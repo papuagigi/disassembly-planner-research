@@ -1,11 +1,13 @@
 """Small truthful handoff snapshots for humans and other agents."""
 from .common import ROOT,WORKSPACE,read,write,utc
+from .scope import study_scope
 
 def optional(path,default=None):
     p=ROOT/path
     return read(p) if p.exists() else default
 
 def main():
+    scope=study_scope()
     state=optional('outputs/pipeline_state.json',{})
     selected=optional('outputs/input_audit/selected_development.json',{})
     discovery=list((ROOT/'outputs/development/full_search').glob('*/result.json'))
@@ -26,7 +28,8 @@ def main():
         completed_discovery_outcomes=completed_discovery,
         selected_validation=len(selected.get('validation_cases',[])),completed_full_discovery=len(discovery),
         completed_independent_validation=len(validation),completed_first_test_episodes=len(scored),
-        targets=dict(full_discovery=10,validation=10,test_CADs=10,test_episodes=30),
+        targets=dict(full_discovery=scope['full_discovery_CADs'],validation=scope['validation_CADs'],test_CADs=scope['evaluation_CADs'],test_episodes=3*scope['evaluation_CADs']),
+        prospective_scope=scope,
         prior_local_probe_discovery=90,new_development=optional('outputs/development/complete.json'),
         model='gpt-6-luna',reasoning_effort='low',wall_seconds=900,no_PPT_created=True,Claude_assigned=False)
     write(ROOT/'outputs/status_snapshot.json',value)
@@ -40,7 +43,7 @@ Controlling plan: PLAN.md. Exactly one final learning → independent validation
 
 State: {state}
 
-Actual finished full-search discovery: {len(discovery)}/10. Independent full-search validation: {len(validation)}/10. First test episodes: {len(scored)}/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
+Actual finished full-search discovery: {len(discovery)}/{scope['full_discovery_CADs']}. Independent full-search validation: {len(validation)}/{scope['validation_CADs']}. First test episodes: {len(scored)}/{3*scope['evaluation_CADs']} across a target of{scope['evaluation_CADs']}CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,{scope['new_discovery_CADs']}are new;unique discovery after completion={90+scope['new_discovery_CADs']}. Validation is{scope['validation_CADs']}different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes. The user reduced the current cohort for a12-hour completion target before proposal/validation/test outcomes. Read config/study_scope.json and protocol/deadline_scope_amendment.json;earlier10/10/10targets are superseded,not falsely completed. Deadline is a target,not guaranteed runtime. Missing episodes or replay events remain pending.
 
 Current input-only preparation: {value['live_progress']}. Fixed-order selection is not complete until selected_development.json exists;selected_discovery=0 above does not mean no reused episode has started. Completed development episodes: {completed_discovery}. Do not treat these as held-out A/B/C comparison outcomes.
 

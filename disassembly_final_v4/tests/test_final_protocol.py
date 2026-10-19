@@ -5,6 +5,7 @@ from unittest.mock import patch
 from disassembly_final_v4 import final_learning,cohort
 from disassembly_final_v4.common import write,read,sha
 from disassembly_final_v4.contracts import LIMITS,ARMS
+from disassembly_final_v4.scope import DEFAULT_SCOPE
 
 class FinalProtocolTests(unittest.TestCase):
     def test_learning_prompt_includes_late_dead_end_and_restore_context(self):
@@ -35,7 +36,7 @@ class FinalProtocolTests(unittest.TestCase):
         self.assertTrue(final_learning.admission_decision(rows)['status'].startswith('ADMITTED'))
         rows[0]['unsafe_fixed_attempt']=True
         self.assertEqual(final_learning.admission_decision(rows)['status'],'REJECTED')
-        self.assertEqual(final_learning.admission_decision(rows[:7])['status'],'REJECTED')
+        self.assertEqual(final_learning.admission_decision(rows[:7],minimum=10)['status'],'REJECTED')
 
     def test_single_started_proposal_is_not_silently_repeated(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -60,7 +61,7 @@ class FinalProtocolTests(unittest.TestCase):
             def outcome(stage,row_id):
                 c=dict(case_id=row_id,part_count=11,geometry_fingerprint=row_id)
                 return dict(case=c,geometry_fingerprint=row_id,status_record={'id':row_id,'status':'qualified'})
-            with patch.object(cohort,'ROOT',root),patch.object(cohort,'pools',return_value=pool),patch.object(cohort,'run_one',side_effect=outcome),patch.object(cohort,'progress'),patch.object(cohort,'probe',return_value={'eligible':True}):
+            with patch.object(cohort,'ROOT',root),patch.object(cohort,'pools',return_value=pool),patch.object(cohort,'run_one',side_effect=outcome),patch.object(cohort,'progress'),patch.object(cohort,'probe',return_value={'eligible':True}),patch.object(cohort,'study_scope',return_value=DEFAULT_SCOPE):
                 result=cohort.select('development')
             d={c['case_id'] for c in result['discovery_cases']};v={c['case_id'] for c in result['validation_cases']}
             self.assertEqual((len(d),len(v)),(10,10));self.assertFalse(d&v)

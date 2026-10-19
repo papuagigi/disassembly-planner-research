@@ -69,7 +69,8 @@ def main():
             from .post_finish import main as finish
             finish()
             write(ROOT/'outputs/pipeline_complete.json',dict(status='COMPLETE',utc=utc(),development=read(ROOT/'outputs/development/complete.json'),
-                test_CADs=10,test_episodes=30,replay_verified=True,PPT_waits_for_user_review=True))
+                test_CADs=len(read(ROOT/'outputs/evaluation/manifest.json')['cases']),
+                test_episodes=read(ROOT/'outputs/evaluation/manifest.json')['planned_episodes'],replay_verified=True,PPT_waits_for_user_review=True))
             write(ROOT/'outputs/pipeline_state.json',dict(status='COMPLETE',utc=utc(),pid=os.getpid()))
             from .post_status import main as status
             status();publish()

@@ -5,6 +5,7 @@ from .common import ROOT,WORKSPACE,read,write,sha,progress
 from .dataset import pools
 from .preparation import run_one
 from .capacity import probe
+from .scope import study_scope
 
 def resolved_case(case):
     case=dict(case)
@@ -13,7 +14,8 @@ def resolved_case(case):
     return case
 
 def select(stage):
-    target=16 if stage=='development' else 10
+    scope=study_scope()
+    target=scope['new_discovery_CADs']+scope['validation_CADs'] if stage=='development' else scope['evaluation_CADs']
     final=ROOT/'outputs/input_audit'/('selected_'+stage+'.json')
     if final.exists():return read(final)
     pool=pools();reused=[];seen=set(pool.get('prior_geometry_fingerprints',[]))
@@ -67,6 +69,8 @@ def select(stage):
     value=dict(status='FINITE_COHORT_COMPLETE',cases=reused+selected,statuses=statuses,attempted=len(statuses),
         selection=pool['selection'],source_order_fixed=True,no_policy_result_gate=True,prepared_but_unused=surplus)
     if stage=='development':
-        value.update(discovery_cases=reused+selected[:6],validation_cases=selected[6:],reused_discovery_CADs=4,new_discovery_CADs=6)
-        assert len(value['discovery_cases'])==10 and len(value['validation_cases'])==10
+        n=scope['new_discovery_CADs']
+        value.update(discovery_cases=reused+selected[:n],validation_cases=selected[n:],
+            reused_discovery_CADs=len(reused),new_discovery_CADs=n,scope=scope)
+        assert len(value['discovery_cases'])==scope['full_discovery_CADs'] and len(value['validation_cases'])==scope['validation_CADs']
     write(final,value,exclusive=True);return value

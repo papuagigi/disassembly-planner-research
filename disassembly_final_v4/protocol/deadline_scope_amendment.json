@@ -1,0 +1,50 @@
+{
+  "utc": "2026-10-19T12:45:35.450953+00:00",
+  "user_authorized": true,
+  "scope": {
+    "version": "v4-12hour-pilot-2026-10-19",
+    "full_discovery_CADs": 5,
+    "reused_discovery_CADs": 4,
+    "new_discovery_CADs": 1,
+    "validation_CADs": 3,
+    "evaluation_CADs": 4,
+    "prior_local_probe_discovery_CADs": 90,
+    "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+    "target_deadline_utc": "2026-10-20T00:40:49+00:00",
+    "target_deadline_kst": "2026-10-20 09:40:49 KST",
+    "reason": "User authorized reducing CAD counts to aim for completion within12hours;preserve already-started episodes and all prior90local-probe experience.",
+    "validation_pass_rule": "ceil(2*n/3) with n>=3;all safety/native-health/replay gates unchanged;no repeated proposal or validation",
+    "source_order_unchanged": true,
+    "episode_budgets_unchanged": true,
+    "expected_remaining_model_episodes": 16,
+    "maximum_remaining_planner_hours": 4.0,
+    "interpretation": "Small pilot;4CAD successes have25percentage-point resolution and wide uncertainty;not broad factory generalization."
+  },
+  "previous_plan_sha256": "67edde1fdcd5dea399a0a549e302aae8b129722b1932bf070818f5a11c4f6b71",
+  "previous_pools_sha256": "bf316c20bbf2c677d61f9dfe358ea82d181ae71c03160d179af45e4a2c81870f",
+  "candidate_order_hashes_unchanged": {
+    "development_candidates": true,
+    "evaluation_candidates": true
+  },
+  "at_amendment": {
+    "completed_development_episodes": 4,
+    "qualified_new_inputs": 5,
+    "prepared_input_attempts": 56,
+    "summed_worker_seconds": 10483.655539829004,
+    "new_input_ids": [
+      "asap_02429",
+      "asap_07375",
+      "asap_04243",
+      "asap_04060",
+      "asap_05459"
+    ],
+    "proposal_started": false,
+    "validation_started": false,
+    "test_geometry_opened": false
+  },
+  "role_assignment": "Use first4qualified inputs in the original source order. First1=new discovery,next3=independent validation. No policy outcomes exist on those4inputs.",
+  "input_and_solver_failures_separate": true,
+  "raw_prior_results_preserved": true,
+  "not_a_completed_experiment": true,
+  "not_a_runtime_guarantee": true
+}

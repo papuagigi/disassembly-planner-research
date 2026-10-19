@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import zipfile
 from .common import ROOT,WORKSPACE,read,write,sha,utc
+from .scope import study_scope
 
 TRAIN_URL='https://people.csail.mit.edu/yunsheng/ASAP/dataset_2404/training_assembly.zip'
 TEST_URL='https://people.csail.mit.edu/yunsheng/ASAP/dataset_2404/test_assembly.zip'
@@ -40,6 +41,11 @@ def pools():
         prior_opened_ids=sorted(previous),selection='Alternating11-15/16-20 source metadata bins; initial physics only; preserve all failures',
         discovery_assignment='4 previous discovery CADs plus first6new qualified inputs; next10new inputs are independent validation',
         previous_discovery_CADs=90,prior_geometry_fingerprints=prior.get('prior_opened_shape_fingerprints',[]),development_part_count_range=[11,20],evaluation_primary_part_count_range=[11,20],evaluation_backup='Then21-30parts,then31+;metadata order only;no model outcomes',all_earlier_geometry_IDs_excluded_from_new_reserves=True)
+    scope=study_scope()
+    result.update(development_target=scope['new_discovery_CADs']+scope['validation_CADs'],
+        discovery_target=scope['new_discovery_CADs'],validation_target=scope['validation_CADs'],evaluation_target=scope['evaluation_CADs'],
+        minimum_discovery_CADs=scope['full_discovery_CADs'],minimum_validation_CADs=scope['validation_CADs'],minimum_evaluation_CADs=scope['evaluation_CADs'],
+        discovery_assignment=f"4 previous discovery CADs plus first{scope['new_discovery_CADs']}new qualified inputs;next{scope['validation_CADs']}new inputs are independent validation")
     write(path,result,exclusive=True);return result
 
 def finalize_download():

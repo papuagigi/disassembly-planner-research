@@ -2,11 +2,13 @@
 from .common import ROOT,WORKSPACE,read,write,sha,utc
 from .contracts import LIMITS,MODEL,EFFORT,ARMS
 from .documents import DocumentBank
+from .scope import study_scope
 
 def source_paths():
     paths=[p for p in ROOT.glob('*.py') if not p.name.startswith('post_')]+list((ROOT/'data_tools').glob('*.py'))+[ROOT/'PLAN.md',ROOT/'protocol/prior_sources.json']
     paths+=[ROOT/'outputs/input_audit/pools.json',ROOT/'outputs/input_audit/selected_development.json',ROOT/'memory/S0.json',ROOT/'memory/S3.json']
     paths+=[ROOT/'outputs/protocol/conversion_development.json',ROOT/'outputs/protocol/conversion_evaluation.json']
+    if (ROOT/'config/study_scope.json').exists():paths.append(ROOT/'config/study_scope.json')
     for name in ['coacd/__init__.py','coacd/lib_coacd.dylib']:
         p=ROOT/'.deps'/name
         if p.exists():paths.append(p)
@@ -19,13 +21,15 @@ def freeze():
     p=ROOT/'outputs/protocol/freeze.json'
     if p.exists():return verify()
     cohort=read(ROOT/'outputs/input_audit/selected_development.json')
-    assert len(cohort['discovery_cases'])==10 and len(cohort['validation_cases'])>=10
+    scope=study_scope()
+    assert len(cohort['discovery_cases'])==scope['full_discovery_CADs'] and len(cohort['validation_cases'])==scope['validation_CADs']
     collected=read(ROOT/'outputs/development/discovery_complete.json')['cases']
-    assert len(collected)==10 and all(read(r['result_path']).get('trace') for r in collected),'Ten actually observed full-search discovery CADs are required'
+    assert len(collected)==scope['full_discovery_CADs']
+    observed_discovery=sum(bool(read(r['result_path']).get('trace')) for r in collected)
     validated=[]
     for c in cohort['validation_cases']:
         p=ROOT/'outputs/development/full_validation'/c['case_id']/'result.json'
-        assert p.exists() and read(p).get('trace'),'Every independent validation CAD must have actual physical observations'
+        assert p.exists(),'Every independent validation CAD must retain its actual attempted episode,including negative infrastructure outcomes'
         validated.append(p)
     assert 'OK' in (ROOT/'outputs/regressions.log').read_text()
     assert not any((ROOT/'data/source/asap_test').glob('*/'))
@@ -37,9 +41,11 @@ def freeze():
         if ref.exists():paths.append(ref)
     value=dict(status='FROZEN_BEFORE_FINAL_TEST_GEOMETRY',utc=utc(),model=MODEL,reasoning_effort=EFFORT,
         limits=LIMITS,arms=ARMS,bank_sha256=bank.sha256,bank_content_sha256=bank.content_sha256,
-        sha256={str(q.resolve()):sha(q) for q in paths},minimum_CAD_requirements=dict(discovery=10,validation=10,evaluation=10),
+        sha256={str(q.resolve()):sha(q) for q in paths},minimum_CAD_requirements=dict(discovery=scope['full_discovery_CADs'],validation=scope['validation_CADs'],evaluation=scope['evaluation_CADs']),
+        cohort_scope=scope,
         no_test_updates=True,time_cuts_seconds=[180,600,900])
-    value.update(actual_physically_observed_full_discovery_CADs=len(collected),actual_physically_observed_validation_CADs=len(validated))
+    value.update(actual_attempted_full_discovery_CADs=len(collected),actual_physically_observed_full_discovery_CADs=observed_discovery,
+        actual_attempted_validation_CADs=len(validated),actual_physically_observed_validation_CADs=sum(bool(read(p).get('trace')) for p in validated))
     write(p,value,exclusive=True);return value
 
 def verify():

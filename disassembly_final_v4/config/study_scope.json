@@ -1,0 +1,19 @@
+{
+  "version": "v4-12hour-pilot-2026-10-19",
+  "full_discovery_CADs": 5,
+  "reused_discovery_CADs": 4,
+  "new_discovery_CADs": 1,
+  "validation_CADs": 3,
+  "evaluation_CADs": 4,
+  "prior_local_probe_discovery_CADs": 90,
+  "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+  "target_deadline_utc": "2026-10-20T00:40:49+00:00",
+  "target_deadline_kst": "2026-10-20 09:40:49 KST",
+  "reason": "User authorized reducing CAD counts to aim for completion within12hours;preserve already-started episodes and all prior90local-probe experience.",
+  "validation_pass_rule": "ceil(2*n/3) with n>=3;all safety/native-health/replay gates unchanged;no repeated proposal or validation",
+  "source_order_unchanged": true,
+  "episode_budgets_unchanged": true,
+  "expected_remaining_model_episodes": 16,
+  "maximum_remaining_planner_hours": 4.0,
+  "interpretation": "Small pilot;4CAD successes have25percentage-point resolution and wide uncertainty;not broad factory generalization."
+}

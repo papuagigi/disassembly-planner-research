@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T12:35:54.681380+00:00",
+  "utc": "2026-10-19T12:46:41.043759+00:00",
   "state": {
     "utc": "2026-10-19T11:36:36.230669+00:00",
     "pid": 29446,
@@ -9,14 +9,14 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T12:35:46.959276+00:00",
-    "qualified": 4,
+    "utc": "2026-10-19T12:43:34.554893+00:00",
+    "qualified": 5,
     "target": 16,
-    "attempted": 48,
+    "attempted": 56,
     "active_ids": [
-      "06307"
+      "04719"
     ],
-    "completed_out_of_order": 2
+    "completed_out_of_order": 0
   },
   "early_discovery": {
     "utc": "2026-10-19T12:31:39.660078+00:00",
@@ -27,43 +27,8 @@
     "total": 4,
     "note": "Offline discovery overlaps input preparation;not a scored A/B/C timing experiment"
   },
-  "completed_discovery_outcomes": [
-    {
-      "case_id": "asap_02402",
-      "raw_goal_reached": true,
-      "completed_removals": 12,
-      "required_removals": 12,
-      "checks": 13,
-      "llm_calls": 8,
-      "seconds": 83.07215474999975,
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "replay_status": "PASS"
-    },
-    {
-      "case_id": "asap_02406",
-      "raw_goal_reached": true,
-      "completed_removals": 12,
-      "required_removals": 12,
-      "checks": 27,
-      "llm_calls": 8,
-      "seconds": 124.11368370900163,
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "replay_status": "PASS"
-    },
-    {
-      "case_id": "asap_07722",
-      "raw_goal_reached": false,
-      "completed_removals": 4,
-      "required_removals": 14,
-      "checks": 240,
-      "llm_calls": 8,
-      "seconds": 830.1997432089993,
-      "native_engine_health": "NATIVE_ENGINE_WARNINGS_RECORDED",
-      "replay_status": "PASS"
-    }
-  ],
   "selected_validation": 0,
-  "completed_full_discovery": 3,
+  "completed_full_discovery": 4,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {

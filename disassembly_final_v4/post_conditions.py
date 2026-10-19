@@ -9,7 +9,7 @@ def main():
     frozen=verify()
     manifest=read(ROOT/'outputs/evaluation/manifest.json')
     completion=read(ROOT/'outputs/evaluation/complete.json')
-    assert len(manifest['cases'])>=10
+    assert len(manifest['cases'])>=frozen['minimum_CAD_requirements']['evaluation']
     assert len(completion['episodes'])==3*len(manifest['cases'])
     prior=read(ROOT/'outputs/input_audit/previous_geometry_fingerprints.json')
     known={r['fingerprint'] for r in prior['records']}

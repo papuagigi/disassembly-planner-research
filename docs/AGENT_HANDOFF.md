@@ -1,6 +1,6 @@
 # Final v4 agent handoff
 
-Snapshot UTC: 2026-10-19T12:35:54.681380+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T12:46:41.043759+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
@@ -8,11 +8,7 @@ Controlling plan: PLAN.md. Exactly one final learning → independent validation
 
 State: {'utc': '2026-10-19T11:36:36.230669+00:00', 'pid': 29446, 'status': 'RUNNING', 'phase': 'prepare_development_inputs'}
 
-Actual finished full-search discovery: 3/10. Independent full-search validation: 0/10. First test episodes: 0/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
-
-Current input-only preparation: {'phase': 'preparing_development', 'utc': '2026-10-19T12:35:46.959276+00:00', 'qualified': 4, 'target': 16, 'attempted': 48, 'active_ids': ['06307'], 'completed_out_of_order': 2}. Fixed-order selection is not complete until selected_development.json exists;selected_discovery=0 above does not mean no reused episode has started. Completed development episodes: [{'case_id': 'asap_02402', 'raw_goal_reached': True, 'completed_removals': 12, 'required_removals': 12, 'checks': 13, 'llm_calls': 8, 'seconds': 83.07215474999975, 'native_engine_health': 'NO_NATIVE_WARNINGS_RECORDED', 'replay_status': 'PASS'}, {'case_id': 'asap_02406', 'raw_goal_reached': True, 'completed_removals': 12, 'required_removals': 12, 'checks': 27, 'llm_calls': 8, 'seconds': 124.11368370900163, 'native_engine_health': 'NO_NATIVE_WARNINGS_RECORDED', 'replay_status': 'PASS'}, {'case_id': 'asap_07722', 'raw_goal_reached': False, 'completed_removals': 4, 'required_removals': 14, 'checks': 240, 'llm_calls': 8, 'seconds': 830.1997432089993, 'native_engine_health': 'NATIVE_ENGINE_WARNINGS_RECORDED', 'replay_status': 'PASS'}]. Do not treat these as held-out A/B/C comparison outcomes.
-
-Native engine health clarification:07722 emitted contact/constraint arena overflow. A deterministic replay may reproduce invalid resource-limited contact handling. Keep raw outcomes/costs;new skill evidence excludes warning-bearing episodes. Candidate validation warnings veto admission. Final analysis separately reports raw and warning-free goal attainment,retaining every CAD in the denominator. Missing logs are unknown. Do not alter physics or rerun episodes to remove warnings.
+Actual finished full-search discovery: 4/10. Independent full-search validation: 0/10. First test episodes: 0/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
 
 A=generated code/no docs;B=same generated code/frozen S3;C=conditional graph+LLM order+fixed DFS/same S3. Same API,initial state,gpt-6-luna/low,8logical model turns,240physical queries,900seconds. Document review is charged. A's failure-free memory resets between products;within-episode feedback is allowed for all.
 

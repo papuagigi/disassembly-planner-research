@@ -11,6 +11,7 @@ from .documents import DocumentBank,materialize,make_bank
 from .metrics import summarize
 from .post_evidence import replay_result
 from .native_health import audit as audit_native_health
+from .scope import study_scope
 import fcntl
 
 PROPOSAL_SCHEMA={'type':'object','properties':{'name':{'type':'string'},'description':{'type':'string'},'markdown_body':{'type':'string'}},'required':['name','description','markdown_body'],'additionalProperties':False}
@@ -75,7 +76,7 @@ def _collect():
     cohort=read(ROOT/'outputs/input_audit/selected_development.json');rows=[]
     for case in cohort['discovery_cases']:
         folder=ROOT/'outputs/development/full_search'/case['case_id']
-        progress('full_search_learning',case=case['case_id'],completed=len(rows),total=10)
+        progress('full_search_learning',case=case['case_id'],completed=len(rows),total=len(cohort['discovery_cases']))
         result=run(discovery_job(case))
         audit=audit_result(folder,case)
         health=audit_native_health(folder)
@@ -85,7 +86,8 @@ def _collect():
         from .post_status import checkpoint
         checkpoint()
     value=dict(utc=utc(),cases=rows,full_search_CADs=len(rows),previous_local_probe_discovery_CADs=90,
-        reused_discovery_CADs=4,new_discovery_CADs=6,unique_discovery_CADs_total=96,
+        reused_discovery_CADs=cohort['reused_discovery_CADs'],new_discovery_CADs=cohort['new_discovery_CADs'],
+        unique_discovery_CADs_total=90+cohort['new_discovery_CADs'],
         actual_backtracking_episodes=sum(r['metrics']['restores']>0 for r in rows))
     write(final,value,exclusive=True);return value
 
@@ -118,14 +120,15 @@ def propose():
     assert len(response['markdown_body'])<=6000 and not re.search(r'\basap_|\b\d{5}\b|```',response['markdown_body'])
     document=materialize(ROOT/'memory/candidate',response['name'],response['description'],response['markdown_body'])
     value=dict(document_path=str(document),document_sha256=sha(document),metadata=metadata,utc=utc(),
-        attempted_full_search_CADs=10,contributing_full_search_CADs=sum(e['physical_procedure_evidence_usable'] for e in evidence),
+        attempted_full_search_CADs=len(evidence),contributing_full_search_CADs=sum(e['physical_procedure_evidence_usable'] for e in evidence),
         no_validation_or_test_input=True)
     write(final,value,exclusive=True);return value
 
-def admission_decision(rows,generation_error=None):
+def admission_decision(rows,generation_error=None,*,minimum=None):
+    if minimum is None:minimum=study_scope()['validation_CADs']
     required=math.ceil(2*len(rows)/3)
     passed=sum(bool(r.get('passed')) for r in rows)
-    admitted=generation_error is None and len(rows)>=10 and passed>=required and all(r.get('physical_audit') in ('PASS','PASS_VERIFIED_PREFIX') for r in rows) and not any(r.get('unsafe_fixed_attempt') or r.get('invalid_restore') or r.get('native_engine_warning_veto') for r in rows)
+    admitted=generation_error is None and len(rows)>=minimum and passed>=required and all(r.get('physical_audit') in ('PASS','PASS_VERIFIED_PREFIX') for r in rows) and not any(r.get('unsafe_fixed_attempt') or r.get('invalid_restore') or r.get('native_engine_warning_veto') for r in rows)
     return dict(status='ADMITTED_BOUNDED_FULL_SEARCH_PROCEDURE' if admitted else 'REJECTED',passed=passed,required=required,
         actual_validation_CADs=len(rows),validations=rows,generation_error=generation_error,utc=utc(),
         scope='Independent bounded functional/physical repair admission;not causal efficacy or a proof of semantic compliance',no_test_input=True)
@@ -180,8 +183,9 @@ def validate_and_freeze_bank():
         docs.append(admitted)
     bp=ROOT/'memory/S3.json'
     bank=DocumentBank(bp) if bp.exists() else make_bank(bp,docs,version='S3-final-v4',evidence=str(ap))
-    value=dict(utc=utc(),actual_full_search_discovery_CADs=10,actual_independent_validation_CADs=len(rows),
-        actual_unique_discovery_CADs_including_prior=96,prior_local_probe_discovery_CADs=90,
+    collection=read(ROOT/'outputs/development/discovery_complete.json')
+    value=dict(utc=utc(),actual_full_search_discovery_CADs=collection['full_search_CADs'],actual_independent_validation_CADs=len(rows),
+        actual_unique_discovery_CADs_including_prior=collection['unique_discovery_CADs_total'],prior_local_probe_discovery_CADs=90,
         new_document_admitted=admission['status'].startswith('ADMITTED'),validation_passes=admission['passed'],
         bank_sha256=bank.sha256,bank_content_sha256=bank.content_sha256,skills=len(bank.documents))
     write(complete,value,exclusive=True);return value
