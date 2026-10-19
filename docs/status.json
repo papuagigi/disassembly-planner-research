@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T21:13:10.841644+00:00",
+  "utc": "2026-10-19T21:13:12.952852+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T19:02:56.329452+00:00",
+    "utc": "2026-10-19T21:13:12.900989+00:00",
     "pid": 51259,
     "status": "RUNNING",
-    "phase": "matched_final_first_episodes"
+    "phase": "aggregate_outcomes_and_tokens"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -50,12 +50,10 @@
     "max_rss_bytes": 4294967296
   },
   "input_progress": {
-    "phase": "first_episode",
-    "utc": "2026-10-19T20:58:09.622910+00:00",
-    "case": "asap_03114",
-    "arm": "B",
-    "completed": 8,
-    "planned": 9
+    "phase": "first_episode_campaign_complete",
+    "utc": "2026-10-19T21:13:12.897175+00:00",
+    "episodes": 9,
+    "cases": 3
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
