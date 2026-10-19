@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:02:07.872712+00:00",
+  "utc": "2026-10-19T14:02:40.144922+00:00",
   "state": {
     "utc": "2026-10-19T13:35:54.204771+00:00",
     "pid": 37806,
@@ -9,12 +9,13 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:01:45.412637+00:00",
+    "utc": "2026-10-19T14:02:15.422658+00:00",
     "qualified": 4,
     "target": 6,
     "attempted": 18,
     "active_ids": [
-      "05580"
+      "05580",
+      "01713"
     ],
     "completed_out_of_order": 0
   },
@@ -38,8 +39,8 @@
       "checks": 30,
       "llm_calls": 8,
       "seconds": 204.75768666600197,
-      "native_engine_health": "NOT_YET_AUDITED",
-      "replay_status": "PENDING"
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
     },
     {
       "case_id": "asap_02402",
