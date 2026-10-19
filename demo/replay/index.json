@@ -1,0 +1,1247 @@
+{
+  "status": "PASS",
+  "episodes": [
+    {
+      "case_id": "asap_05954",
+      "arm": "A",
+      "label": "A · LLM 코드 / 문서 없음",
+      "url": "../replay/data/asap_05954/A/episode.json.gz",
+      "episode_sha256": "0cec3d6e56a3f7f45d688afc275f75299060476b1cc9b3676ffe2458323cb691",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 5; external workholding assumed, may be above floor"
+        },
+        "checks": 160,
+        "actions": [
+          {
+            "part_id": "12",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0016060115778560732,
+              "max_rotation_deg": 1.1743433512824604,
+              "final_max_speed_m_s": 0.00035905628646333907,
+              "max_penetration_m": 0.00048740645429647155,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "4",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 5.3105336142821586e-05,
+              "max_rotation_deg": 0.29300242186175185,
+              "final_max_speed_m_s": 5.898724267228416e-05,
+              "max_penetration_m": 0.00048740785722515423,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "3",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 3.0385885159669694e-05,
+              "max_rotation_deg": 0.1493951551488217,
+              "final_max_speed_m_s": 3.756646011298589e-05,
+              "max_penetration_m": 0.0004847174896559759,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 3,
+        "required_removed": 12,
+        "final_progress": 0.25,
+        "best_removed": 3,
+        "failed_checks": 98,
+        "failure_causes": {
+          "path_collision": 97,
+          "unstable_remainder": 1
+        },
+        "duplicate_queries": 59,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 62,
+        "undone_accepted_removals": 59,
+        "restores": 118,
+        "checkpoint_count": 4,
+        "llm_calls": 1,
+        "tokens": {
+          "input_tokens": 21124,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 739,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.0932306660034,
+        "instructions": 246952,
+        "path_samples": 4001,
+        "dynamic_steps": 47250,
+        "document_reads": 0,
+        "claimed_skill_ids": [],
+        "read_skill_ids": [],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "A",
+        "method_label": "A · LLM 코드 / 문서 없음",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S0-no-memory",
+        "library_enabled": false,
+        "required_removals": 12,
+        "replay_audit": "PASS",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 0,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 59
+      }
+    },
+    {
+      "case_id": "asap_05954",
+      "arm": "B",
+      "label": "B · LLM 코드 / 분해 절차 문서",
+      "url": "../replay/data/asap_05954/B/episode.json.gz",
+      "episode_sha256": "e94967eff65a9e72907c947a625483596cc6c23d02d6e2e96138385559589c26",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 5; external workholding assumed, may be above floor"
+        },
+        "checks": 113,
+        "actions": [
+          {
+            "part_id": "4",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0001478333657378531,
+              "max_rotation_deg": 0.589077212227615,
+              "final_max_speed_m_s": 6.658857754010035e-05,
+              "max_penetration_m": 0.00048505402007057244,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "3",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 3.443078256054153e-05,
+              "max_rotation_deg": 0.21171241756802567,
+              "final_max_speed_m_s": 1.5081350772916837e-05,
+              "max_penetration_m": 0.00048501516823152066,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "12",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0016207614443352848,
+              "max_rotation_deg": 1.0421444153565969,
+              "final_max_speed_m_s": 3.690150882864518e-05,
+              "max_penetration_m": 0.0004783209543840864,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "call_budget_exhausted",
+        "final_removed": 3,
+        "required_removed": 12,
+        "final_progress": 0.25,
+        "best_removed": 3,
+        "failed_checks": 110,
+        "failure_causes": {
+          "path_collision": 108,
+          "unstable_remainder": 2
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 3,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 2,
+        "llm_calls": 8,
+        "tokens": {
+          "input_tokens": 749568,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8243,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 587.9868183330036,
+        "instructions": 73096,
+        "path_samples": 719,
+        "dynamic_steps": 3750,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "B",
+        "method_label": "B · LLM 코드 / 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 12,
+        "replay_audit": "PASS",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 0,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_05954",
+      "arm": "C",
+      "label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+      "url": "../replay/data/asap_05954/C/episode.json.gz",
+      "episode_sha256": "36b086911fcec1a56c3a4051040122ece676af1bf849ba4ac5e3705f145237cb",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 5; external workholding assumed, may be above floor"
+        },
+        "checks": 161,
+        "actions": [
+          {
+            "part_id": "12",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0016060115778560732,
+              "max_rotation_deg": 1.1743433512824604,
+              "final_max_speed_m_s": 0.00035905628646333907,
+              "max_penetration_m": 0.00048740645429647155,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 1,
+        "required_removed": 12,
+        "final_progress": 0.08333333333333333,
+        "best_removed": 3,
+        "failed_checks": 158,
+        "failure_causes": {
+          "path_collision": 156,
+          "unstable_remainder": 2
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 3,
+        "undone_accepted_removals": 2,
+        "restores": 2,
+        "checkpoint_count": 5,
+        "llm_calls": 8,
+        "tokens": {
+          "input_tokens": 310846,
+          "cached_input_tokens": 41088,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6506,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.0267567499977,
+        "instructions": 2162644,
+        "path_samples": 925,
+        "dynamic_steps": 3750,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "C",
+        "method_label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 12,
+        "replay_audit": "PASS",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 0,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 2
+      }
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "A",
+      "label": "A · LLM 코드 / 문서 없음",
+      "url": "../replay/data/asap_06444/A/episode.json.gz",
+      "episode_sha256": "62bcd1148fb1f3bd6561b6849ca18c4c85200ccf2662835b3405dee6ffeffb31",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 1; external workholding assumed, may be above floor"
+        },
+        "checks": 36,
+        "actions": [
+          {
+            "part_id": "20",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 5.091384203028319e-05,
+              "max_rotation_deg": 0.1913849794524753,
+              "final_max_speed_m_s": 0.0005225495445954214,
+              "max_penetration_m": 0.00020930328862990054,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "17",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 7.587065877242308e-05,
+              "max_rotation_deg": 0.4651804640553081,
+              "final_max_speed_m_s": 0.0006680438612133252,
+              "max_penetration_m": 0.00020931660515544276,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "11",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 3.5080694048610904e-05,
+              "max_rotation_deg": 0.19753550719142382,
+              "final_max_speed_m_s": 0.0006868752505150643,
+              "max_penetration_m": 0.00020899777661552516,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "16",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 2.8477209219507433e-05,
+              "max_rotation_deg": 0.15028587637259855,
+              "final_max_speed_m_s": 0.0004005954791362892,
+              "max_penetration_m": 0.00020904611734190562,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "6",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 4.673123152431917e-05,
+              "max_rotation_deg": 0.12576092077757775,
+              "final_max_speed_m_s": 0.0007547919790345632,
+              "max_penetration_m": 0.00020904709725267067,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "10",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 2.407690160989449e-05,
+              "max_rotation_deg": 0.13927184412916258,
+              "final_max_speed_m_s": 0.0008764762393838359,
+              "max_penetration_m": 0.00020904792873014243,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "15",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 2.2276901114812226e-05,
+              "max_rotation_deg": 0.0837566827760869,
+              "final_max_speed_m_s": 0.00043413805327601666,
+              "max_penetration_m": 0.00020904641413796012,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "5",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 3.978288427792599e-05,
+              "max_rotation_deg": 0.12246821077543439,
+              "final_max_speed_m_s": 0.0005817499387406302,
+              "max_penetration_m": 0.0002090471329404166,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "19",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 2.5197706207374646e-05,
+              "max_rotation_deg": 0.08542760910338597,
+              "final_max_speed_m_s": 0.0005092954951699156,
+              "max_penetration_m": 0.00020904822527960309,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "9",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 2.7163504014408226e-05,
+              "max_rotation_deg": 0.1122110178261909,
+              "final_max_speed_m_s": 0.0004970843197464004,
+              "max_penetration_m": 0.0002090560474454309,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "14",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 1.7199356803720154e-05,
+              "max_rotation_deg": 0.13261112012367463,
+              "final_max_speed_m_s": 0.000527867503972303,
+              "max_penetration_m": 0.00020905188162326002,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 11,
+        "required_removed": 20,
+        "final_progress": 0.55,
+        "best_removed": 11,
+        "failed_checks": 24,
+        "failure_causes": {
+          "path_collision": 24
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 11,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 12,
+        "llm_calls": 1,
+        "tokens": {
+          "input_tokens": 24299,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 486,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.081068958003,
+        "instructions": 7344,
+        "path_samples": 1116,
+        "dynamic_steps": 8250,
+        "document_reads": 0,
+        "claimed_skill_ids": [],
+        "read_skill_ids": [],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "A",
+        "method_label": "A · LLM 코드 / 문서 없음",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S0-no-memory",
+        "library_enabled": false,
+        "required_removals": 20,
+        "replay_audit": "PASS_VERIFIED_PREFIX",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 1,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "B",
+      "label": "B · LLM 코드 / 분해 절차 문서",
+      "url": "../replay/data/asap_06444/B/episode.json.gz",
+      "episode_sha256": "11a58041d917d44b81a546e5dd6040197c65d07ffc63f2c4cf74ff2580366bfb",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 1; external workholding assumed, may be above floor"
+        },
+        "checks": 99,
+        "actions": [],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 0,
+        "required_removed": 20,
+        "final_progress": 0.0,
+        "best_removed": 0,
+        "failed_checks": 98,
+        "failure_causes": {
+          "path_collision": 98
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 0,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 1,
+        "llm_calls": 2,
+        "tokens": {
+          "input_tokens": 80570,
+          "cached_input_tokens": 24320,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 921,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.7303623749976,
+        "instructions": 9168,
+        "path_samples": 196,
+        "dynamic_steps": 0,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "B",
+        "method_label": "B · LLM 코드 / 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 20,
+        "replay_audit": "PASS_VERIFIED_PREFIX",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 1,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "C",
+      "label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+      "url": "../replay/data/asap_06444/C/episode.json.gz",
+      "episode_sha256": "60288616191392a12cda52955c05747d0de4d5543f239bcccc1270534ec8f928",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 1; external workholding assumed, may be above floor"
+        },
+        "checks": 82,
+        "actions": [],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 0,
+        "required_removed": 20,
+        "final_progress": 0.0,
+        "best_removed": 0,
+        "failed_checks": 81,
+        "failure_causes": {
+          "path_collision": 81
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 0,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 2,
+        "llm_calls": 8,
+        "tokens": {
+          "input_tokens": 532002,
+          "cached_input_tokens": 68480,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8356,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.0789777919999,
+        "instructions": 2187513,
+        "path_samples": 158,
+        "dynamic_steps": 0,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "C",
+        "method_label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 20,
+        "replay_audit": "PASS_VERIFIED_PREFIX",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 1,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "A",
+      "label": "A · LLM 코드 / 문서 없음",
+      "url": "../replay/data/asap_03114/A/episode.json.gz",
+      "episode_sha256": "a6b9f23503a532e89b1e6555b936bb5d90f1fe1359a2c216be4053f089f1894c",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 24; external workholding assumed, may be above floor"
+        },
+        "checks": 174,
+        "actions": [
+          {
+            "part_id": "27",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00015350677229566126,
+              "max_rotation_deg": 0.9285114355676991,
+              "final_max_speed_m_s": 0.00019402744081480804,
+              "max_penetration_m": 0.0007927103860424225,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 1,
+        "required_removed": 21,
+        "final_progress": 0.047619047619047616,
+        "best_removed": 1,
+        "failed_checks": 173,
+        "failure_causes": {
+          "path_collision": 173
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 1,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 1,
+        "llm_calls": 1,
+        "tokens": {
+          "input_tokens": 22705,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 759,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.1909442920005,
+        "instructions": 30508,
+        "path_samples": 230,
+        "dynamic_steps": 750,
+        "document_reads": 0,
+        "claimed_skill_ids": [],
+        "read_skill_ids": [],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "A",
+        "method_label": "A · LLM 코드 / 문서 없음",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S0-no-memory",
+        "library_enabled": false,
+        "required_removals": 21,
+        "replay_audit": "PASS",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 0,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "B",
+      "label": "B · LLM 코드 / 분해 절차 문서",
+      "url": "../replay/data/asap_03114/B/episode.json.gz",
+      "episode_sha256": "c49cf79eb46893fd6eff8df37df03ef083440e6d0e02eea8b16afb6407580d66",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 24; external workholding assumed, may be above floor"
+        },
+        "checks": 129,
+        "actions": [
+          {
+            "part_id": "25",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00018274659307541375,
+              "max_rotation_deg": 0.9452977471979553,
+              "final_max_speed_m_s": 0.00019402744081480804,
+              "max_penetration_m": 0.0007927103860424225,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 1,
+        "required_removed": 21,
+        "final_progress": 0.047619047619047616,
+        "best_removed": 1,
+        "failed_checks": 127,
+        "failure_causes": {
+          "path_collision": 127
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 1,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 1,
+        "llm_calls": 2,
+        "tokens": {
+          "input_tokens": 52822,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1162,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.727492209,
+        "instructions": 30029,
+        "path_samples": 174,
+        "dynamic_steps": 750,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "B",
+        "method_label": "B · LLM 코드 / 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 21,
+        "replay_audit": "PASS_VERIFIED_PREFIX",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 1,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "C",
+      "label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+      "url": "../replay/data/asap_03114/C/episode.json.gz",
+      "episode_sha256": "b793381a31f0313040c6f18efb01f2a0aa455fedffde16fa10310043a2c61e81",
+      "summary": {
+        "success": false,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 24; external workholding assumed, may be above floor"
+        },
+        "checks": 141,
+        "actions": [
+          {
+            "part_id": "25",
+            "direction": "-y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00018274659307541375,
+              "max_rotation_deg": 0.9452977471979553,
+              "final_max_speed_m_s": 0.00019402744081480804,
+              "max_penetration_m": 0.0007927103860424225,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "wall_time_budget_exhausted",
+        "final_removed": 1,
+        "required_removed": 21,
+        "final_progress": 0.047619047619047616,
+        "best_removed": 1,
+        "failed_checks": 139,
+        "failure_causes": {
+          "path_collision": 139
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 1,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 3,
+        "llm_calls": 8,
+        "tokens": {
+          "input_tokens": 498984,
+          "cached_input_tokens": 13696,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7999,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 900.5325365840035,
+        "instructions": 3720233,
+        "path_samples": 189,
+        "dynamic_steps": 750,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "C",
+        "method_label": "C · Graph·LLM 순위·DFS / 같은 분해 절차 문서",
+        "reference": false,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 240,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S3-final-v6-4GiB",
+        "library_enabled": true,
+        "required_removals": 21,
+        "replay_audit": "PASS_VERIFIED_PREFIX",
+        "learning_updates": 0,
+        "unfinished_reserved_checks": 1,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": false,
+        "source_scope": "미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과",
+        "changed_state_restores": 0
+      }
+    }
+  ],
+  "references": [],
+  "default_url": "../replay/data/asap_05954/A/episode.json.gz"
+}

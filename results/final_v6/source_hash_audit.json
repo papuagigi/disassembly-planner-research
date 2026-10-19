@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T23:00:01.424784+00:00",
+  "verified_frozen_sources": true,
+  "previous_final_results_preserved": 36,
+  "prior_v4_results_preserved": 7,
+  "prior_v4_sources_preserved": 33,
+  "prior_v5_artifacts_preserved": 53,
+  "current_final_raw_results_preserved": 9,
+  "bound_input_assets_preserved": 33814
+}

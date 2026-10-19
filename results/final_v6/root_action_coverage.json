@@ -1,0 +1,468 @@
+{
+  "utc": "2026-10-19T22:59:59.009726+00:00",
+  "mode": "post_score_evidence_only",
+  "cases": [
+    {
+      "case_id": "asap_05954",
+      "root_state_key": "60e34cd924d0c01dd0d885cbcde82d0da72e240e3030260c194961899823c91c",
+      "expected_pairs": 72,
+      "observed_physical_pairs": 24,
+      "rejected_pairs": 22,
+      "valid_pairs": [
+        [
+          "12",
+          "+x"
+        ],
+        [
+          "4",
+          "-y"
+        ]
+      ],
+      "missing_pairs": [
+        [
+          "0",
+          "+x"
+        ],
+        [
+          "0",
+          "+y"
+        ],
+        [
+          "0",
+          "-x"
+        ],
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "0",
+          "-z"
+        ],
+        [
+          "1",
+          "+x"
+        ],
+        [
+          "1",
+          "+y"
+        ],
+        [
+          "1",
+          "-x"
+        ],
+        [
+          "1",
+          "-y"
+        ],
+        [
+          "10",
+          "+y"
+        ],
+        [
+          "10",
+          "+z"
+        ],
+        [
+          "10",
+          "-y"
+        ],
+        [
+          "10",
+          "-z"
+        ],
+        [
+          "11",
+          "+y"
+        ],
+        [
+          "11",
+          "+z"
+        ],
+        [
+          "11",
+          "-y"
+        ],
+        [
+          "11",
+          "-z"
+        ],
+        [
+          "12",
+          "+y"
+        ],
+        [
+          "12",
+          "-x"
+        ],
+        [
+          "12",
+          "-y"
+        ],
+        [
+          "12",
+          "-z"
+        ],
+        [
+          "4",
+          "+x"
+        ],
+        [
+          "4",
+          "+y"
+        ],
+        [
+          "4",
+          "-x"
+        ],
+        [
+          "4",
+          "-z"
+        ],
+        [
+          "6",
+          "+x"
+        ],
+        [
+          "6",
+          "+y"
+        ],
+        [
+          "6",
+          "-x"
+        ],
+        [
+          "6",
+          "-y"
+        ],
+        [
+          "6",
+          "-z"
+        ],
+        [
+          "7",
+          "+x"
+        ],
+        [
+          "7",
+          "+y"
+        ],
+        [
+          "7",
+          "+z"
+        ],
+        [
+          "7",
+          "-x"
+        ],
+        [
+          "7",
+          "-y"
+        ],
+        [
+          "7",
+          "-z"
+        ],
+        [
+          "8",
+          "+x"
+        ],
+        [
+          "8",
+          "+y"
+        ],
+        [
+          "8",
+          "+z"
+        ],
+        [
+          "8",
+          "-x"
+        ],
+        [
+          "8",
+          "-y"
+        ],
+        [
+          "8",
+          "-z"
+        ],
+        [
+          "9",
+          "+x"
+        ],
+        [
+          "9",
+          "+y"
+        ],
+        [
+          "9",
+          "+z"
+        ],
+        [
+          "9",
+          "-x"
+        ],
+        [
+          "9",
+          "-y"
+        ],
+        [
+          "9",
+          "-z"
+        ]
+      ],
+      "conflicting_pairs": [],
+      "root_rejection_observations": {
+        "path_collision": 24
+      },
+      "all_arm_replays_verified": true,
+      "all_arm_native_logs_warning_free": true,
+      "no_admissible_first_action_in_local_finite_API": false,
+      "scope": "Exact initial surviving poses and velocities;declared directions only;verified checker evidence. No claim about original ASAP,rotations,holding or real-world impossibility.",
+      "per_arm_initial_search": {
+        "A": {
+          "completed_initial_state_queries": 5,
+          "known_valid_root_actions_not_tested": [
+            [
+              "4",
+              "-y"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 5,
+            "part_id": "12",
+            "direction": "+x",
+            "valid": true,
+            "committed": true
+          }
+        },
+        "B": {
+          "completed_initial_state_queries": 7,
+          "known_valid_root_actions_not_tested": [
+            [
+              "12",
+              "+x"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 7,
+            "part_id": "4",
+            "direction": "-y",
+            "valid": true,
+            "committed": true
+          }
+        },
+        "C": {
+          "completed_initial_state_queries": 15,
+          "known_valid_root_actions_not_tested": [
+            [
+              "4",
+              "-y"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 15,
+            "part_id": "12",
+            "direction": "+x",
+            "valid": true,
+            "committed": true
+          }
+        }
+      }
+    },
+    {
+      "case_id": "asap_06444",
+      "root_state_key": "43d0267d551b1e7773f98579eb481e2bc2b45f17819b6db8e78ce292ff297008",
+      "expected_pairs": 120,
+      "observed_physical_pairs": 113,
+      "rejected_pairs": 112,
+      "valid_pairs": [
+        [
+          "20",
+          "+y"
+        ]
+      ],
+      "missing_pairs": [
+        [
+          "0",
+          "+y"
+        ],
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "18",
+          "+y"
+        ],
+        [
+          "18",
+          "-y"
+        ],
+        [
+          "20",
+          "-y"
+        ],
+        [
+          "3",
+          "+x"
+        ],
+        [
+          "3",
+          "-y"
+        ]
+      ],
+      "conflicting_pairs": [],
+      "root_rejection_observations": {
+        "path_collision": 181
+      },
+      "all_arm_replays_verified": true,
+      "all_arm_native_logs_warning_free": true,
+      "no_admissible_first_action_in_local_finite_API": false,
+      "scope": "Exact initial surviving poses and velocities;declared directions only;verified checker evidence. No claim about original ASAP,rotations,holding or real-world impossibility.",
+      "per_arm_initial_search": {
+        "A": {
+          "completed_initial_state_queries": 3,
+          "known_valid_root_actions_not_tested": [],
+          "first_valid_initial_action": {
+            "checker_call": 3,
+            "part_id": "20",
+            "direction": "+y",
+            "valid": true,
+            "committed": true
+          }
+        },
+        "B": {
+          "completed_initial_state_queries": 98,
+          "known_valid_root_actions_not_tested": [
+            [
+              "20",
+              "+y"
+            ]
+          ],
+          "first_valid_initial_action": null
+        },
+        "C": {
+          "completed_initial_state_queries": 81,
+          "known_valid_root_actions_not_tested": [
+            [
+              "20",
+              "+y"
+            ]
+          ],
+          "first_valid_initial_action": null
+        }
+      }
+    },
+    {
+      "case_id": "asap_03114",
+      "root_state_key": "c2ce1657178473adda87dd1f82b1471d535bdc63a61d63c4c358a08cae9268a1",
+      "expected_pairs": 126,
+      "observed_physical_pairs": 119,
+      "rejected_pairs": 117,
+      "valid_pairs": [
+        [
+          "25",
+          "-y"
+        ],
+        [
+          "27",
+          "-y"
+        ]
+      ],
+      "missing_pairs": [
+        [
+          "25",
+          "+x"
+        ],
+        [
+          "25",
+          "-x"
+        ],
+        [
+          "27",
+          "+x"
+        ],
+        [
+          "27",
+          "+y"
+        ],
+        [
+          "27",
+          "+z"
+        ],
+        [
+          "27",
+          "-x"
+        ],
+        [
+          "27",
+          "-z"
+        ]
+      ],
+      "conflicting_pairs": [],
+      "root_rejection_observations": {
+        "path_collision": 279
+      },
+      "all_arm_replays_verified": true,
+      "all_arm_native_logs_warning_free": true,
+      "no_admissible_first_action_in_local_finite_API": false,
+      "scope": "Exact initial surviving poses and velocities;declared directions only;verified checker evidence. No claim about original ASAP,rotations,holding or real-world impossibility.",
+      "per_arm_initial_search": {
+        "A": {
+          "completed_initial_state_queries": 103,
+          "known_valid_root_actions_not_tested": [
+            [
+              "25",
+              "-y"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 103,
+            "part_id": "27",
+            "direction": "-y",
+            "valid": true,
+            "committed": true
+          }
+        },
+        "B": {
+          "completed_initial_state_queries": 67,
+          "known_valid_root_actions_not_tested": [
+            [
+              "27",
+              "-y"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 67,
+            "part_id": "25",
+            "direction": "-y",
+            "valid": true,
+            "committed": true
+          }
+        },
+        "C": {
+          "completed_initial_state_queries": 112,
+          "known_valid_root_actions_not_tested": [
+            [
+              "27",
+              "-y"
+            ]
+          ],
+          "first_valid_initial_action": {
+            "checker_call": 112,
+            "part_id": "25",
+            "direction": "-y",
+            "valid": true,
+            "committed": true
+          }
+        }
+      }
+    }
+  ],
+  "no_new_physics_queries": true,
+  "no_model_calls": true,
+  "original_scores_unchanged": true,
+  "incomplete_charged_queries_have_no_invented_outcomes": true
+}
