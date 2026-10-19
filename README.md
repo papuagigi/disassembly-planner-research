@@ -23,6 +23,7 @@ ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하
 - `disassembly_final_v4/`: 현재 마지막 실험의 supervisor,학습·검증·고정·평가,문서 bank,설정.
 - `docs/`: 협업·복구 지침과 앞선 실험의 출처 요약.
 - `results/final_v4/`: 최종 집계가 생성되면 갱신됩니다.
+- `results/prior_v3/`: 보존한180초 기준 결과입니다. 다시보기 검증 상태는 별도JSON에 표시합니다. 새15분 실험과는 학습·시간 조건이 달라 직접적인 개선 원인 비교에 쓰지 않습니다.
 - `viewer/`: MuJoCo 기록을 재생하는 Three.js viewer. 대용량 OBJ/episode는 이 저장소에 자동 업로드하지 않습니다.
 - 나머지 `disassembly_*`: 현재 엔진의 import 의존성을 보존한 이전 구현입니다. 현재 실행 진입점은 v4입니다.
 

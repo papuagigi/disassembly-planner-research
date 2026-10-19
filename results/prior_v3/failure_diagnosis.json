@@ -1,0 +1,825 @@
+{
+  "utc": "2026-10-19T11:05:37.530641+00:00",
+  "outcomes": [
+    {
+      "case_id": "asap_06245",
+      "arm": "A",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 12,
+      "required": 12,
+      "completed_query_results": 23,
+      "charged_queries": 23,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 11
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 15.198960874999102,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_06245",
+      "arm": "B",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 12,
+      "required": 12,
+      "completed_query_results": 12,
+      "charged_queries": 12,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {},
+      "generated_code_errors": {
+        "TypeError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 30.94939266700021,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_06245",
+      "arm": "C",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 12,
+      "required": 12,
+      "completed_query_results": 29,
+      "charged_queries": 29,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 17
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 72.4209759159985,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08116",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 2,
+      "required": 18,
+      "completed_query_results": 190,
+      "charged_queries": 190,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 176
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 26.397193582999535,
+      "same_state_part_pairs_with_six_observed_failed_directions": 21,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08116",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 12,
+      "required": 18,
+      "completed_query_results": 161,
+      "charged_queries": 161,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 149
+      },
+      "generated_code_errors": {
+        "ValueError": 1,
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 58.911621711004045,
+      "same_state_part_pairs_with_six_observed_failed_directions": 6,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08116",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 9,
+      "required": 18,
+      "completed_query_results": 129,
+      "charged_queries": 129,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 120
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 74.53955874899657,
+      "same_state_part_pairs_with_six_observed_failed_directions": 18,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07699",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 9,
+      "required": 11,
+      "completed_query_results": 115,
+      "charged_queries": 115,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 97
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 30.406058541000675,
+      "same_state_part_pairs_with_six_observed_failed_directions": 9,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07699",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 5,
+      "required": 11,
+      "completed_query_results": 118,
+      "charged_queries": 119,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 104
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 27.326616999998805,
+      "same_state_part_pairs_with_six_observed_failed_directions": 10,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07699",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 6,
+      "required": 11,
+      "completed_query_results": 80,
+      "charged_queries": 81,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 74
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 73.86457487499865,
+      "same_state_part_pairs_with_six_observed_failed_directions": 4,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08121",
+      "arm": "A",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 23,
+      "required": 23,
+      "completed_query_results": 63,
+      "charged_queries": 63,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 40
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 7.687894833001337,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08121",
+      "arm": "B",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 23,
+      "required": 23,
+      "completed_query_results": 82,
+      "charged_queries": 82,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 59
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 13.736743208999542,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_08121",
+      "arm": "C",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 23,
+      "required": 23,
+      "completed_query_results": 49,
+      "charged_queries": 49,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 26
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 74.88192295800036,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00319",
+      "arm": "A",
+      "success": false,
+      "termination": "episode_worker_failed_or_hard_timeout",
+      "final_removed": 0,
+      "required": 25,
+      "completed_query_results": 134,
+      "charged_queries": 135,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 134
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 7.999462374998984,
+      "same_state_part_pairs_with_six_observed_failed_directions": 22,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00319",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 0,
+      "required": 25,
+      "completed_query_results": 95,
+      "charged_queries": 96,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 95
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 17.65365450000172,
+      "same_state_part_pairs_with_six_observed_failed_directions": 15,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00319",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 0,
+      "required": 25,
+      "completed_query_results": 60,
+      "charged_queries": 60,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 60
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 95.25596308200329,
+      "same_state_part_pairs_with_six_observed_failed_directions": 9,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07604",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 2,
+      "required": 10,
+      "completed_query_results": 43,
+      "charged_queries": 44,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 41
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 6.915569167000285,
+      "same_state_part_pairs_with_six_observed_failed_directions": 6,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07604",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 2,
+      "required": 10,
+      "completed_query_results": 50,
+      "charged_queries": 51,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 48
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 15.254008541000076,
+      "same_state_part_pairs_with_six_observed_failed_directions": 7,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07604",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 2,
+      "required": 10,
+      "completed_query_results": 26,
+      "charged_queries": 26,
+      "final_error": {
+        "type": "LimitError",
+        "message": "wall_time_budget_exhausted"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 24
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 53.08127587499803,
+      "same_state_part_pairs_with_six_observed_failed_directions": 2,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00740",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 0,
+      "required": 16,
+      "completed_query_results": 49,
+      "charged_queries": 50,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 49
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 7.359983166999882,
+      "same_state_part_pairs_with_six_observed_failed_directions": 8,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00740",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 0,
+      "required": 16,
+      "completed_query_results": 42,
+      "charged_queries": 43,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 42
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 14.908834709000075,
+      "same_state_part_pairs_with_six_observed_failed_directions": 7,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_00740",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 0,
+      "required": 16,
+      "completed_query_results": 29,
+      "charged_queries": 30,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 29
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 57.32339012600096,
+      "same_state_part_pairs_with_six_observed_failed_directions": 3,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_01920",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 7,
+      "required": 19,
+      "completed_query_results": 139,
+      "charged_queries": 140,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 116
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 16.352922499998385,
+      "same_state_part_pairs_with_six_observed_failed_directions": 13,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_01920",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 6,
+      "required": 19,
+      "completed_query_results": 170,
+      "charged_queries": 170,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 164
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 13.23874170900308,
+      "same_state_part_pairs_with_six_observed_failed_directions": 5,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_01920",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 5,
+      "required": 19,
+      "completed_query_results": 29,
+      "charged_queries": 30,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 24
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 87.83082416500838,
+      "same_state_part_pairs_with_six_observed_failed_directions": 3,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_02104",
+      "arm": "A",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 21,
+      "required": 21,
+      "completed_query_results": 143,
+      "charged_queries": 143,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 122
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 9.076057542002673,
+      "same_state_part_pairs_with_six_observed_failed_directions": 17,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_02104",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 6,
+      "required": 21,
+      "completed_query_results": 171,
+      "charged_queries": 171,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 165
+      },
+      "generated_code_errors": {
+        "ValueError": 1,
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 25.5863698319954,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_02104",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 12,
+      "required": 21,
+      "completed_query_results": 85,
+      "charged_queries": 85,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 73
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 83.853076039999,
+      "same_state_part_pairs_with_six_observed_failed_directions": 7,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07632",
+      "arm": "A",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 14,
+      "required": 14,
+      "completed_query_results": 108,
+      "charged_queries": 108,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 94
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 6.664030374999129,
+      "same_state_part_pairs_with_six_observed_failed_directions": 13,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07632",
+      "arm": "B",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 14,
+      "required": 14,
+      "completed_query_results": 60,
+      "charged_queries": 60,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 46
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 16.98319124900081,
+      "same_state_part_pairs_with_six_observed_failed_directions": 6,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07632",
+      "arm": "C",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 10,
+      "required": 14,
+      "completed_query_results": 87,
+      "charged_queries": 87,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 77
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 76.97934449999593,
+      "same_state_part_pairs_with_six_observed_failed_directions": 10,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07264",
+      "arm": "A",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 6,
+      "required": 12,
+      "completed_query_results": 150,
+      "charged_queries": 151,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 1,
+      "observed_rejection_causes": {
+        "path_collision": 144
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 7.882773124998494,
+      "same_state_part_pairs_with_six_observed_failed_directions": 24,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07264",
+      "arm": "B",
+      "success": false,
+      "termination": "wall_time_budget_exhausted",
+      "final_removed": 5,
+      "required": 12,
+      "completed_query_results": 132,
+      "charged_queries": 132,
+      "final_error": {
+        "type": "LimitError",
+        "message": "whole_episode_wall_deadline"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 127
+      },
+      "generated_code_errors": {
+        "LimitError": 1
+      },
+      "provider_errors": 0,
+      "model_seconds": 15.520803791998333,
+      "same_state_part_pairs_with_six_observed_failed_directions": 19,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_07264",
+      "arm": "C",
+      "success": true,
+      "termination": "goal_reached",
+      "final_removed": 12,
+      "required": 12,
+      "completed_query_results": 80,
+      "charged_queries": 80,
+      "final_error": null,
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {
+        "path_collision": 68
+      },
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 68.22244841700012,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_04452",
+      "arm": "A",
+      "success": false,
+      "termination": "limit",
+      "final_removed": 0,
+      "required": 49,
+      "completed_query_results": 0,
+      "charged_queries": 0,
+      "final_error": {
+        "type": "LimitError",
+        "message": "same 1 GiB resident-memory ceiling exceeded"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {},
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 0,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_04452",
+      "arm": "B",
+      "success": false,
+      "termination": "limit",
+      "final_removed": 0,
+      "required": 49,
+      "completed_query_results": 0,
+      "charged_queries": 0,
+      "final_error": {
+        "type": "LimitError",
+        "message": "same 1 GiB resident-memory ceiling exceeded"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {},
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 0,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    },
+    {
+      "case_id": "asap_04452",
+      "arm": "C",
+      "success": false,
+      "termination": "limit",
+      "final_removed": 0,
+      "required": 49,
+      "completed_query_results": 0,
+      "charged_queries": 0,
+      "final_error": {
+        "type": "LimitError",
+        "message": "same 1 GiB resident-memory ceiling exceeded"
+      },
+      "charged_queries_without_finished_trace": 0,
+      "observed_rejection_causes": {},
+      "generated_code_errors": {},
+      "provider_errors": 0,
+      "model_seconds": 0,
+      "same_state_part_pairs_with_six_observed_failed_directions": 0,
+      "interpretation": "Six observed failed directions in one state do not prove global impossibility;rotation,other removals or different physical assumptions may change feasibility."
+    }
+  ],
+  "no_unobserved_cause_claim": true
+}

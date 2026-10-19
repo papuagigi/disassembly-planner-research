@@ -1,0 +1,636 @@
+{
+  "utc": "2026-10-19T11:05:37.662899+00:00",
+  "roles": {
+    "discovery": {
+      "CADs": 90,
+      "CADs_with_completed_physical_queries": 90,
+      "CADs_with_observed_rejections": 90,
+      "CADs_with_measured_repair_pairs": 66,
+      "completed_physical_queries": 1962,
+      "charged_physical_queries": 1964,
+      "rejection_reasons": {
+        "path_collision": 1306,
+        "unstable_remainder": 40
+      },
+      "measured_pair_kinds": {
+        "alternative_direction": 661,
+        "changed_geometry": 17
+      },
+      "collection_errors": [
+        {
+          "case_id": "asap_07187",
+          "error": {
+            "type": "TimeoutError",
+            "message": "development collection wall limit"
+          }
+        },
+        {
+          "case_id": "asap_05957",
+          "error": {
+            "type": "TimeoutError",
+            "message": "development collection wall limit"
+          }
+        }
+      ],
+      "source_results": [
+        {
+          "case_id": "asap_03911",
+          "sha256": "678fbaffcc58d7d9bbd379afd21d2002b4a474a37b906cd31045e5e19283886a"
+        },
+        {
+          "case_id": "asap_07283",
+          "sha256": "b641ae11a0e103a1db99cc194564fcac46bf6c9e43b457d561099dde24142543"
+        },
+        {
+          "case_id": "asap_02196",
+          "sha256": "befeff9aa7679ea041f18a53b1a860633b83f43e5163852d3c913c2f731ff28f"
+        },
+        {
+          "case_id": "asap_03969",
+          "sha256": "83328bc771b3f211807215373276dfd9e8b8dee8b03ca0833bca2f82a0eb5b84"
+        },
+        {
+          "case_id": "asap_06528",
+          "sha256": "a47fdd78a3b551b9e86e96a1159a8060142d9a2fc589040b36f4691527888a91"
+        },
+        {
+          "case_id": "asap_05587",
+          "sha256": "ddc91164aed286b13ffcde49c9680e533d25d7ec154575d7fa80a489a9375cfa"
+        },
+        {
+          "case_id": "asap_07079",
+          "sha256": "2081f239d435138234394d32025232ba0ffc95467fa5173a2b15b388052cf1cd"
+        },
+        {
+          "case_id": "asap_06073",
+          "sha256": "ea1912145519ca7ec41aec932bc28388efa27080d5669ac6b2a650bb2cf23533"
+        },
+        {
+          "case_id": "asap_01038",
+          "sha256": "f71c032670f884e1ec0bf9b73a6224fa18565a22ec230d2f8bd358f875b1a71b"
+        },
+        {
+          "case_id": "asap_08161",
+          "sha256": "64ec1de5fa6a609aa0c3088456e2db636ca9bc2f50cd98016e58306801ef6b4f"
+        },
+        {
+          "case_id": "asap_03341",
+          "sha256": "3133bb019b2c6bc38c8a1c8862b129a0ce384e693fa1d6887fbb1f07d3e6d6b6"
+        },
+        {
+          "case_id": "asap_02629",
+          "sha256": "89f2e035ab7404aef76bcb30e330ef757ba6790780229d8eba212544d9d4ae13"
+        },
+        {
+          "case_id": "asap_06356",
+          "sha256": "42265c1941353037c13bb23bd2afd6f7ecade67bc2f6ffc752aaffc2e06a7285"
+        },
+        {
+          "case_id": "asap_07183",
+          "sha256": "df0f13e7fa0c5de8035f9b544c131c82a6018d8065b245761edbd6e674674f3d"
+        },
+        {
+          "case_id": "asap_00026",
+          "sha256": "b0efd73cab41f35e55d90b7a439d14a2c66ad205982dd65d95445a36fe14df47"
+        },
+        {
+          "case_id": "asap_05091",
+          "sha256": "5ad43912d5754b0d62ec5172d6b23b439e2b7200d79af0c8faa07e36759c61c6"
+        },
+        {
+          "case_id": "asap_06068",
+          "sha256": "ef18f3d23c693af413d50d42e24657b03e315182007e4251ae6b6c45308336dd"
+        },
+        {
+          "case_id": "asap_03841",
+          "sha256": "1941e8db7ac79d9f1745ec7f75e16f6e17bea59492372e6df1c11765dde4f9fb"
+        },
+        {
+          "case_id": "asap_01537",
+          "sha256": "f3289c27b3995f417f90496df7d95fdae278a97810805b37c73da492497caeaa"
+        },
+        {
+          "case_id": "asap_00791",
+          "sha256": "8c165d7f9b272a64139318dcc834c5b20f91d327035b31763f5e32d4a92139e7"
+        },
+        {
+          "case_id": "asap_00900",
+          "sha256": "67d0694128688b962550b0e0471f6140a95be3a5bf317e493eed198656523818"
+        },
+        {
+          "case_id": "asap_05970",
+          "sha256": "377b09d2d0f908f1968adc4cd6b93998a88d0bfc683ddf8c935bdf24c548b0e1"
+        },
+        {
+          "case_id": "asap_02406",
+          "sha256": "6825b6cbef8ffd1daefd63a22cc66c4930625c2eebf69521f55b4bc42434b5cb"
+        },
+        {
+          "case_id": "asap_05270",
+          "sha256": "97f24de101af87856b86f6a2f08cf64063134e70a5e95d88dbd3a31a71564202"
+        },
+        {
+          "case_id": "asap_04897",
+          "sha256": "2d9b8dca2e4de0da3c7b2d73d0ba9270216b5d6dd4dc12ede705b74172771745"
+        },
+        {
+          "case_id": "asap_03732",
+          "sha256": "2e43a784d95dba80c098cbbc3d002e75d35e9f4be159921f1b0ee1fe897c7365"
+        },
+        {
+          "case_id": "asap_01195",
+          "sha256": "cfda1c03e8b39af0b5bfa942f7910de319ba75b75299a6cd015a34a822e22bc8"
+        },
+        {
+          "case_id": "asap_03896",
+          "sha256": "b3e76512bf89273b5d0fd72997ed047da61e2a65b804a1ac2a9744fe9db5fef5"
+        },
+        {
+          "case_id": "asap_03895",
+          "sha256": "36d6c44062e38a7334bfbeb8ea0b7eb51d391f869501a0d223a3b7d4da731f90"
+        },
+        {
+          "case_id": "asap_04162",
+          "sha256": "06e2ef2614f51636e7f7cabfaf100d7785c7d4505d956f2e638e3691272e46df"
+        },
+        {
+          "case_id": "asap_00085",
+          "sha256": "6053fafb5a9809ffd1f26b33e1bbff5cd7fbcce153e0374c07bae76806b33b43"
+        },
+        {
+          "case_id": "asap_02026",
+          "sha256": "2a0587f47ed6880a377dbbfa90a6e4d548c01521561e2254a881bfe0581c40dd"
+        },
+        {
+          "case_id": "asap_06932",
+          "sha256": "59bb6018c1a44cec5a58d36d9dea2b643e8e4a75c93b3a757d5b2058038c782d"
+        },
+        {
+          "case_id": "asap_06693",
+          "sha256": "c6617522af71980c7aabfa4dd7ed9ea87ce9a2afd02376a2f1f3b47af79ff4b3"
+        },
+        {
+          "case_id": "asap_02960",
+          "sha256": "9f23ba3f49fa7e8e224476469c531b123f7adddb9d7ba1d59e4a5cdc5fc64619"
+        },
+        {
+          "case_id": "asap_02402",
+          "sha256": "91bf503af924714d5138c7891b39ef75182e4b3d960a67ff0e1e99a4f813e864"
+        },
+        {
+          "case_id": "asap_03644",
+          "sha256": "49946419ddf529f3232f0d5a12cbefd12fb79f8e4b82284fc45b6ff11de45b0b"
+        },
+        {
+          "case_id": "asap_00784",
+          "sha256": "e374a44d05f0bdf5c42f310b7d2c05ed2052006c577888bae25705e0c02e570a"
+        },
+        {
+          "case_id": "asap_05556",
+          "sha256": "dafa172418790ef48a31b3affc949bd1dea38d60ce687fe6d90583f4012996e1"
+        },
+        {
+          "case_id": "asap_06763",
+          "sha256": "1db7b3851ef5f01c11f06eda533af60b8b30945ef31eed4bc28635c704e8ff05"
+        },
+        {
+          "case_id": "asap_00993",
+          "sha256": "e4e3ab3bded10ea5dccfcf7be51819ebb36f05e6c95cf300f685dc76598e3412"
+        },
+        {
+          "case_id": "asap_04108",
+          "sha256": "22255bd31ead44718a3100b50bc3332363e36ae3d151bf647c4191be7488a986"
+        },
+        {
+          "case_id": "asap_05526",
+          "sha256": "8357ea8353922546c3bfca9c698013bd11df096a9951d6e4bc8d0ff064afa856"
+        },
+        {
+          "case_id": "asap_07722",
+          "sha256": "64f31a69e4f0427fd461b9ef963eaa95b2d126734091574e1a5e1312b1d4d993"
+        },
+        {
+          "case_id": "asap_07949",
+          "sha256": "ce280a95060cec6e53b0da6c2e64de45792dc8ee936dd24a4edf6609c6223155"
+        },
+        {
+          "case_id": "asap_02981",
+          "sha256": "0e6953d7099cdaa55b355bcf77ac32be9da5207bd76341a971e358fc72f66ee2"
+        },
+        {
+          "case_id": "asap_04025",
+          "sha256": "20ce565853e622eb2cdc8c6787685d93f329754e19c22f55b502f538e4ab9c5c"
+        },
+        {
+          "case_id": "asap_08216",
+          "sha256": "d86751984b06bb94059f70ca8c67105583f5846c9554167cab9b03ccd9dd8ed9"
+        },
+        {
+          "case_id": "asap_04203",
+          "sha256": "7ec4532948cf816c25b67c1b0adb8bfa2675e8eb55b236b64cf5e3b0588d2873"
+        },
+        {
+          "case_id": "asap_06845",
+          "sha256": "383799124f1e687fdc3e5d5c2e0199376c11d807570d011c5dda92fd9d2ca452"
+        },
+        {
+          "case_id": "asap_02621",
+          "sha256": "08ce4ca97ed12cd82782057ff02af333659a1c5a0844fbab7ccbd2d29da14ee7"
+        },
+        {
+          "case_id": "asap_02233",
+          "sha256": "454e706641c9ec068f95b9f7c8f977d9d927db8fd8cd0bded206df2304b73fe7"
+        },
+        {
+          "case_id": "asap_03314",
+          "sha256": "ec25bef29354334f85eed508549fc3051ade7a318602a8f727a39df0a5e802a4"
+        },
+        {
+          "case_id": "asap_05532",
+          "sha256": "c8725fcb51f45a6f3a7171eebf03d253ac313f4b579c1e433866e014d03af93f"
+        },
+        {
+          "case_id": "asap_03374",
+          "sha256": "a043bc84e8bb5a33c88362d07c016e4fad6ee4ea05376b0acca2a4e03ef82f45"
+        },
+        {
+          "case_id": "asap_05772",
+          "sha256": "14c32b094b9c7c62205c1727e0a18821164433591c33843cc1c04d16d90344a7"
+        },
+        {
+          "case_id": "asap_06045",
+          "sha256": "238a03499b60fa40bb6169398c4b386a6b195f771f7f864279f4eace1e63a984"
+        },
+        {
+          "case_id": "asap_03531",
+          "sha256": "3200ea47db56863a82e5ae3db66e6694dc2453330d61974194b7f44496e34370"
+        },
+        {
+          "case_id": "asap_05026",
+          "sha256": "7a216657ab9c2a1518c627fd3a7be20c778045aeda402543c0434a2a66c1fd79"
+        },
+        {
+          "case_id": "asap_02115",
+          "sha256": "fc9d45b5347f0ecf8fe50efbbe6d968dc8abd45d7d7c4aa52318148d4f9cae74"
+        },
+        {
+          "case_id": "asap_05810",
+          "sha256": "9ee4f8cda7d08fadda741de1f7d12096dc8942c57204af12b88365255367d7c2"
+        },
+        {
+          "case_id": "asap_06244",
+          "sha256": "e598704ef439ced91477d16803a036e0c0011ccd86057cc54975390fb2a2679c"
+        },
+        {
+          "case_id": "asap_03122",
+          "sha256": "ccf0f6a4a9a3f310b22469f0daf25f4d5acbb06de37f8f60e075e633fd685223"
+        },
+        {
+          "case_id": "asap_07143",
+          "sha256": "eef5423867cb343cc5d0959d5f759af8b6b520ec49a0b424a043e897f7cb0e37"
+        },
+        {
+          "case_id": "asap_07996",
+          "sha256": "8f2a35489a86993a1965f926a337ad7cdcdbf180c056a4e2956d50760305e006"
+        },
+        {
+          "case_id": "asap_06147",
+          "sha256": "7ce905d63eec98fe79eb9d46cdb99e196bffede51b0cb5932cf6addd025686bc"
+        },
+        {
+          "case_id": "asap_07192",
+          "sha256": "9b62968c122377e3c777a651a56d39e355e349cf24c39da5392a948e238c308c"
+        },
+        {
+          "case_id": "asap_02009",
+          "sha256": "f0b07c9234c03fdf4a7f18de6f1f85fcf07067359f7c303d7a35daa73e0f3c25"
+        },
+        {
+          "case_id": "asap_05183",
+          "sha256": "1425a1114f4f54439a16053b12330d8053d2a5dcd3b05254211e6c4fd5f16b4c"
+        },
+        {
+          "case_id": "asap_07300",
+          "sha256": "5f1702cb531f2fb53be128b8f511d8e915195c63f950baac3718cb6ec3656de4"
+        },
+        {
+          "case_id": "asap_01282",
+          "sha256": "7e1913675042625bef4e546e956fb9314b05ec2de39b29ca97fab897f16e63eb"
+        },
+        {
+          "case_id": "asap_06680",
+          "sha256": "6ce894cb8025bc5c54b95214a75e4255840676210567d09931d0c81a659934b1"
+        },
+        {
+          "case_id": "asap_07894",
+          "sha256": "d0953ac5d28d70f5ca6f0220bcf8f40fd9f0228f3732b2105e9f712677949e34"
+        },
+        {
+          "case_id": "asap_03658",
+          "sha256": "fc8c7dfd34c87a74c0d45bde2d37023b73f8de29af0cfa713b492d976d1870e1"
+        },
+        {
+          "case_id": "asap_01321",
+          "sha256": "b7a081cb115d552d342fe8ecb407166b65a7714ad48c33f34ac727cc382e3812"
+        },
+        {
+          "case_id": "asap_06236",
+          "sha256": "2bbe0e3db732b3446558e7ad063a9f31cd2d1c632a9320faf78b58550281840e"
+        },
+        {
+          "case_id": "asap_03247",
+          "sha256": "1b20b2b15c9fc2006af79d090a2c5d32c151799b8ce4c612c142ad454e669df2"
+        },
+        {
+          "case_id": "asap_07187",
+          "sha256": "1299fd0e9b1bb3e1391144bf67cd7641163279cbd5f63f1da07f2bceabfa11d7"
+        },
+        {
+          "case_id": "asap_06127",
+          "sha256": "bb778135207065efd2c7e91e35cd156809f99b5312db6b2f3557e87860287d02"
+        },
+        {
+          "case_id": "asap_05337",
+          "sha256": "92adb76862dae17341884164a3f491bb056de67e63a8e8b9c6fee4b5f83ac0ec"
+        },
+        {
+          "case_id": "asap_05946",
+          "sha256": "22ec760007742cc9980fd2a40ebe360f452728a02a65c18383103e75a7d8fd3b"
+        },
+        {
+          "case_id": "asap_03601",
+          "sha256": "fbfb4e76d371cadcc2b1ba722e19e0d78f1d1e28fc24471013ec50efb379df58"
+        },
+        {
+          "case_id": "asap_05957",
+          "sha256": "f06642767993d8e67c6fdda86a4befc3227663aec96d247097afb2b20149496f"
+        },
+        {
+          "case_id": "asap_03027",
+          "sha256": "808070b2229c05447c115915b1d2c6d00dc9e75507adf5fbdd391907244e10d7"
+        },
+        {
+          "case_id": "asap_07782",
+          "sha256": "b36128a152b31c498387dc02b9b564c6dd70aec451eb429204431dc2eb689313"
+        },
+        {
+          "case_id": "asap_05386",
+          "sha256": "f482049fb8b9b134e1c12392fed667d666ddde10fed019638130a495a1ca148a"
+        },
+        {
+          "case_id": "asap_04623",
+          "sha256": "c06924003320fa4097c898ac642d8de5dc9973389d73f8d640c0e9b83121f8ec"
+        },
+        {
+          "case_id": "asap_05328",
+          "sha256": "fe4d3fef97affb32a680012dd19d870cd40fcfb139a959c7094fa79d5fe7f3e1"
+        },
+        {
+          "case_id": "asap_03674",
+          "sha256": "894a386d711d4769d52b453e40f38e93b3091bb785037a0e6a614f239e3d53e4"
+        },
+        {
+          "case_id": "asap_05531",
+          "sha256": "e111daa8f7ff1e162b86e1c6a9ff76f6e56f16ad590cba857d5caf7be227dfff"
+        }
+      ]
+    },
+    "validation": {
+      "CADs": 12,
+      "CADs_with_completed_physical_queries": 12,
+      "CADs_with_observed_rejections": 12,
+      "CADs_with_measured_repair_pairs": 10,
+      "completed_physical_queries": 228,
+      "charged_physical_queries": 228,
+      "rejection_reasons": {
+        "path_collision": 141
+      },
+      "measured_pair_kinds": {
+        "alternative_direction": 76,
+        "changed_geometry": 1
+      },
+      "collection_errors": [],
+      "source_results": [
+        {
+          "case_id": "asap_03380",
+          "sha256": "f09c22d657b8b6e4e52c6118e7eabc7775f1ff6ca6cce47a2a995be9a1fcf787"
+        },
+        {
+          "case_id": "asap_07923",
+          "sha256": "a1470bd805b7abe0851a8d9d2e95dd62fb5299316edf493fe1054a6e271287a1"
+        },
+        {
+          "case_id": "asap_03851",
+          "sha256": "0dcca65d1aa4ddab16739fbfd26d0fb4b71ee259004051b4211ce18a1873504d"
+        },
+        {
+          "case_id": "asap_06764",
+          "sha256": "6eadae7f7caf118508f996d8e4d47234dea793b0f1e84e31a76c66bc3fa04275"
+        },
+        {
+          "case_id": "asap_06836",
+          "sha256": "ee3f568d2fb48b2e0b7857836c3dd20865608c7b76262f4aa8e9d9dd140b4f8f"
+        },
+        {
+          "case_id": "asap_06279",
+          "sha256": "fbbd01e21567a6b849e53f6a60f1438610df8786af609c589caa918c53b80a2a"
+        },
+        {
+          "case_id": "asap_06229",
+          "sha256": "fc34ef3fb6bffbc81bf74ecaf7caf010747420eb76e523b653c2984cde2d480f"
+        },
+        {
+          "case_id": "asap_03266",
+          "sha256": "0739bbb85cf487169f52fca89be9d69e732023cb929e9a4e448487735a5a5b9d"
+        },
+        {
+          "case_id": "asap_02335",
+          "sha256": "d0c2b61651bd54541e58856b932d4f717b278366606539807d0f2fb7435ff43b"
+        },
+        {
+          "case_id": "asap_02410",
+          "sha256": "22d55f5158630a23d28578f8fae4d5bc2f81aacc2a30cf3cf64c75d7278d7445"
+        },
+        {
+          "case_id": "asap_06126",
+          "sha256": "c86f1396286aae525834823a5e89ea793abc40078a417d83b5017e0e2cc66622"
+        },
+        {
+          "case_id": "asap_06216",
+          "sha256": "7a66af72a777c40160f3c8fc724abef42db0a0ffbfd0935a453bcc42469d680c"
+        }
+      ]
+    }
+  },
+  "admission": {
+    "status": "ADMITTED_BOUNDED_PHYSICAL_PROCEDURE",
+    "utc": "2026-10-19T08:35:39.257878+00:00",
+    "validations": [
+      {
+        "passed": false,
+        "case_id": "asap_03380",
+        "reason": "no independently witnessed bounded repair opportunity",
+        "no_model_calls": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_07923",
+        "original_reason": "path_collision",
+        "new_checks": 2,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_07923/result.json",
+        "result_sha256": "19918f1afe68e42842b17858fde806f9cd6971afb6f407de83852973a6aab353",
+        "repair_elapsed_seconds": 8.264369208998687,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_03851",
+        "original_reason": "path_collision",
+        "new_checks": 4,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_03851/result.json",
+        "result_sha256": "25389f8fc6c716b5563d4533068e4c4090c2bc519d55c5dd0fcb8b2ea00a709c",
+        "repair_elapsed_seconds": 10.481035292001252,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": false,
+        "case_id": "asap_06764",
+        "reason": "no independently witnessed bounded repair opportunity",
+        "no_model_calls": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_06836",
+        "original_reason": "path_collision",
+        "new_checks": 3,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_06836/result.json",
+        "result_sha256": "b845b4e0cf1e5ffbc09f2d612133c93329a23409dc208bbece8f1bf66f4ffef2",
+        "repair_elapsed_seconds": 10.600507540999388,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_06279",
+        "original_reason": "path_collision",
+        "new_checks": 3,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_06279/result.json",
+        "result_sha256": "c4e645177d0fa671b3855883051aff6d7df1dbcbd0ef05c09108e5a3d0cd5c8b",
+        "repair_elapsed_seconds": 8.949418916001378,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_06229",
+        "original_reason": "path_collision",
+        "new_checks": 2,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_06229/result.json",
+        "result_sha256": "f1e0d1828369591b13084796baec20cff9adf51743dcfd1084e7c1147332f6f0",
+        "repair_elapsed_seconds": 9.144749999999476,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_03266",
+        "original_reason": "path_collision",
+        "new_checks": 4,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_03266/result.json",
+        "result_sha256": "337891259b7d029ebff044c2bc9acc695bd768e6ac7b7bef9d6fa6dc737173bc",
+        "repair_elapsed_seconds": 13.665989875000378,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": true,
+        "case_id": "asap_02335",
+        "original_reason": "path_collision",
+        "new_checks": 6,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_02335/result.json",
+        "result_sha256": "fcd7cc69ac23fed234d08f9f5e6397bcdb6264a554c4f89c3da115e681766fa1",
+        "repair_elapsed_seconds": 14.086031250000815,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      },
+      {
+        "passed": false,
+        "case_id": "asap_02410",
+        "reason": "verifier error or interrupted attempt",
+        "error": "AssertionError(('unrecorded query is not an allowed interrupted tail', {'event_index': 9, 'operation': 'remove', 'started_at_utc': '2026-10-19T08:34:58.134001+00:00', 'state_key_before': 'e8893a391d46c2021433c2c1cf304cbe0a577ef19009c59726c3c171d5978062', 'state_key_after': 'e8893a391d46c2021433c2c1cf304cbe0a577ef19009c59726c3c171d5978062', 'checks_before': 7, 'checks_after': 7, 'status': 'error', 'part_id': '2', 'direction': '-x', 'finished_at_utc': '2026-10-19T08:34:58.136241+00:00', 'valid': False, 'committed': False, 'error': {'type': 'BudgetLimit', 'message': 'shared checker budget exhausted'}}))",
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+      },
+      {
+        "passed": false,
+        "case_id": "asap_06126",
+        "reason": "verifier error or interrupted attempt",
+        "error": "ProviderError('Model used tools; response rejected to preserve the planner input boundary')",
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+      },
+      {
+        "passed": true,
+        "case_id": "asap_06216",
+        "original_reason": "path_collision",
+        "new_checks": 6,
+        "repaired_target_committed": true,
+        "unsafe_fixed_part_attempt": false,
+        "repeated_original_unchanged_rejection": false,
+        "execution_error": null,
+        "independent_physical_replay": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/development/document_validation/asap_06216/result.json",
+        "result_sha256": "d387cb0b2054f6c3db49f3c56b6edb4b6eed349fed52068a4767563e1227116a",
+        "repair_elapsed_seconds": 19.018794833000356,
+        "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+        "no_future_repair_sequence_supplied": true
+      }
+    ],
+    "passed": 8,
+    "required": 8,
+    "required_fraction": 0.6666666666666666,
+    "required_independent_CADs_min": 6,
+    "actual_validation_CADs": 12,
+    "document_sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+    "generation_error": null,
+    "scope": "Bounded independent physical repair,not full-planner robustness or held-out efficacy",
+    "no_evaluation_input": true,
+    "no_model_weight_updates": true
+  },
+  "scope": "Generic physical-query collection,not trained-policy scores. Discovery supplies induction evidence;validation repair witnesses are withheld from the verifying model. No model weights update."
+}

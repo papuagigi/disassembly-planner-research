@@ -1,0 +1,82 @@
+{
+  "utc": "2026-10-19T11:05:37.663457+00:00",
+  "discovery_component_count_distribution": {
+    "4": 20,
+    "7": 8,
+    "10": 1,
+    "22": 1,
+    "3": 35,
+    "6": 7,
+    "9": 3,
+    "8": 3,
+    "13": 2,
+    "5": 8,
+    "15": 1,
+    "12": 1
+  },
+  "validation_component_count_distribution": {
+    "3": 9,
+    "5": 2,
+    "8": 1
+  },
+  "test_component_count_distribution": {
+    "13": 2,
+    "19": 1,
+    "12": 1,
+    "24": 1,
+    "26": 1,
+    "11": 1,
+    "17": 1,
+    "20": 1,
+    "22": 1,
+    "15": 1,
+    "50": 1
+  },
+  "development_preparation_status_counts": {
+    "initial_physics_or_capacity_excluded": 57,
+    "collision_preparation_excluded": 72,
+    "initially_qualified_full_path_unknown": 102,
+    "source_geometry_excluded": 2,
+    "duplicate_product_geometry_excluded": 2
+  },
+  "evaluation_preparation_status_counts": {
+    "initially_qualified_full_path_unknown": 12,
+    "initial_physics_or_capacity_excluded": 8,
+    "collision_preparation_excluded": 40,
+    "source_geometry_excluded": 1
+  },
+  "paired_CADs": true,
+  "one_stochastic_model_episode_per_CAD_and_arm": true,
+  "model_sampling_seed_not_exposed": true,
+  "same_resource_ceiling_not_identical_realized_token_spend": true,
+  "full_disassembly_goal": "n-1 removals with one permanent original fixture",
+  "pre_score_test_count_amendment": {
+    "status": "PROSPECTIVE_BEFORE_ANY_SCORED_EPISODE",
+    "utc": "2026-10-19T09:38:17.264643+00:00",
+    "user_minimum": 10,
+    "original_operational_maximum": 15,
+    "effective_test_target": 12,
+    "reason": "Input conversion cost exceeded the operational estimate;use the completed fixed-order prefix above the user minimum,without examining any actor outcomes.",
+    "source_order_unchanged": true,
+    "model_bank_actors_physics_API_and_episode_caps_unchanged": true,
+    "scored_jobs_before_amendment": 0,
+    "test_model_calls_before_amendment": 0,
+    "original_frozen_protocol_sha256": "89e56ceec12f5cdcbe1d176882f28224280c72b605cf556689edcfbfb1ed549d",
+    "source_progress_sha256": "e16fef3eb3c606ec106f5f382ee20054601105087b0ea48fc50aa415522d6965",
+    "selected_case_ids": [
+      "asap_06245",
+      "asap_08116",
+      "asap_07699",
+      "asap_08121",
+      "asap_00319",
+      "asap_07604",
+      "asap_00740",
+      "asap_01920",
+      "asap_02104",
+      "asap_07632",
+      "asap_07264",
+      "asap_04452"
+    ]
+  },
+  "random_sample_of_entire_ASAP": false
+}
