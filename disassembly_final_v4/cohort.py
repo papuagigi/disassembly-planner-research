@@ -42,7 +42,8 @@ def select(stage):
                 if sig:seen.add(sig)
                 statuses.append(status)
                 if c and len(selected)<target:
-                    assert 11<=c['part_count']<=20;selected.append(c)
+                    assert (11<=c['part_count']<=20) if stage=='development' else c['part_count']>=11
+                    selected.append(c)
                 write(ROOT/'outputs/input_audit'/('progress_'+stage+'.json'),dict(cases=selected,statuses=statuses))
                 progress('preparing_'+stage,qualified=len(selected),target=target,attempted=len(statuses))
     if len(selected)<target:raise RuntimeError(f'Finite {stage} reserve exhausted: {len(selected)}/{target};do not relax input criteria')

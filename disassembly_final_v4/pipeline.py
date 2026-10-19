@@ -11,8 +11,8 @@ from .common import ROOT,WORKSPACE,read,write,utc
 
 def stage(name):
     write(ROOT/'outputs/pipeline_state.json',dict(utc=utc(),pid=os.getpid(),status='RUNNING',phase=name))
-    from .post_status import main
-    main()
+    from .post_status import checkpoint
+    checkpoint()
 
 def wait_for_prior(filename):
     prior=WORKSPACE/'disassembly_docskills_v3'

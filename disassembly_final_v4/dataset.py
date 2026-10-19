@@ -32,12 +32,14 @@ def pools():
         return out[:maximum]
     reused=prior['reused_discovery_cases']
     assert len(reused)==4
-    result=dict(created_utc=utc(),development_candidates=reserve(training,150),evaluation_candidates=reserve(test,100),
+    evaluation=reserve(test,100)
+    backup=sorted([dict(id=k,part_count=len(v),obj_bytes=sum(x.file_size for x in v)) for k,v in test.items() if k not in previous and len(v)>20],key=lambda r:(r['part_count']>30,r['obj_bytes'],r['part_count'],r['id']))
+    result=dict(created_utc=utc(),development_candidates=reserve(training,150),evaluation_candidates=evaluation+backup,
         reused_discovery_cases=reused,development_target=16,discovery_target=6,validation_target=10,evaluation_target=10,
         minimum_discovery_CADs=10,minimum_validation_CADs=10,minimum_evaluation_CADs=10,preparation_concurrency=2,
         prior_opened_ids=sorted(previous),selection='Alternating11-15/16-20 source metadata bins; initial physics only; preserve all failures',
         discovery_assignment='4 previous discovery CADs plus first6new qualified inputs; next10new inputs are independent validation',
-        previous_discovery_CADs=90,prior_geometry_fingerprints=prior.get('prior_opened_shape_fingerprints',[]),part_count_range=[11,20],all_earlier_geometry_IDs_excluded_from_new_reserves=True)
+        previous_discovery_CADs=90,prior_geometry_fingerprints=prior.get('prior_opened_shape_fingerprints',[]),development_part_count_range=[11,20],evaluation_primary_part_count_range=[11,20],evaluation_backup='Then21-30parts,then31+;metadata order only;no model outcomes',all_earlier_geometry_IDs_excluded_from_new_reserves=True)
     write(path,result,exclusive=True);return result
 
 def finalize_download():

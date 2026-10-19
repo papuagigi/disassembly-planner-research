@@ -51,6 +51,8 @@ def collect():
         audit=audit_result(folder,case)
         rows.append(dict(case=case,result_path=str(folder/'result.json'),sha256=sha(folder/'result.json'),
             metrics=summarize(result),repairs=repairs(result),audit=audit['status']))
+        from .post_status import checkpoint
+        checkpoint()
     value=dict(utc=utc(),cases=rows,full_search_CADs=len(rows),previous_local_probe_discovery_CADs=90,
         reused_discovery_CADs=4,new_discovery_CADs=6,unique_discovery_CADs_total=96,
         actual_backtracking_episodes=sum(r['metrics']['restores']>0 for r in rows))
@@ -122,6 +124,8 @@ def validate_and_freeze_bank():
             actual_restores=result.get('recovery_state',{}).get('restore_count',0),candidate_was_available=bool(proposal),
             document_sha256=proposal['document_sha256'] if proposal else None)
         write(receipt,value,exclusive=True);rows.append(value)
+        from .post_status import checkpoint
+        checkpoint()
     admission=admission_decision(rows,error);admission['document_sha256']=proposal['document_sha256'] if proposal else None
     ap=ROOT/'outputs/development/new_document/admission.json'
     if ap.exists():admission=read(ap)

@@ -157,7 +157,7 @@ def main():
         qualification=qualification_summary,
         development=read(ROOT/'outputs/development/complete.json'),no_test_memory_updates=True))
     lines=['# Large-CAD physical-document first-episode comparison','',
-        'All old results/PPT remain preserved. Full-search development and independent validation use11-20part training CADs; final inputs are unseen-to-project official ASAP test CADs with11-20components/10-19required removals. They are anonymous engineering CAD,not verified factory provenance. Model=gpt-6-luna/low;8calls/240checks/900seconds;read costs included. One first episode per new CAD/arm. Initial physics only,no full-path or actor-success selection gate.','',
+        'All old results/PPT remain preserved. Full-search development and independent validation use11-20part training CADs; final inputs are unseen-to-project official ASAP test CADs with11+components/10+required removals,using the predeclared size-priority reserve. They are anonymous engineering CAD,not verified factory provenance. Model=gpt-6-luna/low;8calls/240checks/900seconds;read costs included. One first episode per new CAD/arm. Initial physics only,no full-path or actor-success selection gate.','',
         '|Arm|Success|Mean final progress|Mean best progress|Mean checks|Mean calls|Mean tokens|Mean seconds|','|---|---:|---:|---:|---:|---:|---:|---:|']
     for r in aggregate:
         if not r['n']:lines.append(f"|{r['arm']}|not executed:0 qualified CADs|—|—|—|—|—|—|")

@@ -45,6 +45,8 @@ def main():
                 architecture=conf['architecture'],bank_path=str(ROOT/'memory'/(conf['bank']+'.json')),
                 limits=manifest['limits'],phase='evaluation',arm=arm,protocol_sha256=manifest['protocol_sha256']))
             completed.append(dict(case_id=case['case_id'],arm=arm,result_path=str(folder/'result.json'),sha256=sha(folder/'result.json')))
+            from .post_status import checkpoint
+            checkpoint()
     write(done,dict(status='COMPLETE',created_utc=utc(),episodes=completed,expected=manifest['planned_episodes'],
         protocol_sha256=manifest['protocol_sha256'],no_test_memory_updates=True),exclusive=True)
     progress('first_episode_campaign_complete',episodes=len(completed),cases=len(manifest['cases']))

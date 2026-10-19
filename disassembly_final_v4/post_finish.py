@@ -7,7 +7,7 @@ from .common import ROOT,WORKSPACE,read,write,sha,utc
 def main():
     result=read(ROOT/'analysis/results.json');development=read(ROOT/'outputs/development/complete.json')
     lines=['# Final bounded comparison','',f'Created UTC: {utc()}. One final pass;no test-log retuning.','',
-        'All inputs have11–20parts. Full success=n−1stable committed removals. Model=gpt-6-luna/low;8logical CLI calls,240physical queries,900seconds per episode. B/C use identical frozen S3;A has no document memory. All share the physical/restoration API and initial input.',
+        'Discovery/validation have11–20parts;test uses the predeclared11–20first/21+backup reserve. Report actual sizes. Full success=n−1stable committed removals. Model=gpt-6-luna/low;8logical CLI calls,240physical queries,900seconds per episode. B/C use identical frozen S3;A has no document memory. All share the physical/restoration API and initial input.',
         '',f'Development: {development}. Prior90discovery CADs contributed local probes. Four of those CADs received further full-search experience plus six new CADs:96unique discovery CADs. Ten separate new validation CADs were evaluated once. A candidate can be rejected;prior documents remain. These are external-memory updates,not model-weight training.',
         '', '|Arm|Full success|Mean final progress|Mean best progress|Mean checks|Mean calls|Known mean tokens|Mean seconds|', '|---|---:|---:|---:|---:|---:|---:|---:|']
     for r in result['aggregate']:

@@ -1,5 +1,5 @@
 """Small truthful handoff snapshots for humans and other agents."""
-from .common import ROOT,read,write,utc
+from .common import ROOT,WORKSPACE,read,write,utc
 
 def optional(path,default=None):
     p=ROOT/path
@@ -12,6 +12,7 @@ def main():
     validation=list((ROOT/'outputs/development/full_validation').glob('*/result.json'))
     scored=list((ROOT/'outputs/evaluation/trials').glob('*/*/result.json'))
     value=dict(utc=utc(),state=state,selected_discovery=len(selected.get('discovery_cases',[])),
+        live_progress=optional('outputs/progress.json',{}),
         selected_validation=len(selected.get('validation_cases',[])),completed_full_discovery=len(discovery),
         completed_independent_validation=len(validation),completed_first_test_episodes=len(scored),
         targets=dict(full_discovery=10,validation=10,test_CADs=10,test_episodes=30),
@@ -28,7 +29,7 @@ Controlling plan: PLAN.md. Exactly one final learning → independent validation
 
 State: {state}
 
-Actual finished full-search discovery: {len(discovery)}/10. Independent full-search validation: {len(validation)}/10. First test episodes: {len(scored)}/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. All new full-search/validation/test inputs have11–20parts.
+Actual finished full-search discovery: {len(discovery)}/10. Independent full-search validation: {len(validation)}/10. First test episodes: {len(scored)}/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
 
 A=generated code/no docs;B=same generated code/frozen S3;C=conditional graph+LLM order+fixed DFS/same S3. Same API,initial state,gpt-6-luna/low,8logical model turns,240physical queries,900seconds. Document review is charged. A's failure-free memory resets between products;within-episode feedback is allowed for all.
 
@@ -41,5 +42,14 @@ Use the existing Python environment with PYTHONDONTWRITEBYTECODE=1. Supervisor: 
     (ROOT/'AGENT_HANDOFF.md').write_text(text)
     (ROOT/'CLAUDE.md').write_text('# Recovery instructions only\n\nClaude is not assigned. Read PLAN.md and AGENT_HANDOFF.md. Never rerun started episodes or edit frozen actor/bank/physics files. No test-data learning or PPT before result review.\n')
     return value
+
+def checkpoint():
+    """Publish only between completed episodes, outside every scored wall cap."""
+    main()
+    script=WORKSPACE/'collaboration_tools/publish_snapshot.py'
+    if script.exists():
+        import subprocess,sys
+        p=subprocess.run([sys.executable,'-B',str(script)],capture_output=True,text=True)
+        write(ROOT/'outputs/github_publish_latest.json',dict(utc=utc(),returncode=p.returncode,stdout=p.stdout[-1000:],stderr=p.stderr[-1000:]))
 
 if __name__=='__main__':main()
