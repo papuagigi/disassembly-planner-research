@@ -1,0 +1,184 @@
+{
+  "utc": "2026-10-19T07:15:40.919545+00:00",
+  "records": [
+    {
+      "id": "00832",
+      "fingerprint": "ca711c098bca6102d67c1e2e1321f06f750b47918d69a546565793a82c25e7ff",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00832/source_inventory.json",
+      "sha256": "dd042d044b3f910faa7112965023b94037e70ee0f600a58425a63e57d85e025d"
+    },
+    {
+      "id": "00861",
+      "fingerprint": "4603938ea281bbda5a674f047308c112f8cbf06762cfbfb5c386694142cc4230",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00861/source_inventory.json",
+      "sha256": "d08b9f20a179c6aaedde845a5058c63e992f62820f4e1e94d6234de2ea29bc1a"
+    },
+    {
+      "id": "00914",
+      "fingerprint": "4a73c8dd71a5c9c38262216f6823b242c165adb5632d2fc1f4c7d27c14dc14b6",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00914/source_inventory.json",
+      "sha256": "3223c6ab637188ec406b851c72fc6fc3251ca0327038f7a41be349181640350f"
+    },
+    {
+      "id": "01047",
+      "fingerprint": "f642ec5fc9501ce719ed0ef6dad6c6d0d329e3a7ff47d4748bd465dabb57aff8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01047/source_inventory.json",
+      "sha256": "f1721f5384c40ab6d3d5634bac39fd5667df76254c42d3b58ccbb6e4cdcf6b36"
+    },
+    {
+      "id": "01275",
+      "fingerprint": "a962d2eb700f82dfd7b6e093efbe04f0f5ae70a799b98a232fcc3415f81f28dc",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01275/source_inventory.json",
+      "sha256": "fb081f6e3079caae962c885e12cc12be3b914f4405537bc33dcfee6c33f794dc"
+    },
+    {
+      "id": "00953",
+      "fingerprint": "695f8b97778d9ae45b6ac9be412f6020fdfbda3b925319772dcc836a98ffd3f8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00953/source_inventory.json",
+      "sha256": "762fc2e0afdd004d0b29cdf1e0325b7aeaa4b075cd988ec441a6bcc3bf185a93"
+    },
+    {
+      "id": "01041",
+      "fingerprint": "504cccce19345a7e7b33e1f18a0c433be92b05fcd589d82b183c424112ed3f21",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01041/source_inventory.json",
+      "sha256": "1c75355167718b2ef1b95075db45ac25a249a4c0ec248ab79c8189c6ce71dd39"
+    },
+    {
+      "id": "00880",
+      "fingerprint": "d37d11e0a8d15a52589ec54798e639c463225a71df18c867cc219bc24e3475b8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00880/source_inventory.json",
+      "sha256": "729ab363f44668b70135af7b0e1387ad73bf54fcd3839272bfc98095ae30a55b"
+    },
+    {
+      "id": "00845",
+      "fingerprint": "9778c7f2aebed85042e9c8d346f5859688c0c575d2a5b371e64fcbec46169c8b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00845/source_inventory.json",
+      "sha256": "dab7052c170b42a0b59edb3ba6144cce9319239561060bb5ea0df56263638139"
+    },
+    {
+      "id": "01159",
+      "fingerprint": "b36b80337ec966985aab17e9b1c98e5cdad28ca47fa27d43f91561ca7f7765e3",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01159/source_inventory.json",
+      "sha256": "fc6139f95bbcd2b1538789067e031f7917c814461e523797fcf4231dd7b6a1a9"
+    },
+    {
+      "id": "00927",
+      "fingerprint": "94db492919b1a6603dc65c54627200e8c38c1a6bdc44a708d66217a3b22ee391",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00927/source_inventory.json",
+      "sha256": "ca9ab7613734934de01d2c30fea0e6b1fcf37d0ba5dc74d4dd2d60ba0ba9aa80"
+    },
+    {
+      "id": "01005",
+      "fingerprint": "a545a822009d0da1919ee52a7385454bfa3ac1f21ca94edc9a5de8d47a7c7f6e",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01005/source_inventory.json",
+      "sha256": "198868cfb9cd2689fdc24b142cb4e5e3da777eee99fd7469ac1ba7323264b5a6"
+    },
+    {
+      "id": "01262",
+      "fingerprint": "b6486ecdb907c77f4bf7c42574844cae95bc7475b9613a0f75caea358e8c1959",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01262/source_inventory.json",
+      "sha256": "7cc0ebf58c4485f9fe127a7d5e3ad05f8ac92d575ec253c3ca71151562842d45"
+    },
+    {
+      "id": "00944",
+      "fingerprint": "774e7e585ccd8e3cc4500c7c54cd9514db52b6159e0de719975c9ccf3b4a9d47",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00944/source_inventory.json",
+      "sha256": "fc55d8b2298739b6d620d892cd01f04cb800bdfba3b96b2512897d9b4c4d695a"
+    },
+    {
+      "id": "00992",
+      "fingerprint": "524cb0560a41bfc6e5624a7973e58a463c1752574c34afd5a306291f53f2a74b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00992/source_inventory.json",
+      "sha256": "0a137be6cb3007befa8cd3d7504473b113a9c80cb17e372e164295dd92b4f8ce"
+    },
+    {
+      "id": "01027",
+      "fingerprint": "aeca60ae526d1558d28dff0d1fb91b970698ddafc6e841dae2f31f86255dfa8e",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01027/source_inventory.json",
+      "sha256": "c7cf91161807caf0ff8a34cdc909f1cb28949c7f08bc9ddb0703f542eccfb40b"
+    },
+    {
+      "id": "00960",
+      "fingerprint": "30e3ea50f17e24bee68354e5ac6c88ec49b7baccbfa1a2a63c555df5d3fb1809",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00960/source_inventory.json",
+      "sha256": "f31ccee4544696e91672bb85dab4f3e0c1533d788b298e36ae668ddd8479474d"
+    },
+    {
+      "id": "01045",
+      "fingerprint": "7fd535d6571b161091864f9ddb80def03542c8e42a54198a59dcd3c5e0c16c41",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01045/source_inventory.json",
+      "sha256": "e22e6385d5c83044cdf9faa2e13e217d321facb1a4ea8edfb8414f68fcd89d6d"
+    },
+    {
+      "id": "00848",
+      "fingerprint": "3703898ad017a9681dbef4b29dd7e94a04ee63136fbfa7ba4d3d546f41f39a06",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00848/source_inventory.json",
+      "sha256": "3d542f24c91bf84c4139a8282de5c92803b99cf49adaca3c3201773a3e03ae62"
+    },
+    {
+      "id": "00846",
+      "fingerprint": "bfa2ff0278c2f2b00d8c7a741ed405e358ab70dc8b02bbb02970e507e79f7557",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00846/source_inventory.json",
+      "sha256": "8be5136aec74e37f44bff2f18de3b21217a99c7abe0acb005e59910c4087eedd"
+    },
+    {
+      "id": "00399",
+      "fingerprint": "c6a821eba52988eb361a247a1f1543b197939ffee95e470e26a739de118b7671",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00399/source_inventory.json",
+      "sha256": "4ac50e768f84c1778c027668abeb7ddc62c1684a0ea48880579e559c8bfc3c25"
+    },
+    {
+      "id": "00252",
+      "fingerprint": "3224bc696d34a7a05f401735d868e726cc11f1eea75cdd2e6f68f0b097a0549b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00252/source_inventory.json",
+      "sha256": "01617818c951993d02c962a03c0f0aa71bed82804395cb29e17055723a0e068c"
+    },
+    {
+      "id": "00403",
+      "fingerprint": "3498fc55c2ed959a0ce85a226aaafb54134576cd8f77c1bddeab05e2f7d48df7",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00403/source_inventory.json",
+      "sha256": "90152a0c820fce83c5a00a9daf09240548da35dc11ba56b39f93cbd8ed60b29c"
+    },
+    {
+      "id": "00239",
+      "fingerprint": "ccef08fb2d6b5096bef471765214bb72fd55f4d4aaf0be131c75603b74b680b9",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00239/source_inventory.json",
+      "sha256": "71005167d497e5076e7af71b514b728c58a51b3c36c8c1f1799d45dddf2b510c"
+    },
+    {
+      "id": "00075",
+      "fingerprint": "6d8ca5629ff97bc9ed73a00289039b5e930a08f6b7cf7fb32208d46c1347ec10",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00075/source_inventory.json",
+      "sha256": "8528d7c98ef4489edb1402c601805e25140a932f58ded83de8e592e4fa7a4e9f"
+    }
+  ],
+  "covered_prior_IDs": [
+    "00075",
+    "00239",
+    "00252",
+    "00399",
+    "00403",
+    "00832",
+    "00845",
+    "00846",
+    "00848",
+    "00861",
+    "00880",
+    "00914",
+    "00927",
+    "00944",
+    "00953",
+    "00960",
+    "00992",
+    "01005",
+    "01027",
+    "01041",
+    "01045",
+    "01047",
+    "01159",
+    "01262",
+    "01275"
+  ],
+  "all_prior_geometry_IDs": 174,
+  "coverage_limit": "Only compatible pre-existing geometry inventory hashes;older ID exclusions still apply where no compatible fingerprint exists. No evaluation input opened."
+}

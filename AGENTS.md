@@ -1,0 +1,3 @@
+# Collaboration rules
+
+Read README.md,docs/AGENT_HANDOFF.md and docs/PLAN.md first. Preserve earlier results. Current study is one bounded learning-validation-freeze-test cycle. Do not seek a desired winning arm. No model-weight update. Store physical procedures as LLM-readable SKILL.md,not hidden executable skill modules. Keep A/B/C model,API,initial input and budgets matched. Never learn from final test logs or rerun a started first episode. Record actual versus planned counts and unknown token usage. Preserve licenses. No credentials/raw CAD archives/PPT in commits. Use branches for additional work. Claude is not assigned by the original task.

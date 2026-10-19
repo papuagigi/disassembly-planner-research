@@ -1,0 +1,43 @@
+{
+  "status": "ADMITTED_PHYSICAL_PROCEDURE",
+  "created_utc": "2026-10-19T01:38:32.540011+00:00",
+  "document_sha256": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c",
+  "validations": [
+    {
+      "seed": "support",
+      "passed": true,
+      "attempts": [
+        {
+          "passed": true,
+          "error": null,
+          "new_physical_checks": 3,
+          "other_stable_removals": 1,
+          "exact_rejected_query_accepted_after_changed_geometry": true,
+          "independent_physical_replay": "PASS",
+          "no_claim_of_full_planner_reliability": true
+        }
+      ]
+    },
+    {
+      "seed": "interlock",
+      "passed": true,
+      "attempts": [
+        {
+          "passed": true,
+          "error": null,
+          "new_physical_checks": 3,
+          "other_stable_removals": 1,
+          "exact_rejected_query_accepted_after_changed_geometry": true,
+          "independent_physical_replay": "PASS",
+          "no_claim_of_full_planner_reliability": true
+        }
+      ]
+    }
+  ],
+  "strict_full_actor_integration_status": "REJECTED",
+  "strict_rejections_preserved": true,
+  "scope": "Independent bounded physical failure repair;not API-only repair,not full-search robustness,not held-out benefit",
+  "no_new_document_candidate": true,
+  "no_model_weight_update": true,
+  "heldout_efficacy_unknown": true
+}

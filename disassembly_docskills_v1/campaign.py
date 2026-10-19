@@ -1,0 +1,45 @@
+"""Frozen first-episode comparison; A equals the architecture-matched B(S0)."""
+from pathlib import Path
+from .common import ROOT,read,write,sha,utc,progress
+from .contracts import ARMS
+from .protocol import verify
+from .driver import run
+
+def bind():
+    frozen=verify();selected=read(ROOT/'outputs/input_audit/selected_cases.json')
+    assert selected['status']=='FINITE_RESERVE_COMPLETE'
+    path=ROOT/'outputs/evaluation/manifest.json'
+    if path.exists():return read(path)
+    assets={};cases=selected['cases']
+    for entry in cases:
+        cp=Path(entry['case_path']);case=read(cp)
+        paths={cp,Path(entry['shared_path']),Path(entry['reference_path'])}
+        for p in case['parts']:
+            paths.add((cp.parent/p['visual_mesh']).resolve())
+            paths.update((cp.parent/x).resolve() for x in p['collision_meshes'])
+        assets.update({str(p):sha(p) for p in paths})
+    manifest=dict(created_utc=utc(),status='FINAL_INPUTS_BOUND',protocol_sha256=sha(ROOT/'outputs/protocol/freeze.json'),
+        cases=cases,asset_sha256=assets,arms=ARMS,limits=frozen['limits'],planned_episodes=4*len(cases),
+        episode_policy=frozen['episode_policy'],reference_visible_to_actors=False,
+        library_updated_on_final_products=False,model=frozen['model'],reasoning_effort=frozen['reasoning_effort'])
+    write(path,manifest,exclusive=True);return manifest
+
+def main():
+    manifest=bind();verify()
+    arms=list(ARMS);completed=[]
+    for i,case in enumerate(manifest['cases']):
+        order=arms[i%len(arms):]+arms[:i%len(arms)]
+        for arm in order:
+            verify()
+            for p,expected in manifest['asset_sha256'].items():assert sha(p)==expected
+            conf=ARMS[arm];folder=ROOT/'outputs/evaluation/trials'/case['case_id']/arm
+            progress('first_episode',case=case['case_id'],arm=arm,completed=len(completed),planned=manifest['planned_episodes'])
+            result=run(dict(folder=str(folder),case_path=case['case_path'],shared_path=case['shared_path'],
+                architecture=conf['architecture'],bank_path=str(ROOT/'memory'/(conf['bank']+'.json')),
+                limits=manifest['limits'],phase='evaluation',arm=arm,protocol_sha256=manifest['protocol_sha256']))
+            completed.append(dict(case_id=case['case_id'],arm=arm,result=str(folder/'result.json'),sha256=sha(folder/'result.json')))
+    write(ROOT/'outputs/evaluation/complete.json',dict(status='COMPLETE',created_utc=utc(),episodes=completed,
+        expected=manifest['planned_episodes'],protocol_sha256=manifest['protocol_sha256'],no_test_memory_updates=True),exclusive=True)
+    progress('first_episode_campaign_complete',episodes=len(completed))
+
+if __name__=='__main__':main()

@@ -1,0 +1,46 @@
+# Failure-driven disassembly planner
+
+ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하는 연구 prototype입니다. 실패 경험을 LLM이 읽을 수 있는 `SKILL.md`로 만들고, 처음 보는 CAD에서 도움이 되는지 비교합니다. 모델 가중치는 학습하지 않습니다.
+
+## 지금 진행 중인 마지막 실험
+
+- 개발: 11~20부품 CAD 10개에서 최대15분 동안 전체 분해와 실제 backtracking 경험 수집. 기존90개 CAD의 국소 경험과 기존 문서는 보존합니다.
+- 독립 검증: 다른 training CAD 10개. 새 문서는 한 번만 생성·검증합니다. 검증 실패 시 기존 문서만 유지합니다.
+- 고정 후 테스트: 새 official test CAD 10개 × A/B/C. 각 조건은 같은 gpt-6-luna/low,8논리 호출,240물리 검사,900초 상한을 사용합니다.
+- A: LLM 코드 생성,문서 없음. B: 같은 코드 생성,고정 SKILL.md. C: Graph·LLM 순위·DFS,동일한 SKILL.md.
+- 결과가 좋게 나올 때까지 개선을 반복하지 않습니다. 최종 PPT는 결과 검토 후 만듭니다.
+
+현재 상태는 [docs/status.json](docs/status.json), 세부 실행·복구 지침은 [AGENT_HANDOFF](docs/AGENT_HANDOFF.md), 실험 조건은 [PLAN](docs/PLAN.md)을 읽으세요. 아직 생성되지 않은 결과 파일은 완료를 의미하지 않습니다. 현재 공개본은 작업 중인 코드 snapshot입니다.
+
+## 입력과 판단 흐름
+
+부품별 OBJ와 조립 위치 → 원본 형상 충돌 검사/초기 물리 검증 → LLM의 코드 또는 후보 순위 → 검증된 제거·checkpoint 복원 → MuJoCo 잔여 조립체 안정성 → 로그와 다시보기.
+
+목표는 고정된 원래 부품 하나를 제외한 n−1개 부품의 안정적인 제거입니다. 한 부품은 영구 고정되며 중력으로 떨어지지 않습니다. 현재 이동은 회전 없는 여섯 축 방향 직선 추출입니다. 가상 checkpoint 복원은 실제 재조립 동작이 아닙니다. 원본 ASAP 동역학·로봇 실험을 그대로 재현한 것은 아닙니다.
+
+## 폴더
+
+- `disassembly_final_v4/`: 현재 마지막 실험의 supervisor,학습·검증·고정·평가,문서 bank,설정.
+- `docs/`: 협업·복구 지침과 앞선 실험의 출처 요약.
+- `results/final_v4/`: 최종 집계가 생성되면 갱신됩니다.
+- `viewer/`: MuJoCo 기록을 재생하는 Three.js viewer. 대용량 OBJ/episode는 이 저장소에 자동 업로드하지 않습니다.
+- 나머지 `disassembly_*`: 현재 엔진의 import 의존성을 보존한 이전 구현입니다. 현재 실행 진입점은 v4입니다.
+
+## 환경과 실행
+
+Python 환경을 만들고 `pip install -r requirements.txt`로 의존성을 설치합니다. 실제 사용 환경의 버전이며 다른 OS에서의 설치는 별도 확인이 필요합니다. LLM 실행에는 로컬 Codex CLI와 본인 로그인 상태가 필요합니다. 인증 파일이나 API 키를 저장소에 올리지 마세요. 모델 호출은 사용자의 계정 한도를 사용합니다.
+
+```sh
+python -B -m disassembly_final_v4.bootstrap --download
+PYTHONDONTWRITEBYTECODE=1 python -B -m disassembly_final_v4.pipeline
+```
+
+약0.75GB의 공식 archive를 SHA256 검증 후 별도로 받습니다. 기존 완료 기록이 있는 실행은 이어서 진행합니다. 이미 시작된 평가 episode는 조용히 다시 실행하지 않습니다. 원본 작업 머신과 공개 snapshot은 로컬 경로가 다를 수 있습니다. `protocol/prior_sources.json`의 상대 경로는 저장소 루트를 기준으로 해석합니다. 상세 검증 reference 일부의 원본 로컬 경로는 증거 식별용이며 다른 머신에 존재하지 않습니다.
+
+최종 native replay 생성 후에는 study 폴더를 HTTP로 서비스하고 `viewer/index.html`을 여세요. 루트 `viewer/`만으로는 아직 업로드하지 않은 geometry/episode를 재생할 수 없습니다.
+
+## 협업
+
+추가 작업은 새 branch 또는 fork에서 진행하세요. `outputs/protocol/freeze.json`이 생긴 뒤에는 그 실험의 actor,physics,bank를 수정하지 않습니다. 테스트 실패를 학습 자료로 쓰면 해당 CAD의 결과를 새 제품 첫 실행 성능으로 재사용할 수 없습니다. 변경 제안은 원인·변경점·검증·비교 조건을 MD로 남겨 주세요. Claude에게 작업을 자동 할당하지 않습니다.
+
+데이터: [ASAP](https://github.com/yunshengtian/ASAP),[논문](https://arxiv.org/abs/2309.16909). 공식 데이터와 외부 라이브러리는 각각의 원래 배포 조건을 따릅니다. 원본 CAD archive,학술 PDF,발표자료,venv,인증 정보는 업로드하지 않습니다. viewer vendor의 라이선스 고지를 유지합니다.

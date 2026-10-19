@@ -1,0 +1,22 @@
+{
+  "utc": "2026-10-19T10:50:27.764101+00:00",
+  "state": {},
+  "selected_discovery": 0,
+  "selected_validation": 0,
+  "completed_full_discovery": 0,
+  "completed_independent_validation": 0,
+  "completed_first_test_episodes": 0,
+  "targets": {
+    "full_discovery": 10,
+    "validation": 10,
+    "test_CADs": 10,
+    "test_episodes": 30
+  },
+  "prior_local_probe_discovery": 90,
+  "new_development": null,
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "wall_seconds": 900,
+  "no_PPT_created": true,
+  "Claude_assigned": false
+}

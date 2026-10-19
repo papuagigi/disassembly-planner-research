@@ -1,0 +1,13 @@
+{
+  "utc": "2026-10-19T08:35:39.260256+00:00",
+  "new_document_admitted": true,
+  "actual_new_discovery_CADs": 90,
+  "actual_new_discovery_CADs_with_physical_observations": 90,
+  "actual_new_validation_CADs_with_physical_observations": 12,
+  "actual_new_validation_CADs": 12,
+  "prior_skill_source_CADs": 2,
+  "bank_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/memory/S2.json",
+  "bank_sha256": "ca4fdfbdc7d86e3e2807c5be0d72284cb08cb29f02818b130a02f1cd7fe351ce",
+  "bank_content_sha256": "d7cd8feaf088410a6b120ba1b069a305578a24ceea3ae5ac01acdde74a5d6731",
+  "skills": 2
+}
