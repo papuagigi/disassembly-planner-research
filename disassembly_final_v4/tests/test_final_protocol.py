@@ -7,6 +7,13 @@ from disassembly_final_v4.common import write,read,sha
 from disassembly_final_v4.contracts import LIMITS,ARMS
 
 class FinalProtocolTests(unittest.TestCase):
+    def test_learning_prompt_includes_late_dead_end_and_restore_context(self):
+        trace=[dict(checker_call=i+1,valid=True) for i in range(100)]
+        trace[89].update(valid=False,reason='unstable_remainder')
+        events=[dict(operation='restore',checks_before=90)]
+        selected=final_learning.evidence_indices(trace,events,[])
+        self.assertIn(89,selected);self.assertIn(90,selected);self.assertLessEqual(len(selected),24)
+
     def test_repair_requires_actual_commit_and_not_same_rejected_action(self):
         trace=[dict(checker_call=1,part_id='a',direction='+x',valid=False,reason='path_collision',physical_state_key_before='s'),
                dict(checker_call=2,part_id='a',direction='-x',valid=True,committed=False,physical_state_key_before='s'),

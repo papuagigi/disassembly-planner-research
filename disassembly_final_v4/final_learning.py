@@ -13,6 +13,23 @@ from .post_evidence import replay_result
 
 PROPOSAL_SCHEMA={'type':'object','properties':{'name':{'type':'string'},'description':{'type':'string'},'markdown_body':{'type':'string'}},'required':['name','description','markdown_body'],'additionalProperties':False}
 
+def evidence_indices(trace,events,pairs,maximum=24):
+    """Prefer actual late failures/restores over a root-only prompt summary."""
+    chosen=[]
+    def around(check,radius=1):
+        if not trace:return
+        j=min(range(len(trace)),key=lambda i:abs(trace[i]['checker_call']-check))
+        for i in range(max(0,j-radius),min(len(trace),j+radius+1)):
+            if i not in chosen and len(chosen)<maximum:chosen.append(i)
+    for p in pairs[:4]:
+        around(p['failed_check']);around(p['accepted_check'])
+    for e in [e for e in events if e['operation']=='restore'][:4]:around(e['checks_before'],2)
+    unstable=[t for t in trace if t.get('reason')=='unstable_remainder']
+    for t in unstable[:1]+unstable[-1:]:around(t['checker_call'])
+    rejected=[t for t in trace if not t.get('valid')]
+    for t in rejected[-2:]+trace[:2]+trace[-3:]:around(t['checker_call'])
+    return sorted(chosen)
+
 def repairs(result):
     """Measured later accepted removals; never infer a repair from a declaration."""
     trace=result.get('trace',[]);out=[]
@@ -68,13 +85,10 @@ def propose():
     fields=['checker_call','part_id','direction','valid','committed','reason','blockers','remaining_before','remaining_after','physical_state_key_before','physical_state_key_after']
     for i,row in enumerate(collection['cases']):
         result=read(row['result_path']);trace=result.get('trace',[]);events=result.get('recovery_state',{}).get('events',[])
-        indices=set(range(min(3,len(trace))))
-        for j,t in enumerate(trace):
-            if t.get('reason')=='unstable_remainder' or t.get('committed'):
-                if len(indices)<12:indices.update(range(max(0,j-1),min(len(trace),j+2)))
+        indices=evidence_indices(trace,events,row['repairs'])
         evidence.append(dict(evidence_id=f'L{i+1:02}',source_result_sha256=row['sha256'],part_count=row['case']['part_count'],
             metrics=row['metrics'],measured_repairs=row['repairs'][:8],
-            observed_queries=[{k:trace[j].get(k) for k in fields} for j in sorted(indices)[:16]],
+            observed_queries=[{k:trace[j].get(k) for k in fields} for j in indices],
             actual_restore_events=[e for e in events if e['operation']=='restore'][:4]))
     write(folder/'learning_evidence.json',dict(cases=evidence),exclusive=not (folder/'learning_evidence.json').exists())
     bank=DocumentBank(ROOT/'memory/S2.json')
@@ -131,9 +145,19 @@ def validate_and_freeze_bank():
     if ap.exists():admission=read(ap)
     else:write(ap,admission,exclusive=True)
     if admission['status'].startswith('ADMITTED'):
-        p=Path(proposal['document_path']);ref=p.parent/'references/admission.json'
-        if not ref.exists():write(ref,admission,exclusive=True)
-        docs.append(p)
+        p=Path(proposal['document_path'])
+        admitted=ROOT/'memory/admitted'/p.parent.name/'SKILL.md'
+        admitted.parent.mkdir(parents=True,exist_ok=True)
+        if not admitted.exists():shutil.copy2(p,admitted)
+        assert sha(admitted)==proposal['document_sha256']
+        # Preserve the evaluated validation bank byte-for-byte. Supply only
+        # aggregate admission facts to the final LLM,never validation repairs.
+        ref=admitted.parent/'references/admission.json'
+        if not ref.exists():write(ref,dict(status=admission['status'],passed=admission['passed'],required=admission['required'],
+            actual_validation_CADs=admission['actual_validation_CADs'],document_sha256=admission['document_sha256'],
+            full_admission_record_sha256=sha(ap),validation_case_answers_not_supplied=True,
+            scope=admission['scope']),exclusive=True)
+        docs.append(admitted)
     bp=ROOT/'memory/S3.json'
     bank=DocumentBank(bp) if bp.exists() else make_bank(bp,docs,version='S3-final-v4',evidence=str(ap))
     value=dict(utc=utc(),actual_full_search_discovery_CADs=10,actual_independent_validation_CADs=len(rows),
