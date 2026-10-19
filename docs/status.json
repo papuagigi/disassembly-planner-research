@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:37:39.460722+00:00",
+  "utc": "2026-10-19T14:40:06.967347+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T14:37:39.417193+00:00",
@@ -49,8 +49,28 @@
     "full_search_episodes_target": 10,
     "max_rss_bytes": 4294967296
   },
-  "input_progress": {},
-  "memory_extension_state": null,
+  "input_progress": {
+    "phase": "preparing_development",
+    "utc": "2026-10-19T14:39:51.363541+00:00",
+    "qualified": 1,
+    "target": 3,
+    "attempted": 3,
+    "active_ids": [
+      "04052"
+    ],
+    "completed_out_of_order": 2
+  },
+  "memory_extension_state": {
+    "utc": "2026-10-19T14:37:40.979815+00:00",
+    "pid": 41085,
+    "status": "RUNNING",
+    "case_ids": [
+      "asap_05459",
+      "asap_01613"
+    ],
+    "planner_concurrency": 1,
+    "budget_change": "Only1GiB→4GiBRSS;600checks/900s/8calls retained from these development jobs"
+  },
   "inherited_full_search_episodes": 8,
   "completed_additional4GiBepisodes": 0,
   "unique_long_training_CADs": 8,

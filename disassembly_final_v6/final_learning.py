@@ -127,7 +127,9 @@ def _collect():
         reused_discovery_CADs=cohort['reused_discovery_CADs'],new_discovery_CADs=cohort['new_discovery_CADs'],
         unique_discovery_CADs_total=90+study_scope().get('prior_new_discovery_CADs',0)+cohort['new_discovery_CADs'],
         inherited_completed_full_search_CADs=len(study_scope().get('inherited_discovery_ids',[])),
-        new_episode_check_cap=DEV_LIMITS['max_checks'],inherited_episode_check_cap=LIMITS['max_checks'],
+        new_episode_check_cap=DEV_LIMITS['max_checks'],
+        inherited_episode_check_caps=sorted({read(r['result_path'])['limits']['max_checks'] for r in rows if not r.get('additional_memory_extension')}),
+        inherited_episode_peak_rss_caps_bytes=sorted({read(r['result_path'])['limits']['max_rss_bytes'] for r in rows if not r.get('additional_memory_extension')}),
         actual_backtracking_episodes=sum(r['metrics']['restores']>0 for r in rows))
     write(final,value,exclusive=True);return value
 

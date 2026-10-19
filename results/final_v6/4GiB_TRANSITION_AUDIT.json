@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-19T14:40:06.969100+00:00",
+  "status": "PASS_CONFIG_AND_PRESERVATION",
+  "regression_tests": 43,
+  "common_final_limit_bytes": 4294967296,
+  "only_episode_budget_change": "max_rss_bytes",
+  "old_result_and_source_hashes_unchanged": true,
+  "new_final_test_episodes": 0,
+  "bank_not_yet_frozen": true,
+  "new4GiBfull_run_completed": 0,
+  "live_experiment_results_remain_pending": true,
+  "planner_concurrency_enforced_by_collection_lock": true,
+  "eventual_worker_window_audit": "analysis/serial_execution_audit.json",
+  "PPT_created": false
+}

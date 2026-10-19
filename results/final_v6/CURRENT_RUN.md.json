@@ -1,0 +1,29 @@
+{
+  "utc": "2026-10-19T14:41:10.036264+00:00",
+  "status": "RUNNING_NOT_FINAL",
+  "case": "asap_05459",
+  "progress": {
+    "completed_removals": 16,
+    "required_removals": 16,
+    "checker_calls": 26,
+    "llm_calls": 8,
+    "elapsed_seconds": 202.2733587090006,
+    "max_rss_bytes_observed": 1391083520,
+    "error": null
+  },
+  "actual_job_limits": {
+    "max_calls": 8,
+    "max_checks": 600,
+    "timeout_seconds": 900.0,
+    "max_steps": 10000000,
+    "max_checkpoints": 128,
+    "max_restores": 256,
+    "max_rss_bytes": 4294967296,
+    "max_prompt_bytes": 512000,
+    "max_response_bytes": 64000
+  },
+  "source": "Live progress checkpoint;not a final score or proof of full recovery",
+  "previous1GiB_final_removals": 1,
+  "previous1GiB_required": 16,
+  "metadata_update": "Before collection/proposal:inherited budget summary now reports actual240/600mixture. No actor/controller/API/model/budget/prompt policy edit."
+}
