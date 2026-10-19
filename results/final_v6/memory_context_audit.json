@@ -1,0 +1,969 @@
+{
+  "status": "PASS",
+  "trials": [
+    {
+      "case_id": "asap_05954",
+      "arm": "A",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 20888,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 0,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_05954",
+      "arm": "B",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 21662,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 46701,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "No failure is present in the supplied initial observation; the procedure is loaded and its trigger is prospective.",
+              "procedure_step": "Steps 5–6: retain rejected candidates by exact state, then reassess after each accepted removal.",
+              "intended_action_change": "Record failed (state_key, part_id, direction) queries locally, skip them only in that exact state, and regenerate priorities after every committed removal."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "No path collision is present in the supplied initial observation; this is a prospective collision response.",
+              "procedure_step": "Steps 2–5: keep the target eligible, enumerate its other available directions, and query them one at a time after a collision.",
+              "intended_action_change": "Keep each rejected direction state-specific and leave all other available directions for that part eligible for direct remove attempts."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 3,
+          "prompt_bytes": 318904,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "The current history includes a rejected unstable removal of part 2 with unstable remainder parts 1, 0, 6, 7, 8, 9, 10, and 11, plus many path collisions with named blockers.",
+              "procedure_step": "Failure-repair steps 2, 3, 5, and 6: prioritize currently removable unstable bodies or named blockers; keep unknown actions eligible; reassess after accepted removals.",
+              "intended_action_change": "The code scores unstable parts and blockers higher, records each failed (state, part, direction) action, and rebuilds candidates after each accepted removal."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Parts 1, 11, 10, 9, 8, 6, and 7 have path-collision feedback in the current state; their other directions remain available, and source action labels map to rotated world vectors.",
+              "procedure_step": "Directional-clearance steps 2 through 5: retain the target, list its other available directions, use world vectors to rank, then validate a candidate.",
+              "intended_action_change": "The code keeps all untried directions for the same part available after a collision and ranks using direction_vectors_world before submitting remove directly."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 4,
+          "prompt_bytes": 321507,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current state feedback contains many path_collision rejections naming blockers and an unstable_remainder rejection for part 2 with unstable_parts including 0, 1, 6, 7, 8, 9, 10, 11.",
+              "procedure_step": "Steps 2-5: prioritize currently removable blockers and candidates associated with unstable bodies, use current support contacts only as clues, and validate each candidate with remove while retaining unknown actions.",
+              "intended_action_change": "Rank blocker parts and observed supporter candidates earlier, keep failures keyed to the current state, and continue to another candidate after a rejection."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Feedback contains direction-specific path_collision failures for the same target IDs, while their available directions remain listed; the vectors show +y is nearly world-down and -y nearly world-up.",
+              "procedure_step": "Steps 2-5: preserve the target, enumerate its other available directions using world vectors, and query alternatives one at a time; each collision only lowers that exact state-target-direction pair.",
+              "intended_action_change": "Generate all available, not-yet-failed directions per movable target, score using the declared world vectors, and submit each through api.remove."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 5,
+          "prompt_bytes": 321847,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current exact-state feedback includes many path collisions and an unstable remainder for part 2; prior unstable feedback names parts 1, 0, 6, 7, 8, 9, 10, and 11.",
+              "procedure_step": "Steps 2, 3, and 5: prioritize currently listed unstable bodies and collision blockers, keep untested actions eligible, and query the validator one action at a time.",
+              "intended_action_change": "The policy sorts currently reported unstable parts first and then proceeds through other movable parts, using failed feedback only for the current state and continuing after a rejection."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Current state contains path_collision rejections for multiple target-direction pairs, while each movable part still lists directions that have not been rejected at this exact state.",
+              "procedure_step": "Steps 2 through 5: retain the target, enumerate other available directions including the opposite when available, and test candidates with the physical validator.",
+              "intended_action_change": "For each movable part the policy skips only exact-state rejected pairs, ranks available labels by their supplied world-vector upward component, and calls remove directly for each candidate until accepted."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 6,
+          "prompt_bytes": 322123,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "At the current state, removal of part 2 along -y was rejected as unstable_remainder; stability identifies parts 1, 0, 6, 7, 8, 9, 10, and 11 as unstable. Multiple path collisions also name blockers for specific actions.",
+              "procedure_step": "Diagnosis steps 2-4 and 6: raise explicitly unstable movable parts and observed removable blockers; reconsider after each accepted state change, with support edges treated only as clues.",
+              "intended_action_change": "Prioritize movable IDs reported unstable, while retaining other movable candidates; recompute candidates and feedback after each successful removal."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Many current-state removals have path_collision feedback, including part 1 blocked by part 2; untested directions and future-state actions remain eligible.",
+              "procedure_step": "Numbered steps 2-5: keep the target eligible, enumerate its other allowed directions, and submit candidates to the trusted validator individually.",
+              "intended_action_change": "Keep all allowed directions for each movable part in the candidate set except those rejected at this exact state, and let api.remove validate each attempt."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 7,
+          "prompt_bytes": 322453,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current feedback records an unstable_remainder rejection for part 2 and numerous path_collision rejections; the instability report lists parts 1,0,6,7,8,9,10,11.",
+              "procedure_step": "Repair steps 2 and 3: prioritize currently movable unstable parts after instability, and reported removable blockers after collision; retain untested options and re-evaluate after each accepted change.",
+              "intended_action_change": "Policy ranks listed unstable parts first, then collision-affected candidates, before other movable parts; it carries exact-state rejection memory only and retries candidates after every committed removal."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "The supplied exact-state history contains direction-specific path_collision rejections across several targets, with alternative allowed directions not all tested for every current target.",
+              "procedure_step": "Numbered steps 2 through 5: retain the target, enumerate available directions including the opposite direction, and submit remaining candidates to the physical validator one at a time.",
+              "intended_action_change": "Candidate generation keeps every untested allowed direction for each movable part; direction labels are ordered using the supplied world vectors and each candidate is attempted with remove, without treating one collision as a target-wide exclusion."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 8,
+          "prompt_bytes": 322753,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current feedback includes path collisions for the small adjacent inserts and an unstable remainder rejection when removing part 2; the instability names parts 1,0,6,7,8,9,10,11.",
+              "procedure_step": "Steps 2–3: prioritize currently removable unstable parts after instability, and removable named blockers after path collisions; retain all untested candidates and reassess after each accepted removal.",
+              "intended_action_change": "The policy ranks unstable IDs first, then movable parts named as blockers, while preserving exact-state rejection memory and rebuilding candidates after every commit."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Multiple tested directions for parts 1, 8, 9, 10, and 11 have path_collision feedback; each still has other available directions, and vectors are nonstandard because the source frame is rotated.",
+              "procedure_step": "Steps 2–5: keep the target eligible, enumerate its other available directions, inspect world vectors, and validate candidates one by one; retain untested directions after rejection.",
+              "intended_action_change": "Candidate directions come from allowed_directions, their world vectors inform ranking, and rejected actions are excluded only for the exact current state."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_05954",
+      "arm": "C",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 21907,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 47006,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "No removal failure has occurred in this state; prospective risk is instability when removing components that support or contact stacked components.",
+              "procedure_step": "4, select candidate directions using the geometry and direction_vectors_world; raise lower dependencies with low dependency burden ahead of possible supporters.",
+              "intended_action_change": "Prioritize currently floor-supported 1 and 12, then 6; defer 0 and 2 because observed contact edges show them supporting multiple remaining components."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "No path collision has been reported; prospective risk is an unavailable first direction for any candidate.",
+              "procedure_step": "3, order available directions by plausible clearance using world vectors and include alternatives while retaining every untested action.",
+              "intended_action_change": "For early candidates, try +z/-z first: in this source frame these map approximately to +world-y/-world-y, then retain the other four directions as alternatives."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 3,
+          "prompt_bytes": 77564,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path_collision rejections identify blockers 0 and 6 for part 1, blocker 0 for part 12, and blocker 2 for parts 6, 3, and 4; all are uncommitted.",
+              "procedure_step": "Step 3: prioritize removable named blockers when their own paths may be clear; keep rejected targets and untested actions eligible. Step 4: use the world vectors when considering paths.",
+              "intended_action_change": "Move removable blocker 2 candidates ahead of parts blocked by 2; keep 0 and 6 candidates available as possible blockers, while deprioritizing the collision-rejected direction pairs only in this exact state."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Each supplied failure is a direction-specific path_collision, while the same targets have other available directions.",
+              "procedure_step": "Steps 2–5: retain each target, raise its other available directions as candidates, and leave unknown directions eligible for physical validation.",
+              "intended_action_change": "For parts 1, 12, 6, 3, and 4, rank untested directions ahead of their exact-state rejected directions; choose part 2 first because it is named as a blocker for several of them."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 4,
+          "prompt_bytes": 117859,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Parts 1, 12, 6, 3, 4, and 2 have uncommitted path-collision feedback naming blockers. The reported failures share the current state key.",
+              "procedure_step": "Numbered repair procedure 3 and GRAPH_DFS application: prioritize removable named blockers; keep rejected targets eligible and treat failures as exact-state evidence.",
+              "intended_action_change": "Move blocker 2's still-available +z action ahead, then try current alternative actions for affected targets and include those blockers' actions; keep prior rejected pairs later."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Multiple target-direction extractions were rejected for path_collision, while other directions for those same parts remain available and untested.",
+              "procedure_step": "Numbered steps 2–5 and GRAPH_DFS application: retain targets, raise other available directions, use world vectors, and validate each candidate.",
+              "intended_action_change": "For parts 1, 3, 4, 6, and 12, prioritize their untested directions above their rejected directions; do not infer a target-wide ban from the observed collisions."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 5,
+          "prompt_bytes": 57697,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current state has only a prior committed removal of part 12; current_state_feedback is empty, and the history path-collision rejections belong to the previous state_key, so they do not lower priorities here. Current geometry suggests parts 3 and 4 are compact parts near the top of part 2, whose extraction was previously blocked by them.",
+              "procedure_step": "Steps 4 and 6: select directions using geometry and world vectors, then reassess after a committed removal; previous failures apply only to their exact state.",
+              "intended_action_change": "Put small parts 3 and 4, then other potential blockers around 2, before bulk components. Keep prior rejected actions eligible because the physical state changed."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Part 3 had prior path_collision feedback in +x and +z, while its -x, ±y, and -z directions remain untested; all these rejections were in the earlier physical state.",
+              "procedure_step": "Steps 2–5: keep the target eligible, rank other available directions using world vectors, and query alternatives while retaining untested options.",
+              "intended_action_change": "Move untested directions for part 3 ahead of its previously rejected directions, and leave those rejected directions available for later exact-state validation."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 6,
+          "prompt_bytes": 63070,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Part 2 blocked the earlier +x, -x, +y, -y, +z, and -z attempts on the previous state; current-state evidence shows part 5 is fixed and contacts from 5 to 2, while 7 also contacted 2. These failures are state-specific, and there is no current-state rejection yet.",
+              "procedure_step": "Numbered repair procedure steps 3–4: prioritize removable blockers, then select directions using geometry and actual world vectors; keep untested actions eligible.",
+              "intended_action_change": "Put part 7's untried -z action first because it is the only observed removable contact neighbor of 2; test the other untried directions of floor-supported 6, 8, 9, 10, and 11 next, then revisit parts 0, 1, 2, and 3."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Earlier path-collision feedback occurred for 0 +z, 1 ±z, 2 in all six directions, and 3 in several directions, although those results were at older state keys.",
+              "procedure_step": "Numbered steps 2–5: retain targets, lower only the rejected state-target-direction pair, enumerate other available directions, and validate each candidate.",
+              "intended_action_change": "Keep all alternate directions for these targets available later in the ordering; do not treat historical collisions as global bans or infer orientation from labels."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 7,
+          "prompt_bytes": 93392,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path collisions: 7 -z is blocked by 0; 6 is blocked by 0 and/or 2 in the tested directions.",
+              "procedure_step": "Step 3 prioritizes removable named blockers; step 4 uses the actual world vectors to rank candidate paths; step 6 reassesses after a committed removal.",
+              "intended_action_change": "Raise part 2's untested -z action because the observed +z blocker is 2 and part 2 contacts the fixed base; keep part 0 directions and other untested actions available. Defer the already rejected 6 directions in this exact state."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Parts 6 and 7 have path_collision feedback for particular directions, while alternatives remain available for 7 and historic tests are state-specific.",
+              "procedure_step": "Steps 2–5 retain the target, try available alternate directions including opposites, and keep each rejection specific to its tested state/direction.",
+              "intended_action_change": "For part 0, test fresh directions after its prior +z collision was in the prior state; then preserve broad alternate-direction coverage for remaining movable parts. Do not promote any direction to guaranteed success."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 8,
+          "prompt_bytes": 124629,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path collision for part 7 along -z, blocker 0; part 6 has multiple rejected directions with blockers 0, 2, or the floor; part 2 -z is blocked by 3, 6, 7, 8.",
+              "procedure_step": "Step 3: prioritize removable blockers, then use candidate directions from geometry; retain untested actions. Step 6: reassess after state changes.",
+              "intended_action_change": "Try other likely clear removals first, including floor-supported part 1 and exposed chain parts 10 and 11; lower collision-affected targets only for this exact state while leaving their untested actions eligible."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Several current-state path collisions leave alternate directions available, including part 7 after its -z rejection and parts 0 and 6 after multi-direction failures.",
+              "procedure_step": "Steps 2–5: retain each target, raise its untested available directions after a collision, and query remaining options without treating one rejection as a target-wide ban.",
+              "intended_action_change": "Include all available untested directions for collision-affected parts later in the order; avoid retrying same-state rejected pairs. Part 5 remains fixed and is omitted."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "A",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 29047,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 0,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "B",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 29822,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 54922,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Initial observation has no rejection yet; stability failure is a prospective risk because every removal must preserve stable remainder.",
+              "procedure_step": "Step 2 and Step 6: after a diagnosed unstable rejection defer that target in the exact state, then reassess after each accepted removal.",
+              "intended_action_change": "Track failures by state, part, and direction; leave other current candidates eligible and rebuild candidates after every commit."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "No path collision has yet been observed; collision is a prospective risk, and each part has six available directions.",
+              "procedure_step": "Steps 2 through 5: keep the target eligible after collision and try its other available directions, including the opposite direction, with trusted validation.",
+              "intended_action_change": "For each untested candidate, retain all directions and continue to alternate directions after a rejection instead of banning the part."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_06444",
+      "arm": "C",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 34813,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 59851,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "No failure has occurred yet; current support edges show parts 0 and 20 contacting floor, while part 1 is fixed.",
+              "procedure_step": "4, select candidate directions from geometry and world vectors; step 6, reassess after accepted removal.",
+              "intended_action_change": "Prioritize thin, low-mass attachments 7–11 and 19, then components away from fixed support 1; use vectors rather than label assumptions."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Prospective risk only: no path collision feedback has occurred in this state.",
+              "procedure_step": "3, list available directions and order by plausible clearance using world vectors; keep alternate directions available.",
+              "intended_action_change": "For plausible early candidates, rank lateral direction labels +y/-y first because their world vectors point along the assembly length, preserving other directions for later validator checks."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 3,
+          "prompt_bytes": 97762,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "The current state has six uncommitted +y path-collision rejections with named blockers: 7→3, 8→4, 9→5, 10→6, 11→17, and 19→20.",
+              "procedure_step": "Repair procedure steps 1, 3, 4, and 5: retain the exact-state failure evidence, prioritize removable blockers when appropriate, use world vectors for direction reasoning, and keep untested actions eligible for validator checks.",
+              "intended_action_change": "Rank exposed small candidates 7–11 and 19 early, try their untested vertical/alternate directions before unrelated parts, and leave their rejected +y pairs out of this state's submitted order."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Each of candidates 7–11 and 19 has a current +y path_collision; all have other currently available directions, and the +y world vector is approximately -world-x.",
+              "procedure_step": "Numbered steps 2–5: keep the target eligible, enumerate its other available directions, order them using geometry and direction_vectors_world, and submit alternatives for trusted validation.",
+              "intended_action_change": "Try +z/-z first for the tiny exposed fasteners and clip, then +x/-x and -y; defer +y only for the exact unchanged state. This is a test priority, not a prediction of acceptance."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 4,
+          "prompt_bytes": 142892,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path collisions for small parts 7–11 and 19 report blockers; these failures are uncommitted and exact-state only.",
+              "procedure_step": "Step 3: prioritize removable blockers first; Step 4: choose candidate directions using geometry and actual world vectors; retain untested actions.",
+              "intended_action_change": "Raise the reported blockers (3, 4, 5, 6, 17, 20) and candidate escape directions for the affected small parts, while retaining all untested directions and other candidates."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "For parts 7–11 and 19, +y and +z have path-collision evidence in this state; each still has other legal directions.",
+              "procedure_step": "Steps 2–5: keep the target eligible, try other currently available directions in plausible order, and preserve untested choices.",
+              "intended_action_change": "Test alternate -y, -z, +x, and -x paths for those same targets ahead of unrelated candidates; failures only lower the matching state-direction pair."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 5,
+          "prompt_bytes": 179988,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Path-collision rejections identify blockers 3–6 for parts 7–10, blocker 17 for 11, and blocker 20 for 19; these are uncommitted and tied to the unchanged current state.",
+              "procedure_step": "Repair procedure steps 1, 3, 5, and 6: record exact-state blockers, prioritize removable blockers, keep other actions eligible, and reassess after a committed state change.",
+              "intended_action_change": "Promote the small blocked parts' untested +x, -x, and -z directions first; retain all other untested candidates afterward. Do not treat the listed blockers as a global precedence order."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Several small-part paths were rejected for collision in +y, +z, and/or -y, while their +x, -x, and -z actions remain available and untested.",
+              "procedure_step": "Directional clearance steps 2–5: keep the target eligible, enumerate its other available directions, try alternatives, and preserve unknown options.",
+              "intended_action_change": "Rank each affected part's remaining directions before unrelated candidates; test +x, -x, then -z as exploratory alternatives. Their success is unknown and requires validator feedback."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 6,
+          "prompt_bytes": 219447,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current state has repeated uncommitted path_collision failures for small parts 7–11 and 19, with blockers 2–6, 17, or 20.",
+              "procedure_step": "Step 3: prioritize removable blockers; Step 4: use actual world vectors and candidate geometry when ranking directions.",
+              "intended_action_change": "Raise currently eligible parts 12–16 and 2–6 ahead of those blocked parts, since support/contact evidence links these parts to the named obstructions; keep all untested actions eligible."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Each of parts 7–11 and 19 has rejected directions in the unchanged state, while candidate lists still contain other directions for the same targets.",
+              "procedure_step": "Steps 2–5: retain the target, rank other available directions including opposites, and test them through the validator; collisions are exact-state direction evidence.",
+              "intended_action_change": "Within each part, place untested alternate directions before its already rejected direction-direction pairs; do not convert any rejected direction into a target-wide ban."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 7,
+          "prompt_bytes": 260273,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path collisions for parts 7–12 name blockers among parts 2–6, 12–16, and 3; no removal has committed. The failure-repair admission record supports bounded physical repair, while strict full-actor integration is marked rejected.",
+              "procedure_step": "3 and GRAPH_DFS application: prioritize removable named blockers, keep unknown actions eligible, and rank only available actions.",
+              "intended_action_change": "Move currently available blocker candidates ahead of rejected targets: test parts 2–6 and 13–17 in +y first, then their other available directions. This is a hypothesis based on blocker evidence, not a claim that any removal will stabilize or clear the assembly."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Path-collision feedback rejects specific direction pairs for parts 7–12 and 19 in the unchanged state; other directions remain available for several targets.",
+              "procedure_step": "2–5: retain each target, prioritize its untested directions after collision, and submit those alternatives for validation.",
+              "intended_action_change": "After the likely blocker candidates, rank available alternate directions for previously rejected targets, retaining every untested action; use labels only as action-frame choices and interpret vectors as world directions."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 8,
+          "prompt_bytes": 305610,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path-collision feedback repeatedly names parts 2–6 and 12–16 as blockers; none of the rejection feedback reports stability metrics because the paths failed before dynamics.",
+              "procedure_step": "3: prioritize removable named blockers; step 4: use actual world vectors when ordering available paths; keep untested actions eligible.",
+              "intended_action_change": "Rank parts 2–6 and 13–16 ahead of unrelated candidates, favoring their untested -x and alternate directions; leave all other untested actions available."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Multiple candidates have exact-state directional rejections, including small parts 7–11, while other directions for those parts remain untested.",
+              "procedure_step": "2–4: retain each target after a direction-specific collision, enumerate its other currently available directions, and submit them for trusted validation.",
+              "intended_action_change": "Do not retry rejected direction pairs; prioritize untested available directions for implicated blockers and defer rather than globally exclude the original targets."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "A",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 24716,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 0,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "B",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 25491,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 50529,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "No failure is present yet; current state exposes support contacts and the policy will encounter instability or collision feedback as actions are queried.",
+              "procedure_step": "Steps 2–6: reprioritize unstable bodies or named blockers, preserve untested actions, validate candidates, and reassess after accepted removal.",
+              "intended_action_change": "Rank currently diagnosed unstable parts first, then collision blockers and observed supporters of unstable parts; skip rejected state-action pairs while testing other candidates."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "No path collision has been observed yet; each movable part has six available directions.",
+              "procedure_step": "Steps 2–5: retain the target after a direction-specific collision, enumerate its other directions, and query them individually.",
+              "intended_action_change": "Keep all nonrejected directions eligible for each target and rank candidates using the supplied world direction vectors and part center."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    },
+    {
+      "case_id": "asap_03114",
+      "arm": "C",
+      "calls": [
+        {
+          "call": 1,
+          "prompt_bytes": 28435,
+          "loaded": [],
+          "declared": [],
+          "document_plan": [],
+          "exact_bytes": true
+        },
+        {
+          "call": 2,
+          "prompt_bytes": 53473,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "No current_state_feedback or history_feedback rejection exists; no unstable parts or path blockers are reported.",
+              "procedure_step": "Step 4: inspect candidate geometry, available actions, and direction_vectors_world to prioritize plausible extraction paths; keep unknown actions eligible.",
+              "intended_action_change": "Prioritize peripheral parts with open outward straight paths and avoid assuming support_edges prove removal precedence; use source-assembly vectors rather than treating direction labels as world axes."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "No collision has yet been observed for any target-direction pair in this state.",
+              "procedure_step": "Step 3: include alternative directions, including opposites, as candidates and order them using available geometry and world vectors; this is candidate generation, not a success prediction.",
+              "intended_action_change": "Keep all six directions available for each part and rank plausible outward paths first, so a later collision can lower only that exact pair while alternatives remain."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 3,
+          "prompt_bytes": 91935,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Part 0's six tested directions are path_collision with blocker 24; each rejection is uncommitted and leaves the same state.",
+              "procedure_step": "Numbered step 3: prioritize removable blockers; step 4: select directions using geometry and world vectors.",
+              "intended_action_change": "Raise part 24 only as a blocker hypothesis, but it is fixed, so prioritize removable, spatially peripheral parts with outward world-space paths to change the assembly; keep all untested candidates available."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "The current focus part 0 has path_collision feedback in every direction, all attributed to fixed part 24, so the exact-state options are exhausted.",
+              "procedure_step": "Numbered steps 2, 5, and 7: retain rejected target for changed states, preserve unknown actions, and retry after relevant geometry changes.",
+              "intended_action_change": "Defer part 0 at this unchanged state and rank removable peripheral parts first. The vectors map -x toward world -x, +x toward +x, +y mostly world -z, and -y mostly world +z; retain 0's actions for future states after removals change constraints."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 4,
+          "prompt_bytes": 130331,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Parts 0–3 have uncommitted path_collision feedback naming fixed part 24 as blocker; no stability data is present.",
+              "procedure_step": "3, then 4: prioritize removable blockers, then choose directions using geometry and world vectors; retain untested actions.",
+              "intended_action_change": "Move side components 12–15 and 10–11 ahead of the blocked targets; their x-directed paths lead outward from their peripheral positions, while avoiding any attempted removal of fixed 24."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Target 0 was rejected in all six directions, and targets 1–3 were rejected in both tested x directions, each due to blocker 24; alternate directions remain untested.",
+              "procedure_step": "2–4: keep the target eligible, raise other available directions for the same target, and query alternatives through the validator.",
+              "intended_action_change": "After peripheral components, rank remaining candidates toward directions with lateral/world-down clearance (+y maps mostly to world -z); keep rejected exact-state pairs deprioritized and alternate directions eligible. No acceptance or removal is inferred."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 5,
+          "prompt_bytes": 168814,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Current-state path collisions identify fixed part 24 as blocker for parts 0–3 and 12, and part 23 for 10, 11, 13, 15; all rejected checks were uncommitted.",
+              "procedure_step": "3–4: prioritize removable blockers where available, inspect candidate geometry and actual world vectors, and retain unknown actions.",
+              "intended_action_change": "Move untested peripheral parts 4–9 ahead of targets with recorded blocker collisions; try their available directions first to alter surrounding geometry, then retain other alternatives."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Parts 1, 2, and 3 have recorded path collisions only for ±x; their other four directions remain available in this exact state.",
+              "procedure_step": "2–5: keep target eligible, raise its other currently available directions, include available alternatives, and validate each candidate.",
+              "intended_action_change": "Place the untested +y, -y, +z, and -z directions for 1, 2, and 3 ahead of blocked axial directions; avoid treating their ±x failures as target-wide exclusions."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 6,
+          "prompt_bytes": 207223,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "현재 상태에서 여러 부품 제거가 고정 부품 24 또는 23의 path_collision으로 거부됨. 이 피드백은 해당 상태와 경로에만 적용됨.",
+              "procedure_step": "3–4: 보고된 blocker가 제거 가능하면 우선 고려하고, 후보 방향은 action label 대신 direction_vectors_world 및 형상으로 평가. 알 수 없는 액션은 유지.",
+              "intended_action_change": "아직 거부되지 않은 22, 25–27 및 외곽 부품을 우선 배치해 blocker 주변 형상을 바꿀 기회를 주고, 0과 4는 같은 상태에서 이미 거부된 방향 외의 후보로 뒤에 둠."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "동일 상태에서 타겟 0과 4의 여러 방향이 path_collision으로 거부됐으며, 아직 테스트되지 않은 방향이 후보에 남음.",
+              "procedure_step": "2–5: 충돌 한 건을 타겟 전체 금지로 확장하지 말고, 동일 타겟의 다른 사용 가능 방향을 검증 대상으로 유지하며 실패 결과를 정확한 상태/방향에 한정.",
+              "intended_action_change": "0과 4의 거부된 방향도 목록에서 제거하지 않고 뒤쪽에 유지하고, 우선 미검증 후보를 진행하도록 순서를 조정."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 7,
+          "prompt_bytes": 248004,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Recent attempted removals at this exact state were rejected for path_collision; listed blockers include fixed part 24 for the small side parts and parts 23/24 for related components. No action is reported committed.",
+              "procedure_step": "3: prioritize removable blockers for a blocked extraction, keep the failed target and untested actions available; step 6: reassess after any accepted removal.",
+              "intended_action_change": "Put untested small peripheral parts ahead of failed candidates and avoid treating prior rejected state-action pairs as global exclusions; keep fixed part 24 out of the ranking."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "Targets 0, 1, 2, 3, 4, and 22 have state-specific path-collision rejections. Alternate directions remain untested for 1, 2, and 3; for 0, 4, and 22 all six directions have already failed in this unchanged state.",
+              "procedure_step": "2–5: retain a colliding target, try other available directions while preserving unknown options, and record failures only for their exact state and direction.",
+              "intended_action_change": "Keep the untested directions for 1–3 eligible after other peripheral candidates; place fully tested blocked targets 4 and 22 after them and do not repeat their same-state tested actions."
+            }
+          ],
+          "exact_bytes": true
+        },
+        {
+          "call": 8,
+          "prompt_bytes": 286526,
+          "loaded": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "declared": [
+            "physical-disassembly-failure-repair",
+            "physical-directional-clearance"
+          ],
+          "document_plan": [
+            {
+              "skill_id": "physical-disassembly-failure-repair",
+              "observed_trigger": "Several state-specific path_collision rejections identify fixed part 24 as blocker for targets 0–4, 12, and 14; 23 blocks 10, 11, 13, and 15; blockers 7 and 8 block 22.",
+              "procedure_step": "Step 3: prioritize removable blockers, then other candidates whose removal could change obstructions; keep untested actions available.",
+              "intended_action_change": "Put untested peripheral candidates 9, 6, 7, 8, and 5 first to probe alternate removal opportunities and potentially change the geometry around blocked targets; keep untested directions for those targets later."
+            },
+            {
+              "skill_id": "physical-directional-clearance",
+              "observed_trigger": "The current-state feedback reports path_collision for numerous target-direction pairs, while available alternative directions remain for many targets.",
+              "procedure_step": "Steps 2–4: retain the target, enumerate its other available directions, and rank alternatives using world vectors; do not infer orientation from action labels.",
+              "intended_action_change": "For available alternate directions, rank the mostly upward world vectors (+z/-y) ahead of lateral paths for peripheral candidates; preserve remaining directions for later validation. No action is presumed accepted."
+            }
+          ],
+          "exact_bytes": true
+        }
+      ],
+      "explicit_reads": 2,
+      "context_verified": true,
+      "scope": "Exact provision and declarations only,not proof of internal attention/compliance/benefit"
+    }
+  ],
+  "semantic_application_proven": false
+}

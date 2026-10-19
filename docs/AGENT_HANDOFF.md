@@ -1,12 +1,12 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T21:13:12.952852+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T21:13:15.417213+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
-Current state:{'utc': '2026-10-19T21:13:12.900989+00:00', 'pid': 51259, 'status': 'RUNNING', 'phase': 'aggregate_outcomes_and_tokens'}
+Current state:{'utc': '2026-10-19T21:13:15.376927+00:00', 'pid': 51259, 'status': 'RUNNING', 'phase': 'independent_mujoco_replays'}
 
 Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:9/9,on3unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
 
-Current input/episode progress:{'phase': 'first_episode_campaign_complete', 'utc': '2026-10-19T21:13:12.897175+00:00', 'episodes': 9, 'cases': 3}
+Current input/episode progress:{'phase': 'analysis_complete', 'utc': '2026-10-19T21:13:15.374881+00:00', 'cases': 3, 'episodes': 9, 'evaluation_tokens': 2328091}
 
 Optional early_memory_extension and main collection share outputs/development/discovery_collection.lock. They must never run planners concurrently. Main reuses saved additional results. No oldv5/v4supervisor should be restarted. Their complete results/sources are hash-protected. New4GiBepisodes have distinct outputs/development/memory_extension folders;never overwrite with retry.
 

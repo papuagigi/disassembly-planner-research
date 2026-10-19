@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T21:13:12.952852+00:00",
+  "utc": "2026-10-19T21:13:15.417213+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T21:13:12.900989+00:00",
+    "utc": "2026-10-19T21:13:15.376927+00:00",
     "pid": 51259,
     "status": "RUNNING",
-    "phase": "aggregate_outcomes_and_tokens"
+    "phase": "independent_mujoco_replays"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -50,10 +50,11 @@
     "max_rss_bytes": 4294967296
   },
   "input_progress": {
-    "phase": "first_episode_campaign_complete",
-    "utc": "2026-10-19T21:13:12.897175+00:00",
+    "phase": "analysis_complete",
+    "utc": "2026-10-19T21:13:15.374881+00:00",
+    "cases": 3,
     "episodes": 9,
-    "cases": 3
+    "evaluation_tokens": 2328091
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",

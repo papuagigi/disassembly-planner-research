@@ -1,0 +1,102 @@
+{
+  "status": "PASS_CONTRACTS",
+  "utc": "2026-10-19T21:13:15.106930+00:00",
+  "cases": [
+    {
+      "case_id": "asap_05954",
+      "same_case_and_shared_bytes": true,
+      "same_limits": true,
+      "same_requested_model_and_effort": true,
+      "bank_contract_equal_B_C": true,
+      "runtime_bank_hashes_observed": {
+        "A": "d35b0a0e2e9f6f26e51ee55f31a6049c71843c074f8d957a947bed09615e956f",
+        "B": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91",
+        "C": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91"
+      },
+      "same_recorded_initial_observation": true,
+      "missing_runtime_initial_hash_arms": [],
+      "available_initial_hashes": {
+        "A": "32df62dbbb2e164cc6f2ce9f8e9e88d4a864389bc9821a6447d2597c54d94b50",
+        "B": "32df62dbbb2e164cc6f2ce9f8e9e88d4a864389bc9821a6447d2597c54d94b50",
+        "C": "32df62dbbb2e164cc6f2ce9f8e9e88d4a864389bc9821a6447d2597c54d94b50"
+      },
+      "provider_metadata_records_verified": 17,
+      "one_first_episode_per_arm": true,
+      "no_test_learning": true
+    },
+    {
+      "case_id": "asap_06444",
+      "same_case_and_shared_bytes": true,
+      "same_limits": true,
+      "same_requested_model_and_effort": true,
+      "bank_contract_equal_B_C": true,
+      "runtime_bank_hashes_observed": {
+        "A": "d35b0a0e2e9f6f26e51ee55f31a6049c71843c074f8d957a947bed09615e956f",
+        "B": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91",
+        "C": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91"
+      },
+      "same_recorded_initial_observation": true,
+      "missing_runtime_initial_hash_arms": [],
+      "available_initial_hashes": {
+        "A": "33bc149139d44423ae1e9d9102d89936fd31b9299a079e75b04e8862db735e33",
+        "B": "33bc149139d44423ae1e9d9102d89936fd31b9299a079e75b04e8862db735e33",
+        "C": "33bc149139d44423ae1e9d9102d89936fd31b9299a079e75b04e8862db735e33"
+      },
+      "provider_metadata_records_verified": 11,
+      "one_first_episode_per_arm": true,
+      "no_test_learning": true
+    },
+    {
+      "case_id": "asap_03114",
+      "same_case_and_shared_bytes": true,
+      "same_limits": true,
+      "same_requested_model_and_effort": true,
+      "bank_contract_equal_B_C": true,
+      "runtime_bank_hashes_observed": {
+        "A": "d35b0a0e2e9f6f26e51ee55f31a6049c71843c074f8d957a947bed09615e956f",
+        "B": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91",
+        "C": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91"
+      },
+      "same_recorded_initial_observation": true,
+      "missing_runtime_initial_hash_arms": [],
+      "available_initial_hashes": {
+        "A": "edee8e5ae47bab2ac9c98eede2bc8d525c80ae92f7b5bb2a86af979af0d8008e",
+        "B": "edee8e5ae47bab2ac9c98eede2bc8d525c80ae92f7b5bb2a86af979af0d8008e",
+        "C": "edee8e5ae47bab2ac9c98eede2bc8d525c80ae92f7b5bb2a86af979af0d8008e"
+      },
+      "provider_metadata_records_verified": 11,
+      "one_first_episode_per_arm": true,
+      "no_test_learning": true
+    }
+  ],
+  "episodes": 9,
+  "original_minimum_CADs": 4,
+  "effective_minimum_CADs": 3,
+  "original_minimum_met": false,
+  "pre_outcome_cohort_amendment": {
+    "utc": "2026-10-19T19:02:26.882568+00:00",
+    "scope_of_change": "final_CAD_count_only",
+    "original_target": 4,
+    "effective_target": 3,
+    "original_freeze_sha256": "3d67b370962ab6a71a05eff96166683d5a1486771ea8e2de684b653a496ca2cb",
+    "exhaustion_evidence_path": "analysis/input_cohort_exhaustion.json",
+    "exhaustion_evidence_sha256": "dceb9ebbd3402d77663af74f22ab0542d9b2c07893879b3dac21654d28eeab23",
+    "case_ids": [
+      "asap_05954",
+      "asap_06444",
+      "asap_03114"
+    ],
+    "decision_before_policy_outcomes": true,
+    "frozen_actor_bank_physics_unchanged": true,
+    "source_order_fixed": true,
+    "decision_basis": "User requested uninterrupted completion within the time target and explicitly allowed reducing the test allocation. Agent uses all three passing inputs after all75fixed candidates were exhausted;no policy outcome is available.",
+    "explicit_user_selection_of_three": false,
+    "agent_stated_assumption": true,
+    "limitation": "Original four-CAD target unmet. Three-CAD/nine-episode descriptive pilot only;not an industrial success-rate estimate."
+  },
+  "requested_model": "gpt-6-luna",
+  "requested_reasoning_effort": "low",
+  "actual_served_model": "Not independently identified beyond provider records",
+  "unavailable_runtime_fields_remain_unknown": true,
+  "shared_API_verified_by_frozen_source_hashes": true
+}

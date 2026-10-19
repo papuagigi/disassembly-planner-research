@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T19:00:02.178798+00:00",
+  "utc": "2026-10-19T21:13:15.142854+00:00",
   "stages": {
     "development": {
       "completed_source_preparations": 27,
@@ -298,8 +298,8 @@
     },
     "evaluation": {
       "completed_source_preparations": 75,
-      "ordered_candidates_consumed": null,
-      "selected_CADs": 0,
+      "ordered_candidates_consumed": 75,
+      "selected_CADs": 3,
       "source_preparation_statuses": {
         "collision_preparation_excluded": 51,
         "initial_physics_or_capacity_excluded": 14,
@@ -681,7 +681,7 @@
           "id": "03114",
           "status": "initially_qualified_full_path_unknown",
           "elapsed_seconds": 243.71130724999966,
-          "in_selected_cohort": false,
+          "in_selected_cohort": true,
           "selected_initial_native_health": {
             "status": "NO_NATIVE_WARNINGS_RECORDED",
             "warning_count": 0,
@@ -887,7 +887,7 @@
           "id": "05954",
           "status": "initially_qualified_full_path_unknown",
           "elapsed_seconds": 237.14512529200147,
-          "in_selected_cohort": false,
+          "in_selected_cohort": true,
           "selected_initial_native_health": {
             "status": "NO_NATIVE_WARNINGS_RECORDED",
             "warning_count": 0,
@@ -913,7 +913,7 @@
           "id": "06444",
           "status": "initially_qualified_full_path_unknown",
           "elapsed_seconds": 240.52912258400465,
-          "in_selected_cohort": false,
+          "in_selected_cohort": true,
           "selected_initial_native_health": {
             "status": "NO_NATIVE_WARNINGS_RECORDED",
             "warning_count": 0,
