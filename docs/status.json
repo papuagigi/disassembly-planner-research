@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-19T12:58:23.999275+00:00",
+  "utc": "2026-10-19T12:58:27.131545+00:00",
   "state": {
-    "utc": "2026-10-19T12:49:46.841950+00:00",
+    "utc": "2026-10-19T12:58:27.097806+00:00",
     "pid": 36463,
     "status": "RUNNING",
-    "phase": "full_search_learning"
+    "phase": "single_proposal_and_independent_validation"
   },
   "selected_discovery": 5,
   "live_progress": {
