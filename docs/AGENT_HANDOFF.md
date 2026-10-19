@@ -1,12 +1,12 @@
 # Final v4 agent handoff
 
-Snapshot UTC: 2026-10-19T12:49:34.862193+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T12:49:36.967839+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
 Controlling plan: PLAN.md. Exactly one final learning → independent validation → freeze → first-test cycle. Never tune against final tests. Do not rerun started episodes. Existing studies and presentations remain preserved. Claude is not assigned; this document supports recovery only.
 
-State: {'utc': '2026-10-19T12:49:34.845019+00:00', 'pid': 36463, 'status': 'RUNNING', 'phase': 'waiting_for_prior_frozen_evaluation'}
+State: {'utc': '2026-10-19T12:49:36.947111+00:00', 'pid': 36463, 'status': 'RUNNING', 'phase': 'prepare_development_inputs'}
 
 Actual finished full-search discovery: 4/5. Independent full-search validation: 0/3. First test episodes: 0/12 across a target of4CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,1are new;unique discovery after completion=91. Validation is3different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes. The user reduced the current cohort for a12-hour completion target before proposal/validation/test outcomes. Read config/study_scope.json and protocol/deadline_scope_amendment.json;earlier10/10/10targets are superseded,not falsely completed. Deadline is a target,not guaranteed runtime. Missing episodes or replay events remain pending.
 
