@@ -1,0 +1,24 @@
+{
+  "version": "candidate-unadmitted-v6-4GiB",
+  "created_utc": "2026-10-19T15:21:32.294885+00:00",
+  "skills": [
+    {
+      "id": "physical-disassembly-failure-repair",
+      "path": "prior/physical-disassembly-failure-repair/SKILL.md",
+      "sha256": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c"
+    },
+    {
+      "id": "physical-directional-clearance",
+      "path": "prior/physical-directional-clearance/SKILL.md",
+      "sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+    },
+    {
+      "id": "physical-clearance-chain",
+      "path": "candidate/physical-clearance-chain/SKILL.md",
+      "sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
+    }
+  ],
+  "admission_evidence": null,
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

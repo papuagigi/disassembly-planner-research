@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T15:21:16.511180+00:00",
+  "utc": "2026-10-19T15:38:45.713912+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T15:21:16.461703+00:00",
@@ -50,11 +50,11 @@
     "max_rss_bytes": 4294967296
   },
   "input_progress": {
-    "phase": "full_search_learning",
-    "utc": "2026-10-19T15:20:57.990553+00:00",
-    "case": "asap_07385",
-    "completed": 7,
-    "total": 8
+    "phase": "independent_full_search_validation",
+    "utc": "2026-10-19T15:21:32.302176+00:00",
+    "case": "asap_03756",
+    "completed": 0,
+    "total": 3
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
@@ -344,7 +344,7 @@
     }
   ],
   "selected_validation": 3,
-  "completed_validation": 0,
+  "completed_validation": 1,
   "completed_first_test_episodes": 0,
   "targets": {
     "unique_long_training_CADs": 8,
