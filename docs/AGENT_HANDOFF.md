@@ -1,12 +1,12 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T19:42:52.153814+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T19:57:55.483868+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
 Current state:{'utc': '2026-10-19T19:02:56.329452+00:00', 'pid': 51259, 'status': 'RUNNING', 'phase': 'matched_final_first_episodes'}
 
-Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:3/9,on3unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
+Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:4/9,on3unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
 
-Current input/episode progress:{'phase': 'first_episode', 'utc': '2026-10-19T19:27:51.669866+00:00', 'case': 'asap_05954', 'arm': 'C', 'completed': 2, 'planned': 9}
+Current input/episode progress:{'phase': 'first_episode', 'utc': '2026-10-19T19:42:54.270561+00:00', 'case': 'asap_06444', 'arm': 'B', 'completed': 3, 'planned': 9}
 
 Optional early_memory_extension and main collection share outputs/development/discovery_collection.lock. They must never run planners concurrently. Main reuses saved additional results. No oldv5/v4supervisor should be restarted. Their complete results/sources are hash-protected. New4GiBepisodes have distinct outputs/development/memory_extension folders;never overwrite with retry.
 
