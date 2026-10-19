@@ -1,0 +1,51 @@
+{
+  "utc": "2026-10-19T19:00:02.216501+00:00",
+  "status": "FINAL_INPUT_RESERVE_EXHAUSTED_BEFORE_ANY_POLICY_OUTCOME",
+  "original_target": 4,
+  "qualified_CADs": 3,
+  "source_candidates_consumed": 75,
+  "qualification_statuses": {
+    "collision_preparation_excluded": 51,
+    "initial_physics_or_capacity_excluded": 14,
+    "initially_qualified_full_path_unknown": 3,
+    "source_geometry_excluded": 7
+  },
+  "actual_final_episodes_started": 0,
+  "cases": [
+    {
+      "case_id": "asap_05954",
+      "part_count": 13,
+      "required_removals": 12,
+      "case_sha256": "fc148e0011f4ddb1c3f3271723dc10e00243f6db95219275822fdc81f63f0243",
+      "shared_sha256": "7bf89598b47374c01e035ff1b8f00e82846343e4db1e2d80d74cfa2be9db31a4"
+    },
+    {
+      "case_id": "asap_06444",
+      "part_count": 21,
+      "required_removals": 20,
+      "case_sha256": "cb5c4f659d2b21f4c6c05a9ff8ae2fcaab3500b8ffba69e55e23be330f1f2a37",
+      "shared_sha256": "9b88573d46ed8c99ee3295065fbb42621c58401facd84c415b2704df6efdce86"
+    },
+    {
+      "case_id": "asap_03114",
+      "part_count": 22,
+      "required_removals": 21,
+      "case_sha256": "de26ccfa65cdf6c8254fbdd4f05a4b77920d245f9610781c23ff72a3ffa5da1f",
+      "shared_sha256": "ce81afcd1197c750a734773bb41c9bb7765a0b102d13fcaf5dc9e3fcc7a68fc5"
+    }
+  ],
+  "frozen_source_and_bank_audit": "PASS",
+  "freeze_sha256": "3d67b370962ab6a71a05eff96166683d5a1486771ea8e2de684b653a496ca2cb",
+  "resource_caps": {
+    "max_calls": 8,
+    "max_checks": 240,
+    "timeout_seconds": 900.0,
+    "max_steps": 10000000,
+    "max_checkpoints": 128,
+    "max_restores": 256,
+    "max_rss_bytes": 4294967296,
+    "max_prompt_bytes": 512000,
+    "max_response_bytes": 64000
+  },
+  "scored_results_or_outcomes_used_for_selection": false
+}

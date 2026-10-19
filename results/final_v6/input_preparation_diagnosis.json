@@ -1,0 +1,1082 @@
+{
+  "utc": "2026-10-19T19:00:02.178798+00:00",
+  "stages": {
+    "development": {
+      "completed_source_preparations": 27,
+      "ordered_candidates_consumed": 29,
+      "selected_CADs": 11,
+      "source_preparation_statuses": {
+        "initial_physics_or_capacity_excluded": 8,
+        "collision_preparation_excluded": 16,
+        "source_geometry_excluded": 1,
+        "initially_qualified_full_path_unknown": 2
+      },
+      "receipts": [
+        {
+          "id": "01552",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 184.60020341600102,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/01552/qualification.json",
+          "source_sha256": "4a0d7448786833da953cc83c092c26781ef1d72749a5c76b10d52fcbf6d639e9"
+        },
+        {
+          "id": "01989",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 104.08733308400042,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/01989/qualification.json",
+          "source_sha256": "13040a4f310297f4d07d272ae92fcf0bd993b84f5ff6e49cb1db4659a978167a"
+        },
+        {
+          "id": "02096",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 121.46694045800177,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/02096/qualification.json",
+          "source_sha256": "531d8c48e25bd503bc18e8ee850acc95b43c8a784aaa3d1c345436c4c1e4557d"
+        },
+        {
+          "id": "02227",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 119.08953408299931,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/02227/qualification.json",
+          "source_sha256": "a8bdf4947125907eb42cfcfa6b2d194b8696758a8f77781c13a3f7165869bf7a"
+        },
+        {
+          "id": "02240",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 163.41153587499866,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/02240/qualification.json",
+          "source_sha256": "da4295e07cad221e5e42a2eca13bfa4a5135de7fc455cbe3d33da63998201a36"
+        },
+        {
+          "id": "02484",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 199.1717540410027,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/02484/qualification.json",
+          "source_sha256": "37b21e40512f0c06875cc1d9da59bead3e5781571d37f1d4d6944a2bce924423"
+        },
+        {
+          "id": "02825",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 106.81982804199652,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/02825/qualification.json",
+          "source_sha256": "ca015985bac857434cc80162d4a96ddcb7167f4b94767e0b41fa5bd3fd2d2ead"
+        },
+        {
+          "id": "03055",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 97.95695933400202,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/03055/qualification.json",
+          "source_sha256": "5c69780699222f895a4193641b4bb8ce75e26d7c807f58a96751a1a7bf62bf5c"
+        },
+        {
+          "id": "03527",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 218.9810668329992,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/03527/qualification.json",
+          "source_sha256": "e0859fec866c24da6f77dc6c9802a20e876f65c61c5afd0d1d8cb1e817c1e70b"
+        },
+        {
+          "id": "03767",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 197.53008200000113,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/03767/qualification.json",
+          "source_sha256": "008d472776ec009e25ca55a2a91f4cbbded5e14dd9e7bf4d12cfae93567a3f94"
+        },
+        {
+          "id": "04052",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 353.62581675000183,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/04052/qualification.json",
+          "source_sha256": "2f4ce5a74a97ddde459ca7883dc8f95a48fbdd60e3a07decb90c321905f530d7"
+        },
+        {
+          "id": "04068",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 180.76157783300005,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/04068/qualification.json",
+          "source_sha256": "aae4cafa5db06864e596a53a73d7e72954358c1257e2aa4254bfd9584f8a1571"
+        },
+        {
+          "id": "04158",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 0.999710457996116,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/04158/qualification.json",
+          "source_sha256": "89822f785483d6d851fb017869f924c083256d3b9c24b39eea8903a9536399bc"
+        },
+        {
+          "id": "04288",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 234.15860883300047,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/04288/qualification.json",
+          "source_sha256": "f1512c53152b71974b7e614684e59f29363658f3e62002e352d4efcdc97f5eec"
+        },
+        {
+          "id": "04810",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 103.31945983300102,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/04810/qualification.json",
+          "source_sha256": "f9522b9a1f672d11e0ab1984e194675e8f0da42319039ddc97ce2fb6ec818da5"
+        },
+        {
+          "id": "05827",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 526.6540364159955,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/05827/qualification.json",
+          "source_sha256": "cc0edd7136d42bca8640a655d0ff5ccbe4649e137971dc26453243b5ed344929"
+        },
+        {
+          "id": "05828",
+          "status": "initially_qualified_full_path_unknown",
+          "elapsed_seconds": 464.9282430000021,
+          "in_selected_cohort": true,
+          "selected_initial_native_health": {
+            "status": "NO_NATIVE_WARNINGS_RECORDED",
+            "warning_count": 0,
+            "warning_messages": {},
+            "warning_free_observed": true,
+            "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "error": null,
+          "source_path": "outputs/input_audit/development/05828/qualification.json",
+          "source_sha256": "42b20556a4ea34e12c20b66e8eeb7999f76b8db2ed26f5d8b04d7cab57fe2283"
+        },
+        {
+          "id": "05893",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 79.22098395800276,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/05893/qualification.json",
+          "source_sha256": "6b8c56d569da7ee9b1d133290ff5265ec52b691644c8d3ea6c74ca7e123cf348"
+        },
+        {
+          "id": "06246",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 102.66426129200045,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/06246/qualification.json",
+          "source_sha256": "cf6888ca2c067605504e370d824a77b0fd87db448257deb48fc84d08fffa52ff"
+        },
+        {
+          "id": "07135",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 177.6573271659945,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07135/qualification.json",
+          "source_sha256": "75d301d7c1af8af4a41f8511a458182564f168f1ff9076a0c1f27c3683b7bfa5"
+        },
+        {
+          "id": "07163",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 149.61569387500276,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07163/qualification.json",
+          "source_sha256": "583ff81b052527f9b7c5a1d15eea45e89ef0c8b5e35c5dab1c5163e48ef88d02"
+        },
+        {
+          "id": "07364",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 20.492834374999802,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07364/qualification.json",
+          "source_sha256": "5726a1a34693bed3af8cd697a440eb8f91116b6270344c20f3e657fcaa44149e"
+        },
+        {
+          "id": "07607",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 180.63426345900007,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07607/qualification.json",
+          "source_sha256": "7e7aed0ffad9dbc3d135995f5b5243c7a33a629c99d4f3f62143be0ce9cd381e"
+        },
+        {
+          "id": "07664",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 152.47222391600008,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07664/qualification.json",
+          "source_sha256": "12771498e7ddc993d71b8f3913079f96b737f527bd0e587ce7870ff39ad0ce01"
+        },
+        {
+          "id": "07694",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 169.26540387500063,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07694/qualification.json",
+          "source_sha256": "0a04bc8648e05769d7f17babf85122ef2a6329056bae6b81b25aa506aa93cc3e"
+        },
+        {
+          "id": "07856",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 423.3751376670007,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/development/07856/qualification.json",
+          "source_sha256": "f0271c6d97a85fddc4087baf3924b4ff0d3b13a9aff173fbc5b7ab651df2e50d"
+        },
+        {
+          "id": "08243",
+          "status": "initially_qualified_full_path_unknown",
+          "elapsed_seconds": 94.62782591599898,
+          "in_selected_cohort": true,
+          "selected_initial_native_health": {
+            "status": "NO_NATIVE_WARNINGS_RECORDED",
+            "warning_count": 0,
+            "warning_messages": {},
+            "warning_free_observed": true,
+            "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "error": null,
+          "source_path": "outputs/input_audit/development/08243/qualification.json",
+          "source_sha256": "44c82a9b06188434ca3a419d2f9991377cabed0d6af031403b1cdb5a70a885f0"
+        }
+      ]
+    },
+    "evaluation": {
+      "completed_source_preparations": 75,
+      "ordered_candidates_consumed": null,
+      "selected_CADs": 0,
+      "source_preparation_statuses": {
+        "collision_preparation_excluded": 51,
+        "initial_physics_or_capacity_excluded": 14,
+        "initially_qualified_full_path_unknown": 3,
+        "source_geometry_excluded": 7
+      },
+      "receipts": [
+        {
+          "id": "00000",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 55.431803916995705,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00000/qualification.json",
+          "source_sha256": "87b9ab54bcf71bac70aac1b4979382adc2d53f520fab9c237c6fd7881b21cd37"
+        },
+        {
+          "id": "00106",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 129.7831387920014,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00106/qualification.json",
+          "source_sha256": "ea4a80aa7df41eafd927c502ff5938eb761a55d1bbc5eb0c2ad04dfffd202deb"
+        },
+        {
+          "id": "00185",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 15.674540292005986,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00185/qualification.json",
+          "source_sha256": "b62b994c980e324dfd0471d1bb71992b15d1d7c36b4a0b58cfe7602450de4e2f"
+        },
+        {
+          "id": "00354",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 172.27704799999628,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00354/qualification.json",
+          "source_sha256": "5b43b9aa834d678ffe355b93a19601dac49e3efd73ebf9276aa4c14677ef9f2c"
+        },
+        {
+          "id": "00392",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 562.3072382500031,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00392/qualification.json",
+          "source_sha256": "04165e3f3b02d22dfe2b5c1d7a8dc0218215d46383a874288ff3aa7f4a3b5599"
+        },
+        {
+          "id": "00437",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 181.09481845800474,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00437/qualification.json",
+          "source_sha256": "948056bd7155376201b8f0bf942f1ba6b46f8a764409f973403780441452e89f"
+        },
+        {
+          "id": "00509",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 233.60262483300176,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00509/qualification.json",
+          "source_sha256": "352209b0683c1d459fe06c30d803836f19e764419cd2ad9378d00ef909130fdb"
+        },
+        {
+          "id": "00644",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 133.82843716700154,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00644/qualification.json",
+          "source_sha256": "0489020ee8d8b0bc320f6c91a8a65b7b03e5b99b6b8efc062d62f9a548b007c5"
+        },
+        {
+          "id": "00709",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 239.6368636670013,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00709/qualification.json",
+          "source_sha256": "8d495908cbec56ad6ca4376cc53d341107750a3ec3b1b4630b05518c3f33b8b8"
+        },
+        {
+          "id": "00754",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 264.3341784580043,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00754/qualification.json",
+          "source_sha256": "79df8c27dd217ae34dc227ffe978d89a33ffc8d4f07273e653a703f2131ce11d"
+        },
+        {
+          "id": "00820",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 144.2351139579987,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00820/qualification.json",
+          "source_sha256": "3bfd1149c05dcd5f8f5b50869d1b87b0a44ea75d09f4daf8b1aa18c737a8675a"
+        },
+        {
+          "id": "00824",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 100.44621216700034,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00824/qualification.json",
+          "source_sha256": "17fa61f9b80abf9bfd0a15b579a8027994feb8b73a0bd0fd922933ced9b9201a"
+        },
+        {
+          "id": "00988",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 269.82836279099865,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/00988/qualification.json",
+          "source_sha256": "779908b41dc93e6e9b78b5a44380709bffe884a152d53034bd08c8934ec8a5a7"
+        },
+        {
+          "id": "01115",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 109.63113129200065,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01115/qualification.json",
+          "source_sha256": "01df32650c5e4f4e0ef43316a29fc8cdd1cae3d9135d02811a896ac9ba0938f3"
+        },
+        {
+          "id": "01197",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 136.59270700000343,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01197/qualification.json",
+          "source_sha256": "9091c94b1161a228dc68d1a4367ae42aefbe7d76c90f01c196095dd98280ba94"
+        },
+        {
+          "id": "01202",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 159.79141054199863,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01202/qualification.json",
+          "source_sha256": "66e3060aa66528da1e6c7955a9dfd4608c94e80120dd24e9bf516406f51f7870"
+        },
+        {
+          "id": "01235",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 122.99278808399686,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01235/qualification.json",
+          "source_sha256": "0bf66afef7b3e42e752c96df3b487271a1ce558a0bcd4e4832a583af9ba32527"
+        },
+        {
+          "id": "01261",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 502.92681787499896,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01261/qualification.json",
+          "source_sha256": "5fbbf27189361d7b72924ad2b39802ba975bb28c00a60b7a123ec05b33269ca2"
+        },
+        {
+          "id": "01436",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 430.7181254170064,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01436/qualification.json",
+          "source_sha256": "a4d4e292488501ff69a323e060d318550f2557eb405659e259d5999ed99c68cf"
+        },
+        {
+          "id": "01440",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 181.03151579099358,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01440/qualification.json",
+          "source_sha256": "3d88f188d5a49a6414eb6516b2dbc91adb3b43ff9d119bcbb361f49dcf450359"
+        },
+        {
+          "id": "01631",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 150.07068462499592,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01631/qualification.json",
+          "source_sha256": "0019dda3e234b0770313750a1ec3929b437d2ca6fbac9accd39ea4556753ca7e"
+        },
+        {
+          "id": "01708",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 178.55138329200418,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01708/qualification.json",
+          "source_sha256": "294a9eb545596efe2eb58d24d1f54e916385dad7aa25874b00396b7def24ad99"
+        },
+        {
+          "id": "01906",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 224.32074458400166,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01906/qualification.json",
+          "source_sha256": "2cb1ed2c5855d1ca0c779b46be85001f2e79904455552b358bd4d29fea28edf5"
+        },
+        {
+          "id": "01909",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 91.58086137500504,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01909/qualification.json",
+          "source_sha256": "7bf09d67a2f412f41ff15ae9fe9e511591d3ec21ccfc86205b8151ac36f86846"
+        },
+        {
+          "id": "01917",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 168.59580929200456,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/01917/qualification.json",
+          "source_sha256": "640ba536cc9c8d5f392292738a7d7fc8d75b43ce1ee5d84a3e8aa46ad57dcc36"
+        },
+        {
+          "id": "02002",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 171.73786079199635,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02002/qualification.json",
+          "source_sha256": "3326e3b91ef90c425698beddb7eb15d2efb48909c44841e7e12fbe3cefb20456"
+        },
+        {
+          "id": "02016",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 193.46145329099818,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02016/qualification.json",
+          "source_sha256": "10499730d28fbefc034b6db8b1389ec133f68758fcf146efeaa11184d161248b"
+        },
+        {
+          "id": "02117",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 181.1467916249967,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02117/qualification.json",
+          "source_sha256": "2c05154eb36aef09a0ff86bb7b991b8ad3f3b64db946de5330359c078cbeb815"
+        },
+        {
+          "id": "02297",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 239.71466274999693,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02297/qualification.json",
+          "source_sha256": "0e4bf2bd1a5f7a3285dd1ab9072d9fe25e28749284bd751848a7f0a5e8773f5a"
+        },
+        {
+          "id": "02307",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 96.490286207998,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02307/qualification.json",
+          "source_sha256": "2aaaf373e3ad8f523a9166e62972411447cd82e10494e0a528fe59ea16784598"
+        },
+        {
+          "id": "02418",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 116.49179979100154,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02418/qualification.json",
+          "source_sha256": "713f0ccea93940497abea227611cea2a66435d1286760a6655d10a39f8a6387c"
+        },
+        {
+          "id": "02523",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 203.36556595800357,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02523/qualification.json",
+          "source_sha256": "267c4827452b7735c564a60749526c37f665ff3289ccd0b9285ec8d59329f66b"
+        },
+        {
+          "id": "02587",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 180.98146937500132,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02587/qualification.json",
+          "source_sha256": "f52483c255b0d148a118be41791b910e9d76ce35d3371a43f5fb3f12cdde0690"
+        },
+        {
+          "id": "02666",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 91.50477783300448,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02666/qualification.json",
+          "source_sha256": "f8933937d010e365d0b5c218518c36e3a398ad10e885279957c55c7b8fa3a92e"
+        },
+        {
+          "id": "02828",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 664.9738908750005,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02828/qualification.json",
+          "source_sha256": "5c28176ac4a2148e3ea1ba2437a6061ac09dc2847e57fae3553199ca6596a855"
+        },
+        {
+          "id": "02962",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 471.463016791,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/02962/qualification.json",
+          "source_sha256": "9d032a7e3b653b3f2bd1f35a623cf6ea718f08a1f283256fb7c7fa76645a3bca"
+        },
+        {
+          "id": "03030",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 172.81811308299802,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03030/qualification.json",
+          "source_sha256": "4aca5886d508d32f6cf5203645de50a8197a0f2dc0e37dd6ced9ceb4837a92cb"
+        },
+        {
+          "id": "03114",
+          "status": "initially_qualified_full_path_unknown",
+          "elapsed_seconds": 243.71130724999966,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": {
+            "status": "NO_NATIVE_WARNINGS_RECORDED",
+            "warning_count": 0,
+            "warning_messages": {},
+            "warning_free_observed": true,
+            "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03114/qualification.json",
+          "source_sha256": "a9eab49824d0578f83d3d8fa774dc1a4c6058e9513f18903096fa40a57b75488"
+        },
+        {
+          "id": "03212",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 190.43262949999917,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03212/qualification.json",
+          "source_sha256": "466aeccad1f3a716687dbe6af32017764b2aad42c431c53343bdde67559504da"
+        },
+        {
+          "id": "03280",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 99.28545474999555,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03280/qualification.json",
+          "source_sha256": "4a6028ca46503401c6b2aadf93639463bb5c7c791e7468f30053e72f788d967f"
+        },
+        {
+          "id": "03507",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 649.0290862080001,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03507/qualification.json",
+          "source_sha256": "43acfcde7b3fe33d8a161e7aebbaa6474fb006313dc55be88f9e97d386653713"
+        },
+        {
+          "id": "03556",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 46.64344345800055,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03556/qualification.json",
+          "source_sha256": "95122a8259e06d225636ce209d944f53f2c0ece13165e8871def5ca39e52a43b"
+        },
+        {
+          "id": "03619",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 544.7572089589958,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03619/qualification.json",
+          "source_sha256": "ec7bcfc8a2eba0ef4242b1b751eb862a07ce3a9915656b50d3063a746feaa6dd"
+        },
+        {
+          "id": "03866",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 176.25276929100073,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03866/qualification.json",
+          "source_sha256": "8ff01b6b5e80fbd1a45bb15553687f49a12bfbec7bc4ba40447366967fe48e00"
+        },
+        {
+          "id": "03932",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 77.99601191699912,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/03932/qualification.json",
+          "source_sha256": "2da5115336d76afa9db6f5f1dc376a7be59c2e49f2ed3a27beda59699c989a5f"
+        },
+        {
+          "id": "04364",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 137.76003412499995,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/04364/qualification.json",
+          "source_sha256": "72724d6476870f33ab43f70dc446a4d19b43cc8bebf624534459304d0b048157"
+        },
+        {
+          "id": "04603",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 149.2116717089957,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/04603/qualification.json",
+          "source_sha256": "00b2ca282f92049a722d0de2698090225c61757dc5857a706a586a686b404b9a"
+        },
+        {
+          "id": "04671",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 228.3474774580027,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/04671/qualification.json",
+          "source_sha256": "0dad8af015ae4be92b62ce81c196abcf8474882051c49696cabd363b6e1700eb"
+        },
+        {
+          "id": "04762",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 117.05942408400006,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/04762/qualification.json",
+          "source_sha256": "0e5be7bd084b0830acef9901319de5ca78ff1908ce1467723aa9a7d772d2b1cb"
+        },
+        {
+          "id": "05048",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 146.2974888749959,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05048/qualification.json",
+          "source_sha256": "a16b30db41b9fd1a21f98dafbb8391f8bfab792dd28f855569a950036ea603e7"
+        },
+        {
+          "id": "05098",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 91.06510037500266,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05098/qualification.json",
+          "source_sha256": "7d257c894198e7637a02d155e72cc0ef1d7eb0f55875e4bc38e3ec852d0165e5"
+        },
+        {
+          "id": "05181",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 124.09597066599963,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05181/qualification.json",
+          "source_sha256": "e1cf02310b331805fccff49855056b8ee4bf2881f4ffcb43e79efc72e61846ed"
+        },
+        {
+          "id": "05304",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 127.01088500000333,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05304/qualification.json",
+          "source_sha256": "8a213cc467265f47537b95917d3b2aa480e3e35ee5beed3fe353a1b941723b72"
+        },
+        {
+          "id": "05335",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 152.2551377090058,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05335/qualification.json",
+          "source_sha256": "73c31426b12c6ef34e6db0abf09638bc2dfb109631fa7b86bb75acbfec0f979d"
+        },
+        {
+          "id": "05481",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 147.89850212499732,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05481/qualification.json",
+          "source_sha256": "ad4a859501c89bc60c5b49b46bbac8d6cf8aba5836aa9f6a4a33b2170c19371b"
+        },
+        {
+          "id": "05593",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 175.3951828749996,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05593/qualification.json",
+          "source_sha256": "ce78ea7a8520197986f0b82c46faa3ce25e0c058763eeb9ad9498195141afcba"
+        },
+        {
+          "id": "05770",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 286.8540597500032,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05770/qualification.json",
+          "source_sha256": "a62a57438b114c1c2f9ebe76283e8189d30759bf097945429e2c1d8ca996675d"
+        },
+        {
+          "id": "05954",
+          "status": "initially_qualified_full_path_unknown",
+          "elapsed_seconds": 237.14512529200147,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": {
+            "status": "NO_NATIVE_WARNINGS_RECORDED",
+            "warning_count": 0,
+            "warning_messages": {},
+            "warning_free_observed": true,
+            "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/05954/qualification.json",
+          "source_sha256": "0013b8dec722539474557df66834a023e6fa391a9ca7e45f6e96c67b12ce3c9b"
+        },
+        {
+          "id": "06116",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 400.1907730410021,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/06116/qualification.json",
+          "source_sha256": "55152551f4a793fb41a100a918d86715e2d3f69d82c9bf82cc37c20b29257c48"
+        },
+        {
+          "id": "06444",
+          "status": "initially_qualified_full_path_unknown",
+          "elapsed_seconds": 240.52912258400465,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": {
+            "status": "NO_NATIVE_WARNINGS_RECORDED",
+            "warning_count": 0,
+            "warning_messages": {},
+            "warning_free_observed": true,
+            "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/06444/qualification.json",
+          "source_sha256": "6a303abe57f893d514ef9a605d364eb5d1659abfbe1679b0b5bd0ec97423886e"
+        },
+        {
+          "id": "06853",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 0.6887544580022222,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/06853/qualification.json",
+          "source_sha256": "f49bb9807261aa705ab2e4ad5f1845449af8ce43696cad0da88195fa212e4fdf"
+        },
+        {
+          "id": "07102",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 459.46894779200375,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/07102/qualification.json",
+          "source_sha256": "c8655ace730cdece527ac78f4dd4e756b5c434b09ab512e5c02bfe79ea8c516e"
+        },
+        {
+          "id": "07475",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 92.05104716599453,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/07475/qualification.json",
+          "source_sha256": "ec7d9decf99909f8206b2ff25766decfcc9ec4bab6fc7d1327005482028f550d"
+        },
+        {
+          "id": "07507",
+          "status": "initial_physics_or_capacity_excluded",
+          "elapsed_seconds": 297.66376874999696,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/07507/qualification.json",
+          "source_sha256": "2e15c12843bb65d259139c8169edea3e749bdecf9741b208df4fa3ce67186e48"
+        },
+        {
+          "id": "07806",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 147.91074404199753,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/07806/qualification.json",
+          "source_sha256": "0ed90fbcc269df719e3752211e0d7d05b400c220aff530aaf950f40fd9643a22"
+        },
+        {
+          "id": "08013",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 229.73820058300043,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/08013/qualification.json",
+          "source_sha256": "a7bfb008efffb7abcbfb412977b7e6c55c4c55307e5d8a06d72aee313c9dc625"
+        },
+        {
+          "id": "08049",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 181.19005395800195,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/08049/qualification.json",
+          "source_sha256": "583528777a0a5ba9eaef57559fb4a816531e93753bc1d76fe113bf73f7c61b53"
+        },
+        {
+          "id": "08174",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 199.81017345799773,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/08174/qualification.json",
+          "source_sha256": "43f701053a9813fd57e44cf5811032b3ef13472970eddf752074c1d23685113c"
+        },
+        {
+          "id": "20000",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 1.7568337080010679,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20000/qualification.json",
+          "source_sha256": "5cf87ca1252c894689046540b6bbdc5711f0b0a241824ddbcb64419060db5389"
+        },
+        {
+          "id": "20002",
+          "status": "collision_preparation_excluded",
+          "elapsed_seconds": 181.9992262079977,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20002/qualification.json",
+          "source_sha256": "ea592851a200e0587a4acd9e094fc098cda31a39124411879bde4872ce2f5151"
+        },
+        {
+          "id": "20003",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 2.566014707997965,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20003/qualification.json",
+          "source_sha256": "73ef73d8b3e444ae3254e5fca79a7c68f7a5da6b3558a5ce2cc1b75f6884dbcd"
+        },
+        {
+          "id": "20005",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 0.9335180410052999,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20005/qualification.json",
+          "source_sha256": "ff1fa9ec76d57dbcfbf2d654b7c75c82889aa41b24f66f6afb663b3f69f605de"
+        },
+        {
+          "id": "20007",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 1.8666665829950944,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20007/qualification.json",
+          "source_sha256": "9e5224a08829ebee763ca28b471e49c45d1f5065c718ec8d078b08d6c3fe42dd"
+        },
+        {
+          "id": "20014",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 1.5544307079981081,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20014/qualification.json",
+          "source_sha256": "a9a9e9e6edca8add70916d9cbd1dad32fcd4ecf2485ba8a389dc69732e7bbb7b"
+        },
+        {
+          "id": "20016",
+          "status": "source_geometry_excluded",
+          "elapsed_seconds": 2.3716270830045687,
+          "in_selected_cohort": false,
+          "selected_initial_native_health": null,
+          "error": null,
+          "source_path": "outputs/input_audit/evaluation/20016/qualification.json",
+          "source_sha256": "27fccf03ab56cf4cf049f7096a1656080b3c96c238a973aef4b51aaa4b9b82e4"
+        }
+      ]
+    }
+  },
+  "scope": "All completed preparation receipts include unused prefetch. Ordered selection and final scored denominators are separate. No setup/native-capacity exclusion proves physical impossibility or planner failure."
+}
