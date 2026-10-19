@@ -14,6 +14,10 @@ ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하
 
 현재 상태는 [docs/status.json](docs/status.json), 세부 실행·복구 지침은 [AGENT_HANDOFF](docs/AGENT_HANDOFF.md), 실험 조건은 [PLAN](docs/PLAN.md)을 읽으세요. 아직 생성되지 않은 결과 파일은 완료를 의미하지 않습니다. 현재 공개본은 작업 중인 코드 snapshot입니다.
 
+최종 표본은 **3 CAD × A/B/C = 9회 첫 실행**입니다. 후보75개 중3개만 입력 검증을 통과해,평가 결과를 보기 전에 표본 수를 줄였고 사용자가 이를 확인했습니다. 원래4개 목표는 미달했습니다. [표본 변경](docs/provenance/cohort_amendment.json),[사용자 확인 기록](docs/provenance/cohort_amendment_confirmation.json)을 보세요. 모델·예산·물리 기준·actor·skill은 유지합니다.
+
+Claude Code로 재개할 때는 [복사용 프롬프트](docs/CLAUDE_CONTINUATION_PROMPT.md)와 [재개 안내](docs/CLAUDE.md)를 읽으세요. 현재 로컬 실행이 살아 있으면 중복 실행하지 않습니다.
+
 ## 입력과 판단 흐름
 
 부품별 OBJ와 조립 위치 → 원본 형상 충돌 검사/초기 물리 검증 → LLM의 코드 또는 후보 순위 → 검증된 제거·checkpoint 복원 → MuJoCo 잔여 조립체 안정성 → 로그와 다시보기.

@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-19T19:02:26.882568+00:00",
+  "scope_of_change": "final_CAD_count_only",
+  "original_target": 4,
+  "effective_target": 3,
+  "original_freeze_sha256": "3d67b370962ab6a71a05eff96166683d5a1486771ea8e2de684b653a496ca2cb",
+  "exhaustion_evidence_path": "analysis/input_cohort_exhaustion.json",
+  "exhaustion_evidence_sha256": "dceb9ebbd3402d77663af74f22ab0542d9b2c07893879b3dac21654d28eeab23",
+  "case_ids": [
+    "asap_05954",
+    "asap_06444",
+    "asap_03114"
+  ],
+  "decision_before_policy_outcomes": true,
+  "frozen_actor_bank_physics_unchanged": true,
+  "source_order_fixed": true,
+  "decision_basis": "User requested uninterrupted completion within the time target and explicitly allowed reducing the test allocation. Agent uses all three passing inputs after all75fixed candidates were exhausted;no policy outcome is available.",
+  "explicit_user_selection_of_three": false,
+  "agent_stated_assumption": true,
+  "limitation": "Original four-CAD target unmet. Three-CAD/nine-episode descriptive pilot only;not an industrial success-rate estimate."
+}
