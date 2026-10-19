@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-19T12:59:01.738225+00:00",
+  "opened_training_source_CADs": 58,
+  "newly_added_distinct_shape_fingerprints": 58,
+  "ledger_sha256": "57e32315edb70a6938c2832bdca0edbd22cfae24bb8ec500f3022203cd4605cd",
+  "before_test_geometry": true,
+  "reason": "A first-episode held-out claim excludes exact duplicate geometry from every opened training input,not only successfully qualified/selected inputs.",
+  "development_roles_and_all_episode_outcomes_unchanged": true
+}

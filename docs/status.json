@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T12:58:27.131545+00:00",
+  "utc": "2026-10-19T13:00:21.592524+00:00",
   "state": {
     "utc": "2026-10-19T12:58:27.097806+00:00",
     "pid": 36463,
@@ -8,11 +8,11 @@
   },
   "selected_discovery": 5,
   "live_progress": {
-    "phase": "full_search_learning",
-    "utc": "2026-10-19T12:50:00.331780+00:00",
-    "case": "asap_02429",
-    "completed": 4,
-    "total": 5
+    "phase": "independent_full_search_validation",
+    "utc": "2026-10-19T12:58:42.586892+00:00",
+    "case": "asap_07375",
+    "completed": 0,
+    "total": 3
   },
   "early_discovery": {
     "utc": "2026-10-19T12:46:43.010490+00:00",
@@ -114,7 +114,7 @@
   ],
   "selected_validation": 3,
   "completed_full_discovery": 5,
-  "completed_independent_validation": 0,
+  "completed_independent_validation": 1,
   "completed_first_test_episodes": 0,
   "targets": {
     "full_discovery": 5,

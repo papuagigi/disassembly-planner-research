@@ -13,6 +13,7 @@ def main():
     assert len(completion['episodes'])==3*len(manifest['cases'])
     prior=read(ROOT/'outputs/input_audit/previous_geometry_fingerprints.json')
     known={r['fingerprint'] for r in prior['records']}
+    known.update(read(ROOT/'outputs/input_audit/pools.json').get('prior_geometry_fingerprints',[]))
     development=read(ROOT/'outputs/input_audit/selected_development.json')
     known.update(c['geometry_fingerprint'] for c in development['cases'])
     banks={a:DocumentBank(ROOT/'memory'/(conf['bank']+'.json')) for a,conf in ARMS.items()}
