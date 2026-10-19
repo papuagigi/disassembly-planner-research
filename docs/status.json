@@ -1,22 +1,20 @@
 {
-  "utc": "2026-10-19T12:49:36.967839+00:00",
+  "utc": "2026-10-19T12:49:39.452431+00:00",
   "state": {
-    "utc": "2026-10-19T12:49:36.947111+00:00",
+    "utc": "2026-10-19T12:49:39.430176+00:00",
     "pid": 36463,
     "status": "RUNNING",
-    "phase": "prepare_development_inputs"
+    "phase": "drain_preserved_input_workers_after_scope_reduction"
   },
-  "selected_discovery": 0,
+  "selected_discovery": 5,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T12:43:34.554893+00:00",
-    "qualified": 5,
-    "target": 16,
-    "attempted": 56,
-    "active_ids": [
-      "04719"
-    ],
-    "completed_out_of_order": 0
+    "utc": "2026-10-19T12:49:39.414571+00:00",
+    "qualified": 4,
+    "target": 4,
+    "attempted": 37,
+    "active_ids": [],
+    "completed_out_of_order": 1
   },
   "early_discovery": {
     "utc": "2026-10-19T12:46:43.010490+00:00",
@@ -105,7 +103,7 @@
       "replay_status": "PASS"
     }
   ],
-  "selected_validation": 0,
+  "selected_validation": 3,
   "completed_full_discovery": 4,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
