@@ -18,7 +18,7 @@ def viewer():
     if not old.exists():old=WORKSPACE/'viewer' # portable GitHub snapshot
     if not (folder/'vendor').exists():shutil.copytree(old/'vendor',folder/'vendor')
     text=(old/'index.html').read_text().replace('문서형 skill · 3D 분해 실험','실제 분해 실패 절차 · 대형 CAD 비교')
-    text=text.replace('별도로 검증한 가능한 순서','실행 후 재검증한 가능한 순서').replace('평가 LLM에 제공하지 않은 참고 경로입니다.','성공한 실제 실행에서 얻은 경로를 평가 후 다시 검증했습니다. 평가 LLM에 미리 제공하지 않았습니다.')
+    text=text.replace('별도로 검증한 가능한 순서','실행 후 재검증한 가능한 순서').replace('평가 LLM에 제공하지 않은 참고 경로입니다.','검증된 성공 경로가 있는 경우에만 평가 후 재검증한 참고 순서를 표시합니다. 평가 LLM에는 미리 제공하지 않습니다.')
     text=text.replace('viewer.js?rev=document-final-2','viewer.js?rev=final-document-v4')
     text=text.replace('재생 시간은 시각화용이며 실제 분해 작업 시간과 다릅니다.',
         '재생 시간은 시각화용이며 실제 분해 작업 시간과 다릅니다. 거절된 검사는 현재 조립체 상태에 적용되지 않습니다.')
