@@ -100,6 +100,8 @@ def wilson(k,n):
     return [max(0,center-radius),min(1,center+radius)]
 
 def main():
+    from .post_conditions import main as audit_conditions
+    audit_conditions()
     manifest=read(ROOT/'outputs/evaluation/manifest.json');calls,token_groups=tokens()
     trials=[];contexts=[];behaviors=[];timecuts=[]
     for case in manifest['cases']:
