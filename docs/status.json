@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T19:02:38.135366+00:00",
+  "utc": "2026-10-19T19:02:40.238035+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T19:02:38.094442+00:00",
+    "utc": "2026-10-19T19:02:40.188142+00:00",
     "pid": 51259,
     "status": "RUNNING",
-    "phase": "drain_preserved_input_workers_after_scope_reduction"
+    "phase": "waiting_for_prior_replays_and_integrity"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
