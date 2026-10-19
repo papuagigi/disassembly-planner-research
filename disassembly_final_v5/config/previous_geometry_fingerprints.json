@@ -1,0 +1,504 @@
+{
+  "records": [
+    {
+      "id": "00832",
+      "fingerprint": "ca711c098bca6102d67c1e2e1321f06f750b47918d69a546565793a82c25e7ff",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00832/source_inventory.json",
+      "sha256": "dd042d044b3f910faa7112965023b94037e70ee0f600a58425a63e57d85e025d"
+    },
+    {
+      "id": "00861",
+      "fingerprint": "4603938ea281bbda5a674f047308c112f8cbf06762cfbfb5c386694142cc4230",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00861/source_inventory.json",
+      "sha256": "d08b9f20a179c6aaedde845a5058c63e992f62820f4e1e94d6234de2ea29bc1a"
+    },
+    {
+      "id": "00914",
+      "fingerprint": "4a73c8dd71a5c9c38262216f6823b242c165adb5632d2fc1f4c7d27c14dc14b6",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00914/source_inventory.json",
+      "sha256": "3223c6ab637188ec406b851c72fc6fc3251ca0327038f7a41be349181640350f"
+    },
+    {
+      "id": "01047",
+      "fingerprint": "f642ec5fc9501ce719ed0ef6dad6c6d0d329e3a7ff47d4748bd465dabb57aff8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01047/source_inventory.json",
+      "sha256": "f1721f5384c40ab6d3d5634bac39fd5667df76254c42d3b58ccbb6e4cdcf6b36"
+    },
+    {
+      "id": "01275",
+      "fingerprint": "a962d2eb700f82dfd7b6e093efbe04f0f5ae70a799b98a232fcc3415f81f28dc",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01275/source_inventory.json",
+      "sha256": "fb081f6e3079caae962c885e12cc12be3b914f4405537bc33dcfee6c33f794dc"
+    },
+    {
+      "id": "00953",
+      "fingerprint": "695f8b97778d9ae45b6ac9be412f6020fdfbda3b925319772dcc836a98ffd3f8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00953/source_inventory.json",
+      "sha256": "762fc2e0afdd004d0b29cdf1e0325b7aeaa4b075cd988ec441a6bcc3bf185a93"
+    },
+    {
+      "id": "01041",
+      "fingerprint": "504cccce19345a7e7b33e1f18a0c433be92b05fcd589d82b183c424112ed3f21",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01041/source_inventory.json",
+      "sha256": "1c75355167718b2ef1b95075db45ac25a249a4c0ec248ab79c8189c6ce71dd39"
+    },
+    {
+      "id": "00880",
+      "fingerprint": "d37d11e0a8d15a52589ec54798e639c463225a71df18c867cc219bc24e3475b8",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00880/source_inventory.json",
+      "sha256": "729ab363f44668b70135af7b0e1387ad73bf54fcd3839272bfc98095ae30a55b"
+    },
+    {
+      "id": "00845",
+      "fingerprint": "9778c7f2aebed85042e9c8d346f5859688c0c575d2a5b371e64fcbec46169c8b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00845/source_inventory.json",
+      "sha256": "dab7052c170b42a0b59edb3ba6144cce9319239561060bb5ea0df56263638139"
+    },
+    {
+      "id": "01159",
+      "fingerprint": "b36b80337ec966985aab17e9b1c98e5cdad28ca47fa27d43f91561ca7f7765e3",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01159/source_inventory.json",
+      "sha256": "fc6139f95bbcd2b1538789067e031f7917c814461e523797fcf4231dd7b6a1a9"
+    },
+    {
+      "id": "00927",
+      "fingerprint": "94db492919b1a6603dc65c54627200e8c38c1a6bdc44a708d66217a3b22ee391",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00927/source_inventory.json",
+      "sha256": "ca9ab7613734934de01d2c30fea0e6b1fcf37d0ba5dc74d4dd2d60ba0ba9aa80"
+    },
+    {
+      "id": "01005",
+      "fingerprint": "a545a822009d0da1919ee52a7385454bfa3ac1f21ca94edc9a5de8d47a7c7f6e",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01005/source_inventory.json",
+      "sha256": "198868cfb9cd2689fdc24b142cb4e5e3da777eee99fd7469ac1ba7323264b5a6"
+    },
+    {
+      "id": "01262",
+      "fingerprint": "b6486ecdb907c77f4bf7c42574844cae95bc7475b9613a0f75caea358e8c1959",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01262/source_inventory.json",
+      "sha256": "7cc0ebf58c4485f9fe127a7d5e3ad05f8ac92d575ec253c3ca71151562842d45"
+    },
+    {
+      "id": "00944",
+      "fingerprint": "774e7e585ccd8e3cc4500c7c54cd9514db52b6159e0de719975c9ccf3b4a9d47",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00944/source_inventory.json",
+      "sha256": "fc55d8b2298739b6d620d892cd01f04cb800bdfba3b96b2512897d9b4c4d695a"
+    },
+    {
+      "id": "00992",
+      "fingerprint": "524cb0560a41bfc6e5624a7973e58a463c1752574c34afd5a306291f53f2a74b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00992/source_inventory.json",
+      "sha256": "0a137be6cb3007befa8cd3d7504473b113a9c80cb17e372e164295dd92b4f8ce"
+    },
+    {
+      "id": "01027",
+      "fingerprint": "aeca60ae526d1558d28dff0d1fb91b970698ddafc6e841dae2f31f86255dfa8e",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01027/source_inventory.json",
+      "sha256": "c7cf91161807caf0ff8a34cdc909f1cb28949c7f08bc9ddb0703f542eccfb40b"
+    },
+    {
+      "id": "00960",
+      "fingerprint": "30e3ea50f17e24bee68354e5ac6c88ec49b7baccbfa1a2a63c555df5d3fb1809",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00960/source_inventory.json",
+      "sha256": "f31ccee4544696e91672bb85dab4f3e0c1533d788b298e36ae668ddd8479474d"
+    },
+    {
+      "id": "01045",
+      "fingerprint": "7fd535d6571b161091864f9ddb80def03542c8e42a54198a59dcd3c5e0c16c41",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/01045/source_inventory.json",
+      "sha256": "e22e6385d5c83044cdf9faa2e13e217d321facb1a4ea8edfb8414f68fcd89d6d"
+    },
+    {
+      "id": "00848",
+      "fingerprint": "3703898ad017a9681dbef4b29dd7e94a04ee63136fbfa7ba4d3d546f41f39a06",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00848/source_inventory.json",
+      "sha256": "3d542f24c91bf84c4139a8282de5c92803b99cf49adaca3c3201773a3e03ae62"
+    },
+    {
+      "id": "00846",
+      "fingerprint": "bfa2ff0278c2f2b00d8c7a741ed405e358ab70dc8b02bbb02970e507e79f7557",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v1/outputs/input_audit/qualification/00846/source_inventory.json",
+      "sha256": "8be5136aec74e37f44bff2f18de3b21217a99c7abe0acb005e59910c4087eedd"
+    },
+    {
+      "id": "00399",
+      "fingerprint": "c6a821eba52988eb361a247a1f1543b197939ffee95e470e26a739de118b7671",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00399/source_inventory.json",
+      "sha256": "4ac50e768f84c1778c027668abeb7ddc62c1684a0ea48880579e559c8bfc3c25"
+    },
+    {
+      "id": "00252",
+      "fingerprint": "3224bc696d34a7a05f401735d868e726cc11f1eea75cdd2e6f68f0b097a0549b",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00252/source_inventory.json",
+      "sha256": "01617818c951993d02c962a03c0f0aa71bed82804395cb29e17055723a0e068c"
+    },
+    {
+      "id": "00403",
+      "fingerprint": "3498fc55c2ed959a0ce85a226aaafb54134576cd8f77c1bddeab05e2f7d48df7",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00403/source_inventory.json",
+      "sha256": "90152a0c820fce83c5a00a9daf09240548da35dc11ba56b39f93cbd8ed60b29c"
+    },
+    {
+      "id": "00239",
+      "fingerprint": "ccef08fb2d6b5096bef471765214bb72fd55f4d4aaf0be131c75603b74b680b9",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00239/source_inventory.json",
+      "sha256": "71005167d497e5076e7af71b514b728c58a51b3c36c8c1f1799d45dddf2b510c"
+    },
+    {
+      "id": "00075",
+      "fingerprint": "6d8ca5629ff97bc9ed73a00289039b5e930a08f6b7cf7fb32208d46c1347ec10",
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v2/outputs/input_audit/qualification/00075/source_inventory.json",
+      "sha256": "8528d7c98ef4489edb1402c601805e25140a932f58ded83de8e592e4fa7a4e9f"
+    },
+    {
+      "id": "01612",
+      "fingerprint": "7c435835212474ba54bea2c0c2446fdce4fad7db2b15ce531e56a42fbd3ea914",
+      "source_sha256": "36d969c44e34c48ef263007a7144a7775a9e9030228993fcb16e8c9d86cb9b47",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01615",
+      "fingerprint": "8d47734b8ea4a153f3b16da8fdebe1438926d70459026646ab72cb34894aeaf2",
+      "source_sha256": "91246641982287b57798e8125b61368353e2a117ba5f3935f2d6a37de2a5f5f1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01620",
+      "fingerprint": "3bcbe5b1108ec553d43fcd2a4ccb858dec2cbed7a1fe0cae5ac6ef0f1ab44998",
+      "source_sha256": "0d90c958883a8c70a760c6ecf44345661fe1a2ccd7898ae9829b4b5c3d10d73a",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01657",
+      "fingerprint": "e09210d51a6ec010dbc6c1728a9842a56c7fe4efe4f68b3592297ee3cc45eeb0",
+      "source_sha256": "bc823d975915f60cf7dc8baab22884aa3c06aeea3ad1fe18f4d02e56256a0efc",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01701",
+      "fingerprint": "a0b96d92639ea8afe1e5707733b5a50d74203b9b9c722d14577c96f4782f28e6",
+      "source_sha256": "31f3ad73567887456c46f348df9ea299311cdaf1e1695e0b66e18769dc2c644c",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01779",
+      "fingerprint": "cd0c910a604c0d7fd53021954f868a09a8b5f42de7fd5a812d570e2adef42b6b",
+      "source_sha256": "f1b739006b3f957bdbd1f2cb382e3be621a8b534b3ae654b9619bd23bee91f31",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01801",
+      "fingerprint": "de4e123c3194f34616957b98b45df0829b010d40f403f6b410eb62169749c4b6",
+      "source_sha256": "20e2df5dc7eb32519d82cfea94252665582c01fb3585a505edb54afccfb9dbea",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01802",
+      "fingerprint": "9450c5c65f191646a63a43921776fbca3a72286ce0c6972a23623c6e8e2efbb4",
+      "source_sha256": "441a8dea0b6a954d1188c180fca68d43aee3c113399d4b807fd6d31658ff08e3",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01870",
+      "fingerprint": "2490dcc912c7b9299e1c60308bb13032016879535f6949aa0e32285c909f7981",
+      "source_sha256": "b4a608bc538371cab0c7c60fcd25662b37d0041187eb0fee04354edfae686400",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01991",
+      "fingerprint": "356a771d1f00258443f1f2aeb8d7247837a3b8a9444babeedde13a7130773553",
+      "source_sha256": "b728d66eab9df7ad7b6d0989ab3b252815d9d820179115966740aa13086994c8",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "01994",
+      "fingerprint": "977d5c0bfcb0dcdfcc945368fa2510fc9edad050f68037749d2cc50312b80694",
+      "source_sha256": "a70bf0b91fd1aa0e532743a90e1c72d2f055149faf4b6f9e108b64023c98e870",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02257",
+      "fingerprint": "e60ec8b79938f4bac7c8263d59e673b027c324b8cc43bd4da31d42e3ed209a22",
+      "source_sha256": "e4f90dfd06ab1c59a276e432be9e740fb6eaba74900d30e226351ce70d7c4539",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02259",
+      "fingerprint": "057798089e94891146838c5f70fbee2dc192cd717de6db77700c133ccfda71a8",
+      "source_sha256": "b52380d8a5f75845298fd8c53daf723555bc8d671394a9dac49ef59609a1d654",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02323",
+      "fingerprint": "a722259d32bf010de730690ebbdd4e16af2b2bac3391e97bc83b578f3edce19a",
+      "source_sha256": "6a606cb0cd8295d9abeb935d73ddfee47b725e24d9320072c7d925938b3c5c7d",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02346",
+      "fingerprint": "4a9b80c8d6ccd3ce5fa89f20e4a2231229956b6d20053770b2d68d089d2863ed",
+      "source_sha256": "45c54dedae39793337e2cfab262a6f303fbe34070ab573e59418fdc8b4071b08",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02351",
+      "fingerprint": "a9ba781f26e18f428a6d049f4ecad864f68fa35a701b069aa015a34b3d8221e7",
+      "source_sha256": "332ef2cfb3684cb6f3a7c41227d80f4340e865ec67fd50a54e4b51ca04477bec",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02374",
+      "fingerprint": "b91825ac2a915d8e3c769e2a0a4762f2d81256b8ee8b4360f643fbfe5971ba65",
+      "source_sha256": "fcaa9c56f2b7f1cfa16f0c8dc753dab1b32a7049ef302d5f3aea34f1368fb75e",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02429",
+      "fingerprint": "4d5b75bddc477fc2fea02d26f80b0d421412de4ce1c3e8787dda88a7ec2faa47",
+      "source_sha256": "97b1d56bf77a5baa2d6a18c6714cd27af4c9a93c88c11ecc2bcb50924547e682",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02627",
+      "fingerprint": "9ef25630d277beb2e81c0c27b5a052c63243ff0c78aa1ab3ae6143c9ebae815c",
+      "source_sha256": "4f844a4bd3db09533d0ef710ea8fb3fa8a0a6b53f44985c9ed851eba272e5498",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02879",
+      "fingerprint": "a53402b260a0b2e36a418dfbb17191c7fd3604a0e2b6f40381e21771d3602f87",
+      "source_sha256": "58e204389d48f4980b7d29435f71e97e09b4c106b3439f25b7686a412904b4b1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02930",
+      "fingerprint": "90fdf5f449d8c54392db6e86f2f579d01a948925ff57351a7f1252344a3a9c2a",
+      "source_sha256": "637447d6f4d5a376d3e232cd0860a715c1a080c939811b7972c06985b14855f3",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "02932",
+      "fingerprint": "d3998d3606f5d6f0dbf7d2f734c45fc1c16f8b46bea4f44fcd104bdf6223d6cf",
+      "source_sha256": "76868bd07e438d514a2d0d63b442d58678d1a64f0af9fbb8c54321dbe4bd9d60",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03337",
+      "fingerprint": "2465e203d000398d215b4ce0bf1b4ba52c081f95f4eb4fa455f5a401e8531a0a",
+      "source_sha256": "3583fc6ebcc8a58e70c97d5d3e824874b43f0df1aaa3025b95b74e3cc9300d09",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03359",
+      "fingerprint": "cd89030488eb593f176aa1d757ad8d2f1c6e6f53a7ccbca2dc587760c4cadc86",
+      "source_sha256": "2c042b929f97b63b881799a6acd084ac2b5e2e2f40669596695d3d86db90df88",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03500",
+      "fingerprint": "7e4628d87b02a4b0d3a5086835667dc3d6c3e6689a526e52f01172ce99b27e6a",
+      "source_sha256": "51d90f8516befe644acf40526da0ffe3dee2e56bcb6f55a1b07146384fd6a385",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03662",
+      "fingerprint": "d08878882b30d9629a745bf7b7d2b1f2137da32932ad6e7cf67a7346d5f02521",
+      "source_sha256": "0514e02415c320e216521f61e5701b09abff98b8a2ae55094661425004cab54e",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03915",
+      "fingerprint": "165d0f096c4d861b35cb2f552908b94f10db09b709f5eaed25ba24a70966de56",
+      "source_sha256": "855d5b55f6195598d57bbc043d35e7ea912220ccd0e9053e335737ee9fb182e2",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "03973",
+      "fingerprint": "cf9c277c31f5755ce4ef3d6f9a977bf28e50159040f66cb4bc8659667fea059f",
+      "source_sha256": "1bb6ca133a0526aa7df1d1051c0083afd1216c97429be8f7b774178efa8cbaad",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04060",
+      "fingerprint": "c00269186585729271544fd8259ee86f87cef1496499816511072d25f9a5fd49",
+      "source_sha256": "dd52ef6cde5c406fc38e6e652a4fe16f121283841d316a825884b7f69c187ed1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04086",
+      "fingerprint": "aa19537bc20dd79daa70e25a84b670ae96fe51fc14da457527551b288d4ee009",
+      "source_sha256": "9ebf6ff1c600e46b9d93d9bb178d150bfb71197a8921014ce695be3737e5201d",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04107",
+      "fingerprint": "ba0b48d084613064b60ef1b457a2080d0d86c84576d420d53c6409ca678b34b6",
+      "source_sha256": "d59935c8509259f64cec9e08b1971ac310526521facdbf83d77a1a83177cef43",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04149",
+      "fingerprint": "294cbf4caca27d5f42aa48744e8d0e2c501fd6fcda44fb583d882977a6504751",
+      "source_sha256": "09b8862780d07fc9b043fd7c8a3abb2c353351c83c9b4e6f6d76a8221ffe2df0",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04243",
+      "fingerprint": "a48bfcfc187c47b2847cd443cddfc95f94c2c4194417fa562707f7579859ddf6",
+      "source_sha256": "aeafcdea7e9e49b97009105e0d09d2d8a75d6ec7ab88ea87b59d394c91b4e142",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04679",
+      "fingerprint": "fbb848edad2084795efa6c6287daf3930baaa8894aecea1f0d430b723e6f6057",
+      "source_sha256": "3640c11250ed841b839fedc041cdfb3c83cf7ce85f4307dccba32d65a8ada923",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "04719",
+      "fingerprint": "bc1a4c74ee27156756e5d1dfd7e19552cdc219e4f24e8c19be5ce752bc2b31f6",
+      "source_sha256": "bac599cfd886fb30b1ed76cc7fd7cd3959f0c4f163000ff3f69a3d8db67d73cd",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05068",
+      "fingerprint": "c1c1107688084f0b957a4a4847458147888d3e042f383e2275b8957c71fd9567",
+      "source_sha256": "5db06ec1e55d55cf830405962a8510482c42270eced15a2cdc55c2a66f39bbf1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05165",
+      "fingerprint": "8fb212f9fe155c8074d85f9b9564d74d7d30919a52dd27fc60f34166c6ee2035",
+      "source_sha256": "272317f4879d6c5fc864cc97c26f741abbdd8ad8039b9d8cadca7e97954b9b7d",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05459",
+      "fingerprint": "f67eade25f39971cab945b34fb23ed25c6ab16cac6679c3ee9900bd3c76c37ea",
+      "source_sha256": "b5847bcb7474171a781fdfaa3bb30833c16e3808336d676047b97aed1b4ead26",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05560",
+      "fingerprint": "df0dc53564bc1bd7159bc07aa4f364422acff91453e6d0583d00b22fa6e4163f",
+      "source_sha256": "0bc756ed8bcbd7a32dcc450f8c1294fa4d20b905b477f70feadce9852f763bc1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05676",
+      "fingerprint": "4b3d6c6a001c1fb86a458bc28e67a4bb2a3a6a1a81398e170136d727023b7ef1",
+      "source_sha256": "26eb524127ce036d4638a2766d0415cfe46b94ebe68efa9d0480c65d40492e5b",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "05704",
+      "fingerprint": "c66228220beed8e4bb6450fd93895c4f788ae6a58e3a73da8f67e30a6e3f0be9",
+      "source_sha256": "43df3c71fc32deb23809d030437ed8334fbf1625cdb2cc3172736232da9349e5",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06275",
+      "fingerprint": "3a81a4d5a301762619a75acfa2e1985ad01b1b5f71170160fd0356ca99104b32",
+      "source_sha256": "c84b8d5463d073bfaecfb51cfdc16a1136adb8a6187a5ea74a76b5418aec1d59",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06307",
+      "fingerprint": "68738fd8e4a9769011173c7dc5f9a23b448db1fb45e9939a7ea6089544aabd70",
+      "source_sha256": "97e6dd4d198629973392a17d1d29141ecb2814856fd5abbc292e1f6c8f2c071f",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06315",
+      "fingerprint": "4d1d536791c292342ef0c4ee081338167b7633264e94708aa4ac7d15b0ddba18",
+      "source_sha256": "ff2a6923fffada3fc84b4e93b209e7c92dfdd734e3fca4cdccf35b7c636ab12f",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06400",
+      "fingerprint": "f566c8db34be0dc748e9b94ed296f5579e6c1aebcdd7dac44f0049644ecf4ba7",
+      "source_sha256": "ae1ccfafe619e73c06dbd45813bf8837a18f39081d10db2f48cf373a90395ff9",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06534",
+      "fingerprint": "fd10539258707a54e7b53f45d226002e33227a02d236a8a8236de97d9b5c71ed",
+      "source_sha256": "ecbd6770b5b035ada95113dd4015b80dc28f5d0d07911d1872ffb46d2d070dc1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06558",
+      "fingerprint": "965ca8148c2a418aaf4e42a8866be7383ba11683907d07bfc712dc4ca6e53cd9",
+      "source_sha256": "6dbdcdb392e6bbba706dc795678c8e85ebf85361ac0d6230e6bb1993affa0050",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06584",
+      "fingerprint": "8457976a9c95df9aa7b42adcfd8359df1b41e8eaa9be3a0420d7a0871a045e67",
+      "source_sha256": "f428cd0af01ce5db708b5308ef42b3467ccecc14219fd48f20811a2e32b3d33d",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06846",
+      "fingerprint": "47843e0670ae61da2679e0e2186b0b99dcec9b5f96997dc105abc021198d1a67",
+      "source_sha256": "ce265c4c151e2a6504a4da1d769d6e3edb289814fbe7f87b100ea2977fed33d0",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06993",
+      "fingerprint": "a529bafa5f86411afc40b3dfafe165cf25659f6d38d09836581078d0f87d1b92",
+      "source_sha256": "9a2adae69f7a8e73f5eb93ca51051deba2a20836cbb1e58d5e92094894a168a9",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "06994",
+      "fingerprint": "1e3665f0a52b6dd800cf849f1e7dcfa14e8629deb05df801d3b4a36810192089",
+      "source_sha256": "bce55aea3a49520bfb23242c858c6dedb3548eb7db8483c8c7786db5f35919c1",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "07039",
+      "fingerprint": "49362e6b09fd727d5d0c07865b812e6f02870981b6e4366c67db82a7510400aa",
+      "source_sha256": "00e822f392eaa299d1f0ae758d7d0e252129651ea59b8af334b64e542945d530",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "07375",
+      "fingerprint": "f5f5ae852811294cf0291690918891010673246563f59fdf552548d06cdae91b",
+      "source_sha256": "0cea2a8fdac3869e5a78e5039a496afaa8003e6944793a9eb4ace1b648187111",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "07595",
+      "fingerprint": "6dfc3ef6ddb39ec0fab93cf6b4e2a131cdcb4d91719d6969d299902f63157d2a",
+      "source_sha256": "1751c3edec82cd79a02eaedffe76492ccc8140bcd19628c765513463ec149c0f",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "07615",
+      "fingerprint": "ee6298f1d93351a794c8045a3c665eeb49ab96fc212e5aebb176b1b5d05eddf5",
+      "source_sha256": "7a06ec93a8b06ffbb37d2f78e32a3ac0672eefef987679da0ad997d8587ce65b",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "07818",
+      "fingerprint": "054c5dc9b5558a0522a47831fc83a8dcc35528bf3f57d2eb0344586395420980",
+      "source_sha256": "7c86a1129dd6b5e269777c4348927ff40056c188bf777a267dbdddd069d7e01f",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "08113",
+      "fingerprint": "ee5e7779d7d233461b7c56c3457f622f269eda74c8b4de56cac374d148f7e347",
+      "source_sha256": "78d4f3df9d81dbab937450274ccc69b86a849d4a772e27f11f0362ba922905cf",
+      "role": "prior_v4opened_training_input"
+    },
+    {
+      "id": "08236",
+      "fingerprint": "4a2722d2fc43027368971000d0a8042c1649b1c6cee30798f6bb8394bc0171c6",
+      "source_sha256": "d18f17ccd1a16507ea9c20c676986abad2d5611b1dc059f41c859e64a639daf5",
+      "role": "prior_v4opened_training_input"
+    }
+  ],
+  "utc": "2026-10-19T13:25:17.838332+00:00",
+  "includes_unused_and_failed_prior_inputs": true
+}

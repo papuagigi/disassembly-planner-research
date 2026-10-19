@@ -18,8 +18,8 @@ def source_paths():
     return sorted(set(paths))
 
 def freeze():
-    p=ROOT/'outputs/protocol/freeze.json'
-    if p.exists():return verify()
+    freeze_path=ROOT/'outputs/protocol/freeze.json'
+    if freeze_path.exists():return verify()
     cohort=read(ROOT/'outputs/input_audit/selected_development.json')
     scope=study_scope()
     assert len(cohort['discovery_cases'])==scope['full_discovery_CADs'] and len(cohort['validation_cases'])==scope['validation_CADs']
@@ -46,7 +46,7 @@ def freeze():
         no_test_updates=True,time_cuts_seconds=[180,600,900])
     value.update(actual_attempted_full_discovery_CADs=len(collected),actual_physically_observed_full_discovery_CADs=observed_discovery,
         actual_attempted_validation_CADs=len(validated),actual_physically_observed_validation_CADs=sum(bool(read(p).get('trace')) for p in validated))
-    write(p,value,exclusive=True);return value
+    write(freeze_path,value,exclusive=True);return value
 
 def verify():
     value=read(ROOT/'outputs/protocol/freeze.json')

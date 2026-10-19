@@ -1,0 +1,8 @@
+{
+  "version": "S0-no-memory",
+  "created_utc": "2026-10-19T10:38:58.629803+00:00",
+  "skills": [],
+  "admission_evidence": null,
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

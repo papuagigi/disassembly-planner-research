@@ -1,0 +1,31 @@
+{
+  "version": "v5-long-training-extension-2026-10-19",
+  "full_discovery_CADs": 8,
+  "reused_discovery_CADs": 5,
+  "new_discovery_CADs": 3,
+  "prior_new_discovery_CADs": 1,
+  "unique_discovery_CADs_total_target": 94,
+  "validation_CADs": 3,
+  "evaluation_CADs": 4,
+  "prior_local_probe_discovery_CADs": 90,
+  "inherited_discovery_ids": [
+    "asap_02406",
+    "asap_02402",
+    "asap_07722",
+    "asap_03674",
+    "asap_02429"
+  ],
+  "new_development_max_checks": 600,
+  "new_development_wall_seconds": 900.0,
+  "final_max_checks": 240,
+  "final_wall_seconds": 900.0,
+  "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+  "extension_authorized_utc": "2026-10-19T13:25:17.883468+00:00",
+  "target_deadline_utc": "2026-10-20T04:40:49+00:00",
+  "target_deadline_kst": "2026-10-20 13:40:49 KST",
+  "reason": "User approved3additional long training CADs before revalidation/freeze;retain old studies and use new validation CADs to avoid reusing seen validation feedback.",
+  "validation_pass_rule": "ceil(2*n/3),n>=3;all safety/native-health/replay vetoes retained;one new proposal/validation pass only",
+  "source_order_fixed": true,
+  "test_budgets_unchanged": true,
+  "interpretation": "Pilot transfer comparison;4testCADs/12episodes;no preferred winner;no model-weight update"
+}

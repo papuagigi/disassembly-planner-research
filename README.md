@@ -4,10 +4,10 @@ ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하
 
 ## 지금 진행 중인 마지막 실험
 
-사용자가12시간 내 마무리를 요청해 proposal·검증·테스트 전에 범위를 줄였습니다. 기존90개 국소 경험은 보존합니다. 새 비교는 소규모 pilot이며 결과에 따라 표본을 고르거나 추가하지 않습니다. 목표 시각은 2026-10-20 09:40:49 KST입니다. 입력 준비/물리 재검증 지연에 따른 초과 가능성을 기록합니다.
+사용자가 긴 학습 CAD 3개 추가와 재검증·고정을 승인했습니다. 목표는 최초 요청부터 총16시간 이내이며,목표 시각은 2026-10-20 13:40:49 KST입니다. 입력 준비/물리 재검증 지연에 따른 초과 가능성을 기록합니다. 기존90개 국소 경험에 v4의 새1개와 v5의 새3개를 더해 고유 개발 CAD94개를 목표로 합니다. 전체 분해 성공94개라는 뜻은 아닙니다. 새 비교는 소규모 pilot이며 결과에 따라 표본을 고르거나 추가하지 않습니다.
 
-- 개발: 11~20부품 CAD 5개에서 최대15분 동안 전체 분해와 실제 backtracking 경험 수집. 기존90개 CAD의 국소 경험과 기존 문서는 보존합니다.
-- 독립 검증: 다른 training CAD 3개. 새 문서는 한 번만 생성·검증합니다. 검증 실패 시 기존 문서만 유지합니다.
+- 개발: 11~20부품 CAD 8개의 전체 탐색 기록을 사용합니다. 완료된5개 기록을 보존하고 새3개를 추가합니다. 새3개만 최대600물리 검사·15분을 허용하며,기존5개는 실제240검사 상한을 유지합니다. 기존90개 CAD의 국소 경험과 기존 문서는 보존합니다. 실제 backtracking 발생 여부와 물리 엔진 오류를 별도로 기록합니다.
+- 독립 검증: 새로운 training CAD 3개. 이전 부분 검증 CAD는 재사용하지 않습니다. 새 문서는 한 번만 생성·검증합니다. 검증 실패 시 기존 문서만 유지합니다.
 - 고정 후 테스트: 새 official test CAD 4개 × A/B/C. 각 조건은 같은 gpt-6-luna/low,8논리 호출,240물리 검사,900초 상한을 사용합니다.
 - A: LLM 코드 생성,문서 없음. B: 같은 코드 생성,고정 SKILL.md. C: Graph·LLM 순위·DFS,동일한 SKILL.md.
 - 결과가 좋게 나올 때까지 개선을 반복하지 않습니다. 최종 PPT는 결과 검토 후 만듭니다.
@@ -22,20 +22,21 @@ ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하
 
 ## 폴더
 
-- `disassembly_final_v4/`: 현재 마지막 실험의 supervisor,학습·검증·고정·평가,문서 bank,설정.
+- `disassembly_final_v5/`: 현재 마지막 실험의 supervisor,학습·검증·고정·평가,문서 bank,설정.
+- `disassembly_final_v4/`: 새 학습 범위 승인 전의 구현. 로컬 완료 기록과 부분 검증은 보존하고 새 최종 비교와 구분합니다.
 - `docs/`: 협업·복구 지침과 앞선 실험의 출처 요약.
-- `results/final_v4/`: 최종 집계가 생성되면 갱신됩니다.
+- `results/final_v5/`: 최종 집계가 생성되면 갱신됩니다.
 - `results/prior_v3/`: 보존한180초 기준 결과입니다. 다시보기 검증 상태는 별도JSON에 표시합니다. 새15분 실험과는 학습·시간 조건이 달라 직접적인 개선 원인 비교에 쓰지 않습니다.
 - `viewer/`: MuJoCo 기록을 재생하는 Three.js viewer. 대용량 OBJ/episode는 이 저장소에 자동 업로드하지 않습니다.
-- 나머지 `disassembly_*`: 현재 엔진의 import 의존성을 보존한 이전 구현입니다. 현재 실행 진입점은 v4입니다.
+- 나머지 `disassembly_*`: 현재 엔진의 import 의존성을 보존한 이전 구현입니다. 현재 실행 진입점은 v5입니다.
 
 ## 환경과 실행
 
 Python 환경을 만들고 `pip install -r requirements.txt`로 의존성을 설치합니다. 실제 사용 환경의 버전이며 다른 OS에서의 설치는 별도 확인이 필요합니다. LLM 실행에는 로컬 Codex CLI와 본인 로그인 상태가 필요합니다. 인증 파일이나 API 키를 저장소에 올리지 마세요. 모델 호출은 사용자의 계정 한도를 사용합니다.
 
 ```sh
-python -B -m disassembly_final_v4.bootstrap --download
-PYTHONDONTWRITEBYTECODE=1 python -B -m disassembly_final_v4.pipeline
+python -B -m disassembly_final_v5.bootstrap --download
+PYTHONDONTWRITEBYTECODE=1 python -B -m disassembly_final_v5.pipeline
 ```
 
 약0.75GB의 공식 archive를 SHA256 검증 후 별도로 받습니다. 기존 완료 기록이 있는 실행은 이어서 진행합니다. 이미 시작된 평가 episode는 조용히 다시 실행하지 않습니다. 원본 작업 머신과 공개 snapshot은 로컬 경로가 다를 수 있습니다. `protocol/prior_sources.json`의 상대 경로는 저장소 루트를 기준으로 해석합니다. 상세 검증 reference 일부의 원본 로컬 경로는 증거 식별용이며 다른 머신에 존재하지 않습니다.

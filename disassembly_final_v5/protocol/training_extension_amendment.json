@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-19T13:25:17.883654+00:00",
+  "user_authorized": true,
+  "scope": {
+    "version": "v5-long-training-extension-2026-10-19",
+    "full_discovery_CADs": 8,
+    "reused_discovery_CADs": 5,
+    "new_discovery_CADs": 3,
+    "prior_new_discovery_CADs": 1,
+    "unique_discovery_CADs_total_target": 94,
+    "validation_CADs": 3,
+    "evaluation_CADs": 4,
+    "prior_local_probe_discovery_CADs": 90,
+    "inherited_discovery_ids": [
+      "asap_02406",
+      "asap_02402",
+      "asap_07722",
+      "asap_03674",
+      "asap_02429"
+    ],
+    "new_development_max_checks": 600,
+    "new_development_wall_seconds": 900.0,
+    "final_max_checks": 240,
+    "final_wall_seconds": 900.0,
+    "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+    "extension_authorized_utc": "2026-10-19T13:25:17.883468+00:00",
+    "target_deadline_utc": "2026-10-20T04:40:49+00:00",
+    "target_deadline_kst": "2026-10-20 13:40:49 KST",
+    "reason": "User approved3additional long training CADs before revalidation/freeze;retain old studies and use new validation CADs to avoid reusing seen validation feedback.",
+    "validation_pass_rule": "ceil(2*n/3),n>=3;all safety/native-health/replay vetoes retained;one new proposal/validation pass only",
+    "source_order_fixed": true,
+    "test_budgets_unchanged": true,
+    "interpretation": "Pilot transfer comparison;4testCADs/12episodes;no preferred winner;no model-weight update"
+  },
+  "prior5episodes_reused_without_rerun": [
+    {
+      "case_id": "asap_02406",
+      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02406/result.json",
+      "result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
+      "copied_without_model_call": true
+    },
+    {
+      "case_id": "asap_02402",
+      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02402/result.json",
+      "result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
+      "copied_without_model_call": true
+    },
+    {
+      "case_id": "asap_07722",
+      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_07722/result.json",
+      "result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
+      "copied_without_model_call": true
+    },
+    {
+      "case_id": "asap_03674",
+      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_03674/result.json",
+      "result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
+      "copied_without_model_call": true
+    },
+    {
+      "case_id": "asap_02429",
+      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02429/result.json",
+      "result_sha256": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
+      "copied_without_model_call": true
+    }
+  ],
+  "prequalified_additional_case": "asap_05459",
+  "additional_unopened_training_reserve": 160,
+  "prior_validation3retired_from_new_validation": true,
+  "prior_v4_unadmitted_candidate_not_deployed": true,
+  "new_training_only_inspection_cap": 600,
+  "final_A_B_C_cap": 240,
+  "same_model_effort_and900second_cap": true,
+  "old_failed_resources_excluded_from_new_physical_skill_evidence": true,
+  "test_geometry_unopened": true
+}

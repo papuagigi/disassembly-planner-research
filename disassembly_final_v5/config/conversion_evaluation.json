@@ -1,0 +1,71 @@
+{
+  "version": 5,
+  "longest_dimension_m": 0.24,
+  "source_geometry_redesign": false,
+  "source_final_state": "Absent/null identity; 3D translation or 6D XYZ Euler radians then translation; source shapes preserved",
+  "collision": "Original triangle BVH neighborhoods plus deterministic per-material-sample signed distance/initial-point baseline for extraction; uncapped CoACD only for MuJoCo residual stability",
+  "coacd": {
+    "threshold": 0.005,
+    "preprocess_mode": "off",
+    "resolution": 1500,
+    "mcts_iterations": 100,
+    "mcts_max_depth": 4,
+    "seed": 0,
+    "max_convex_hull": -1,
+    "merge": true,
+    "real_metric": false
+  },
+  "part_timeout_seconds": 90,
+  "workers": 2,
+  "source_collision_quality": {
+    "grid_axis_count": 7,
+    "face_samples": 64,
+    "surface_offsets_m": [
+      -0.0005,
+      0.0005
+    ],
+    "sample_material_error_limit_m": 0.001,
+    "limitation": "Finite deterministic samples, not an exact equality proof."
+  },
+  "pose_candidates": {
+    "stable_pose_top": 3,
+    "stable_pose_sigma": 0.0,
+    "stable_pose_seed": 0,
+    "canonical_order": [
+      "z_up",
+      "z_down",
+      "x_up",
+      "x_down",
+      "y_up",
+      "y_down"
+    ],
+    "transform": "whole-assembly rigid transform only; ground actual mesh min z"
+  },
+  "fixture_policy": "Exactly one original permanent external anchor; frozen pose order, descending mass/source volume/world-XY footprint/numeric ID; no second anchor or dynamic holding",
+  "initial_screen": {
+    "static_penetration_m": 0.001,
+    "intervals": 2,
+    "seconds_each": 1.5,
+    "total_translation_m": 0.005,
+    "total_rotation_deg": 5.0,
+    "strict_all_original_stability_criteria": true,
+    "arbitrary_fall_adoption": false
+  },
+  "selection": "Frozen metadata-only source order;initial physics only;no reference-path or actor-result gate",
+  "endpoint": "Full assembly disassembly to at most one remaining original component (n-1 removals).",
+  "legacy_target": "Nonfixed focus ID is compatibility metadata, not a selective-retrieval goal.",
+  "asset_namespace": "evaluation",
+  "initial_setup_timeout_seconds": 60,
+  "requested_cases": 30,
+  "stage_role": "evaluation",
+  "fixture_candidate_policy": "any_single_anchor",
+  "case_namespace": "evaluation",
+  "receipt_namespace": "evaluation",
+  "path_mode": "straight_source_axes",
+  "extraction_collision": "source_mesh_bvh",
+  "allow_natural_zero_clamp": false,
+  "initialization_case_wall_seconds": 180,
+  "development_calibration": "outputs/development/physics + unchanged real_v3 geometry regression tests",
+  "extraction_scope": "Fixed-quaternion straight source-axis translations; discrete 1mm poses; material samples/containment/support-plane checks are finite/conservative, not a continuous exact collision proof",
+  "source_geometry_tuning": "No post-freeze changes; original geometry/relative placement preserved"
+}
