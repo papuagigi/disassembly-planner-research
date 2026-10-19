@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T12:11:17.096790+00:00",
+  "utc": "2026-10-19T12:12:48.602871+00:00",
   "state": {
     "utc": "2026-10-19T11:36:36.230669+00:00",
     "pid": 29446,
@@ -9,27 +9,27 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T12:10:51.639571+00:00",
-    "qualified": 3,
+    "utc": "2026-10-19T12:12:29.708722+00:00",
+    "qualified": 4,
     "target": 16,
-    "attempted": 34,
+    "attempted": 37,
     "active_ids": [
-      "03915",
-      "02323"
+      "01801",
+      "01779"
     ],
     "completed_out_of_order": 0
   },
   "early_discovery": {
-    "utc": "2026-10-19T12:08:48.769993+00:00",
+    "utc": "2026-10-19T12:11:19.280927+00:00",
     "pid": 32828,
     "phase": "RUNNING",
-    "case": "asap_02406",
-    "completed": 0,
+    "case": "asap_02402",
+    "completed": 1,
     "total": 4,
     "note": "Offline discovery overlaps input preparation;not a scored A/B/C timing experiment"
   },
   "selected_validation": 0,
-  "completed_full_discovery": 1,
+  "completed_full_discovery": 2,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
