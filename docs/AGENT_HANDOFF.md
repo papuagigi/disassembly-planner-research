@@ -1,10 +1,10 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T19:06:04.642996+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T19:17:58.908539+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
 Current state:{'utc': '2026-10-19T19:02:56.329452+00:00', 'pid': 51259, 'status': 'RUNNING', 'phase': 'matched_final_first_episodes'}
 
-Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:0/9,on3unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
+Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:1/9,on3unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
 
 Current input/episode progress:{'phase': 'first_episode', 'utc': '2026-10-19T19:02:58.407729+00:00', 'case': 'asap_05954', 'arm': 'A', 'completed': 0, 'planned': 9}
 
