@@ -5,6 +5,8 @@ import sys
 from .common import ROOT,WORKSPACE,read,write,sha,utc
 
 def main():
+    from .post_root_coverage import main as root_coverage
+    root_coverage()
     from .post_pack import main as pack
     pack()
     result=read(ROOT/'analysis/results.json');development=read(ROOT/'outputs/development/complete.json')
@@ -21,6 +23,7 @@ def main():
         '', '## Interpretation', '',
         'B−A changes document availability plus charged review. C−B changes graph/DFS/code generation/scheduling together. No pure C-memory ablation was run. v3→v6 changes learning experience,input cohort and wall budget;do not attribute differences to one cause. Two4GiBadditional TRAINING episodes retain600queries/900s/8calls;the preserved eight1GiBepisodes retain their original five240-query and three600-query budgets. Final A/B/C all use4GiBRSS. Final A/B/C all retain the same240query cap. Mixed training budgets are not a controlled policy-improvement comparison.',
         'Full success,final progress,best progress,and branch restoration are distinct. Undone accepted removals measure search work. A failed uncommitted extraction alone is not backtracking. Reading or declaring a document does not prove compliance or benefit.',
+        'Read ROOT_ACTION_COVERAGE.md and root_action_coverage.json for post-score evidence at the exact initial state. Full warning-free/replay-verified coverage with every declared action rejected can establish a blocked first step under this finite local API only. Incomplete coverage leaves feasibility unresolved;it does not establish real-world or original ASAP impossibility. No extra model or physics call is used by this diagnostic.',
         'Source/initial-physics exclusions are separate from planner failures. An unresolved budgeted episode is not proof of physical impossibility. One permanent fixture,six straight source-axis directions,assumed mass/friction and local finite collision checks differ from original ASAP. Virtual restores are not real reassembly.',
         'Actor resident-memory exhaustion,native MuJoCo errors/warnings,and collision/stability rejection are different observed mechanisms. Initial capacity screening cannot guarantee runtime memory stays within the cap. Keep every started episode and cost;do not silently replace a resource-limited input or count its operational error as a learned physical failure.',
         'Deterministic replay can reproduce native solver overflow. Raw outcomes are preserved;the additional warning-free goal column excludes any episode with a native worker warning or missing worker log without dropping its CAD from the denominator. See native_engine_health/native_warning_count in trials.csv. No-warning observation is not proof of complete physical fidelity. Such development episodes cannot supply new skill-procedure evidence;validation warnings veto admission.',
