@@ -9,7 +9,8 @@ import statistics as st
 from .common import ROOT,read,write,sha,utc,progress
 from .metrics import summarize
 from .documents import DocumentBank
-from .native_health import audit as audit_native_health,failure_class
+from .native_health import audit as audit_native_health
+from .post_native_classify import failure_class
 
 def csv_write(path,rows):
     if not rows:return
@@ -102,6 +103,8 @@ def wilson(k,n):
 def main():
     from .post_conditions import main as audit_conditions
     audit_conditions()
+    from .post_input_diagnosis import main as audit_inputs
+    audit_inputs()
     manifest=read(ROOT/'outputs/evaluation/manifest.json');calls,token_groups=tokens()
     trials=[];contexts=[];behaviors=[];timecuts=[]
     for case in manifest['cases']:

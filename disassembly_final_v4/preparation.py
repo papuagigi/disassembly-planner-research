@@ -14,6 +14,8 @@ import traceback
 from .common import ROOT,WORKSPACE,read,write,sha,utc,progress
 from .dataset import extract,pools
 
+class InitialNativeEngineError(RuntimeError):pass
+
 def source_record(split,aid):
     from disassembly_docskills_v1.data_tools.inventory_sources import load_mesh,shape_fingerprint,assembly_fingerprint
     source=extract(split,aid);parts=[];meshes=[];reasons=[]
@@ -71,6 +73,12 @@ def worker(stage,aid):
                     if physics['status']!='physical_valid':status='initial_physics_or_capacity_excluded'
                     else:
                         setup=physics['selected'];case=ROOT/setup['case_path']
+                        from .native_health import inspect_log
+                        selected_trial=ROOT/setup['initial_physics']['trial_case']
+                        native=inspect_log(selected_trial.with_suffix('.physics_worker.log'))
+                        details['selected_initial_native_health']=native
+                        if not native['warning_free_observed']:
+                            raise InitialNativeEngineError('Initial state has native solver warnings or an unavailable native log;no planner outcome was queried')
                         from disassembly_docskills_v2.qualification import shared_input
                         shared=shared_input(case);sp=folder/'shared.json'
                         if sp.exists():assert read(sp)==shared
@@ -82,7 +90,8 @@ def worker(stage,aid):
                             source_inventory_path=str(inv),source_split=record['source_group'],geometry_fingerprint=signature)
                         status='initially_qualified_full_path_unknown'
         except Exception as exc:
-            status='preparation_error';details.update(error=repr(exc),traceback=traceback.format_exc())
+            status='initial_native_engine_warning_or_unknown_excluded' if isinstance(exc,InitialNativeEngineError) else 'preparation_error'
+            details.update(error=repr(exc),traceback=traceback.format_exc())
         result=dict(status_record=dict(id=aid,status=status,elapsed_seconds=time.monotonic()-began,details=details),
             case=entry,geometry_fingerprint=signature)
         write(final,result,exclusive=True);write(folder/'heartbeat.json',dict(utc=utc(),pid=os.getpid(),phase='finished'))

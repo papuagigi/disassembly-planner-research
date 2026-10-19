@@ -1,0 +1,10 @@
+{
+  "utc": "2026-10-19T12:57:19.532527+00:00",
+  "before_final_freeze": true,
+  "before_new_test_geometry": true,
+  "existing_selected_development_initial_logs_checked": 8,
+  "existing_selected_development_initial_warnings": 0,
+  "new_preparation_rule": "An accepted root-state selected trial with a native MuJoCo warning or missing native log is excluded as an input/engine validation failure,not a planner failure. Preserve its receipt;do not relax physics or use a full solution/policy outcome.",
+  "model_and_episode_caps_unchanged": true,
+  "additional_model_calls": 0
+}

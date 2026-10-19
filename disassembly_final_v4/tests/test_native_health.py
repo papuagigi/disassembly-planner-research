@@ -1,7 +1,8 @@
 import tempfile
 from pathlib import Path
 import unittest
-from disassembly_final_v4.native_health import inspect_log,failure_class
+from disassembly_final_v4.native_health import inspect_log
+from disassembly_final_v4.post_native_classify import failure_class
 from disassembly_final_v4.final_learning import admission_decision
 
 

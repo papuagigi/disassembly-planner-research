@@ -16,3 +16,5 @@ __pycache__/
 *.dylib
 *.so
 .DS_Store
+!demo/replay/
+!demo/replay/**

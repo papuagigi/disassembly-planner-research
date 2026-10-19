@@ -28,6 +28,9 @@ def viewer():
         "C:'C · Graph·LLM 순위·DFS / 같은 분해 절차 문서'")
     js=js.replace("txt('sequence',steps.map((a,i)=>(i+1)+'. '+a.part_id+' ('+a.direction+')').join(' → '));",
         "txt('sequence',steps.length?steps.map((a,i)=>(i+1)+'. '+a.part_id+' ('+a.direction+')').join(' → '):'이 예산에서 검증된 성공 경로가 없습니다. 분해 불가능을 뜻하지 않습니다.');")
+    js=js.replace("const data=await response.json();", "const data=resolved.pathname.endsWith('.gz')?JSON.parse(await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).text()):await response.json();")
+    warning="if(s.native_engine_health&&s.native_engine_health!=='NO_NATIVE_WARNINGS_RECORDED'){txt('scope','MuJoCo 경고 또는 로그 누락 · planner 실패와 구분');txt('result','물리 계산 확인 필요');$('result').className='tag failure';stat('MuJoCo 경고',s.native_warning_count??'알 수 없음');txt('physics','접촉·제약 계산의 자원 부족 등 native 경고가 있습니다. 같은 오류를 다시 재생해도 물리 검증 성공을 뜻하지 않습니다. '+(episode.physics_scope??''));}\n  "
+    js=js.replace('if(s.diagnostic){',warning+'if(s.diagnostic){')
     (folder/'viewer.js').write_text(js)
 
 def main():

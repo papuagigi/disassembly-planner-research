@@ -5,6 +5,8 @@ import sys
 from .common import ROOT,WORKSPACE,read,write,sha,utc
 
 def main():
+    from .post_pack import main as pack
+    pack()
     result=read(ROOT/'analysis/results.json');development=read(ROOT/'outputs/development/complete.json')
     lines=['# Final bounded comparison','',f'Created UTC: {utc()}. One final pass;no test-log retuning.','',
         'Discovery/validation have11–20parts;test uses the predeclared11–20first/21+backup reserve. Report actual sizes. Full success=n−1stable committed removals. Model=gpt-6-luna/low;8logical CLI calls,240physical queries,900seconds per episode. B/C use identical frozen S3;A has no document memory. All share the physical/restoration API and initial input.',
