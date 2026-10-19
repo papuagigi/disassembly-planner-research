@@ -1,10 +1,10 @@
 {
-  "utc": "2026-10-19T12:46:43.011408+00:00",
+  "utc": "2026-10-19T12:49:34.862193+00:00",
   "state": {
-    "utc": "2026-10-19T11:36:36.230669+00:00",
-    "pid": 29446,
+    "utc": "2026-10-19T12:49:34.845019+00:00",
+    "pid": 36463,
     "status": "RUNNING",
-    "phase": "prepare_development_inputs"
+    "phase": "waiting_for_prior_frozen_evaluation"
   },
   "selected_discovery": 0,
   "live_progress": {
@@ -59,15 +59,80 @@
     ],
     "reused_by_main_collection_without_rerun": true
   },
+  "completed_discovery_outcomes": [
+    {
+      "case_id": "asap_02402",
+      "raw_goal_reached": true,
+      "completed_removals": 12,
+      "required_removals": 12,
+      "checks": 13,
+      "llm_calls": 8,
+      "seconds": 83.07215474999975,
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
+    },
+    {
+      "case_id": "asap_02406",
+      "raw_goal_reached": true,
+      "completed_removals": 12,
+      "required_removals": 12,
+      "checks": 27,
+      "llm_calls": 8,
+      "seconds": 124.11368370900163,
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
+    },
+    {
+      "case_id": "asap_03674",
+      "raw_goal_reached": true,
+      "completed_removals": 11,
+      "required_removals": 11,
+      "checks": 35,
+      "llm_calls": 8,
+      "seconds": 528.1620516660005,
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
+    },
+    {
+      "case_id": "asap_07722",
+      "raw_goal_reached": false,
+      "completed_removals": 4,
+      "required_removals": 14,
+      "checks": 240,
+      "llm_calls": 8,
+      "seconds": 830.1997432089993,
+      "native_engine_health": "NATIVE_ENGINE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
+    }
+  ],
   "selected_validation": 0,
   "completed_full_discovery": 4,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
-    "full_discovery": 10,
-    "validation": 10,
-    "test_CADs": 10,
-    "test_episodes": 30
+    "full_discovery": 5,
+    "validation": 3,
+    "test_CADs": 4,
+    "test_episodes": 12
+  },
+  "prospective_scope": {
+    "version": "v4-12hour-pilot-2026-10-19",
+    "full_discovery_CADs": 5,
+    "reused_discovery_CADs": 4,
+    "new_discovery_CADs": 1,
+    "validation_CADs": 3,
+    "evaluation_CADs": 4,
+    "prior_local_probe_discovery_CADs": 90,
+    "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+    "target_deadline_utc": "2026-10-20T00:40:49+00:00",
+    "target_deadline_kst": "2026-10-20 09:40:49 KST",
+    "reason": "User authorized reducing CAD counts to aim for completion within12hours;preserve already-started episodes and all prior90local-probe experience.",
+    "validation_pass_rule": "ceil(2*n/3) with n>=3;all safety/native-health/replay gates unchanged;no repeated proposal or validation",
+    "source_order_unchanged": true,
+    "episode_budgets_unchanged": true,
+    "expected_remaining_model_episodes": 16,
+    "maximum_remaining_planner_hours": 4.0,
+    "interpretation": "Small pilot;4CAD successes have25percentage-point resolution and wide uncertainty;not broad factory generalization."
   },
   "prior_local_probe_discovery": 90,
   "new_development": null,

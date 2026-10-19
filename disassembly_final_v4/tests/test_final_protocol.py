@@ -50,21 +50,30 @@ class FinalProtocolTests(unittest.TestCase):
         self.assertEqual(ARMS['B']['bank'],ARMS['C']['bank'])
         self.assertEqual((LIMITS['max_checkpoints'],LIMITS['max_restores']),(128,256))
 
-    def test_role_assignment_has_ten_discovery_ten_independent_validation(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            root=Path(tmp);reused=[]
-            for i in range(4):
-                p=root/f'prior{i}.json';write(p,{'test_fixture':i})
-                reused.append(dict(case_id=f'old{i}',case_path=str(p),case_sha256=sha(p),shared_path=str(p),source_inventory_path=str(p),geometry_fingerprint=f'old{i}'))
-            pool=dict(reused_discovery_cases=reused,development_candidates=[dict(id=str(i)) for i in range(16)],selection='test fixed order')
-            write(root/'outputs/input_audit/previous_geometry_fingerprints.json',{'records':[]})
-            def outcome(stage,row_id):
-                c=dict(case_id=row_id,part_count=11,geometry_fingerprint=row_id)
-                return dict(case=c,geometry_fingerprint=row_id,status_record={'id':row_id,'status':'qualified'})
-            with patch.object(cohort,'ROOT',root),patch.object(cohort,'pools',return_value=pool),patch.object(cohort,'run_one',side_effect=outcome),patch.object(cohort,'progress'),patch.object(cohort,'probe',return_value={'eligible':True}),patch.object(cohort,'study_scope',return_value=DEFAULT_SCOPE):
-                result=cohort.select('development')
-            d={c['case_id'] for c in result['discovery_cases']};v={c['case_id'] for c in result['validation_cases']}
-            self.assertEqual((len(d),len(v)),(10,10));self.assertFalse(d&v)
-            self.assertEqual(v,{str(i) for i in range(6,16)})
+    def test_role_assignment_respects_original_and_deadline_scopes_without_leakage(self):
+        scopes=[DEFAULT_SCOPE,{**DEFAULT_SCOPE,'full_discovery_CADs':5,'new_discovery_CADs':1,'validation_CADs':3,'evaluation_CADs':4}]
+        for scope in scopes:
+            with self.subTest(scope=scope),tempfile.TemporaryDirectory() as tmp:
+                root=Path(tmp);reused=[]
+                for i in range(4):
+                    p=root/f'prior{i}.json';write(p,{'test_fixture':i})
+                    reused.append(dict(case_id=f'old{i}',case_path=str(p),case_sha256=sha(p),shared_path=str(p),source_inventory_path=str(p),geometry_fingerprint=f'old{i}'))
+                target=scope['new_discovery_CADs']+scope['validation_CADs']
+                pool=dict(reused_discovery_cases=reused,development_candidates=[dict(id=str(i)) for i in range(target)],selection='test fixed order')
+                write(root/'outputs/input_audit/previous_geometry_fingerprints.json',{'records':[]})
+                def outcome(stage,row_id):
+                    c=dict(case_id=row_id,part_count=11,geometry_fingerprint=row_id)
+                    return dict(case=c,geometry_fingerprint=row_id,status_record={'id':row_id,'status':'qualified'})
+                with patch.object(cohort,'ROOT',root),patch.object(cohort,'pools',return_value=pool),patch.object(cohort,'run_one',side_effect=outcome),patch.object(cohort,'progress'),patch.object(cohort,'probe',return_value={'eligible':True}),patch.object(cohort,'study_scope',return_value=scope):
+                    result=cohort.select('development')
+                d={c['case_id'] for c in result['discovery_cases']};v={c['case_id'] for c in result['validation_cases']}
+                self.assertEqual((len(d),len(v)),(scope['full_discovery_CADs'],scope['validation_CADs']));self.assertFalse(d&v)
+                self.assertEqual(v,{str(i) for i in range(scope['new_discovery_CADs'],target)})
+
+    def test_three_case_validation_still_needs_two_passes_and_all_safety_gates(self):
+        rows=[dict(passed=i<2,physical_audit='PASS') for i in range(3)]
+        self.assertTrue(final_learning.admission_decision(rows,minimum=3)['status'].startswith('ADMITTED'))
+        rows[2]['native_engine_warning_veto']=True
+        self.assertEqual(final_learning.admission_decision(rows,minimum=3)['status'],'REJECTED')
 
 if __name__=='__main__':unittest.main()

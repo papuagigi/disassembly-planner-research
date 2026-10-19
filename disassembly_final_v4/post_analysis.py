@@ -9,7 +9,7 @@ import statistics as st
 from .common import ROOT,read,write,sha,utc,progress
 from .metrics import summarize
 from .documents import DocumentBank
-from .native_health import audit as audit_native_health
+from .native_health import audit as audit_native_health,failure_class
 
 def csv_write(path,rows):
     if not rows:return
@@ -113,6 +113,7 @@ def main():
             row=dict(case_id=case['case_id'],arm=arm,part_count=case['part_count'],**m,
                 raw_goal_reached=bool(m['success']),native_engine_health=health['status'],
                 native_warning_count=health['warning_count'],
+                observed_failure_class=failure_class(result,health,folder/'worker.log'),
                 warning_free_goal_reached=bool(m['success'] and health['warning_free_observed']),
                 best_progress=m['best_removed']/max(1,m['required_removed']),
                 known_total_tokens=sum(c['total_tokens'] or 0 for c in usage),input_tokens=sum(c['input_tokens'] or 0 for c in usage),
@@ -137,6 +138,7 @@ def main():
             warning_free_goal_reached=sum(r['warning_free_goal_reached'] for r in subset),
             native_warning_episodes=sum(r['native_engine_health']=='NATIVE_ENGINE_WARNINGS_RECORDED' for r in subset),
             native_health_unknown_episodes=sum(r['native_engine_health']=='UNKNOWN_MISSING_WORKER_LOG' for r in subset),
+            observed_failure_classes=dict(Counter(r['observed_failure_class'] for r in subset)),
             success_rate_wilson95=wilson(len(successful),len(subset)),final_progress_mean=mean('final_progress'),
             best_progress_mean=mean('best_progress'),undone_accepted_removals_mean=mean('undone_accepted_removals'),
             checks_mean=mean('checks'),failed_checks_mean=mean('failed_checks'),restores_mean=mean('restores'),

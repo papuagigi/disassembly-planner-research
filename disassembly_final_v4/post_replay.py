@@ -7,6 +7,7 @@ from .post_evidence import replay_result
 from .metrics import summarize
 from disassembly_docskills_v1.post_replay import annotate
 from disassembly_real_v3.simulator import FullDisassemblySim
+from .native_health import audit as audit_native_health
 
 LABELS={'A':'A · LLM 코드 / 문서 없음','B':'B · LLM 코드 / 분해 절차 문서',
         'C':'C · Graph·LLM 순위·DFS / 같은 분해 절차 문서'}
@@ -33,7 +34,8 @@ def main():
     manifest=read(ROOT/'outputs/evaluation/manifest.json');viewer();out=ROOT/'replay';items=[];audits=[];refs=[];errors=[]
     for case in manifest['cases']:
         results={a:read(ROOT/'outputs/evaluation/trials'/case['case_id']/a/'result.json') for a in ['A','B','C']}
-        successful=next((a for a in ['A','B','C'] if results[a].get('success')),None)
+        health={a:audit_native_health(ROOT/'outputs/evaluation/trials'/case['case_id']/a) for a in ['A','B','C']}
+        successful=next((a for a in ['A','B','C'] if results[a].get('success') and health[a]['warning_free_observed']),None)
         ref=None
         if successful:
             refpath=out/'reference'/case['case_id']/'episode.json'
@@ -63,6 +65,8 @@ def main():
                     bank_version=result.get('bank_version'),library_enabled=arm!='A',required_removals=case['required_removals'],
                     actions=result.get('actions',[]),replay_audit=audit['status'],learning_updates=0,
                     unfinished_reserved_checks=audit['charged_unfinished_checks'],
+                    native_engine_health=health[arm]['status'],native_warning_count=health[arm]['warning_count'],
+                    warning_free_goal_reached=bool(result['success'] and health[arm]['warning_free_observed']),
                     source_scope='미사용 원본 CAD의 첫 실행 · 초기 물리만으로 선정 · 로컬 물리 모델 조건부 결과')
                 sim.events=extra['events'];sim.dump_demo(epath,title=case['case_id']+' · '+LABELS[arm],summary=summary)
                 episode=read(epath);tagged={**result,'_path':rp,'_episode_parent':dest}

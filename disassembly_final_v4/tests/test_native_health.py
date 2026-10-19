@@ -1,7 +1,7 @@
 import tempfile
 from pathlib import Path
 import unittest
-from disassembly_final_v4.native_health import inspect_log
+from disassembly_final_v4.native_health import inspect_log,failure_class
 from disassembly_final_v4.final_learning import admission_decision
 
 
@@ -23,6 +23,14 @@ class NativeHealthTests(unittest.TestCase):
             report=inspect_log(Path(tmp)/'absent.log')
             self.assertIsNone(report['warning_count'])
             self.assertFalse(report['warning_free_observed'])
+
+    def test_checker_limit_does_not_hide_solver_resource_failure(self):
+        result=dict(success=False,termination='check_budget_exhausted',error=None)
+        with tempfile.TemporaryDirectory() as tmp:
+            p=Path(tmp)/'worker.log';p.write_text('WARNING: Too many contacts. The arena memory is full.\n')
+            self.assertEqual(failure_class(result,inspect_log(p),p),'mujoco_resource_failure_or_warning')
+            p.write_text('')
+            self.assertEqual(failure_class(result,inspect_log(p),p),'planner_check_budget_exhausted')
 
 
 if __name__=='__main__':unittest.main()

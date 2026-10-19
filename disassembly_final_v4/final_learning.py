@@ -101,7 +101,7 @@ def propose():
     fields=['checker_call','part_id','direction','valid','committed','reason','blockers','remaining_before','remaining_after','physical_state_key_before','physical_state_key_after']
     for i,row in enumerate(collection['cases']):
         result=read(row['result_path']);trace=result.get('trace',[]);events=result.get('recovery_state',{}).get('events',[])
-        trusted=row['native_engine_health']['warning_free_observed']
+        trusted=row['native_engine_health']['warning_free_observed'] and bool(trace)
         indices=evidence_indices(trace,events,row['repairs'])
         evidence.append(dict(evidence_id=f'L{i+1:02}',source_result_sha256=row['sha256'],part_count=row['case']['part_count'],
             native_engine_health=row['native_engine_health']['status'],physical_procedure_evidence_usable=trusted,

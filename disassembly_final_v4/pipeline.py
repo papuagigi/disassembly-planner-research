@@ -28,6 +28,22 @@ def publish():
         p=subprocess.run([sys.executable,'-B',str(script)],capture_output=True,text=True)
         write(ROOT/'outputs/github_publish_latest.json',dict(utc=utc(),returncode=p.returncode,stdout=p.stdout[-2000:],stderr=p.stderr[-1000:]))
 
+def wait_preparation_quiet():
+    """A reduced cohort must not leave old prefetch contending with final work."""
+    began=time.monotonic()
+    while True:
+        active=[]
+        for p in (ROOT/'outputs/input_audit/development').glob('*/heartbeat.json'):
+            record=read(p)
+            if record.get('phase')=='finished':continue
+            completed=subprocess.run(['ps','-p',str(record['pid']),'-o','command='],capture_output=True,text=True)
+            if 'not permitted' in completed.stderr.lower():raise RuntimeError('Cannot safely inspect preserved input worker')
+            if 'disassembly_final_v4.preparation worker development' in completed.stdout:active.append(p.parent.name)
+        if not active:return
+        write(ROOT/'outputs/preparation_drain.json',dict(utc=utc(),active_unused_input_workers=active,elapsed_seconds=time.monotonic()-began))
+        if time.monotonic()-began>1800:raise RuntimeError('Unused preparation worker failed to drain within30minutes;preserve evidence')
+        time.sleep(10)
+
 def main():
     from .bootstrap import configure
     configure()
@@ -43,6 +59,7 @@ def main():
             stage('prepare_development_inputs')
             from .cohort import select
             select('development')
+            stage('drain_preserved_input_workers_after_scope_reduction');wait_preparation_quiet()
             stage('waiting_for_prior_replays_and_integrity');wait_for_prior('pipeline_complete.json')
             stage('verify_regressions_before_new_learning')
             with (ROOT/'outputs/regressions.log').open('w') as f:
