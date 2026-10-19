@@ -1,164 +1,234 @@
 {
-  "utc": "2026-10-19T13:58:50.137404+00:00",
-  "status": "INTERIM",
+  "utc": "2026-10-19T14:02:07.830332+00:00",
+  "status": "INTERIM_NOT_FINAL",
   "episodes": [
     {
+      "case_id": "asap_01613",
+      "result_sha256": "45830bc0bb0cb83eb67e7b18c1e9e10c645fd8f732c1f601fcf4004ea2cb6c9e",
+      "removals": 3,
+      "required": 10,
+      "success": false,
+      "checks": 30,
+      "calls": 8,
+      "seconds": 204.75768666600197,
+      "observed_failure_class": "actor_memory_budget_exhausted",
+      "native_health": "NOT_YET_AUDITED",
+      "peak_rss_bytes": 1119977472,
+      "evidence_gate": {
+        "usable": false,
+        "excluded_reason": "Native engine warning/error or unknown native health;not physical failure evidence.",
+        "observed_physical_failure_queries": 27,
+        "physical_feedback_counts": {
+          "path_collision": 27,
+          "ok": 3
+        },
+        "physical_prefix_replay": "PENDING",
+        "termination": "limit",
+        "recorded_error": {
+          "type": "LimitError",
+          "message": "same 1 GiB resident-memory ceiling exceeded"
+        },
+        "actor_memory_limited": true,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
+      },
+      "restores": 0
+    },
+    {
       "case_id": "asap_02402",
-      "source_result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
+      "result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
       "removals": 12,
       "required": 12,
       "success": true,
       "checks": 13,
       "calls": 8,
-      "peak_rss_bytes": 149848064,
-      "error": null,
+      "seconds": 83.07215474999975,
       "observed_failure_class": "raw_goal_reached",
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "ok": 12,
-        "path_collision": 1
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 149848064,
+      "evidence_gate": {
+        "usable": true,
+        "excluded_reason": null,
+        "observed_physical_failure_queries": 1,
+        "physical_feedback_counts": {
+          "ok": 12,
+          "path_collision": 1
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "goal_reached",
+        "recorded_error": null,
+        "actor_memory_limited": false,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 1,
-      "observed_restores": 0,
-      "measured_repairs": 1,
-      "trusted_physical_repair_evidence": true
+      "restores": 0
     },
     {
       "case_id": "asap_02406",
-      "source_result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
+      "result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
       "removals": 12,
       "required": 12,
       "success": true,
       "checks": 27,
       "calls": 8,
-      "peak_rss_bytes": 183681024,
-      "error": null,
+      "seconds": 124.11368370900163,
       "observed_failure_class": "raw_goal_reached",
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "path_collision": 15,
-        "ok": 12
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 183681024,
+      "evidence_gate": {
+        "usable": true,
+        "excluded_reason": null,
+        "observed_physical_failure_queries": 15,
+        "physical_feedback_counts": {
+          "path_collision": 15,
+          "ok": 12
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "goal_reached",
+        "recorded_error": null,
+        "actor_memory_limited": false,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 15,
-      "observed_restores": 0,
-      "measured_repairs": 15,
-      "trusted_physical_repair_evidence": true
+      "restores": 0
     },
     {
       "case_id": "asap_02429",
-      "source_result_sha256": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
+      "result_sha256": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
       "removals": 12,
       "required": 17,
       "success": false,
       "checks": 240,
       "calls": 8,
-      "peak_rss_bytes": 872693760,
-      "error": null,
+      "seconds": 413.08094933399843,
       "observed_failure_class": "planner_check_budget_exhausted",
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "path_collision": 188,
-        "ok": 52
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 872693760,
+      "evidence_gate": {
+        "usable": true,
+        "excluded_reason": null,
+        "observed_physical_failure_queries": 188,
+        "physical_feedback_counts": {
+          "path_collision": 188,
+          "ok": 52
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "check_budget_exhausted",
+        "recorded_error": null,
+        "actor_memory_limited": false,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 188,
-      "observed_restores": 40,
-      "measured_repairs": 59,
-      "trusted_physical_repair_evidence": true
+      "restores": 40
     },
     {
       "case_id": "asap_03674",
-      "source_result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
+      "result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
       "removals": 11,
       "required": 11,
       "success": true,
       "checks": 35,
       "calls": 8,
-      "peak_rss_bytes": 334675968,
-      "error": null,
+      "seconds": 528.1620516660005,
       "observed_failure_class": "raw_goal_reached",
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "path_collision": 24,
-        "ok": 11
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 334675968,
+      "evidence_gate": {
+        "usable": true,
+        "excluded_reason": null,
+        "observed_physical_failure_queries": 24,
+        "physical_feedback_counts": {
+          "path_collision": 24,
+          "ok": 11
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "goal_reached",
+        "recorded_error": null,
+        "actor_memory_limited": false,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 24,
-      "observed_restores": 0,
-      "measured_repairs": 24,
-      "trusted_physical_repair_evidence": true
+      "restores": 0
     },
     {
       "case_id": "asap_05459",
-      "source_result_sha256": "bff6f1d6d66f385621d7f009a8d6cf156c020c2cc6d38eae908f8147d2920572",
+      "result_sha256": "bff6f1d6d66f385621d7f009a8d6cf156c020c2cc6d38eae908f8147d2920572",
       "removals": 1,
       "required": 16,
       "success": false,
       "checks": 1,
       "calls": 2,
-      "peak_rss_bytes": 1274150912,
-      "error": {
-        "type": "LimitError",
-        "message": "same 1 GiB resident-memory ceiling exceeded"
-      },
+      "seconds": 30.264486833002593,
       "observed_failure_class": "actor_memory_budget_exhausted",
-      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "ok": 1
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 1274150912,
+      "evidence_gate": {
+        "usable": false,
+        "excluded_reason": "No observed collision or unstable-remainder rejection;no new failure-repair procedure.",
+        "observed_physical_failure_queries": 0,
+        "physical_feedback_counts": {
+          "ok": 1
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "limit",
+        "recorded_error": {
+          "type": "LimitError",
+          "message": "same 1 GiB resident-memory ceiling exceeded"
+        },
+        "actor_memory_limited": true,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 0,
-      "observed_restores": 0,
-      "measured_repairs": 0,
-      "trusted_physical_repair_evidence": false
+      "restores": 0
     },
     {
       "case_id": "asap_07722",
-      "source_result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
+      "result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
       "removals": 4,
       "required": 14,
       "success": false,
       "checks": 240,
       "calls": 8,
-      "peak_rss_bytes": 1060651008,
-      "error": null,
+      "seconds": 830.1997432089993,
       "observed_failure_class": "mujoco_resource_failure_or_warning",
-      "native_engine_health": "NATIVE_ENGINE_WARNINGS_RECORDED",
-      "physical_feedback_reasons": {
-        "ok": 8,
-        "path_collision": 166,
-        "unstable_remainder": 66
+      "native_health": "NATIVE_ENGINE_WARNINGS_RECORDED",
+      "peak_rss_bytes": 1060651008,
+      "evidence_gate": {
+        "usable": false,
+        "excluded_reason": "Native engine warning/error or unknown native health;not physical failure evidence.",
+        "observed_physical_failure_queries": 232,
+        "physical_feedback_counts": {
+          "ok": 8,
+          "path_collision": 166,
+          "unstable_remainder": 66
+        },
+        "physical_prefix_replay": "PASS",
+        "termination": "check_budget_exhausted",
+        "recorded_error": null,
+        "actor_memory_limited": false,
+        "resource_stop_is_not_physical_failure": true,
+        "scope": "Only completed verified physical feedback may support a procedure. An operational stop is never a collision/support-failure label. A verified physical-failure prefix may remain usable after a resource stop."
       },
-      "observed_physical_rejection_queries": 232,
-      "observed_restores": 4,
-      "measured_repairs": 0,
-      "trusted_physical_repair_evidence": false
+      "restores": 4
     }
   ],
-  "original_completed_full_search": 5,
-  "additional_finished": 1,
-  "resource_error_is_not_physical_rejection": true,
-  "current_memory_limit_bytes": 1073741824,
-  "rss_measure": "resource.getrusage(RUSAGE_SELF).ru_maxrss;peak of this actor process,not current RSS or a demonstrated system-wide OOM",
-  "final_conditions_preserved_config_only": {
-    "model": "gpt-6-luna",
-    "effort": "low",
-    "limits": {
-      "max_calls": 8,
-      "max_checks": 240,
-      "timeout_seconds": 900.0,
-      "max_steps": 10000000,
-      "max_checkpoints": 128,
-      "max_restores": 256,
-      "max_rss_bytes": 1073741824,
-      "max_prompt_bytes": 512000,
-      "max_response_bytes": 64000
-    },
-    "same_as_v4": true,
-    "B_C_same_bank_config": true,
-    "no_final_runtime_claim_before_test": true
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "new_skill_not_yet_proposed": true,
+  "old_documents_retained": true,
+  "memory_guard": "Actor process peak RSS,not OS-wide OOM and not model-token memory.",
+  "final_budget_unchanged": {
+    "logical_calls": 8,
+    "physical_queries": 240,
+    "wall_seconds": 900,
+    "peak_rss_bytes": 1073741824
   },
-  "additional_training_prefix": [
-    "asap_05459",
-    "asap_01613",
-    "asap_07385"
-  ],
-  "remaining_learning_overlap": "Offline planned training only;final timing episodes remain serial after input preparation drains."
+  "newly_added_training_budget": {
+    "logical_calls": 8,
+    "physical_queries": 600,
+    "wall_seconds": 900,
+    "peak_rss_bytes": 1073741824
+  },
+  "verified_resource_vs_physical_evidence_regressions": 40,
+  "candidate_cannot_learn_resource_stop_as_collision": true
 }

@@ -95,6 +95,7 @@ def _collect():
     write(final,value,exclusive=True);return value
 
 def propose():
+    from .learning_evidence import eligibility
     folder=ROOT/'outputs/development/new_document';folder.mkdir(parents=True,exist_ok=True)
     final=folder/'proposal.json'
     if final.exists():return read(final)
@@ -104,17 +105,20 @@ def propose():
     fields=['checker_call','part_id','direction','valid','committed','reason','blockers','remaining_before','remaining_after','physical_state_key_before','physical_state_key_after']
     for i,row in enumerate(collection['cases']):
         result=read(row['result_path']);trace=result.get('trace',[]);events=result.get('recovery_state',{}).get('events',[])
-        trusted=row['native_engine_health']['warning_free_observed'] and bool(trace)
+        evidence_gate=eligibility(result,row['native_engine_health'],row['audit'])
+        trusted=evidence_gate['usable']
         indices=evidence_indices(trace,events,row['repairs'])
         evidence.append(dict(evidence_id=f'L{i+1:02}',source_result_sha256=row['sha256'],part_count=row['case']['part_count'],
             native_engine_health=row['native_engine_health']['status'],physical_procedure_evidence_usable=trusted,
-            metrics=row['metrics'] if trusted else {'excluded_from_skill_evidence':'Native solver warning;retain raw episode for infrastructure accounting'},
+            evidence_gate=evidence_gate,
+            metrics=row['metrics'] if trusted else {'excluded_from_skill_evidence':evidence_gate['excluded_reason']},
             measured_repairs=row['repairs'][:8] if trusted else [],
             observed_queries=[{k:trace[j].get(k) for k in fields} for j in indices] if trusted else [],
             actual_restore_events=[e for e in events if e['operation']=='restore'][:4] if trusted else []))
     write(folder/'learning_evidence.json',dict(cases=evidence),exclusive=not (folder/'learning_evidence.json').exists())
     bank=DocumentBank(ROOT/'memory/S2.json')
     prompt='''Generate ONE portable physical disassembly procedure as LLM-readable SKILL.md from the measured full-search development evidence below. Output only schema JSON. markdown_body must contain only the Markdown body,not YAML frontmatter. No tools/files/browsing,Python programs,CAD IDs,answer sequences,or API-format patches. Name must be new. Cite L01... evidence. At most6000characters. Include purpose,observed triggers,numbered planner actions,expected trusted physical feedback,limitations,applicability to generated-code B and fixed Graph/DFS C. Retain prior documents;do not contradict them. Separate observed repair/backtracking from unvalidated hypotheses. Do not claim successful backtracking if none is measured. Failed removal queries do not commit,so they alone do not require checkpoint restoration. Exact-state records survive restoration;do not retry an unchanged known failure. C's fixed DFS controls restore timing;documents only guide ordering. Never invent a hidden support,rotation,grasp,or collision exemption. Every accepted removal requires physical validation. Focus on any additional long-horizon procedure actually supported,not universal disassembly success. Inherited five episodes have240check caps;three added development episodes have600check caps,all900seconds. Never present extra development effort as a matched-policy performance gain. All prior-version validation outcomes,new independent validation and final test CADs are withheld.\nPRIOR DOCUMENTS:\n'''+str(bank.documents)+'\nMEASURED DEVELOPMENT EVIDENCE:\n'+__import__('json').dumps(evidence,ensure_ascii=False)
+    prompt+='\nEVIDENCE BOUNDARY: Respect every evidence_gate. Memory/resource exhaustion,time limits,and provider errors are operational stops,never collision or support-failure labels. A CAD with only accepted actions and no physical rejection supplies no new failure-repair procedure. Derive new steps only from entries marked physical_procedure_evidence_usable;do not infer an unobserved physical failure from termination.'
     from disassembly_mujoco.agent import CodexCLIProvider
     write(attempt,dict(utc=utc(),one_attempt_only=True),exclusive=True)
     provider=CodexCLIProvider(folder/'llm_calls',model=MODEL,reasoning_effort=EFFORT,timeout=120)

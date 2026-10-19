@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T13:57:44.653803+00:00",
+  "utc": "2026-10-19T14:02:07.872712+00:00",
   "state": {
     "utc": "2026-10-19T13:35:54.204771+00:00",
     "pid": 37806,
@@ -9,13 +9,12 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T13:57:39.681565+00:00",
+    "utc": "2026-10-19T14:01:45.412637+00:00",
     "qualified": 4,
     "target": 6,
-    "attempted": 15,
+    "attempted": 18,
     "active_ids": [
-      "02708",
-      "02212"
+      "05580"
     ],
     "completed_out_of_order": 0
   },
@@ -31,6 +30,17 @@
     "reused_by_main_without_rerun": true
   },
   "completed_discovery_outcomes": [
+    {
+      "case_id": "asap_01613",
+      "raw_goal_reached": false,
+      "completed_removals": 3,
+      "required_removals": 10,
+      "checks": 30,
+      "llm_calls": 8,
+      "seconds": 204.75768666600197,
+      "native_engine_health": "NOT_YET_AUDITED",
+      "replay_status": "PENDING"
+    },
     {
       "case_id": "asap_02402",
       "raw_goal_reached": true,
@@ -99,7 +109,7 @@
     }
   ],
   "selected_validation": 0,
-  "completed_full_discovery": 6,
+  "completed_full_discovery": 7,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
