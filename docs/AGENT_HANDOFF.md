@@ -1,12 +1,12 @@
 # Final v4 agent handoff
 
-Snapshot UTC: 2026-10-19T11:08:53.506060+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T11:36:34.015315+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
 Controlling plan: PLAN.md. Exactly one final learning → independent validation → freeze → first-test cycle. Never tune against final tests. Do not rerun started episodes. Existing studies and presentations remain preserved. Claude is not assigned; this document supports recovery only.
 
-State: {'utc': '2026-10-19T11:08:53.505746+00:00', 'pid': 27126, 'status': 'RUNNING', 'phase': 'prepare_development_inputs'}
+State: {'utc': '2026-10-19T11:36:34.012511+00:00', 'pid': 29446, 'status': 'RUNNING', 'phase': 'waiting_for_prior_frozen_evaluation'}
 
 Actual finished full-search discovery: 0/10. Independent full-search validation: 0/10. First test episodes: 0/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
 
