@@ -103,6 +103,9 @@ def wilson(k,n):
     z=1.96;p=k/n;den=1+z*z/n;center=(p+z*z/(2*n))/den;radius=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/den
     return [max(0,center-radius),min(1,center+radius)]
 
+def budget_stop(error):
+    return error.get('type') in ('LimitError','BudgetLimit','RecoveryBudgetLimit')
+
 def main():
     from .post_serial_audit import main as audit_serial
     audit_serial()
@@ -118,6 +121,8 @@ def main():
             health=audit_native_health(folder)
             usage=[c for c in calls if c['phase']=='evaluation' and c['case_id']==case['case_id'] and c['arm']==arm]
             execution_errors=[d['execution_error'] for d in result.get('decisions',[]) if d.get('execution_error')]
+            budget_stops=[e for e in execution_errors if budget_stop(e)]
+            nonbudget_errors=[e for e in execution_errors if not budget_stop(e)]
             row=dict(case_id=case['case_id'],arm=arm,part_count=case['part_count'],**m,
                 raw_goal_reached=bool(m['success']),native_engine_health=health['status'],
                 native_warning_count=health['warning_count'],
@@ -127,7 +132,9 @@ def main():
                 known_total_tokens=sum(c['total_tokens'] or 0 for c in usage),input_tokens=sum(c['input_tokens'] or 0 for c in usage),
                 output_tokens=sum(c['output_tokens'] or 0 for c in usage),cached_input_tokens=sum(c['cached_input_tokens'] or 0 for c in usage),
                 unknown_usage_calls=sum(not c['usage_known'] for c in usage),
-                generated_code_error_count=len(execution_errors),generated_code_error_types=dict(Counter(e['type'] for e in execution_errors)),
+                generated_code_error_count=len(nonbudget_errors),generated_code_error_types=dict(Counter(e['type'] for e in nonbudget_errors)),
+                caught_execution_exception_count=len(execution_errors),caught_budget_stop_count=len(budget_stops),
+                caught_budget_stop_types=dict(Counter(e['type'] for e in budget_stops)),
                 provider_error_calls=sum(bool(c['provider_error']) for c in usage),final_error=result.get('error'),
                 bank_version=result.get('bank_version'),bank_content_sha256=result.get('bank_content_sha256'),
                 result_path=str(folder/'result.json'),result_sha256=sha(folder/'result.json'),first_budgeted_episode=True)
@@ -190,6 +197,7 @@ def main():
         'B-A changes frozen document availability plus required initial review. C-B changes graph/DFS/code-generation/call scheduling as a bundle; no isolated graph/DFS effect. No final C0 arm,so C memory efficacy is not identified separately.',
         'Final progress is the accepted state at termination;best progress is the greatest accepted prefix observed during the search. A backtracking planner can have lower final than best progress after undoing a branch. Neither partial-progress metric substitutes for full goal success. Undone accepted removals measure branch-search work,not removal of nonrequired components.',
         'Read body bytes,declaration,observable priority change and improved held-out outcomes are separate. See memory_context_audit.json,behavior_audit.json,raw code/ranks and actual event replays. Token calls include failed-provider usage. Cached input and reasoning are not double-counted. Missing usage is unknown.',
+        'Recognized LimitError/BudgetLimit/RecoveryBudgetLimit exceptions are budget stops,not counted as generated-code errors. Raw execution exception counts remain separately available. A nonbudget execution error still requires its raw message before claiming a code defect.',
         'LLM calls mean logical CodexCLIProvider.complete invocations/CLI planner turns,not independently observed backend HTTP requests. The CLI runs statelessly in an empty temporary working directory with user configuration,memories and major agent-tool features disabled;any recorded tool activity invalidates the response. Provider token totals include CLI context as well as supplied planner text.',
         'time_budget_prefixes.csv is an observed timeline prefix at180/600/900seconds from one900-second policy,not separate per-budget retraining/reruns. A failed early run is not more efficient than successful full disassembly. Use common-success paired rows for cost-only interpretation.',
         'Native engine health is separate from deterministic event replay. Raw success/costs remain unchanged;warning_free_goal_reached additionally requires no native runtime warning in the actual worker log. Missing logs are unknown. All cases remain in the denominator. Inspect native_warning_episodes before interpreting raw success as physically trustworthy. Solver-contact/constraint overflow is infrastructure failure,not a learned physical disassembly rule.',

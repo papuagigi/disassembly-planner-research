@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T21:28:15.758585+00:00",
+  "primary_trial_fields_unchanged": [
+    "case_id",
+    "arm",
+    "result_sha256",
+    "success",
+    "termination",
+    "final_removed",
+    "required_removed",
+    "best_removed",
+    "checks",
+    "failed_checks",
+    "restores",
+    "llm_calls",
+    "known_total_tokens",
+    "elapsed_seconds",
+    "native_engine_health"
+  ],
+  "all_nine_raw_result_hashes_unchanged": true,
+  "recognized_deadline_exceptions": 5,
+  "nonbudget_execution_errors": 0,
+  "original_derived_results_preserved": "outputs/recovery/reporting_classification_before_fix",
+  "no_model_or_physics_calls": true
+}
