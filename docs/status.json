@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T22:03:27.259819+00:00",
+  "utc": "2026-10-19T22:23:58.467900+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T21:13:15.376927+00:00",
@@ -51,11 +51,11 @@
   },
   "input_progress": {
     "phase": "actual_replay_verified",
-    "utc": "2026-10-19T21:57:58.674307+00:00",
+    "utc": "2026-10-19T22:22:25.591483+00:00",
     "case": "asap_06444",
-    "arm": "A",
-    "queries": 35,
-    "completed": 4
+    "arm": "C",
+    "queries": 81,
+    "completed": 6
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
