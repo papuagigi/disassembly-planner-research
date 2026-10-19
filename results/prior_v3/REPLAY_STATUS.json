@@ -1,5 +1,5 @@
 {
-  "status": "PARTIAL",
-  "episodes_ready": 20,
-  "full_audit": "PENDING"
+  "status": "PASS",
+  "episodes_ready": 36,
+  "full_audit": "PASS"
 }
