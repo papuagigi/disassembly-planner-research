@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:02:40.144922+00:00",
+  "utc": "2026-10-19T14:21:29.062332+00:00",
   "state": {
     "utc": "2026-10-19T13:35:54.204771+00:00",
     "pid": 37806,
@@ -9,13 +9,13 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:02:15.422658+00:00",
+    "utc": "2026-10-19T14:21:00.191301+00:00",
     "qualified": 4,
     "target": 6,
-    "attempted": 18,
+    "attempted": 29,
     "active_ids": [
-      "05580",
-      "01713"
+      "03610",
+      "05491"
     ],
     "completed_out_of_order": 0
   },
@@ -98,6 +98,17 @@
       "replay_status": "PASS"
     },
     {
+      "case_id": "asap_07385",
+      "raw_goal_reached": false,
+      "completed_removals": 2,
+      "required_removals": 12,
+      "checks": 242,
+      "llm_calls": 8,
+      "seconds": 901.1882945420002,
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS_VERIFIED_PREFIX"
+    },
+    {
       "case_id": "asap_07722",
       "raw_goal_reached": false,
       "completed_removals": 4,
@@ -110,7 +121,7 @@
     }
   ],
   "selected_validation": 0,
-  "completed_full_discovery": 7,
+  "completed_full_discovery": 8,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
