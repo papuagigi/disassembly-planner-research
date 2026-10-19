@@ -174,7 +174,9 @@ def main():
         initially_qualified_CADs=len(qualification['cases']),attempted_CADs=qualification['attempted'],
         status_counts=dict(Counter(r['status'] for r in qualification['statuses'])),
         full_geometry_QA_and_exclusions_preserved_in_source=True)
+    from .post_cohort_scope import summary as cohort_amendment
     write(ROOT/'analysis/results.json',dict(created_utc=utc(),trials=trials,aggregate=aggregate,paired=pairs,token_groups=token_groups,
+        pre_outcome_cohort_amendment=cohort_amendment(),
         qualification=qualification_summary,
         development=read(ROOT/'outputs/development/complete.json'),no_test_memory_updates=True))
     lines=['# Large-CAD physical-document first-episode comparison','',

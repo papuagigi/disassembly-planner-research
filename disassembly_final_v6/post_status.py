@@ -10,6 +10,8 @@ def optional(name,default=None):
 
 def main():
     scope=study_scope();state=optional('outputs/pipeline_state.json',{})
+    from .post_cohort_scope import effective_target,summary as cohort_amendment
+    test_target=effective_target() if (ROOT/'outputs/protocol/freeze.json').exists() else scope['evaluation_CADs']
     selected=optional('outputs/input_audit/selected_development.json',{})
     paths=list((ROOT/'outputs/development/full_search').glob('*/result.json'))
     extra=list((ROOT/'outputs/development/memory_extension').glob('*/result.json'))
@@ -30,7 +32,8 @@ def main():
         unique_long_training_CADs=len({r['case_id'] for r in rows}),long_training_episode_outcomes=rows,
         selected_validation=len(selected.get('validation_cases',[])),completed_validation=len(validation),
         completed_first_test_episodes=len(final),targets=dict(unique_long_training_CADs=8,total_long_training_episodes=10,
-            additional4GiBepisodes=2,validation_CADs=3,new_test_CADs=4,first_test_episodes=12),
+            additional4GiBepisodes=2,validation_CADs=3,new_test_CADs=test_target,first_test_episodes=3*test_target),
+        pre_outcome_cohort_amendment=cohort_amendment(),
         model='gpt-6-luna',reasoning_effort='low',peak_RSS_cap_GiB=4,planner_concurrency=1,
         prior_local_probe_CADs=90,current_line_unique_development_CADs=94,
         no_model_weight_update=True,Claude_assigned=False,PPT_created=False,
@@ -43,7 +46,7 @@ UTC:{value['utc']}. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is n
 
 Current state:{state}
 
-Preserved1GiBepisodes:{len(paths)}/8. Additional4GiBdevelopment episodes:{len(extra)}/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:{len(validation)}/3. New final first episodes:{len(final)}/12,on4unseen official test products. Missing outputs are pending.
+Preserved1GiBepisodes:{len(paths)}/8. Additional4GiBdevelopment episodes:{len(extra)}/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:{len(validation)}/3. New final first episodes:{len(final)}/{3*test_target},on{test_target}unseen official test products. Missing outputs are pending. Original scope remains preserved in config/study_scope.json. Any pre-outcome sample-count amendment is outputs/protocol/cohort_amendment.json;it changes no actor,bank,physics or episode budget.
 
 Current input/episode progress:{value['input_progress']}
 

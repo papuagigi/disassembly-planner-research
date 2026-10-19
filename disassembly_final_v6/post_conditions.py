@@ -7,9 +7,11 @@ from .protocol import verify
 
 def main():
     frozen=verify()
+    from .post_cohort_scope import effective_target,summary as cohort_amendment
+    minimum=effective_target()
     manifest=read(ROOT/'outputs/evaluation/manifest.json')
     completion=read(ROOT/'outputs/evaluation/complete.json')
-    assert len(manifest['cases'])>=frozen['minimum_CAD_requirements']['evaluation']
+    assert len(manifest['cases'])==minimum
     assert len(completion['episodes'])==3*len(manifest['cases'])
     prior=read(ROOT/'outputs/input_audit/previous_geometry_fingerprints.json')
     known={r['fingerprint'] for r in prior['records']}
@@ -64,6 +66,9 @@ def main():
             provider_metadata_records_verified=calls,one_first_episode_per_arm=True,no_test_learning=True))
     assert total==manifest['planned_episodes']==len(completion['episodes'])
     receipt=dict(status='PASS_CONTRACTS',utc=utc(),cases=rows,episodes=total,
+        original_minimum_CADs=frozen['minimum_CAD_requirements']['evaluation'],effective_minimum_CADs=minimum,
+        original_minimum_met=len(manifest['cases'])>=frozen['minimum_CAD_requirements']['evaluation'],
+        pre_outcome_cohort_amendment=cohort_amendment(),
         requested_model=MODEL,requested_reasoning_effort=EFFORT,
         actual_served_model='Not independently identified beyond provider records',
         unavailable_runtime_fields_remain_unknown=True,

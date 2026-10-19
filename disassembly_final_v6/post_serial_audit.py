@@ -22,7 +22,9 @@ def main():
     rows.sort(key=lambda r:r['started_utc'])
     for left,right in zip(rows,rows[1:]):
         assert datetime.fromisoformat(right['started_utc'])>=datetime.fromisoformat(left['finished_utc']),('Planner overlap',left,right)
-    assert len(rows)==17,('Expected2development+3validation+12final jobs',len(rows))
+    from .post_cohort_scope import effective_target
+    expected=2+3+3*effective_target()
+    assert len(rows)==expected,('Unexpected completed planner job count',len(rows),expected)
     value=dict(status='PASS',utc=utc(),new_planner_episodes=len(rows),observed_max_concurrent_planners=1,
         all_new_jobs_4GiB=True,episodes=rows,
         scope='Planner worker lifecycle windows only;input preparation and post-score native replay are not planner invocations.')
