@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T18:17:40.107280+00:00",
+  "utc": "2026-10-19T18:33:30.645546+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T16:15:16.933671+00:00",
@@ -51,14 +51,14 @@
   },
   "input_progress": {
     "phase": "preparing_evaluation",
-    "utc": "2026-10-19T18:17:38.443275+00:00",
+    "utc": "2026-10-19T18:33:16.201828+00:00",
     "qualified": 3,
     "target": 4,
-    "attempted": 54,
+    "attempted": 58,
     "active_ids": [
-      "07806"
+      "00392"
     ],
-    "completed_out_of_order": 0
+    "completed_out_of_order": 2
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
