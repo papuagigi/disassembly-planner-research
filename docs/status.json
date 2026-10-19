@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T12:49:55.922614+00:00",
+  "utc": "2026-10-19T12:49:58.237939+00:00",
   "state": {
     "utc": "2026-10-19T12:49:46.841950+00:00",
     "pid": 36463,
@@ -9,9 +9,9 @@
   "selected_discovery": 5,
   "live_progress": {
     "phase": "full_search_learning",
-    "utc": "2026-10-19T12:49:55.883144+00:00",
-    "case": "asap_07722",
-    "completed": 2,
+    "utc": "2026-10-19T12:49:58.208710+00:00",
+    "case": "asap_03674",
+    "completed": 3,
     "total": 5
   },
   "early_discovery": {
