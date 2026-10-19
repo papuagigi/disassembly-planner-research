@@ -1,12 +1,12 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T18:33:30.645546+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T18:58:34.011724+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
-Current state:{'utc': '2026-10-19T16:15:16.933671+00:00', 'pid': 41025, 'status': 'RUNNING', 'phase': 'prepare_unseen_test_inputs'}
+Current state:{'status': 'STOPPED_WITH_RECORDED_ERROR', 'utc': '2026-10-19T18:58:33.960626+00:00', 'pid': 41025, 'error': "RuntimeError('Finite evaluation reserve exhausted: 3/4;do not relax input criteria')", 'traceback': 'Traceback (most recent call last):\n  File "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/pipeline.py", line 74, in main\n    stage(\'prepare_unseen_test_inputs\');select(\'evaluation\');publish()\n                                        ^^^^^^^^^^^^^^^^^^^^\n  File "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/cohort.py", line 81, in select\n    if len(selected)<target:raise RuntimeError(f\'Finite {stage} reserve exhausted: {len(selected)}/{target};do not relax input criteria\')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Finite evaluation reserve exhausted: 3/4;do not relax input criteria\n'}
 
 Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:0/12,on4unseen official test products. Missing outputs are pending.
 
-Current input/episode progress:{'phase': 'preparing_evaluation', 'utc': '2026-10-19T18:33:16.201828+00:00', 'qualified': 3, 'target': 4, 'attempted': 58, 'active_ids': ['00392'], 'completed_out_of_order': 2}
+Current input/episode progress:{'phase': 'preparing_evaluation', 'utc': '2026-10-19T18:58:33.960252+00:00', 'qualified': 3, 'target': 4, 'attempted': 75, 'active_ids': [], 'completed_out_of_order': 0}
 
 Optional early_memory_extension and main collection share outputs/development/discovery_collection.lock. They must never run planners concurrently. Main reuses saved additional results. No oldv5/v4supervisor should be restarted. Their complete results/sources are hash-protected. New4GiBepisodes have distinct outputs/development/memory_extension folders;never overwrite with retry.
 

@@ -1,11 +1,12 @@
 {
-  "utc": "2026-10-19T18:33:30.645546+00:00",
+  "utc": "2026-10-19T18:58:34.011724+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T16:15:16.933671+00:00",
+    "status": "STOPPED_WITH_RECORDED_ERROR",
+    "utc": "2026-10-19T18:58:33.960626+00:00",
     "pid": 41025,
-    "status": "RUNNING",
-    "phase": "prepare_unseen_test_inputs"
+    "error": "RuntimeError('Finite evaluation reserve exhausted: 3/4;do not relax input criteria')",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/pipeline.py\", line 74, in main\n    stage('prepare_unseen_test_inputs');select('evaluation');publish()\n                                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/cohort.py\", line 81, in select\n    if len(selected)<target:raise RuntimeError(f'Finite {stage} reserve exhausted: {len(selected)}/{target};do not relax input criteria')\n                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Finite evaluation reserve exhausted: 3/4;do not relax input criteria\n"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -51,14 +52,12 @@
   },
   "input_progress": {
     "phase": "preparing_evaluation",
-    "utc": "2026-10-19T18:33:16.201828+00:00",
+    "utc": "2026-10-19T18:58:33.960252+00:00",
     "qualified": 3,
     "target": 4,
-    "attempted": 58,
-    "active_ids": [
-      "00392"
-    ],
-    "completed_out_of_order": 2
+    "attempted": 75,
+    "active_ids": [],
+    "completed_out_of_order": 0
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
