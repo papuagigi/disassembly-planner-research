@@ -1,0 +1,322 @@
+{
+  "utc": "2026-10-19T14:31:08.564450+00:00",
+  "prior_study": "disassembly_final_v5",
+  "completed": {
+    "07249": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07249/qualification.json",
+      "sha256": "a690eabe21ac395c6a811c3329f311e33571e01c340b9ff25ca3117082e8adf5"
+    },
+    "05580": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/05580/qualification.json",
+      "sha256": "1e49f28b78a92b355477071a33b9cf565f8a2deabeb0576eddfb8afe0abf9597"
+    },
+    "01713": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01713/qualification.json",
+      "sha256": "c0541199046a41c74079a8506a1f1b47a0d3e95d41a2987a42ac86b7af6b53c9"
+    },
+    "03756": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/03756/qualification.json",
+      "sha256": "57e53de1dced701b11c6e8d28b8566812e61b08cfa43d9f5599f4f61e2837110"
+    },
+    "02679": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02679/qualification.json",
+      "sha256": "1ac51becd9e7b8498c0c4fec25007263b880573c71b2b9fe0c6cf53fad21d037"
+    },
+    "07531": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07531/qualification.json",
+      "sha256": "011963fbe21f0070c12062c4a35b45a8360e86298ef9680ed1f8994c2a80a551"
+    },
+    "02878": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02878/qualification.json",
+      "sha256": "dbdf7bfd4528a03ca15afbff35a62c91a64fc50c4840466e1fdbc30ba09df838"
+    },
+    "04347": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/04347/qualification.json",
+      "sha256": "5de7bfa1bb1dad392173ad75b7bfd8f57ba4f98edab8ce0d9bcf105ea482a57f"
+    },
+    "05491": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/05491/qualification.json",
+      "sha256": "498fdef4d47a943d2649d1f8278bae9b5b70dfb57b8233e1ea088f239e526a3b"
+    },
+    "02212": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02212/qualification.json",
+      "sha256": "92a8a61048b47c6cede00218ab4f744f553cdbdcd2caf4a715fca1721a1ac991"
+    },
+    "03735": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/03735/qualification.json",
+      "sha256": "7a330fda72990d42999a43584edcb53956dbc61618976a20a6e0e2c25d8de82e"
+    },
+    "07392": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07392/qualification.json",
+      "sha256": "b66ca9f6227693aff679b83b9e367675c73fd0588cf45975c8eaef1408cb1204"
+    },
+    "01642": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01642/qualification.json",
+      "sha256": "6a0ed66f4193096cd1f7b6ab1465d0f310b1753c3568561b07a6d35eaca06978"
+    },
+    "02004": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02004/qualification.json",
+      "sha256": "850236a8d5afbce3b64ca809c111fa4f44eca04e48026c8fa79c60b1716a27d9"
+    },
+    "07929": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07929/qualification.json",
+      "sha256": "b766b20ba0d1ab7c56601f9f345dba4fdad0bcedc58d689a9587fe1ccee8ebec"
+    },
+    "01963": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01963/qualification.json",
+      "sha256": "9b776f99a47886e5646ad25ac1ef4c2a1b252b05ccabba17d44e64950d3461ca"
+    },
+    "02731": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02731/qualification.json",
+      "sha256": "4e5d8e89f0da4963aa02fbb4e222f0fa24e33ea82d7ccf9a0473b9eb0d702417"
+    },
+    "03610": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/03610/qualification.json",
+      "sha256": "5ea3bf701cca4a673b408f25cee853ad4deceb8deea93eafd5996adbc5010cda"
+    },
+    "08055": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/08055/qualification.json",
+      "sha256": "94485b77f1d75f0fb48d498c765f335d60a7d29a9815ba510b0e0fff49200f18"
+    },
+    "02708": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02708/qualification.json",
+      "sha256": "ebc33f69b8b6637e12ac2f12dee58bbaab7e2a45516fdf2985be943484a3d9df"
+    },
+    "05524": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/05524/qualification.json",
+      "sha256": "420f93cc9ab35d61253ff53e38a2c6d94761d8b6ea53b4b139c72c73e7a12395"
+    },
+    "04697": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/04697/qualification.json",
+      "sha256": "39cdaba51c1adc2a45dd611fe8692fd28d0f8dffa415d1313fd775fd8d5ee9ec"
+    },
+    "02275": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02275/qualification.json",
+      "sha256": "eb49f6d615b6ee8414dd81a2be955510565c81510c8f25622150ee7188f7531f"
+    },
+    "06829": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/06829/qualification.json",
+      "sha256": "de2c74a847fcf366221ef6291b03d59975265b1f78bfdc38f54fd4062b80dc4b"
+    },
+    "07551": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07551/qualification.json",
+      "sha256": "fbcf5f7a3d27042f5e67a15bcc54fb7634c148e2c3b411f02fffe2c36e050687"
+    },
+    "05691": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/05691/qualification.json",
+      "sha256": "e3a30d3691792f7b7fbfc9d1777bfb9d56a10c212857014eaa8e111df0fc6b26"
+    },
+    "02001": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02001/qualification.json",
+      "sha256": "87027e56cf27f7415251b04b290116ecb71b88356a587d393b839085fe3ee469"
+    },
+    "07385": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07385/qualification.json",
+      "sha256": "69a227589efb51e9298b000a374ae8bfcba7c7c851bb878bdacda4f0efea46f6"
+    },
+    "03914": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/03914/qualification.json",
+      "sha256": "6f811bc882443c6067ae63ed3385046f7047560877d3722e25698acd3c343bf6"
+    },
+    "07912": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/07912/qualification.json",
+      "sha256": "3230b2364ffb598a72bfa9f68cf017f25775ce21efbf52a2f2bbe72046d55059"
+    },
+    "01613": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01613/qualification.json",
+      "sha256": "df3570e28ca976b580224c7888148aff5cf7530e60ce986c84d5bb750f03135c"
+    },
+    "01793": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01793/qualification.json",
+      "sha256": "91349d342b1d7f4f97662e761552b31670172a1a51b9886a0e3a16d18718a085"
+    },
+    "04241": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/04241/qualification.json",
+      "sha256": "a4bd9de1ad1e4ff7f5b55f053046a0b47083fde5026963add5b7d26f97f4719f"
+    },
+    "02979": {
+      "path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/02979/qualification.json",
+      "sha256": "980a6d3eb71660048c78c5bd585cfa6e738d078555c81c168ca2397c2c97706e"
+    }
+  },
+  "pending": {
+    "01596": {
+      "folder": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v5/outputs/input_audit/development/01596",
+      "pid": 40773
+    }
+  },
+  "prior_consumed_count": 34,
+  "prior_consumed_statuses": [
+    {
+      "id": "05459",
+      "status": "REUSED_INITIAL_PREPARATION_NO_PRIOR_PLANNER",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "id": "02878",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 127.1911361249986
+    },
+    {
+      "id": "02275",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 149.00594141699912
+    },
+    {
+      "id": "01613",
+      "status": "initially_qualified_full_path_unknown",
+      "elapsed_seconds": 247.09990858400124
+    },
+    {
+      "id": "04241",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 232.82366729099886
+    },
+    {
+      "id": "07551",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 83.38930133400208
+    },
+    {
+      "id": "06829",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 221.91513658300028
+    },
+    {
+      "id": "05691",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 388.90301587499926
+    },
+    {
+      "id": "07392",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 117.38652550000188
+    },
+    {
+      "id": "07385",
+      "status": "initially_qualified_full_path_unknown",
+      "elapsed_seconds": 63.73323929199978
+    },
+    {
+      "id": "02004",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 112.1134764999988
+    },
+    {
+      "id": "02001",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 142.25407391599947
+    },
+    {
+      "id": "04347",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 186.40154662499845
+    },
+    {
+      "id": "03735",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 183.2407634170013
+    },
+    {
+      "id": "03756",
+      "status": "initially_qualified_full_path_unknown",
+      "elapsed_seconds": 157.52328395899895
+    },
+    {
+      "id": "02708",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.74451950000002
+    },
+    {
+      "id": "02212",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.82574941699932
+    },
+    {
+      "id": "07249",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 194.08901825000066
+    },
+    {
+      "id": "05580",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 234.16271716700066
+    },
+    {
+      "id": "01713",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 314.4465723329995
+    },
+    {
+      "id": "08055",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 135.24610191600004
+    },
+    {
+      "id": "07929",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.5209260000010545
+    },
+    {
+      "id": "01793",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 148.13168645900078
+    },
+    {
+      "id": "03914",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 109.78713691699886
+    },
+    {
+      "id": "02679",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 250.17283295800007
+    },
+    {
+      "id": "02731",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 287.86890795900035
+    },
+    {
+      "id": "01642",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.86154400000305
+    },
+    {
+      "id": "07531",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 158.66088245799983
+    },
+    {
+      "id": "05524",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 299.97045624999737
+    },
+    {
+      "id": "03610",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 323.24926875000165
+    },
+    {
+      "id": "05491",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 197.72199608299707
+    },
+    {
+      "id": "07912",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 163.24918666699887
+    },
+    {
+      "id": "04697",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 285.3596059160009
+    },
+    {
+      "id": "01963",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.6755449580014
+    }
+  ],
+  "source_order_preserved": true
+}

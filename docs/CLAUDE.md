@@ -1,3 +1,3 @@
-# Recovery instructions only
+# Recovery only
 
-Claude is not assigned. Read PLAN.md and AGENT_HANDOFF.md. Never rerun started episodes or edit frozen actor/bank/physics files. No test-data learning or PPT before result review.
+Claude is not assigned. Read PLAN.md,AGENT_HANDOFF.md and OPERATIONS.md. Verify live PIDs before recovery. Keep all prior results. Do not change frozen source/bank or learn from final test logs. No final-episode retry or PPT.

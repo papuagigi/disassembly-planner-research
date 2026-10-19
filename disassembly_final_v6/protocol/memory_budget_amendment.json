@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-19T14:31:08.564450+00:00",
+  "user_authorized": true,
+  "old_peak_rss_bytes": 1073741824,
+  "new_peak_rss_bytes": 4294967296,
+  "only_final_episode_budget_change": "max_rss_bytes",
+  "model": "gpt-6-luna",
+  "effort": "low",
+  "final_limits": {
+    "max_calls": 8,
+    "max_checks": 240,
+    "timeout_seconds": 900.0,
+    "max_steps": 10000000,
+    "max_checkpoints": 128,
+    "max_restores": 256,
+    "max_rss_bytes": 4294967296,
+    "max_prompt_bytes": 512000,
+    "max_response_bytes": 64000
+  },
+  "development_recovery_limits": {
+    "max_calls": 8,
+    "max_checks": 600,
+    "timeout_seconds": 900.0,
+    "max_rss_bytes": 4294967296
+  },
+  "recovery_case_ids": [
+    "asap_05459",
+    "asap_01613"
+  ],
+  "same_case_and_initial_state_bytes": true,
+  "prior_S2_retained": true,
+  "model_weight_update": false,
+  "planner_concurrency": 1,
+  "validation_CADs": 3,
+  "test_CADs": 4,
+  "prior_input_selection_prefix_preserved": true,
+  "no_test_episode_started_before_amendment": true,
+  "imported_discovery_CADs": 8,
+  "new_development_episodes": 2,
+  "unique_discovery_CADs": 94,
+  "runtime_target": "2026-10-20 13:40:49 KST",
+  "hardware": {
+    "cpu": "Apple M5 Pro",
+    "RAM_GiB": 48,
+    "observed_unused_GiB_approx": [
+      8,
+      9
+    ],
+    "swap_bytes": 0,
+    "load_test_at4GiB_performed": false
+  }
+}

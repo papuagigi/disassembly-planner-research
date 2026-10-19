@@ -1,0 +1,66 @@
+{
+  "utc": "2026-10-19T13:21:47.347223+00:00",
+  "reason": "User approved adding3long training CADs then revalidation and freeze;supersede partial v4before test geometry opens",
+  "prior_supervisor_pid": 36463,
+  "prior_state": {
+    "utc": "2026-10-19T12:58:27.097806+00:00",
+    "pid": 36463,
+    "status": "RUNNING",
+    "phase": "single_proposal_and_independent_validation"
+  },
+  "results_sha256": {
+    "disassembly_final_v4/outputs/development/full_search/asap_02429/result.json": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
+    "disassembly_final_v4/outputs/development/full_search/asap_02402/result.json": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
+    "disassembly_final_v4/outputs/development/full_search/asap_03674/result.json": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
+    "disassembly_final_v4/outputs/development/full_search/asap_07722/result.json": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
+    "disassembly_final_v4/outputs/development/full_search/asap_02406/result.json": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
+    "disassembly_final_v4/outputs/development/full_validation/asap_04243/result.json": "eb320c8d82ea201aae00cff9fac03743ff18948b897fe67d31da1d10c3bf0cf8",
+    "disassembly_final_v4/outputs/development/full_validation/asap_07375/result.json": "7b912a62ec502b443c8ec27df5d6e08429016f82412f9120599619241b905114"
+  },
+  "sources_sha256": {
+    "disassembly_final_v4/bootstrap.py": "8f0d37fd9f85e6e5ff1764e35dd7398dc6b4954b788a080b6c864b0cb909a343",
+    "disassembly_final_v4/metrics.py": "3ba7a1cc574d4ae663343b9f808d4d5344ffde44619dc396c5e3be8eaf51f316",
+    "disassembly_final_v4/capacity.py": "304b5ca7795d48adf3db2087ed7dca99990a870155ac3ead645d28155255ddc1",
+    "disassembly_final_v4/controller.py": "6ce712e0c6013110ba296a5c41a88fd05a2f47eb6317fc20ed9fb74200198d51",
+    "disassembly_final_v4/cohort.py": "57030b8e9c946c9f4049058498e380eb5c3ffddcab018a2287217c3b0c375128",
+    "disassembly_final_v4/post_analysis.py": "4c958e6f3fd369012b5ef9d9e07eb40d0a7ff0f73c2292ef37df2594c6af39f0",
+    "disassembly_final_v4/post_input_diagnosis.py": "db48fb6c339992b16aa0c415e53d094e55920d872556b352ca3048fd10bc3519",
+    "disassembly_final_v4/documents.py": "0fe49d1bbefe1372ba15e7f718e0e7d1c8dd3660a6b39a334b1b59f64bff610d",
+    "disassembly_final_v4/protocol.py": "91692e4dd3ceac707b658bd684bb94a7b50a9da9b0ffb7a51bc40502c39d777d",
+    "disassembly_final_v4/native_health.py": "6a3fb09233a3db194e1610a225b8e9953e303a6ac4ddfb9094975d402dc3ca87",
+    "disassembly_final_v4/__init__.py": "8546cfc53acca4bbc15897d75f780c84efa1b6a2a784979200daf23a295013ac",
+    "disassembly_final_v4/final_learning.py": "b6cd24b1f7e718b2c557b882131df6702b2bce8fe91d34d9fe19728860fe0cf1",
+    "disassembly_final_v4/dataset.py": "29eb267f346edc0c935f5a2283ee91df20642487f6a2ec64ce84c93085a14402",
+    "disassembly_final_v4/campaign.py": "e72caa2e036bdf91e0155e39c4d6c532d105780023ec4336a8cd69ceb0ead79a",
+    "disassembly_final_v4/post_evidence.py": "51ae4b66a0a3c5a0958520eadd3c2baf171298c42f426a92f8cb6b208488761e",
+    "disassembly_final_v4/post_conditions.py": "595af4e7c8711bfbe9db1b32bf6b329177f1da7f3268fb69367bfe09995d89d5",
+    "disassembly_final_v4/evidence_replay.py": "85214493ec4677585ad6475cc82dca01c1a1379354ef25cdec93fcbc6e7c7b69",
+    "disassembly_final_v4/common.py": "53ae68346a776f30e5c884ba09d0465313df876ae7e2b38bd80a81201105f2a6",
+    "disassembly_final_v4/pipeline.py": "441bcd3235b2b7b6b5ff267cb1c757840b26141e3d2da0a6d83da2e2f852557c",
+    "disassembly_final_v4/contracts.py": "da95c76710ee586e9ab16c6f751ea98e774495a8dfe1d88ed5c2be8ebd22959d",
+    "disassembly_final_v4/post_replay.py": "bb5ac551638d37b3d8ae2b0ba460c420232bfe4cfa0903e94472209d64aa153a",
+    "disassembly_final_v4/early_discovery.py": "2ad4321a93196c63bc2cde0e3ac1a300e8d23db0c619300d7adcb3e2a98a4d5b",
+    "disassembly_final_v4/post_native_classify.py": "2c6e559f20c53268c8b93f0ca4d4fd23e6d3aca2e9b51c431f693cb9bdc48cff",
+    "disassembly_final_v4/post_status.py": "a92d6af3fda02e0644966295159aa7170cee3663eafeb36d579ab48c39b7a445",
+    "disassembly_final_v4/post_finish.py": "d584c4bc0feb75e9d9637c38b200aed83d9e1dee31bee1b19875003210cdc161",
+    "disassembly_final_v4/actors.py": "95607c6cc8cfad920cc07197b31b59b479fbe43458d5ea6e548209e9b6cd99f0",
+    "disassembly_final_v4/driver.py": "15f831ef436588db1df2f4abe69ad928a82be23dae625ab124d0af87be828db9",
+    "disassembly_final_v4/post_pack.py": "0e08e1318004803a85df38871d6f051dcdd32a4a01a4a89623d69c7694380015",
+    "disassembly_final_v4/scope.py": "3b84c02f00fd51e4f10617b29ef3a9981ecef4537606a1152a07786e8358189b",
+    "disassembly_final_v4/preparation.py": "6e5a2dbbc6bd8115eacaa9a57c368c5c1cac1a59f46d767be2c9443c0f67d907",
+    "disassembly_final_v4/memory/candidate/physical-long-horizon-clearance/SKILL.md": "f294099384292b6dabc004b05b78ed18899d916c6569e44bded8a53b25495f01",
+    "disassembly_final_v4/memory/prior/physical-directional-clearance/SKILL.md": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+    "disassembly_final_v4/memory/prior/physical-disassembly-failure-repair/SKILL.md": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c"
+  },
+  "started_validation_jobs": [
+    {
+      "folder": "disassembly_final_v4/outputs/development/full_validation/asap_04243",
+      "result_finished": true
+    },
+    {
+      "folder": "disassembly_final_v4/outputs/development/full_validation/asap_07375",
+      "result_finished": true
+    }
+  ],
+  "no_test_geometry_at_transition": true
+}

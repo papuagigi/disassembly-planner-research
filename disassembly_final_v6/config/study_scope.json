@@ -1,0 +1,42 @@
+{
+  "version": "v6-common-4GiB-2026-10-19",
+  "full_discovery_CADs": 8,
+  "reused_discovery_CADs": 8,
+  "new_discovery_CADs": 0,
+  "prior_new_discovery_CADs": 4,
+  "unique_discovery_CADs_total_target": 94,
+  "validation_CADs": 3,
+  "evaluation_CADs": 4,
+  "prior_local_probe_discovery_CADs": 90,
+  "inherited_discovery_ids": [
+    "asap_02406",
+    "asap_02402",
+    "asap_07722",
+    "asap_03674",
+    "asap_02429",
+    "asap_05459",
+    "asap_01613",
+    "asap_07385"
+  ],
+  "new_development_max_checks": 600,
+  "new_development_wall_seconds": 900.0,
+  "final_max_checks": 240,
+  "final_wall_seconds": 900.0,
+  "user_request_observed_utc": "2026-10-19T12:40:49+00:00",
+  "extension_authorized_utc": "2026-10-19T14:31:08.564450+00:00",
+  "target_deadline_utc": "2026-10-20T04:40:49+00:00",
+  "target_deadline_kst": "2026-10-20 13:40:49 KST",
+  "reason": "User explicitly authorized common4GiBmemory cap;two additional development episodes on memory-limited CADs;other model/budgets unchanged;one planner at a time.",
+  "validation_pass_rule": "ceil(2*n/3),n>=3;all safety/native-health/replay vetoes retained;one new proposal/validation pass only",
+  "source_order_fixed": true,
+  "test_budgets_unchanged": true,
+  "interpretation": "Pilot transfer comparison;4testCADs/12episodes;no preferred winner;no model-weight update",
+  "memory_extension_ids": [
+    "asap_05459",
+    "asap_01613"
+  ],
+  "memory_extension_episodes": 2,
+  "inherited_full_search_episodes": 8,
+  "full_search_episodes_target": 10,
+  "max_rss_bytes": 4294967296
+}
