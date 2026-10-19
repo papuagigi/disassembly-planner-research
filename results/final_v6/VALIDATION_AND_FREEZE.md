@@ -15,6 +15,8 @@ S3 content SHA256: `6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bd
 
 The rejected candidate remains available as evidence under `memory/candidate/`; it is not loaded by final B/C. Document count or availability is not proof of performance improvement. Model weights do not change.
 
+Byte comparison confirmed that S3's two document bodies and validation references are identical to S2. Thus this extra-learning cycle did **not** change the admitted procedural contents. The bank's `content_sha256` also hashes its manifest (including version and creation metadata), so a changed bank checksum alone must not be called a learned-memory update.
+
 ## Actual independent validation episodes
 
 |CAD|Committed removals at end|Physical queries charged|Logical LLM calls|Complete disassembly|Independent event replay|Native warnings|Procedure gate|
