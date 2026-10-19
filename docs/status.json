@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T15:20:48.270923+00:00",
+  "utc": "2026-10-19T15:20:56.042668+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T15:20:18.956435+00:00",
@@ -51,9 +51,9 @@
   },
   "input_progress": {
     "phase": "full_search_learning",
-    "utc": "2026-10-19T15:20:48.216010+00:00",
-    "case": "asap_05459",
-    "completed": 5,
+    "utc": "2026-10-19T15:20:55.980425+00:00",
+    "case": "asap_01613",
+    "completed": 6,
     "total": 8
   },
   "memory_extension_state": {
