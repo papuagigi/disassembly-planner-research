@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "utc": "2026-10-19T23:02:32.521142+00:00",
+  "pipeline_complete": true,
+  "first_episodes": 9,
+  "raw_result_hashes_preserved": true,
+  "matched_contracts": true,
+  "serial_planners": true,
+  "same_B_C_bank": true,
+  "native_completed_queries_reproduced": 1090,
+  "native_restores_verified": 120,
+  "unfinished_charged_queries_kept_unknown": 5,
+  "portable_assets_hash_verified": 72,
+  "portable_episode_frames_and_events_equal_original": true,
+  "portable_frames": 9983,
+  "portable_events": 1090,
+  "evaluation_logical_calls": 39,
+  "evaluation_input_output_tokens": 2328091,
+  "unknown_usage_calls": 0,
+  "no_new_PPT": true,
+  "portable_browser_check": "PASS_OBSERVED_A_PLAY_AND_SEEK",
+  "portable_browser_evidence": {
+    "observed_case": "asap_06444",
+    "arm": "A",
+    "case_selector": [
+      "asap_05954",
+      "asap_06444",
+      "asap_03114"
+    ],
+    "arm_selector": [
+      "A",
+      "B",
+      "C"
+    ],
+    "gzip_episode_and_mesh_rendered": true,
+    "playing_frame_observed_1based": 447,
+    "last_frame_observed_1based": 1164,
+    "final_removed": 11,
+    "required_removed": 20,
+    "unfinished_query_label_observed": true,
+    "all_nine_data_files_verified_separately": true,
+    "each_other_arm_interactively_opened": false
+  }
+}
