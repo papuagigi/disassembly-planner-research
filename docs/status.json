@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:42:41.501145+00:00",
+  "utc": "2026-10-19T14:51:35.092023+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T14:37:39.417193+00:00",
@@ -51,15 +51,14 @@
   },
   "input_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:42:29.401531+00:00",
-    "qualified": 1,
+    "utc": "2026-10-19T14:51:24.688829+00:00",
+    "qualified": 2,
     "target": 3,
-    "attempted": 3,
+    "attempted": 14,
     "active_ids": [
-      "04052",
-      "03767"
+      "07163"
     ],
-    "completed_out_of_order": 3
+    "completed_out_of_order": 0
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:37:40.979815+00:00",
@@ -73,7 +72,7 @@
     "budget_change": "Only1GiB→4GiBRSS;600checks/900s/8calls retained from these development jobs"
   },
   "inherited_full_search_episodes": 8,
-  "completed_additional4GiBepisodes": 1,
+  "completed_additional4GiBepisodes": 2,
   "unique_long_training_CADs": 8,
   "long_training_episode_outcomes": [
     {
@@ -284,6 +283,31 @@
       "peak_rss_bytes": 1060651008,
       "native_health": "NATIVE_ENGINE_WARNINGS_RECORDED",
       "result_path": "outputs/development/full_search/asap_07722/result.json"
+    },
+    {
+      "case_id": "asap_01613",
+      "source": "4GiBadditional",
+      "success": true,
+      "removed": 10,
+      "required": 10,
+      "checks": 57,
+      "calls": 8,
+      "seconds": 363.6959161659979,
+      "limits": {
+        "max_calls": 8,
+        "max_checks": 600,
+        "timeout_seconds": 900.0,
+        "max_steps": 10000000,
+        "max_checkpoints": 128,
+        "max_restores": 256,
+        "max_rss_bytes": 4294967296,
+        "max_prompt_bytes": 512000,
+        "max_response_bytes": 64000
+      },
+      "error": null,
+      "peak_rss_bytes": 1072447488,
+      "native_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "result_path": "outputs/development/memory_extension/asap_01613/result.json"
     },
     {
       "case_id": "asap_05459",
