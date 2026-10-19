@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T12:46:41.043759+00:00",
+  "utc": "2026-10-19T12:46:43.011408+00:00",
   "state": {
     "utc": "2026-10-19T11:36:36.230669+00:00",
     "pid": 29446,
@@ -19,13 +19,45 @@
     "completed_out_of_order": 0
   },
   "early_discovery": {
-    "utc": "2026-10-19T12:31:39.660078+00:00",
+    "utc": "2026-10-19T12:46:43.010490+00:00",
     "pid": 32828,
-    "phase": "RUNNING",
-    "case": "asap_03674",
-    "completed": 3,
-    "total": 4,
-    "note": "Offline discovery overlaps input preparation;not a scored A/B/C timing experiment"
+    "phase": "COMPLETE",
+    "completed": 4,
+    "episodes": [
+      {
+        "case_id": "asap_02406",
+        "success": true,
+        "checks": 27,
+        "actual_restores": 0,
+        "result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
+        "audit": "PASS"
+      },
+      {
+        "case_id": "asap_02402",
+        "success": true,
+        "checks": 13,
+        "actual_restores": 0,
+        "result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
+        "audit": "PASS"
+      },
+      {
+        "case_id": "asap_07722",
+        "success": false,
+        "checks": 240,
+        "actual_restores": 4,
+        "result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
+        "audit": "PASS"
+      },
+      {
+        "case_id": "asap_03674",
+        "success": true,
+        "checks": 35,
+        "actual_restores": 0,
+        "result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
+        "audit": "PASS"
+      }
+    ],
+    "reused_by_main_collection_without_rerun": true
   },
   "selected_validation": 0,
   "completed_full_discovery": 4,

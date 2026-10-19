@@ -1,6 +1,6 @@
 # Final v4 agent handoff
 
-Snapshot UTC: 2026-10-19T12:46:41.043759+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T12:46:43.011408+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
