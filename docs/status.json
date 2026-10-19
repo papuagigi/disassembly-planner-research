@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T16:15:14.397694+00:00",
+  "utc": "2026-10-19T16:15:16.973031+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T16:15:14.343601+00:00",
+    "utc": "2026-10-19T16:15:16.933671+00:00",
     "pid": 41025,
     "status": "RUNNING",
-    "phase": "freeze_before_final_test"
+    "phase": "prepare_unseen_test_inputs"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -864,5 +864,5 @@
     "no_test_input": true,
     "document_sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
   },
-  "freeze_exists": false
+  "freeze_exists": true
 }

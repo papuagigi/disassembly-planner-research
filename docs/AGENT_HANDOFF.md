@@ -1,8 +1,8 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T16:15:14.397694+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T16:15:16.973031+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
-Current state:{'utc': '2026-10-19T16:15:14.343601+00:00', 'pid': 41025, 'status': 'RUNNING', 'phase': 'freeze_before_final_test'}
+Current state:{'utc': '2026-10-19T16:15:16.933671+00:00', 'pid': 41025, 'status': 'RUNNING', 'phase': 'prepare_unseen_test_inputs'}
 
 Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:3/3. New final first episodes:0/12,on4unseen official test products. Missing outputs are pending.
 
