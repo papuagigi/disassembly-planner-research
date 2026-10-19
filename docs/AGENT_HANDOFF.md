@@ -1,12 +1,12 @@
 # Common4GiB recovery handoff
 
-UTC:2026-10-19T15:20:18.998446+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
+UTC:2026-10-19T15:20:26.744140+00:00. Read PLAN.md,OPERATIONS.md,TIME_BUDGET.md first. Claude is not assigned. Verify live PID/heartbeat before recovery.
 
 Current state:{'utc': '2026-10-19T15:20:18.956435+00:00', 'pid': 41025, 'status': 'RUNNING', 'phase': 'full_search_learning'}
 
 Preserved1GiBepisodes:8/8. Additional4GiBdevelopment episodes:2/2,on05459and01613only. Combined10episodes are8unique long CADs;current-line unique development corpus94includes90local-probe inputs,not94complete solutions. Independent validation:0/3. New final first episodes:0/12,on4unseen official test products. Missing outputs are pending.
 
-Current input/episode progress:{'phase': 'preparing_development', 'utc': '2026-10-19T15:20:06.289936+00:00', 'qualified': 3, 'target': 3, 'attempted': 29, 'active_ids': [], 'completed_out_of_order': 1}
+Current input/episode progress:{'phase': 'full_search_learning', 'utc': '2026-10-19T15:20:26.689076+00:00', 'case': 'asap_02406', 'completed': 0, 'total': 8}
 
 Optional early_memory_extension and main collection share outputs/development/discovery_collection.lock. They must never run planners concurrently. Main reuses saved additional results. No oldv5/v4supervisor should be restarted. Their complete results/sources are hash-protected. New4GiBepisodes have distinct outputs/development/memory_extension folders;never overwrite with retry.
 
