@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T14:59:47.939405+00:00",
+  "utc": "2026-10-19T15:20:06.357473+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T14:37:39.417193+00:00",
+    "utc": "2026-10-19T15:20:06.301593+00:00",
     "pid": 41025,
     "status": "RUNNING",
-    "phase": "prepare_development_inputs"
+    "phase": "drain_preserved_input_workers_after_scope_reduction"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -51,15 +51,12 @@
   },
   "input_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:59:21.614367+00:00",
-    "qualified": 2,
+    "utc": "2026-10-19T15:20:06.289936+00:00",
+    "qualified": 3,
     "target": 3,
-    "attempted": 19,
-    "active_ids": [
-      "07856",
-      "06246"
-    ],
-    "completed_out_of_order": 0
+    "attempted": 29,
+    "active_ids": [],
+    "completed_out_of_order": 1
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
@@ -348,7 +345,7 @@
       "result_path": "outputs/development/memory_extension/asap_05459/result.json"
     }
   ],
-  "selected_validation": 0,
+  "selected_validation": 3,
   "completed_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
