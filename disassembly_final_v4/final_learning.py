@@ -10,6 +10,7 @@ from .driver import run
 from .documents import DocumentBank,materialize,make_bank
 from .metrics import summarize
 from .post_evidence import replay_result
+import fcntl
 
 PROPOSAL_SCHEMA={'type':'object','properties':{'name':{'type':'string'},'description':{'type':'string'},'markdown_body':{'type':'string'}},'required':['name','description','markdown_body'],'additionalProperties':False}
 
@@ -55,16 +56,26 @@ def audit_result(folder,case):
     audit,_,_=replay_result(folder/'result.json',shared_path=case['shared_path'],allow_incomplete=True)
     write(p,audit,exclusive=True);return audit
 
+def discovery_job(case):
+    folder=ROOT/'outputs/development/full_search'/case['case_id']
+    return dict(folder=str(folder),case_path=case['case_path'],shared_path=case['shared_path'],architecture='graph_dfs',
+        bank_path=str(ROOT/'memory/S2.json'),limits=LIMITS,phase='discovery',arm='C',
+        public_task_note='Development experience collection;seek complete disassembly within the stated limits. Do not fabricate a restore or a successful branch.')
+
 def collect():
+    lockpath=ROOT/'outputs/development/discovery_collection.lock';lockpath.parent.mkdir(parents=True,exist_ok=True)
+    with lockpath.open('a+') as lock:
+        fcntl.flock(lock,fcntl.LOCK_EX)
+        return _collect()
+
+def _collect():
     final=ROOT/'outputs/development/discovery_complete.json'
     if final.exists():return read(final)
     cohort=read(ROOT/'outputs/input_audit/selected_development.json');rows=[]
     for case in cohort['discovery_cases']:
         folder=ROOT/'outputs/development/full_search'/case['case_id']
         progress('full_search_learning',case=case['case_id'],completed=len(rows),total=10)
-        result=run(dict(folder=str(folder),case_path=case['case_path'],shared_path=case['shared_path'],architecture='graph_dfs',
-            bank_path=str(ROOT/'memory/S2.json'),limits=LIMITS,phase='discovery',arm='C',
-            public_task_note='Development experience collection;seek complete disassembly within the stated limits. Do not fabricate a restore or a successful branch.'))
+        result=run(discovery_job(case))
         audit=audit_result(folder,case)
         rows.append(dict(case=case,result_path=str(folder/'result.json'),sha256=sha(folder/'result.json'),
             metrics=summarize(result),repairs=repairs(result),audit=audit['status']))

@@ -13,6 +13,7 @@ def main():
     scored=list((ROOT/'outputs/evaluation/trials').glob('*/*/result.json'))
     value=dict(utc=utc(),state=state,selected_discovery=len(selected.get('discovery_cases',[])),
         live_progress=optional('outputs/progress.json',{}),
+        early_discovery=optional('outputs/early_discovery_state.json'),
         selected_validation=len(selected.get('validation_cases',[])),completed_full_discovery=len(discovery),
         completed_independent_validation=len(validation),completed_first_test_episodes=len(scored),
         targets=dict(full_discovery=10,validation=10,test_CADs=10,test_episodes=30),
