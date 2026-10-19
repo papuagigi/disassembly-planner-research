@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T16:15:09.853057+00:00",
+  "utc": "2026-10-19T16:15:14.397694+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T15:21:16.461703+00:00",
+    "utc": "2026-10-19T16:15:14.343601+00:00",
     "pid": 41025,
     "status": "RUNNING",
-    "phase": "single_proposal_and_independent_validation"
+    "phase": "freeze_before_final_test"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -363,6 +363,506 @@
   "no_model_weight_update": true,
   "Claude_assigned": false,
   "PPT_created": false,
-  "skill_admission": null,
+  "skill_admission": {
+    "status": "REJECTED",
+    "passed": 2,
+    "required": 2,
+    "actual_validation_CADs": 3,
+    "validations": [
+      {
+        "case_id": "asap_03756",
+        "passed": true,
+        "full_success": false,
+        "measured_repairs": [
+          {
+            "failed_check": 1,
+            "accepted_check": 5,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 2,
+            "accepted_check": 5,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 3,
+            "accepted_check": 5,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 4,
+            "accepted_check": 5,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "-y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 8,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 9,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 10,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 11,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "-y",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 12,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "+z",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 13,
+            "accepted_check": 25,
+            "part": "13",
+            "reason": "path_collision",
+            "old_direction": "-z",
+            "new_direction": "+x",
+            "changed_state": true
+          },
+          {
+            "failed_check": 14,
+            "accepted_check": 18,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 15,
+            "accepted_check": 18,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 16,
+            "accepted_check": 18,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 17,
+            "accepted_check": 18,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "-y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 58,
+            "accepted_check": 59,
+            "part": "3",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 72,
+            "accepted_check": 73,
+            "part": "4",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 80,
+            "accepted_check": 81,
+            "part": "5",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 88,
+            "accepted_check": 89,
+            "part": "6",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 122,
+            "accepted_check": 124,
+            "part": "0",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 123,
+            "accepted_check": 124,
+            "part": "0",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 125,
+            "accepted_check": 127,
+            "part": "1",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 126,
+            "accepted_check": 127,
+            "part": "1",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 131,
+            "accepted_check": 133,
+            "part": "2",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 132,
+            "accepted_check": 133,
+            "part": "2",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 134,
+            "accepted_check": 135,
+            "part": "3",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 136,
+            "accepted_check": 137,
+            "part": "4",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 138,
+            "accepted_check": 139,
+            "part": "5",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 140,
+            "accepted_check": 141,
+            "part": "6",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 142,
+            "accepted_check": 144,
+            "part": "7",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 143,
+            "accepted_check": 144,
+            "part": "7",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 146,
+            "accepted_check": 150,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 147,
+            "accepted_check": 150,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 148,
+            "accepted_check": 150,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 149,
+            "accepted_check": 150,
+            "part": "12",
+            "reason": "path_collision",
+            "old_direction": "-y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 153,
+            "accepted_check": 157,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 154,
+            "accepted_check": 157,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "-x",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 155,
+            "accepted_check": 157,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 156,
+            "accepted_check": 157,
+            "part": "14",
+            "reason": "path_collision",
+            "old_direction": "-y",
+            "new_direction": "+z",
+            "changed_state": false
+          },
+          {
+            "failed_check": 190,
+            "accepted_check": 191,
+            "part": "3",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 204,
+            "accepted_check": 205,
+            "part": "4",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 212,
+            "accepted_check": 213,
+            "part": "5",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          },
+          {
+            "failed_check": 220,
+            "accepted_check": 221,
+            "part": "6",
+            "reason": "path_collision",
+            "old_direction": "+x",
+            "new_direction": "-x",
+            "changed_state": false
+          }
+        ],
+        "unsafe_fixed_attempt": false,
+        "invalid_restore": false,
+        "native_engine_warning_veto": false,
+        "native_engine_health": {
+          "status": "NO_NATIVE_WARNINGS_RECORDED",
+          "warning_count": 0,
+          "warning_messages": {},
+          "warning_free_observed": true,
+          "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "utc": "2026-10-19T15:38:45.668852+00:00",
+          "result_sha256": "d37513d78ec0d42baaa787d8fdf2557827b9849b665f496b539f67b0d8a841c7",
+          "no_model_calls": true,
+          "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
+        },
+        "physical_audit": "PASS",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_03756/result.json",
+        "result_sha256": "d37513d78ec0d42baaa787d8fdf2557827b9849b665f496b539f67b0d8a841c7",
+        "actual_restores": 2,
+        "candidate_was_available": true,
+        "document_sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
+      },
+      {
+        "case_id": "asap_08243",
+        "passed": true,
+        "full_success": false,
+        "measured_repairs": [
+          {
+            "failed_check": 25,
+            "accepted_check": 27,
+            "part": "8",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 26,
+            "accepted_check": 27,
+            "part": "8",
+            "reason": "path_collision",
+            "old_direction": "+z",
+            "new_direction": "-y",
+            "changed_state": false
+          },
+          {
+            "failed_check": 77,
+            "accepted_check": 78,
+            "part": "5",
+            "reason": "path_collision",
+            "old_direction": "+y",
+            "new_direction": "+z",
+            "changed_state": false
+          }
+        ],
+        "unsafe_fixed_attempt": false,
+        "invalid_restore": false,
+        "native_engine_warning_veto": false,
+        "native_engine_health": {
+          "status": "NO_NATIVE_WARNINGS_RECORDED",
+          "warning_count": 0,
+          "warning_messages": {},
+          "warning_free_observed": true,
+          "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "utc": "2026-10-19T16:05:41.959297+00:00",
+          "result_sha256": "2d536189635d4fa5bec4e140edba402b9859a564862309d8f92744efcc17eef3",
+          "no_model_calls": true,
+          "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
+        },
+        "physical_audit": "PASS_VERIFIED_PREFIX",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_08243/result.json",
+        "result_sha256": "2d536189635d4fa5bec4e140edba402b9859a564862309d8f92744efcc17eef3",
+        "actual_restores": 0,
+        "candidate_was_available": true,
+        "document_sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
+      },
+      {
+        "case_id": "asap_05828",
+        "passed": false,
+        "full_success": false,
+        "measured_repairs": [],
+        "unsafe_fixed_attempt": false,
+        "invalid_restore": false,
+        "native_engine_warning_veto": true,
+        "native_engine_health": {
+          "status": "NATIVE_ENGINE_WARNINGS_RECORDED",
+          "warning_count": 40,
+          "warning_messages": {
+            "WARNING: Insufficient arena memory for the number of constraints generated. Increase arena memory allocation above 18M bytes.": 20,
+            "WARNING: Too many contacts. The arena memory is full, increase arena memory allocation.": 20
+          },
+          "warning_free_observed": false,
+          "worker_log_sha256": "898146ff7bec343df2b1eca2368973b8f823e4101ee798ead5a465968a651848",
+          "utc": "2026-10-19T16:15:09.809993+00:00",
+          "result_sha256": "50e534170801bb294f14aa0d5e28ba60b4f6c29efec00767ef94f5f2cdc381a4",
+          "no_model_calls": true,
+          "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
+        },
+        "physical_audit": "PASS_VERIFIED_PREFIX",
+        "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_05828/result.json",
+        "result_sha256": "50e534170801bb294f14aa0d5e28ba60b4f6c29efec00767ef94f5f2cdc381a4",
+        "actual_restores": 0,
+        "candidate_was_available": true,
+        "document_sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
+      }
+    ],
+    "generation_error": null,
+    "utc": "2026-10-19T16:15:12.192791+00:00",
+    "scope": "Independent bounded functional/physical repair admission;not causal efficacy or a proof of semantic compliance",
+    "no_test_input": true,
+    "document_sha256": "2baca6ed120216e730fb7a0c88544e41ffda0d9fa1cc9929c1ac231abfb3f50a"
+  },
   "freeze_exists": false
 }
