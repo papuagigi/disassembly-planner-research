@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T13:35:54.235550+00:00",
+  "utc": "2026-10-19T13:36:33.868061+00:00",
   "state": {
     "utc": "2026-10-19T13:35:54.204771+00:00",
     "pid": 37806,
@@ -7,8 +7,29 @@
     "phase": "prepare_development_inputs"
   },
   "selected_discovery": 0,
-  "live_progress": {},
-  "early_discovery": null,
+  "live_progress": {
+    "phase": "preparing_development",
+    "utc": "2026-10-19T13:36:26.500429+00:00",
+    "qualified": 1,
+    "target": 6,
+    "attempted": 1,
+    "active_ids": [
+      "02878",
+      "02275"
+    ],
+    "completed_out_of_order": 0
+  },
+  "early_discovery": {
+    "utc": "2026-10-19T13:36:33.840144+00:00",
+    "pid": 37861,
+    "phase": "COMPLETE",
+    "case": "asap_05459",
+    "raw_success": false,
+    "result_sha256": "bff6f1d6d66f385621d7f009a8d6cf156c020c2cc6d38eae908f8147d2920572",
+    "replay": "PASS",
+    "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+    "reused_by_main_without_rerun": true
+  },
   "completed_discovery_outcomes": [
     {
       "case_id": "asap_02402",
@@ -55,6 +76,17 @@
       "replay_status": "PASS"
     },
     {
+      "case_id": "asap_05459",
+      "raw_goal_reached": false,
+      "completed_removals": 1,
+      "required_removals": 16,
+      "checks": 1,
+      "llm_calls": 2,
+      "seconds": 30.264486833002593,
+      "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+      "replay_status": "PASS"
+    },
+    {
       "case_id": "asap_07722",
       "raw_goal_reached": false,
       "completed_removals": 4,
@@ -67,7 +99,7 @@
     }
   ],
   "selected_validation": 0,
-  "completed_full_discovery": 5,
+  "completed_full_discovery": 6,
   "completed_independent_validation": 0,
   "completed_first_test_episodes": 0,
   "targets": {
