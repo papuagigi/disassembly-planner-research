@@ -1,0 +1,214 @@
+{
+  "utc": "2026-10-19T22:37:30.380571+00:00",
+  "case_id": "asap_06444",
+  "mode": "post_score_read_only_log_analysis",
+  "root_state_key": "43d0267d551b1e7773f98579eb481e2bc2b45f17819b6db8e78ce292ff297008",
+  "profiles": {
+    "A": {
+      "completed_initial_state_queries": 3,
+      "part20_positive_y_queries": [
+        {
+          "checker_call": 3,
+          "valid": true,
+          "committed": true
+        }
+      ],
+      "raw_result_sha256": "f227390c61a53867a1f21e84d4c40ca4eb183dd1a0d9bc02745d3e0a29edec30",
+      "generated_code_sha256": [
+        "aa9ed27e1bcfa94e701cba0e6fab1933f8c411d80dfb703a16d697e359d3d8be"
+      ]
+    },
+    "B": {
+      "completed_initial_state_queries": 98,
+      "part20_positive_y_queries": [],
+      "raw_result_sha256": "f40ad22292b8afab14abcb890858377368dcf08140a196bb13787fd29d61f40e",
+      "generated_code_sha256": [
+        "c93b30c3b22578b1a0ff4d229a1d1d50d55e284488cb9535a54fbb08b48d4191"
+      ]
+    },
+    "C": {
+      "completed_initial_state_queries": 81,
+      "part20_positive_y_queries": [],
+      "raw_result_sha256": "7ee5833c67ac25359ac8708091d5b18ff90fc1f9f41bdb4ff601330c84d18912",
+      "generated_code_sha256": []
+    }
+  },
+  "generated_code_order_observations": {
+    "A": "Sort movable parts by (center[0],id);try outward x first,then remaining declared directions.",
+    "B": "Sort movable parts by (mass,center[0],id);try +z,-z,+x,-x,+y,-y."
+  },
+  "C_raw_response_ranks": [
+    {
+      "logical_call": 1,
+      "checks_before": 0,
+      "operation": "read_skills",
+      "ranked_actions": 0,
+      "part20_positive_y_response_positions_1based": [],
+      "first_three_response_actions": []
+    },
+    {
+      "logical_call": 2,
+      "checks_before": 0,
+      "operation": "execute",
+      "ranked_actions": 52,
+      "part20_positive_y_response_positions_1based": [],
+      "first_three_response_actions": [
+        {
+          "part_id": "7",
+          "direction": "+y"
+        },
+        {
+          "part_id": "8",
+          "direction": "+y"
+        },
+        {
+          "part_id": "9",
+          "direction": "+y"
+        }
+      ]
+    },
+    {
+      "logical_call": 3,
+      "checks_before": 6,
+      "operation": "execute",
+      "ranked_actions": 114,
+      "part20_positive_y_response_positions_1based": [
+        94
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "7",
+          "direction": "+z"
+        },
+        {
+          "part_id": "8",
+          "direction": "+z"
+        },
+        {
+          "part_id": "9",
+          "direction": "+z"
+        }
+      ]
+    },
+    {
+      "logical_call": 4,
+      "checks_before": 12,
+      "operation": "execute",
+      "ranked_actions": 79,
+      "part20_positive_y_response_positions_1based": [
+        76
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "7",
+          "direction": "-y"
+        },
+        {
+          "part_id": "8",
+          "direction": "-y"
+        },
+        {
+          "part_id": "9",
+          "direction": "-y"
+        }
+      ]
+    },
+    {
+      "logical_call": 5,
+      "checks_before": 18,
+      "operation": "execute",
+      "ranked_actions": 102,
+      "part20_positive_y_response_positions_1based": [
+        99
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "7",
+          "direction": "+x"
+        },
+        {
+          "part_id": "7",
+          "direction": "-x"
+        },
+        {
+          "part_id": "7",
+          "direction": "-z"
+        }
+      ]
+    },
+    {
+      "logical_call": 6,
+      "checks_before": 24,
+      "operation": "execute",
+      "ranked_actions": 111,
+      "part20_positive_y_response_positions_1based": [
+        76
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "12",
+          "direction": "-z"
+        },
+        {
+          "part_id": "12",
+          "direction": "+x"
+        },
+        {
+          "part_id": "12",
+          "direction": "-x"
+        }
+      ]
+    },
+    {
+      "logical_call": 7,
+      "checks_before": 30,
+      "operation": "execute",
+      "ranked_actions": 96,
+      "part20_positive_y_response_positions_1based": [
+        11
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "2",
+          "direction": "+y"
+        },
+        {
+          "part_id": "3",
+          "direction": "+y"
+        },
+        {
+          "part_id": "4",
+          "direction": "+y"
+        }
+      ]
+    },
+    {
+      "logical_call": 8,
+      "checks_before": 36,
+      "operation": "execute",
+      "ranked_actions": 76,
+      "part20_positive_y_response_positions_1based": [
+        55
+      ],
+      "first_three_response_actions": [
+        {
+          "part_id": "2",
+          "direction": "-x"
+        },
+        {
+          "part_id": "3",
+          "direction": "-x"
+        },
+        {
+          "part_id": "4",
+          "direction": "-x"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Response rank is not necessarily the controller final order after eligibility and skill tiers.",
+    "Observed differences do not isolate a causal effect of document text.",
+    "No new model or physical query;no score,policy or bank change."
+  ]
+}

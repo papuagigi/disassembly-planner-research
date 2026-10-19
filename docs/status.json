@@ -1,11 +1,11 @@
 {
-  "utc": "2026-10-19T22:23:58.467900+00:00",
+  "utc": "2026-10-19T22:59:56.700917+00:00",
   "study": "disassembly_final_v6",
   "state": {
-    "utc": "2026-10-19T21:13:15.376927+00:00",
+    "utc": "2026-10-19T22:59:56.655576+00:00",
     "pid": 51259,
     "status": "RUNNING",
-    "phase": "independent_mujoco_replays"
+    "phase": "final_handoff"
   },
   "scope": {
     "version": "v6-common-4GiB-2026-10-19",
@@ -50,12 +50,10 @@
     "max_rss_bytes": 4294967296
   },
   "input_progress": {
-    "phase": "actual_replay_verified",
-    "utc": "2026-10-19T22:22:25.591483+00:00",
-    "case": "asap_06444",
-    "arm": "C",
-    "queries": 81,
-    "completed": 6
+    "phase": "all_actual_replays_ready",
+    "utc": "2026-10-19T22:59:56.647440+00:00",
+    "episodes": 9,
+    "errors": 0
   },
   "memory_extension_state": {
     "utc": "2026-10-19T14:51:37.750755+00:00",
@@ -374,16 +372,7 @@
     "decision_basis": "User requested uninterrupted completion within the time target and explicitly allowed reducing the test allocation. Agent uses all three passing inputs after all75fixed candidates were exhausted;no policy outcome is available.",
     "explicit_user_selection_of_three": false,
     "agent_stated_assumption": true,
-    "limitation": "Original four-CAD target unmet. Three-CAD/nine-episode descriptive pilot only;not an industrial success-rate estimate.",
-    "subsequent_explicit_user_confirmation": {
-      "utc_recorded": "2026-10-19T19:06:02.580069+00:00",
-      "user_explicitly_selected": "Three qualifying CADs / nine first episodes / descriptive pilot",
-      "effective_CADs": 3,
-      "first_episodes": 9,
-      "original_amendment_sha256": "d145232b68685f064ebb589af76025994c5e13e7d2baa10678d71aba51191cf1",
-      "original_pre_outcome_decision_preserved": true,
-      "final_results_completed_when_recorded": 0
-    }
+    "limitation": "Original four-CAD target unmet. Three-CAD/nine-episode descriptive pilot only;not an industrial success-rate estimate."
   },
   "model": "gpt-6-luna",
   "reasoning_effort": "low",
