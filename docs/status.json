@@ -1,6 +1,11 @@
 {
-  "utc": "2026-10-19T10:50:27.764101+00:00",
-  "state": {},
+  "utc": "2026-10-19T10:53:41.686216+00:00",
+  "state": {
+    "utc": "2026-10-19T10:53:41.685112+00:00",
+    "pid": 25916,
+    "status": "RUNNING",
+    "phase": "waiting_for_prior_frozen_evaluation"
+  },
   "selected_discovery": 0,
   "selected_validation": 0,
   "completed_full_discovery": 0,

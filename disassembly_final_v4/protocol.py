@@ -20,6 +20,13 @@ def freeze():
     if p.exists():return verify()
     cohort=read(ROOT/'outputs/input_audit/selected_development.json')
     assert len(cohort['discovery_cases'])==10 and len(cohort['validation_cases'])>=10
+    collected=read(ROOT/'outputs/development/discovery_complete.json')['cases']
+    assert len(collected)==10 and all(read(r['result_path']).get('trace') for r in collected),'Ten actually observed full-search discovery CADs are required'
+    validated=[]
+    for c in cohort['validation_cases']:
+        p=ROOT/'outputs/development/full_validation'/c['case_id']/'result.json'
+        assert p.exists() and read(p).get('trace'),'Every independent validation CAD must have actual physical observations'
+        validated.append(p)
     assert 'OK' in (ROOT/'outputs/regressions.log').read_text()
     assert not any((ROOT/'data/source/asap_test').glob('*/'))
     bank=DocumentBank(ROOT/'memory/S3.json')
@@ -32,6 +39,7 @@ def freeze():
         limits=LIMITS,arms=ARMS,bank_sha256=bank.sha256,bank_content_sha256=bank.content_sha256,
         sha256={str(q.resolve()):sha(q) for q in paths},minimum_CAD_requirements=dict(discovery=10,validation=10,evaluation=10),
         no_test_updates=True,time_cuts_seconds=[180,600,900])
+    value.update(actual_physically_observed_full_discovery_CADs=len(collected),actual_physically_observed_validation_CADs=len(validated))
     write(p,value,exclusive=True);return value
 
 def verify():
