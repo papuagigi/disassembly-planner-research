@@ -1,0 +1,19 @@
+{
+  "version": "S3-final-v6-4GiB",
+  "created_utc": "2026-10-19T16:15:12.194677+00:00",
+  "skills": [
+    {
+      "id": "physical-disassembly-failure-repair",
+      "path": "prior/physical-disassembly-failure-repair/SKILL.md",
+      "sha256": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c"
+    },
+    {
+      "id": "physical-directional-clearance",
+      "path": "prior/physical-directional-clearance/SKILL.md",
+      "sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+    }
+  ],
+  "admission_evidence": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/new_document/admission.json",
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}
