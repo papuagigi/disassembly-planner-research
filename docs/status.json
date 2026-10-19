@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T13:37:22.072620+00:00",
+  "utc": "2026-10-19T13:57:44.653803+00:00",
   "state": {
     "utc": "2026-10-19T13:35:54.204771+00:00",
     "pid": 37806,
@@ -9,13 +9,13 @@
   "selected_discovery": 0,
   "live_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T13:36:56.506457+00:00",
-    "qualified": 1,
+    "utc": "2026-10-19T13:57:39.681565+00:00",
+    "qualified": 4,
     "target": 6,
-    "attempted": 1,
+    "attempted": 15,
     "active_ids": [
-      "02878",
-      "02275"
+      "02708",
+      "02212"
     ],
     "completed_out_of_order": 0
   },
