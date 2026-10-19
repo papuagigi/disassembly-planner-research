@@ -13,3 +13,8 @@ Main PID41025/session64041;additional training PID41085/session44431. Logs/recei
 Development preview ready 2026-10-19T14:59:47.956473+00:00
 
 Both4GiBadditional development episodes are complete and verified. Read analysis/CURRENT_STUDY_AND_REPLAY.md. Preview capture was protected by the collection lock and has finished;no preview worker needs recovery. Localviewer8785/viewer/development.htmluses thedevelopmentcatalog separately from future finalindex. Existing serverPIDis in outputs/replay_server.json. Keepit;finalpost_finishreuses the same port. MainPID41025continues. Do not restart the completed early_memory_extensionjob.
+
+
+## Pre-outcome finite-cohort resume 2026-10-19T19:03:25.805079+00:00
+
+Old supervisor41025completed with the recorded75-candidate exhaustion error;do not resume it. New supervisor51259/session98488uses outputs/pipeline_resumed_3cad.log. All75receipts are preserved. The effective final cohort is all3qualifying CADs,9first episodes. Read outputs/protocol/cohort_amendment.json and analysis/INPUT_COHORT_EXHAUSTION.md;original4-CADregistration is preserved and unmet. Postprocessor/orchestration adapters changed only sample accounting;frozen actor,bank,physics,API,model and episode limits were not edited. Earlier published postprocessor sources are preserved under outputs/recovery/cohort_exhaustion/post_sources_before_amendment/. No repeated training or validation model calls. Planner concurrency1. Claude remains unassigned.

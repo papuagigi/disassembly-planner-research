@@ -28,4 +28,12 @@ def effective_target():
 
 def summary():
     path=ROOT/'outputs/protocol/cohort_amendment.json'
-    return read(path) if path.exists() else None
+    if not path.exists():return None
+    value=read(path)
+    confirmation=ROOT/'outputs/protocol/cohort_amendment_confirmation.json'
+    if confirmation.exists():
+        receipt=read(confirmation)
+        assert receipt['original_amendment_sha256']==sha(path)
+        assert receipt['effective_CADs']==value['effective_target']
+        value={**value,'subsequent_explicit_user_confirmation':receipt}
+    return value
