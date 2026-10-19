@@ -1,13 +1,19 @@
 {
-  "utc": "2026-10-19T11:05:43.518919+00:00",
+  "utc": "2026-10-19T11:08:51.725754+00:00",
   "state": {
-    "utc": "2026-10-19T11:05:43.518164+00:00",
-    "pid": 26698,
+    "utc": "2026-10-19T11:08:51.724777+00:00",
+    "pid": 27126,
     "status": "RUNNING",
-    "phase": "prepare_development_inputs"
+    "phase": "waiting_for_prior_frozen_evaluation"
   },
   "selected_discovery": 0,
-  "live_progress": {},
+  "live_progress": {
+    "phase": "preparing_development",
+    "utc": "2026-10-19T11:07:31.115409+00:00",
+    "qualified": 0,
+    "target": 16,
+    "attempted": 1
+  },
   "selected_validation": 0,
   "completed_full_discovery": 0,
   "completed_independent_validation": 0,

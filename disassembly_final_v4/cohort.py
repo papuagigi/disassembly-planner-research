@@ -4,6 +4,7 @@ from pathlib import Path
 from .common import ROOT,WORKSPACE,read,write,sha,progress
 from .dataset import pools
 from .preparation import run_one
+from .capacity import probe
 
 def resolved_case(case):
     case=dict(case)
@@ -21,6 +22,7 @@ def select(stage):
             c=resolved_case(raw)
             if not Path(c['case_path']).exists():c=run_one(stage,c['source_assembly_id'])['case']
             assert c and sha(c['case_path'])==c['case_sha256']
+            assert probe(c)['eligible'],'Reused development input fails initial actor-capacity check;no new model calls permitted'
             reused.append(c);seen.add(c['geometry_fingerprint'])
     else:
         from .protocol import verify
@@ -38,6 +40,10 @@ def select(stage):
             batch=rows[cursor:cursor+2];cursor+=len(batch)
             for result in ex.map(lambda r:run_one(stage,r['id']),batch):
                 c=result.get('case');status=dict(result['status_record']);sig=result.get('geometry_fingerprint')
+                if c:
+                    capacity=probe(c)
+                    status['initial_actor_capacity']=capacity
+                    if not capacity['eligible']:status['status']='initial_actor_capacity_excluded';c=None
                 if sig in seen:status['status']='duplicate_geometry_excluded';c=None
                 if sig:seen.add(sig)
                 statuses.append(status)

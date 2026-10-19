@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ko">
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>문서형 skill · 3D 분해 실험</title>
+<title>실제 분해 실패 절차 · 대형 CAD 비교</title>
 <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 <style>
 :root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:#183344;background:#eef3f6;font-size:15px}
@@ -17,11 +17,11 @@
 <div class="grid"><section class="panel scene">
 <div class="headerline"><div><h2 id="title">실험 다시보기 준비 중</h2><span id="scope" class="muted"></span></div><span id="result" class="tag"></span></div>
 <div id="viewport"><div id="badge">기록을 불러오고 있습니다</div><div id="time"></div><div class="legend">색: 개별 부품 구분 · 회색: 고정부품 · 붉은 강조: 거절된 검사</div></div>
-<div class="controls"><input id="timeline" type="range" min="0" max="0" value="0"><div class="row"><button id="play">▶ 재생</button><button id="first">처음</button><button id="failure">첫 실패</button><button id="restore">첫 복원</button><button id="end">마지막</button><button id="fit">전체 보기</button><select id="speed"><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select><span class="muted" id="frame"></span></div><p class="muted">드래그: 회전 · 휠: 확대 · 우클릭: 이동. 재생 시간은 시각화용이며 실제 분해 작업 시간과 다릅니다.</p></div>
+<div class="controls"><input id="timeline" type="range" min="0" max="0" value="0"><div class="row"><button id="play">▶ 재생</button><button id="first">처음</button><button id="failure">첫 실패</button><button id="restore">첫 복원</button><button id="end">마지막</button><button id="fit">전체 보기</button><select id="speed"><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select><span class="muted" id="frame"></span></div><p class="muted">드래그: 회전 · 휠: 확대 · 우클릭: 이동. 재생 시간은 시각화용이며 실제 분해 작업 시간과 다릅니다. 거절된 검사는 현재 조립체 상태에 적용되지 않습니다.</p></div>
 </section><aside>
 <section class="panel"><h2>이 실행의 기록</h2><div id="stats"></div><p id="memory" class="status"></p><p class="muted">문서 제공, 사용 선언, 실제 행동은 서로 다른 근거입니다. 사용 선언만으로 성능 개선을 판단하지 않습니다.</p><a id="raw" target="_blank">원시 실행 기록</a></section>
 <section class="panel"><h2>부품 ID</h2><div id="parts"></div><p class="muted">색은 정답 순서나 기능을 뜻하지 않습니다. 회색은 원래 제품의 부품 하나를 외부 지그로 고정했다고 가정한 것입니다. 이 부품은 중력에 의해 떨어지지 않습니다.</p></section>
-<section class="panel"><h2>별도로 검증한 가능한 순서</h2><div id="sequence" class="sequence"></div><p class="muted">평가 LLM에 제공하지 않은 참고 경로입니다. 유일한 정답이나 최적 경로는 아닙니다. 방향은 source 축 기준입니다.</p></section>
+<section class="panel"><h2>실행 후 재검증한 가능한 순서</h2><div id="sequence" class="sequence"></div><p class="muted">성공한 실제 실행에서 얻은 경로를 평가 후 다시 검증했습니다. 평가 LLM에 미리 제공하지 않았습니다. 유일한 정답이나 최적 경로는 아닙니다. 방향은 source 축 기준입니다.</p></section>
 </aside></div>
 <section class="panel"><h2>실패·제거·복원 기록</h2><div id="events" class="events"></div><details><summary>문서 선택과 사용 선언</summary><pre id="docs"></pre></details><p id="physics" class="muted"></p><p class="muted">추출은 원본 OBJ에 대한 표본화된 직선 이동 검사입니다. 제거 후 잔류 조립체는 MuJoCo가 중력·접촉·마찰을 계산합니다. 로봇·그리퍼·볼트 풀기·실제 재조립을 시연하는 것이 아닙니다.</p></section>
-</main><script type="module" src="./viewer.js?rev=document-final-2"></script></body></html>
+</main><script type="module" src="./viewer.js?rev=final-document-v4"></script></body></html>

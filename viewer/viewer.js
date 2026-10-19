@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {OBJLoader} from './vendor/OBJLoader.js';
-const $=id=>document.getElementById(id),names={A:'A · LLM 코드 / 문서 없음',B:'B · LLM 코드 / 문서 있음',C:'C · Graph·LLM 순위·DFS / 문서 있음',C_S0:'C(S0) · Graph·LLM 순위·DFS / 문서 없음'};
+const $=id=>document.getElementById(id),names={A:'A · LLM 코드 / 문서 없음',B:'B · LLM 코드 / 문서 있음',C:'C · Graph·LLM 순위·DFS / 같은 분해 절차 문서'};
 let catalog=[],diagnosticURL=null,episode=null,episodeURL=null,index=0,playing=false,last=0,elapsed=0,nodes=new Map(),generation=0,returnURL=null;
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor('#eef4f7');renderer.shadowMap.enabled=true;renderer.outputColorSpace=THREE.SRGBColorSpace;
 const viewport=$('viewport');viewport.prepend(renderer.domElement);const scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(38,1,.0001,100);camera.up.set(0,0,1);
@@ -20,7 +20,7 @@ function updatePanel(){const s=episode.summary;txt('title',episode.title);txt('s
   txt('memory',s.library_enabled?'문서 library 제공 · 문서 요청 '+(episode.document_reads?.length??0)+'회 · 평가 중 갱신 0회':'재사용 문서 library 없음');txt('docs',JSON.stringify({문서제공:episode.document_reads??[],사용선언:episode.document_application_claims??[]},null,2));
   $('raw').hidden=!episode.actual_source?.result_url;if(episode.actual_source?.result_url)$('raw').href=new URL(episode.actual_source.result_url,episodeURL).href;
   $('parts').replaceChildren();for(const p of episode.parts){const pill=document.createElement('span');pill.className='part';const dot=document.createElement('i');dot.className='dot';dot.style.background=p.fixed?'#899aa4':'#'+new THREE.Color().setRGB(...p.color.slice(0,3)).getHexString();pill.append(dot,document.createTextNode(p.id+(p.fixed?' · 고정':'')));$('parts').append(pill);}
-  const steps=episode.reference_sequence?.steps??[];txt('sequence',steps.map((a,i)=>(i+1)+'. '+a.part_id+' ('+a.direction+')').join(' → '));$('reference').disabled=!episode.reference_sequence?.episode_url||s.reference;$('return').hidden=!(s.reference||s.diagnostic)||!returnURL;
+  const steps=episode.reference_sequence?.steps??[];txt('sequence',steps.length?steps.map((a,i)=>(i+1)+'. '+a.part_id+' ('+a.direction+')').join(' → '):'이 예산에서 검증된 성공 경로가 없습니다. 분해 불가능을 뜻하지 않습니다.');$('reference').disabled=!episode.reference_sequence?.episode_url||s.reference;$('return').hidden=!(s.reference||s.diagnostic)||!returnURL;
   $('events').replaceChildren();for(const e of episode.events??[]){const button=document.createElement('button');button.className='event';button.textContent=(e.checker_call?'q'+e.checker_call+' · ':'')+(e.message??e.type);button.onclick=()=>showFrame(e.frame);$('events').append(button);}
   for(const f of episode.restore_frames??[]){const button=document.createElement('button');button.className='event';button.textContent='↶ checkpoint 복원 · 프레임 '+(f+1);button.onclick=()=>showFrame(f);$('events').append(button);}
   $('failure').disabled=!(episode.failure_frames?.length);$('restore').disabled=!(episode.restore_frames?.length);txt('physics',episode.physics_scope??'MuJoCo 잔류 조립체 중력·접촉·마찰, 표본화된 기하학 경로 검사');

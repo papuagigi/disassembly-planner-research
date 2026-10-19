@@ -21,6 +21,8 @@ gpt-6-luna / low. Per full-search episode: 8 logical CLI model turns, 240 physic
 
 Use unchanged v3 source-mesh extraction and MuJoCo residual stability: six fixed-orientation source-axis straight translations, one permanent original fixture, gravity/friction with assumed physical properties. Full success means n−1 committed stable removals. Virtual restore is search-state restoration, not physical reassembly. Conversion exclusions are not planner failures. 15 minutes is an operational ceiling, not a proof all inputs are solvable.
 
+Prospective input-capacity amendment before any v4 model call:the earlier50part v3 input exceeded the common1GiB actor memory cap before any model call in all arms. Run a fresh actor initialization/shared-snapshot preflight with S0,max_calls=0,and zero physical queries. Require a32MiB margin below the unchanged1GiB episode cap. This hardware-compatibility gate uses no policy outcome or reference path. Preserve all exclusions and raw qualification receipts.
+
 ## One learning and admission attempt
 
 1. Run C with prior S2 on all 10 development CADs for complete-tree exploration within the above caps, stopping on success. Record collisions, instability, accepted removals, exact checkpoints, actual restores and alternate-branch outcomes. Actual backtracking must be measured; do not manufacture or claim it if absent.
