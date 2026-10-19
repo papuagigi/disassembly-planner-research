@@ -1,0 +1,18 @@
+{
+  "utc": "2026-10-19T14:42:41.448921+00:00",
+  "scope": "Additional development experience only,not final A/B/C evaluation",
+  "case_id": "asap_05459",
+  "raw_success": true,
+  "completed_removals": 16,
+  "required_removals": 16,
+  "checks": 26,
+  "logical_calls": 8,
+  "seconds": 202.2689303340012,
+  "peak_actor_RSS_GiB": 1.2955474853515625,
+  "cap_GiB": 4.0,
+  "physical_replay_status": "PASS",
+  "native_health_status": "NO_NATIVE_WARNINGS_RECORDED",
+  "previous_1GiB_completed_removals": 1,
+  "not_a_library_effect_estimate": true,
+  "old_result_preserved": true
+}

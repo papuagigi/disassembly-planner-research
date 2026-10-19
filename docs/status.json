@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:41:51.870510+00:00",
+  "utc": "2026-10-19T14:42:41.501145+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T14:37:39.417193+00:00",
@@ -51,12 +51,13 @@
   },
   "input_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:41:29.391506+00:00",
+    "utc": "2026-10-19T14:42:29.401531+00:00",
     "qualified": 1,
     "target": 3,
     "attempted": 3,
     "active_ids": [
-      "04052"
+      "04052",
+      "03767"
     ],
     "completed_out_of_order": 3
   },
