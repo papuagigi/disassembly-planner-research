@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>실제 분해 실패 절차 · 대형 CAD 비교</title>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif;color:#183344;background:#eef3f6;font-size:15px}
+*{box-sizing:border-box}body{margin:0}header{background:#153547;color:white;padding:18px 28px;display:flex;align-items:center;justify-content:space-between}header small{opacity:.75}h1{font-size:24px;margin:0}h2{font-size:18px;margin:0 0 10px}p{line-height:1.55;margin:8px 0}main{max-width:1550px;margin:auto;padding:20px}.row{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.panel{background:white;border:1px solid #d5e0e7;border-radius:12px;padding:16px;margin-bottom:16px}.selectors label{display:flex;align-items:center;gap:10px}select,button{font:inherit;border:1px solid #bfd0dc;background:white;color:#17384b;border-radius:7px;padding:8px 12px}button{cursor:pointer}button:hover{background:#e7f3f5}button:disabled{opacity:.45;cursor:default}.grid{display:grid;grid-template-columns:minmax(600px,1fr) 340px;gap:16px}.scene{padding:0;overflow:hidden}#viewport{height:570px;position:relative;background:#eef4f7}#viewport canvas{display:block}#badge{position:absolute;left:16px;top:16px;max-width:75%;background:#ffffffec;padding:10px 14px;border:1px solid #d3e1e7;border-radius:8px;pointer-events:none}#time{position:absolute;right:14px;top:14px;background:#ffffffdf;padding:10px;border-radius:8px;pointer-events:none}.controls{padding:16px}input[type=range]{width:100%;accent-color:#168078}.legend{position:absolute;bottom:12px;left:14px;background:#ffffffe8;padding:7px 12px;border-radius:7px;font-size:13px}.muted{color:#637d8d;font-size:13px}.stat{display:flex;justify-content:space-between;border-bottom:1px solid #edf1f4;padding:8px 0}.stat strong{color:#176f6a}.failure{color:#b34434!important}.part{display:inline-flex;align-items:center;gap:5px;border:1px solid #d8e3e9;border-radius:20px;padding:4px 8px;margin:4px;font-size:13px}.dot{width:11px;height:11px;border-radius:50%;display:inline-block}.events{max-height:230px;overflow:auto}.event{display:block;text-align:left;width:100%;border:0;border-bottom:1px solid #edf1f4;border-radius:0;font-size:13px}.sequence{color:#174e64;font-weight:600;line-height:1.8}details{margin-top:10px}pre{white-space:pre-wrap;word-break:break-word;font-size:12px;max-height:230px;overflow:auto}.status{padding:12px;background:#f0f7f7;border-radius:7px}.tag{font-size:12px;background:#e8f3f3;padding:4px 8px;border-radius:5px}.error{background:#fff0ea;padding:16px;color:#9b3c28}.headerline{display:flex;justify-content:space-between;align-items:center;padding:15px 18px}a{color:#1b6a85}#reference{background:#e9f5f3}aside .panel{padding:16px}@media(max-width:1050px){.grid{grid-template-columns:1fr}#viewport{height:500px}}
+</style></head><body>
+<header><h1>DISASSEMBLY LAB <small>문서형 skill 연구</small></h1><span>MuJoCo 계산 궤적 · Three.js 다시보기</span></header>
+<main>
+<section class="panel selectors row">
+<label>제품 <select id="case"></select></label><label>조건 <select id="arm"></select></label>
+<span class="tag">추가학습 실행 · 최종 A/B/C 테스트 제외</span>
+<button id="reference">검증된 참고 순서 보기</button><button id="diagnostic" hidden>개발 사례의 중력 실패 진단</button><button id="return" hidden>실제 실험으로</button>
+</section>
+<div class="grid"><section class="panel scene">
+<div class="headerline"><div><h2 id="title">실험 다시보기 준비 중</h2><span id="scope" class="muted"></span></div><span id="result" class="tag"></span></div>
+<div id="viewport"><div id="badge">기록을 불러오고 있습니다</div><div id="time"></div><div class="legend">색: 개별 부품 구분 · 회색: 고정부품 · 붉은 강조: 거절된 검사</div></div>
+<div class="controls"><input id="timeline" type="range" min="0" max="0" value="0"><div class="row"><button id="play">▶ 재생</button><button id="first">처음</button><button id="failure">첫 실패</button><button id="restore">첫 복원</button><button id="end">마지막</button><button id="fit">전체 보기</button><select id="speed"><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select><span class="muted" id="frame"></span></div><p class="muted">드래그: 회전 · 휠: 확대 · 우클릭: 이동. 재생 시간은 시각화용이며 실제 분해 작업 시간과 다릅니다. 거절된 검사는 현재 조립체 상태에 적용되지 않습니다.</p></div>
+</section><aside>
+<section class="panel"><h2>이 실행의 기록</h2><div id="stats"></div><p id="memory" class="status"></p><p class="muted">문서 제공, 사용 선언, 실제 행동은 서로 다른 근거입니다. 사용 선언만으로 성능 개선을 판단하지 않습니다.</p><a id="raw" target="_blank">원시 실행 기록</a></section>
+<section class="panel"><h2>부품 ID</h2><div id="parts"></div><p class="muted">색은 정답 순서나 기능을 뜻하지 않습니다. 회색은 원래 제품의 부품 하나를 외부 지그로 고정했다고 가정한 것입니다. 이 부품은 중력에 의해 떨어지지 않습니다.</p></section>
+<section class="panel"><h2>실행 후 재검증한 가능한 순서</h2><div id="sequence" class="sequence"></div><p class="muted">성공한 실제 실행에서 얻은 경로를 개발 실행 후 다시 검증했습니다. 이 순서를 정답으로 미리 제공하지 않았습니다. 유일한 정답이나 최적 경로는 아닙니다. 방향은 source 축 기준입니다.</p></section>
+</aside></div>
+<section class="panel"><h2>실패·제거·복원 기록</h2><div id="events" class="events"></div><details><summary>문서 선택과 사용 선언</summary><pre id="docs"></pre></details><p id="physics" class="muted"></p><p class="muted">추출은 원본 OBJ에 대한 표본화된 직선 이동 검사입니다. 제거 후 잔류 조립체는 MuJoCo가 중력·접촉·마찰을 계산합니다. 로봇·그리퍼·볼트 풀기·실제 재조립을 시연하는 것이 아닙니다.</p></section>
+</main><script type="module" src="./development.js?rev=4gib-preview-1"></script></body></html>

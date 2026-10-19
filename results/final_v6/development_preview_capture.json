@@ -1,0 +1,20 @@
+{
+  "status": "PASS_NATIVE_CAPTURE_AND_EXPORT",
+  "utc": "2026-10-19T14:55:31.036570+00:00",
+  "original_result_sha256": "11a9a70ecf7ea857231111ecb788a088763ae58fd822a0300b5083ce19ebeec4",
+  "episode_sha256": "7ed33b693fc19d24fc815c0089f1bbd32461f7462254645b58b06d8cfff49764",
+  "frames": 1710,
+  "physical_queries_replayed": 26,
+  "restores_verified": 0,
+  "no_model_calls": true,
+  "no_actor_or_budget_change": true,
+  "native_capture_locked_before_scored_episodes": true,
+  "native_capture_log_check": {
+    "status": "NO_NATIVE_WARNINGS_RECORDED",
+    "warning_count": 0,
+    "warning_messages": {},
+    "warning_free_observed": true,
+    "worker_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "bundle_manifest": "analysis/development_preview_bundle.json"
+}

@@ -1,0 +1,337 @@
+{
+  "status": "PASS",
+  "episodes": [
+    {
+      "case_id": "asap_05459",
+      "arm": "C",
+      "label": "C · 4GiB 추가학습",
+      "url": "../replay/development/asap_05459/C/episode.json.gz",
+      "summary": {
+        "success": true,
+        "physics": {
+          "gravity": [
+            0,
+            0,
+            -9.81
+          ],
+          "friction": 0.5,
+          "timestep": 0.002,
+          "settle_seconds": 1.5,
+          "path_step_m": 0.001,
+          "penetration_tolerance_m": 0.0002,
+          "resting_contact_slack_m": 2e-05,
+          "stable_translation_m": 0.005,
+          "stable_rotation_deg": 5.0,
+          "stable_final_speed_m_s": 0.02,
+          "stable_penetration_m": 0.001,
+          "density_kg_m3": 1000,
+          "solver_iterations": 100,
+          "contact_solref": [
+            0.01,
+            1.0
+          ],
+          "path_mode": "straight_source_axes",
+          "extraction_collision": "source_mesh_bvh",
+          "mass_floor_kg": 0.001,
+          "mass_source": "Assumed density times closed source mesh volume",
+          "inertia_model": "Unchanged simulator AABB diagonal inertia at AABB origin; not calibrated product inertia",
+          "base_fixture": "One permanently world-fixed original part 16; external workholding assumed, may be above floor"
+        },
+        "checks": 26,
+        "actions": [
+          {
+            "part_id": "0",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00047502618801851664,
+              "max_rotation_deg": 1.214590362140504,
+              "final_max_speed_m_s": 0.00032759833361492964,
+              "max_penetration_m": 4.913038309819892e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "1",
+            "direction": "+y",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0005177894273776327,
+              "max_rotation_deg": 1.326297768039551,
+              "final_max_speed_m_s": 0.00041444402258759193,
+              "max_penetration_m": 5.064756836797471e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "10",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0003368911233018466,
+              "max_rotation_deg": 0.8743026226580725,
+              "final_max_speed_m_s": 0.00023078693430881637,
+              "max_penetration_m": 5.127748227168315e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "11",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.000285021047565767,
+              "max_rotation_deg": 0.7790927146906321,
+              "final_max_speed_m_s": 0.0003090007545710664,
+              "max_penetration_m": 4.435175392253765e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "12",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00035312424979368743,
+              "max_rotation_deg": 0.9756799764726234,
+              "final_max_speed_m_s": 0.0003083643723001497,
+              "max_penetration_m": 4.5651042469121685e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "13",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0004320403559646566,
+              "max_rotation_deg": 1.2004577228506195,
+              "final_max_speed_m_s": 0.0005064175880133233,
+              "max_penetration_m": 4.8218924187697845e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "14",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.00046720225246152554,
+              "max_rotation_deg": 1.3163569239171364,
+              "final_max_speed_m_s": 0.0003391986093403606,
+              "max_penetration_m": 5.1140203901295637e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "15",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0004748249072835648,
+              "max_rotation_deg": 1.333440037139726,
+              "final_max_speed_m_s": 0.00033540693784689694,
+              "max_penetration_m": 5.349718480941324e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "2",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0005144678292571717,
+              "max_rotation_deg": 1.44933966436899,
+              "final_max_speed_m_s": 0.0004982163986736115,
+              "max_penetration_m": 5.516696223121657e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "3",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.000545423049924301,
+              "max_rotation_deg": 1.653409611934588,
+              "final_max_speed_m_s": 0.00047654145023187617,
+              "max_penetration_m": 5.8438307084648764e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "4",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0005014277244803325,
+              "max_rotation_deg": 2.1401842464266756,
+              "final_max_speed_m_s": 0.000452679428552804,
+              "max_penetration_m": 6.455641212961987e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "5",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0006283473538676157,
+              "max_rotation_deg": 2.722980946326686,
+              "final_max_speed_m_s": 0.0006423661017079901,
+              "max_penetration_m": 6.347354644608858e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "6",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0008320825806706771,
+              "max_rotation_deg": 3.46882105326361,
+              "final_max_speed_m_s": 0.001140203781610762,
+              "max_penetration_m": 5.778113978824335e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "7",
+            "direction": "-x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 6.536970239442423e-05,
+              "max_rotation_deg": 0.1763389926197345,
+              "final_max_speed_m_s": 5.221864632356286e-05,
+              "max_penetration_m": 1.2364690570925546e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "8",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 8.038374546232446e-05,
+              "max_rotation_deg": 0.2186679205116459,
+              "final_max_speed_m_s": 5.8390467920317403e-05,
+              "max_penetration_m": 1.2062420364381695e-05,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          },
+          {
+            "part_id": "9",
+            "direction": "+x",
+            "stability": {
+              "stable": true,
+              "max_displacement_m": 0.0,
+              "max_rotation_deg": 0.0,
+              "final_max_speed_m_s": 0.0,
+              "max_penetration_m": 0.0,
+              "unstable_parts": [],
+              "physics_steps": 750,
+              "finite": true
+            }
+          }
+        ],
+        "scope": "Sampled fixed-quaternion straight extraction in the declared action frame with the declared collision representation, then MuJoCo residual gravity/contact/friction stability. No force-driven extraction or arbitrary rotation planner.",
+        "termination": "goal_reached",
+        "final_removed": 16,
+        "required_removed": 16,
+        "final_progress": 1.0,
+        "best_removed": 16,
+        "failed_checks": 10,
+        "failure_causes": {
+          "path_collision": 10
+        },
+        "duplicate_queries": 0,
+        "duplicate_rejected_queries": 0,
+        "accepted_removals": 16,
+        "undone_accepted_removals": 0,
+        "restores": 0,
+        "checkpoint_count": 17,
+        "llm_calls": 8,
+        "tokens": {
+          "input_tokens": 288368,
+          "cached_input_tokens": 48768,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8468,
+          "reasoning_output_tokens": 0
+        },
+        "elapsed_seconds": 202.2689303340012,
+        "instructions": 420243,
+        "path_samples": 927,
+        "dynamic_steps": 12000,
+        "document_reads": 2,
+        "claimed_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "read_skill_ids": [
+          "physical-directional-clearance",
+          "physical-disassembly-failure-repair"
+        ],
+        "application_evidence_scope": "Read bytes and model declarations are recorded separately; trace invariants are tested separately, not inferred from declarations.",
+        "condition": "C",
+        "method_label": "C · 4GiB 추가학습",
+        "reference": false,
+        "library_enabled": true,
+        "model": "gpt-6-luna",
+        "reasoning_effort": "low",
+        "limits": {
+          "max_calls": 8,
+          "max_checks": 600,
+          "timeout_seconds": 900.0,
+          "max_steps": 10000000,
+          "max_checkpoints": 128,
+          "max_restores": 256,
+          "max_rss_bytes": 4294967296,
+          "max_prompt_bytes": 512000,
+          "max_response_bytes": 64000
+        },
+        "bank_version": "S2-prior-verified-v3-retained",
+        "required_removals": 16,
+        "replay_audit": "PASS",
+        "learning_updates": 0,
+        "native_engine_health": "NO_NATIVE_WARNINGS_RECORDED",
+        "native_warning_count": 0,
+        "warning_free_goal_reached": true,
+        "source_scope": "추가학습 CAD 실제 실행 · 최종 A/B/C 테스트 제외",
+        "changed_state_restores": 0
+      }
+    }
+  ],
+  "references": [],
+  "default_url": "../replay/development/asap_05459/C/episode.json.gz",
+  "scope": "Development only;not a held-out final score"
+}

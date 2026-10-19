@@ -49,3 +49,7 @@ PYTHONDONTWRITEBYTECODE=1 python -B -m disassembly_final_v6.pipeline
 추가 작업은 새 branch 또는 fork에서 진행하세요. `outputs/protocol/freeze.json`이 생긴 뒤에는 그 실험의 actor,physics,bank를 수정하지 않습니다. 테스트 실패를 학습 자료로 쓰면 해당 CAD의 결과를 새 제품 첫 실행 성능으로 재사용할 수 없습니다. 변경 제안은 원인·변경점·검증·비교 조건을 MD로 남겨 주세요. Claude에게 작업을 자동 할당하지 않습니다.
 
 데이터: [ASAP](https://github.com/yunshengtian/ASAP),[논문](https://arxiv.org/abs/2309.16909). 공식 데이터와 외부 라이브러리는 각각의 원래 배포 조건을 따릅니다. 원본 CAD archive,학술 PDF,발표자료,venv,인증 정보는 업로드하지 않습니다. viewer vendor의 라이선스 고지를 유지합니다.
+
+## 05459의 16개 제거 다시보기
+
+[development_demo/README.md](development_demo/README.md)를 읽으세요. 4GiB추가학습에서 성공한 실제26개 검사와16개 제거를 MuJoCo로 재검증했습니다. 저장소를 받은 뒤 `cd development_demo`에서 `python3 -m http.server 8786 --bind 127.0.0.1`을 실행하고 `/viewer/development.html`을 여세요. 최종 A/B/C평가 결과가 아닌 개발 사례입니다.

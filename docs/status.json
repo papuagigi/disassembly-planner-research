@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-19T14:51:35.092023+00:00",
+  "utc": "2026-10-19T14:59:47.939405+00:00",
   "study": "disassembly_final_v6",
   "state": {
     "utc": "2026-10-19T14:37:39.417193+00:00",
@@ -51,25 +51,38 @@
   },
   "input_progress": {
     "phase": "preparing_development",
-    "utc": "2026-10-19T14:51:24.688829+00:00",
+    "utc": "2026-10-19T14:59:21.614367+00:00",
     "qualified": 2,
     "target": 3,
-    "attempted": 14,
+    "attempted": 19,
     "active_ids": [
-      "07163"
+      "07856",
+      "06246"
     ],
     "completed_out_of_order": 0
   },
   "memory_extension_state": {
-    "utc": "2026-10-19T14:37:40.979815+00:00",
+    "utc": "2026-10-19T14:51:37.750755+00:00",
     "pid": 41085,
-    "status": "RUNNING",
-    "case_ids": [
-      "asap_05459",
-      "asap_01613"
+    "status": "COMPLETE",
+    "episodes": [
+      {
+        "case_id": "asap_05459",
+        "result_sha256": "11a9a70ecf7ea857231111ecb788a088763ae58fd822a0300b5083ce19ebeec4",
+        "raw_success": true,
+        "physical_replay": "PASS",
+        "native_health": "NO_NATIVE_WARNINGS_RECORDED"
+      },
+      {
+        "case_id": "asap_01613",
+        "result_sha256": "04fd142565262a06338de296e6031d9f1b7b85a0d5eb91c8173c51679203bfb2",
+        "raw_success": true,
+        "physical_replay": "PASS",
+        "native_health": "NO_NATIVE_WARNINGS_RECORDED"
+      }
     ],
     "planner_concurrency": 1,
-    "budget_change": "Only1GiB→4GiBRSS;600checks/900s/8calls retained from these development jobs"
+    "main_collector_reuses_without_rerun": true
   },
   "inherited_full_search_episodes": 8,
   "completed_additional4GiBepisodes": 2,
