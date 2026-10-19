@@ -11,9 +11,19 @@ def main():
     discovery=list((ROOT/'outputs/development/full_search').glob('*/result.json'))
     validation=list((ROOT/'outputs/development/full_validation').glob('*/result.json'))
     scored=list((ROOT/'outputs/evaluation/trials').glob('*/*/result.json'))
+    completed_discovery=[]
+    for p in sorted(discovery):
+        result=read(p)
+        health=optional(str(p.parent.relative_to(ROOT)/'engine_health.json'),{})
+        completed_discovery.append(dict(case_id=result['case_id'],raw_goal_reached=bool(result['success']),
+            completed_removals=result.get('completed_removals'),required_removals=result.get('required_removals'),
+            checks=result.get('checker_calls'),llm_calls=result.get('llm_calls'),seconds=result.get('elapsed_seconds'),
+            native_engine_health=health.get('status','NOT_YET_AUDITED'),
+            replay_status=optional(str(p.parent.relative_to(ROOT)/'physical_audit.json'),{}).get('status','PENDING')))
     value=dict(utc=utc(),state=state,selected_discovery=len(selected.get('discovery_cases',[])),
         live_progress=optional('outputs/progress.json',{}),
         early_discovery=optional('outputs/early_discovery_state.json'),
+        completed_discovery_outcomes=completed_discovery,
         selected_validation=len(selected.get('validation_cases',[])),completed_full_discovery=len(discovery),
         completed_independent_validation=len(validation),completed_first_test_episodes=len(scored),
         targets=dict(full_discovery=10,validation=10,test_CADs=10,test_episodes=30),
@@ -31,6 +41,10 @@ Controlling plan: PLAN.md. Exactly one final learning → independent validation
 State: {state}
 
 Actual finished full-search discovery: {len(discovery)}/10. Independent full-search validation: {len(validation)}/10. First test episodes: {len(scored)}/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
+
+Current input-only preparation: {value['live_progress']}. Fixed-order selection is not complete until selected_development.json exists;selected_discovery=0 above does not mean no reused episode has started. Completed development episodes: {completed_discovery}. Do not treat these as held-out A/B/C comparison outcomes.
+
+Native engine health clarification:07722 emitted contact/constraint arena overflow. A deterministic replay may reproduce invalid resource-limited contact handling. Keep raw outcomes/costs;new skill evidence excludes warning-bearing episodes. Candidate validation warnings veto admission. Final analysis separately reports raw and warning-free goal attainment,retaining every CAD in the denominator. Missing logs are unknown. Do not alter physics or rerun episodes to remove warnings.
 
 A=generated code/no docs;B=same generated code/frozen S3;C=conditional graph+LLM order+fixed DFS/same S3. Same API,initial state,gpt-6-luna/low,8logical model turns,240physical queries,900seconds. Document review is charged. A's failure-free memory resets between products;within-episode feedback is allowed for all.
 

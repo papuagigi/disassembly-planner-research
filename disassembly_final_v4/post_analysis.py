@@ -9,6 +9,7 @@ import statistics as st
 from .common import ROOT,read,write,sha,utc,progress
 from .metrics import summarize
 from .documents import DocumentBank
+from .native_health import audit as audit_native_health
 
 def csv_write(path,rows):
     if not rows:return
@@ -104,9 +105,13 @@ def main():
     for case in manifest['cases']:
         for arm in ['A','B','C']:
             folder=ROOT/'outputs/evaluation/trials'/case['case_id']/arm;result=read(folder/'result.json');m=summarize(result)
+            health=audit_native_health(folder)
             usage=[c for c in calls if c['phase']=='evaluation' and c['case_id']==case['case_id'] and c['arm']==arm]
             execution_errors=[d['execution_error'] for d in result.get('decisions',[]) if d.get('execution_error')]
             row=dict(case_id=case['case_id'],arm=arm,part_count=case['part_count'],**m,
+                raw_goal_reached=bool(m['success']),native_engine_health=health['status'],
+                native_warning_count=health['warning_count'],
+                warning_free_goal_reached=bool(m['success'] and health['warning_free_observed']),
                 best_progress=m['best_removed']/max(1,m['required_removed']),
                 known_total_tokens=sum(c['total_tokens'] or 0 for c in usage),input_tokens=sum(c['input_tokens'] or 0 for c in usage),
                 output_tokens=sum(c['output_tokens'] or 0 for c in usage),cached_input_tokens=sum(c['cached_input_tokens'] or 0 for c in usage),
@@ -127,6 +132,9 @@ def main():
         subset=[r for r in trials if r['arm']==arm];successful=[r for r in subset if r['success']]
         def mean(key,rows=subset):return st.mean(r[key] for r in rows) if rows else None
         aggregate.append(dict(arm=arm,n=len(subset),successes=len(successful),success_rate=len(successful)/len(subset) if subset else None,
+            warning_free_goal_reached=sum(r['warning_free_goal_reached'] for r in subset),
+            native_warning_episodes=sum(r['native_engine_health']=='NATIVE_ENGINE_WARNINGS_RECORDED' for r in subset),
+            native_health_unknown_episodes=sum(r['native_engine_health']=='UNKNOWN_MISSING_WORKER_LOG' for r in subset),
             success_rate_wilson95=wilson(len(successful),len(subset)),final_progress_mean=mean('final_progress'),
             best_progress_mean=mean('best_progress'),undone_accepted_removals_mean=mean('undone_accepted_removals'),
             checks_mean=mean('checks'),failed_checks_mean=mean('failed_checks'),restores_mean=mean('restores'),
@@ -168,7 +176,8 @@ def main():
         'Final progress is the accepted state at termination;best progress is the greatest accepted prefix observed during the search. A backtracking planner can have lower final than best progress after undoing a branch. Neither partial-progress metric substitutes for full goal success. Undone accepted removals measure branch-search work,not removal of nonrequired components.',
         'Read body bytes,declaration,observable priority change and improved held-out outcomes are separate. See memory_context_audit.json,behavior_audit.json,raw code/ranks and actual event replays. Token calls include failed-provider usage. Cached input and reasoning are not double-counted. Missing usage is unknown.',
         'LLM calls mean logical CodexCLIProvider.complete invocations/CLI planner turns,not independently observed backend HTTP requests. The CLI runs statelessly in an empty temporary working directory with user configuration,memories and major agent-tool features disabled;any recorded tool activity invalidates the response. Provider token totals include CLI context as well as supplied planner text.',
-        'time_budget_prefixes.csv is an observed timeline prefix at30/60/120/900seconds from one900-second policy,not separate per-budget retraining/reruns. A failed early run is not more efficient than successful full disassembly. Use common-success paired rows for cost-only interpretation.',
+        'time_budget_prefixes.csv is an observed timeline prefix at180/600/900seconds from one900-second policy,not separate per-budget retraining/reruns. A failed early run is not more efficient than successful full disassembly. Use common-success paired rows for cost-only interpretation.',
+        'Native engine health is separate from deterministic event replay. Raw success/costs remain unchanged;warning_free_goal_reached additionally requires no native runtime warning in the actual worker log. Missing logs are unknown. All cases remain in the denominator. Inspect native_warning_episodes before interpreting raw success as physically trustworthy. Solver-contact/constraint overflow is infrastructure failure,not a learned physical disassembly rule.',
         'Qualification exclusions and unresolved-within-budget planner outcomes are distinct. No first-episode outcome may be silently retried or removed. MuJoCo/material/scale/fixed-fixture/straight-path limitations remain. Virtual restore is not physical reassembly. No PPT was modified.']
     (ROOT/'analysis/RESULTS.md').write_text('\n'.join(lines)+'\n')
     progress('analysis_complete',cases=len(manifest['cases']),episodes=len(trials),evaluation_tokens=token_groups['evaluation']['total_tokens'])
