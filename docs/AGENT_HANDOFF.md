@@ -1,12 +1,12 @@
 # Final v5 agent handoff
 
-Snapshot UTC: 2026-10-19T13:35:51.277207+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T13:35:54.235550+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
 Controlling plan: PLAN.md. Exactly one final learning → independent validation → freeze → first-test cycle. Never tune against final tests. Do not rerun started episodes. Existing studies and presentations remain preserved. Claude is not assigned; this document supports recovery only.
 
-State: {'utc': '2026-10-19T13:35:51.251854+00:00', 'pid': 37806, 'status': 'RUNNING', 'phase': 'waiting_for_prior_frozen_evaluation'}
+State: {'utc': '2026-10-19T13:35:54.204771+00:00', 'pid': 37806, 'status': 'RUNNING', 'phase': 'prepare_development_inputs'}
 
 Actual full-search discovery evidence: 5/8 (five imported byte-exact v4episodes plus three newly authorized long training episodes). New independent validation: 0/3. First test episodes: 0/12 on4new official test CADs. Retain90prior local-probe discovery CADs,not90full solutions. After this extension,the target unique discovery corpus is94(90+one v4new CAD+three v5new CADs). Old validation CADs07375/04243/04060and their feedback are excluded from the new proposal and retired from v5validation;three fresh validation CADs are used. All new learning/validation inputs have11–20parts. Final test needs10+removals and uses the same predeclared size-priority source reserve. User approved three additional training CADs;target deadline is2026-10-20 13:40:49KST,total16hours from the original request. Read PLAN.md,config/study_scope.json and protocol/training_extension_amendment.json. This is a target,not a runtime guarantee;missing results remain pending.
 
