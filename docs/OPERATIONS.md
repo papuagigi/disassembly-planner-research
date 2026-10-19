@@ -5,3 +5,7 @@ Read PLAN.md,TIME_BUDGET.md,AGENT_HANDOFF.md and outputs/supervisor_launch.json.
 Use PYTHONDONTWRITEBYTECODE=1 and the existing disassembly_learning_v1/.venvPython. Main:python -B -m disassembly_final_v6.pipeline. Optional planned learning:python -B -m disassembly_final_v6.early_memory_extension. Shared collection lock guarantees one planner. These are complementary jobs,not duplicate campaigns.
 
 Preserve1GiBhistory in v5and the copied byte-identical evidence. Two4GiBadditional episodes have separate folders outputs/development/memory_extension. Never overwrite them with a repeat. All final episodes are4GiB,not mixed with inherited1GiBtraining. No hardware allocation/OS security hard cap is promised by the peak-RSSguard. Native arena issues remain separate. No Claude assignment or PPT.
+
+Launched UTC 2026-10-19T14:38:04.520954+00:00
+
+Main PID41025/session64041;additional training PID41085/session44431. Logs/receipts above. Both live PIDs must be checked before recovery. No extra planner may run concurrently.
