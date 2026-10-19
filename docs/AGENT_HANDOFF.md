@@ -1,6 +1,6 @@
 # Final v4 agent handoff
 
-Snapshot UTC: 2026-10-19T12:12:48.602871+00:00. Verify live processes and outputs before recovery.
+Snapshot UTC: 2026-10-19T12:31:37.403573+00:00. Verify live processes and outputs before recovery.
 
 Goal: measure whether development-failure-derived SKILL.md improves first-episode disassembly on unseen CADs. No desired winner. No model-weight training.
 
@@ -8,7 +8,7 @@ Controlling plan: PLAN.md. Exactly one final learning → independent validation
 
 State: {'utc': '2026-10-19T11:36:36.230669+00:00', 'pid': 29446, 'status': 'RUNNING', 'phase': 'prepare_development_inputs'}
 
-Actual finished full-search discovery: 2/10. Independent full-search validation: 0/10. First test episodes: 0/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
+Actual finished full-search discovery: 3/10. Independent full-search validation: 0/10. First test episodes: 0/30 across a target of10CADs. Earlier90CAD discovery means local physical probes,not90completed disassemblies. Four development CADs are reused for additional full-search experience,six are new;unique discovery after completion=96. Validation is10different newly qualified training CADs. Full-search discovery/validation have11–20parts. Test prioritizes11–20parts with a predeclared21+backup reserve;report actual sizes.
 
 A=generated code/no docs;B=same generated code/frozen S3;C=conditional graph+LLM order+fixed DFS/same S3. Same API,initial state,gpt-6-luna/low,8logical model turns,240physical queries,900seconds. Document review is charged. A's failure-free memory resets between products;within-episode feedback is allowed for all.
 
