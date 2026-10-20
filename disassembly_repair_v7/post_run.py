@@ -83,54 +83,82 @@ def reference_episode(case, out):
     return path, steps
 
 
-def replay_all():
+def _replay_one(case, arm, ref_path, ref_steps, manifest):
+    """Worker: independent native replay of one finished episode (no model call)."""
     from disassembly_docskills_v1.post_replay import annotate
     from .replay_verify import replay_result
+    out = ROOT / 'replay'
+    rp = TRIALS / case['case_id'] / arm / 'result.json'
+    result = read(rp)
+    dest = out / 'data' / case['case_id'] / arm
+    dest.mkdir(parents=True, exist_ok=True)
+    epath, apath = dest / 'episode.json', dest / 'audit.json'
+    if epath.exists() and apath.exists():
+        return None
+    try:
+        audit, sim, extra = replay_result(rp, shared_path=case['shared_path'], capture=True, allow_incomplete=True)
+    except Exception as exc:
+        return dict(case_id=case['case_id'], arm=arm, error=repr(exc)[:1500])
+    health = native(TRIALS / case['case_id'] / arm)
+    summary = dict(**summarize_v71({**result, 'condition': arm}), condition=arm, method_label=LABELS[arm], reference=False,
+                   model=manifest['model'], reasoning_effort=manifest['reasoning_effort'], limits=manifest['limits'],
+                   required_removals=case['required_removals'], actions=result.get('actions', []),
+                   replay_audit=audit['status'], native_engine_health=health['status'],
+                   native_warning_count=health['warning_count'],
+                   source_scope='v7 사전등록 새 CAD 첫 실행 · 로컬 물리 모델 조건부 결과')
+    summary.pop('error', None)
+    sim.events = extra['events']
+    sim.dump_demo(epath, title=case['case_id'] + ' · ' + LABELS[arm], summary=summary)
+    episode = read(epath)
+    annotate(episode, {**result, 'condition': arm, '_path': rp, '_episode_parent': dest}, result['recovery_state']['events'], extra)
+    episode.update(schema='repair_v7_pilot_replay_v1', assembly_display_name=case['case_id'].replace('asap_', 'ASAP '),
+                   rank_history=[{k: v for k, v in h.items() if k != 'effective_order'} for h in result.get('rank_history', [])],
+                   turn_progress=result.get('turn_progress', []))
+    if ref_path:
+        episode['reference_sequence'] = dict(steps=[dict(part_id=p, direction=d) for p, d in ref_steps],
+                                             episode_url=rel(ref_path, dest), after_evaluation=True, unique=False, optimality_proven=False)
+    write(epath, episode)
+    write(apath, audit, exclusive=True)
+    return None
+
+
+def _reference_one(case):
+    try:
+        path, steps = reference_episode(case, ROOT / 'replay')
+        return case['case_id'], str(path), steps, None
+    except Exception as exc:
+        return case['case_id'], None, None, repr(exc)[:1500]
+
+
+def replay_all(workers=6):
+    """Post-hoc replays are untimed, so they run in parallel processes; scores are never changed."""
+    import concurrent.futures as cf
+    import multiprocessing as mp
     manifest = read(ROOT / 'outputs/pilot/manifest.json')
     viewer()
     out = ROOT / 'replay'
     items, audits, errors, refs = [], [], [], []
+    ctx = mp.get_context('spawn')
+    with cf.ProcessPoolExecutor(workers, mp_context=ctx) as pool:
+        ref_results = {cid: (p, st, err) for cid, p, st, err in pool.map(_reference_one, manifest['cases'])}
+        jobs = []
+        for case in manifest['cases']:
+            p, st, err = ref_results[case['case_id']]
+            if err:
+                errors.append(dict(case_id=case['case_id'], arm='reference', error=err))
+            else:
+                refs.append(dict(case_id=case['case_id'], url=rel(p, ROOT / 'viewer')))
+            for arm in 'ABC':
+                if (TRIALS / case['case_id'] / arm / 'result.json').exists():
+                    jobs.append(pool.submit(_replay_one, case, arm, Path(p) if p else None, st, manifest))
+        errors += [e for e in (j.result() for j in jobs) if e]
     for case in manifest['cases']:
-        try:
-            ref_path, ref_steps = reference_episode(case, out)
-            refs.append(dict(case_id=case['case_id'], url=rel(ref_path, ROOT / 'viewer')))
-        except Exception as exc:
-            ref_path, ref_steps = None, None
-            errors.append(dict(case_id=case['case_id'], arm='reference', error=repr(exc)))
         for arm in 'ABC':
             rp = TRIALS / case['case_id'] / arm / 'result.json'
-            if not rp.exists():
-                continue
-            result = read(rp)
             dest = out / 'data' / case['case_id'] / arm
-            dest.mkdir(parents=True, exist_ok=True)
             epath, apath = dest / 'episode.json', dest / 'audit.json'
-            if not epath.exists():
-                try:
-                    audit, sim, extra = replay_result(rp, shared_path=case['shared_path'], capture=True, allow_incomplete=True)
-                except Exception as exc:
-                    errors.append(dict(case_id=case['case_id'], arm=arm, error=repr(exc)[:1500]))
-                    continue
-                health = native(TRIALS / case['case_id'] / arm)
-                summary = dict(**summarize_v71({**result, 'condition': arm}), condition=arm, method_label=LABELS[arm], reference=False,
-                               model=manifest['model'], reasoning_effort=manifest['reasoning_effort'], limits=manifest['limits'],
-                               required_removals=case['required_removals'], actions=result.get('actions', []),
-                               replay_audit=audit['status'], native_engine_health=health['status'],
-                               native_warning_count=health['warning_count'],
-                               source_scope='v7 사전등록 새 CAD 첫 실행 · 로컬 물리 모델 조건부 결과')
-                summary.pop('error', None)
-                sim.events = extra['events']
-                sim.dump_demo(epath, title=case['case_id'] + ' · ' + LABELS[arm], summary=summary)
-                episode = read(epath)
-                annotate(episode, {**result, 'condition': arm, '_path': rp, '_episode_parent': dest}, result['recovery_state']['events'], extra)
-                episode.update(schema='repair_v7_pilot_replay_v1', assembly_display_name=case['case_id'].replace('asap_', 'ASAP '),
-                               rank_history=[{k: v for k, v in h.items() if k != 'effective_order'} for h in result.get('rank_history', [])],
-                               turn_progress=result.get('turn_progress', []))
-                if ref_path:
-                    episode['reference_sequence'] = dict(steps=[dict(part_id=p, direction=d) for p, d in ref_steps],
-                                                         episode_url=rel(ref_path, dest), after_evaluation=True, unique=False, optimality_proven=False)
-                write(epath, episode)
-                write(apath, audit, exclusive=True)
+            if not (rp.exists() and epath.exists() and apath.exists()):
+                continue
             audit = read(apath)
             audits.append(dict(case_id=case['case_id'], arm=arm, **{k: audit[k] for k in ('status', 'physical_queries_replayed', 'guarded_requests_replayed', 'restores_verified')}))
             items.append(dict(case_id=case['case_id'], arm=arm, label=LABELS[arm], url=rel(epath, ROOT / 'viewer'),
