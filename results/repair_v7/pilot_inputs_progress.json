@@ -1,8 +1,9 @@
 {
-  "utc": "2026-10-20T08:00:15.604940+00:00",
-  "cursor": 23,
+  "utc": "2026-10-20T08:17:13.161154+00:00",
+  "cursor": 26,
   "selected": [
-    "asap_06146"
+    "asap_06146",
+    "asap_03012"
   ],
   "statuses": [
     {
@@ -145,6 +146,26 @@
       "id": "06601",
       "status": "collision_preparation_excluded",
       "elapsed_seconds": 270.7701525830007,
+      "split": "training"
+    },
+    {
+      "id": "03012",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 110.20985491700048,
+      "split": "training",
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "03285",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 136.11898887499956,
+      "split": "training"
+    },
+    {
+      "id": "04175",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 357.58674854199853,
       "split": "training"
     }
   ]
