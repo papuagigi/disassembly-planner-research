@@ -63,7 +63,8 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 - Public repo: https://github.com/papuagigi/disassembly-planner-research. Work branch **`claude/repair-v7`**.
 - Rule from the user: commit detailed changes on the branch; **at every core update push the branch AND merge it into `main` and push `main`** (user, 2026-10-20). Core updates: physics decision, pilot selection complete, pilot results, final interpretation.
 - Tool: `disassembly_repair_v7/offline/publish_snapshot.sh "<subject>" [commit|push] [groups]` (`push` = branch push + fetch + merge into main + push main + remote-head verification; aborts on merge conflict) → `publish.py` allowlist (code, docs, evidence, pilot summaries), secret-pattern fail, `<workspace>` path redaction; no raw CAD, traces, provider logs or PPT.
-- First push: 8 commits, head `1a5819a` (v7 code, tests, physics tools, pilot pipeline, docs, evidence, README/CLAUDE/AGENTS pointers).
+- Do NOT run the old `collaboration_tools/publish_snapshot.py` for v7: it regenerates README/CLAUDE/AGENTS with v6 text and commits to main directly.
+- Main merged and pushed at `49355f1` (2026-10-20, fast-forward). First branch push: 8 commits, head `1a5819a` (v7 code, tests, physics tools, pilot pipeline, docs, evidence, README/CLAUDE/AGENTS pointers).
 
 ## Next actions
 
