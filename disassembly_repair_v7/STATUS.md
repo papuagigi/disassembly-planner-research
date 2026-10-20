@@ -68,7 +68,7 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 
 ## Pilot incidents (recorded as they happen; no rerun, no code change during the campaign)
 
-- 06146/C (10:4xZ): `termination=limit`, `LimitError: same 4 GiB resident-memory ceiling exceeded` after 119 s, 19 checks, 8/14 removals, 8 calls. Peak RSS 4.32 GiB vs 06146 A 1.64 / B 1.44 GiB and v6 C 1.0–2.2 GiB → a v7 C-path memory growth (cause not yet identified), classified as infrastructure (`memory_guard`), not planner failure. Diagnose after the campaign by replaying the saved C responses with RSS/tracemalloc sampling; any fix becomes a separately labeled condition (v7.2) proposed to the user.
+- 06146/C (10:4xZ): `termination=limit`, `LimitError: same 4 GiB resident-memory ceiling exceeded` after 119 s, 19 checks, 8/14 removals, 8 calls. Peak RSS 4.32 GiB vs 06146 A 1.64 / B 1.44 GiB and v6 C 1.0–2.2 GiB → classified as infrastructure (`memory_guard`), not planner failure. Update: 03012/C peaked at only 0.62 GiB while completing 12/12, so the spike is not a general C-path leak; working hypothesis (unverified) = a state-specific native MuJoCo allocation (very many contacts) on the 06146 states C visited, similar to the 06186 qualification crash. Diagnose after the campaign by replaying the saved C responses with RSS/tracemalloc sampling; any fix becomes a separately labeled condition (v7.2) proposed to the user.
 
 ## Next actions
 
