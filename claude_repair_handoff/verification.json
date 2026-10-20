@@ -1,0 +1,28 @@
+{
+  "status": "PASS_HANDOFF_DOCUMENTS_ONLY",
+  "utc": "2026-10-20T04:56:20.866754+00:00",
+  "protected_files_verified_unchanged": 162,
+  "protected_differences": [],
+  "root_prior_instructions_preserved_as_suffix": true,
+  "local_md_links_verified": 11,
+  "publisher_syntax_checked": true,
+  "new_model_calls": 0,
+  "new_physical_queries": 0,
+  "planner_repairs_implemented": false,
+  "new_experiments_started": false,
+  "claude_launched_or_messaged": false,
+  "PPT_created": false,
+  "handoff_sha256": {
+    "evidence.json": "292aba90d7dccbe816f62135dd3dbb60d51241385b6d9b026214833b35ab8a3e",
+    "TASK_PROMPT.md": "ad9be1154062293e52509235a19662b5f982674fdf2564123c289c5318e5ddd3",
+    "FAILURE_DIAGNOSIS.md": "6a7d3bc5eb7c59b68bca541f0f1cd084b21b472ce4e6e78280e362010fb81122",
+    "README.md": "3a07af3fea9ef07f663b4210010f91659fe652a9ecbc5f4ac26166903f5a5807"
+  },
+  "changed_existing_files": [
+    "CLAUDE.md",
+    "disassembly_final_v6/CLAUDE.md",
+    "disassembly_final_v6/CLAUDE_CONTINUATION_PROMPT.md",
+    "collaboration_tools/publish_snapshot.py"
+  ],
+  "public_publication": "Not asserted by this documentation check; see the separate local publication receipt or Git history."
+}

@@ -1,5 +1,9 @@
 # Failure-driven disassembly planner
 
+## 새 문제 수정 작업의 인계
+
+v6 예비 실험은 완료됐습니다. 현재 사용자는 Claude Code에 별도 버전의 문제 수정을 맡기려 합니다. [새 인계 안내](claude_repair_handoff/README.md),[실제 로그 진단](claude_repair_handoff/FAILURE_DIAGNOSIS.md),[입력할 프롬프트](claude_repair_handoff/TASK_PROMPT.md)를 먼저 읽으세요. 인계 문서 작성만 완료했으며 새 planner 수정·평가는 아직 실행하지 않았습니다. 아래 v6 결과는 보존한 기준 실험이며, 그 pipeline을 다시 시작하지 않습니다. 기존 중단 복구 프롬프트는 새 문제 해결 작업의 지시가 아닙니다.
+
 ASAP CAD/OBJ를 입력으로 받고, MuJoCo로 제거 후 안정성을 확인하는 연구 prototype입니다. 실패 경험을 LLM이 읽을 수 있는 `SKILL.md`로 만들고, 처음 보는 CAD에서 도움이 되는지 비교합니다. 모델 가중치는 학습하지 않습니다.
 
 ## 완료한 최종 예비 실험

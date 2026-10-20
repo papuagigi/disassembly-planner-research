@@ -1,4 +1,6 @@
-# Continuation instructions
+# Completed v6 recovery instructions
+
+**2026-10-20 follow-up:** v6 is COMPLETE. The user is preparing a separate Claude Code repair assignment. Read [the new handoff](../claude_repair_handoff/README.md) and [the new task prompt](../claude_repair_handoff/TASK_PROMPT.md) for that task. The instructions below preserve the v6 recovery contract. Their stop/no-retuning rules protect this completed study; they do not prohibit user-authorized repairs in a new version. This file does not launch Claude or restart a supervisor. The dated "not assigned" labels below describe the earlier contingency arrangement.
 
 Claude is not currently assigned. These instructions activate only when the user explicitly asks Claude Code to continue. A later direct user continuation request overrides an older `Claude_assigned=false` status snapshot. Do not launch or message another agent yourself.
 
