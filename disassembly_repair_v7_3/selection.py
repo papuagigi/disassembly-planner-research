@@ -10,8 +10,10 @@ inputs and v7.2 included; v7.3 itself excluded while it builds the list).
           OBJ bytes, part count, ID) — the v7 rule.
   Tier 2 (only after tier 1 is exhausted): 8-10 parts, ordered by part count descending,
           OBJ bytes, ID (closest to the >=10-removal range first).
-Target 4 cases; candidates are processed strictly in frozen order (4 conversions in flight)
-and the first 4 that pass are selected.
+Target 4 cases; candidates are processed strictly in frozen order and the first 4 that pass are selected.
+Amendment (2026-10-20 20:40 UTC, no planner outcome involved): conversions in flight reduced from 4 to 2 (the v7
+value) after candidate 40, because CoACD 90 s per-part timeouts dominated collision-preparation exclusions under
+the extra CPU contention (26/40 vs v7 37/75). Statuses already recorded are kept; the frozen order is unchanged.
 Stages (unchanged from v7.1): v6 qualification (source geometry, collision preparation,
 initial physics screen with one fixture, native MuJoCo log health, shared initial state);
 duplicate geometry fingerprint vs every earlier opened product -> excluded; sample-0 lock
@@ -46,7 +48,7 @@ INPUTS = ROOT / 'outputs/selection_inputs'
 CONFIG = ROOT / 'outputs/protocol/conversion_pilot.json'   # byte-identical copy of the v7.1 conversion config
 PHYSICS = 'P2_persist_up_to_stable_penetration'
 TARGET = 4
-IN_FLIGHT = 4
+IN_FLIGHT = 2   # v7 value; was 4 until candidate 40 (see docstring amendment)
 REFERENCE_WALL = 7200.
 REFERENCE_CHECK_CAP = 2500
 REFERENCE_WORKERS = 10

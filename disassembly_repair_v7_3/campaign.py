@@ -8,9 +8,11 @@ VALIDATION  development CADs 05459, 02406, 07375, 03674 (held out from S5 writin
             X in {B, C} passes if its success rate > A's, or equal and the median charged checks of its successful
             runs <= A's (if no arm succeeded: mean best_removed > A's). S5 is admitted iff at least one of B, C passes
             and neither B nor C has a lower success rate than A.
-EVALUATION  the 4 NEW CADs of outputs/protocol/selection_selected.json (never opened before v7.3; reference sequences
-            never shown to planners). Base bank Sx = S5 if admitted, else S3 (last admitted; byte-identical copy) and
-            then an exploratory S5 branch is added and reported separately (never pooled).
+EVALUATION  the NEW CADs of outputs/protocol/selection_selected.json (never opened before v7.3; reference sequences
+            never shown to planners). If the frozen pool yields fewer than 4, the cases found are used if there are
+            >= 3; with fewer than 3 the user is asked.
+            Base bank Sx = S5 if admitted, else S3 (last admitted; byte-identical copy) and then an exploratory S5
+            branch is added and reported separately (never pooled).
             Per CAD: attempt 1 A(S0), B(Sx), C(Sx) [+ B(S5), C(S5) if exploratory]; assembly note written by
             gpt-6-luna/low from the three primary attempt-1 records (+ a second note from A, B(S5), C(S5));
             attempt 2: B(Sx+note), C(Sx+note), [B(S5+note), C(S5+note)], A(S0), B(Sx), C(Sx), B(Sx+note) r2,

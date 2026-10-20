@@ -1,0 +1,47 @@
+{
+  "stage": "evaluation",
+  "utc": "2026-10-20T23:13:14.803564+00:00",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "banks": [
+    "<workspace>/disassembly_final_v6/memory/S0.json",
+    "<workspace>/disassembly_repair_v7_3/memory/S3copy.json",
+    "<workspace>/disassembly_repair_v7_3/memory/S5.json"
+  ],
+  "rules": "v7.3 development validation and final evaluation on NEW CADs (sequential, frozen, no reruns).\n\nPre-registered here (before any v7.3 validation or evaluation outcome):\nVALIDATION  development CADs 05459, 02406, 07375, 03674 (held out from S5 writing: mine73.VALIDATION_CADS).\n            Arms A(S0), B(S5), C(S5), 2 repeats each, arm order rotated per CAD; one episode at a time.\n            Infrastructure-invalid episodes are excluded from both numerator and denominator: termination class\n            provider_error or native_engine_resource with 0 charged checks (rare after R7; listed in the decision).\n            X in {B, C} passes if its success rate > A's, or equal and the median charged checks of its successful\n            runs <= A's (if no arm succeeded: mean best_removed > A's). S5 is admitted iff at least one of B, C passes\n            and neither B nor C has a lower success rate than A.\nEVALUATION  the NEW CADs of outputs/protocol/selection_selected.json (never opened before v7.3; reference sequences\n            never shown to planners). If the frozen pool yields fewer than 4, the cases found are used if there are\n            >= 3; with fewer than 3 the user is asked.\n            Base bank Sx = S5 if admitted, else S3 (last admitted; byte-identical copy) and then an exploratory S5\n            branch is added and reported separately (never pooled).\n            Per CAD: attempt 1 A(S0), B(Sx), C(Sx) [+ B(S5), C(S5) if exploratory]; assembly note written by\n            gpt-6-luna/low from the three primary attempt-1 records (+ a second note from A, B(S5), C(S5));\n            attempt 2: B(Sx+note), C(Sx+note), [B(S5+note), C(S5+note)], A(S0), B(Sx), C(Sx), B(Sx+note) r2,\n            C(Sx+note) r2, in this order.\n            Primary metrics: success, charged checks, elapsed seconds, tokens; every episode reported as-is.\nCommon: gpt-6-luna/low, v7.2 limits (8 calls, 240 checks, 900 s, 8 GiB), physics P2, E1 threaded winding (decision-\nidentical, accepted by outputs/e1/equality.json), R7 recoverable responses, contract notes 8-10, note writer v2.",
+  "physics": "P2_persist_up_to_stable_penetration",
+  "e1_equality": {
+    "status": "PASS",
+    "episodes": 61
+  },
+  "sha256": {
+    "<workspace>/disassembly_repair_v7_3/actors.py": "a170360abd829cbf5dc9fc6091378e1caee10d91b724f3e2b4728d4fa053a913",
+    "<workspace>/disassembly_repair_v7_3/shared_api.py": "88ce05f017b9540813e78bb765235956b14db5b8edfd81872e69b824f02a27c3",
+    "<workspace>/disassembly_repair_v7_3/runtime.py": "2407e398a1d545a0af690bf06b06c2c57741d7abcd7c1ecf0409a4eb69b7d23c",
+    "<workspace>/disassembly_repair_v7_3/controller.py": "78461d7537696b89260483eb2187d3f120ebff379a92f6c1088d6835729466e0",
+    "<workspace>/disassembly_repair_v7_3/contracts.py": "71015de51b4c6927118173fb2b54333374b92b29a9a3d8013a5af8085b9d6ace",
+    "<workspace>/disassembly_repair_v7_3/driver.py": "91f764a9a59511a2684e0703f4b06e360a9cb089e7ae015192e8baff66c3843c",
+    "<workspace>/disassembly_repair_v7_3/metrics.py": "f4a0624b7f28a3d733cb83d99370a5a832c19e4439bf8a2e0482c8b1f7f36c9c",
+    "<workspace>/disassembly_repair_v7_3/campaign.py": "a34198d3366a5f0db95c1cd42bec26602c4f3833d1a71b761b10bf8d004d3384",
+    "<workspace>/disassembly_repair_v7_3/learning73.py": "fed8083dd647e2622dc897f983a5496b646bc1c7a70515e4ae0c9b04d8deb920",
+    "<workspace>/disassembly_repair_v7_3/mine73.py": "9d7e7df15061f538ae5b4d5f7ced7da6d46f087befc745a074059f65eb8e8818",
+    "<workspace>/disassembly_repair_v7_3/skill_writer.py": "5a2ad2f3d18c708cd6e0fcedbaff36b12e30214b95738145c310a9be4dbd2627",
+    "<workspace>/disassembly_repair_v7_3/procs.py": "107aacd0286b678043a35501e8f06c127ec3fd882c55ab22ebccd787f2a03b3c",
+    "<workspace>/disassembly_repair_v7_3/replay_verify.py": "2c9eececd13177d783b8a40226f4d0dc146fdfd62e845a2edf397d6d14ef9cba",
+    "<workspace>/disassembly_repair_v7_3/provider.py": "0c73e0afce50b579c6848d1e8e5bb88a49ddfb1faa1f96fd47282d8b5b00f6f5",
+    "<workspace>/disassembly_repair_v7_3/fast_geometry.py": "7f48e7cc52db0109b903d6ef725833a6b9079e5fb9a47b9621976894744aebdd",
+    "<workspace>/disassembly_final_v6/memory/S0.json": "cc74cd7466ef7067e9193ee266e14eef1b823bc54020280d062386cbea7572ac",
+    "<workspace>/disassembly_repair_v7_3/memory/S3copy.json": "80dba28076de47bede2edb5e622931093b7e8d8328330f4b65a6ada5add1ddff",
+    "<workspace>/disassembly_repair_v7_3/memory/S3copy/physical-disassembly-failure-repair/SKILL.md": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c",
+    "<workspace>/disassembly_repair_v7_3/memory/S3copy/physical-directional-clearance/SKILL.md": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+    "<workspace>/disassembly_repair_v7_3/memory/S5.json": "17cdacd9f06dcc45ad1735f6bc9e9cdaacea49c0b607ecfa65320d95fca0fa15",
+    "<workspace>/disassembly_repair_v7_3/memory/S5/world-family-disassembly-search/SKILL.md": "5806572eb29f01ddf6f8d30621e9e23d33e5011e985aaac9d49c0a466763d680"
+  },
+  "base_bank": "S3",
+  "exploratory_s5": true,
+  "cads": [
+    "asap_02260",
+    "asap_02991",
+    "asap_05879",
+    "asap_03937"
+  ]
+}
