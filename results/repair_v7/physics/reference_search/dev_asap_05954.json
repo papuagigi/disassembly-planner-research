@@ -1,0 +1,253 @@
+{
+  "case_id": "asap_05954",
+  "case_path": "<workspace>/disassembly_final_v6/cases/evaluation/asap_05954.json",
+  "utc": "2026-10-20T05:29:11.655667+00:00",
+  "status": "search_exhausted_no_complete_path_with_remaining_set_pruning",
+  "wall_cap_seconds": 1800.0,
+  "elapsed_seconds": 213.248240292,
+  "workers": 10,
+  "method": "Physical feasibility control: non-LLM reference search with the evaluated checker.\n\nEach state is fully expanded: every canonical candidate (non-fixed part x\nallowed direction) is removed from that exact state by the unchanged\nFullDisassemblySim (source-axis straight extraction, source-mesh path check,\nMuJoCo residual stability). Expansions run in parallel worker processes, each\nwith its own simulator restored to the exact parent state. Accepted children\nare explored depth-first in a fixed generic order (higher part center first,\nthen ID, then direction). The search stops on n-1 removals (a complete\nreference sequence), exhaustion, or the wall cap.\n\nThis is a control for interpreting planner failure. Its sequence is never given\nto a planner. Absence of a found path is not an impossibility proof; the\nper-state sample-0 lock records explain what blocked progress.\nPruning by remaining-part set (approximation) is recorded when used.",
+  "prune_remaining_set": true,
+  "total_parts": 13,
+  "required_removals": 12,
+  "fixed": [
+    "5"
+  ],
+  "stats": {
+    "checks": 378,
+    "accepted": 12,
+    "rejected_by_reason": {
+      "path_collision": 362,
+      "unstable_remainder": 4
+    }
+  },
+  "reference_sequence": null,
+  "max_removed_reached": 3,
+  "expanded_states": [
+    {
+      "state_key": "60e34cd924d0c01dd0d885cbcde82d0da72e240e3030260c194961899823c91c",
+      "removed": 0,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 72,
+      "accepted": [
+        [
+          "12",
+          "+x"
+        ],
+        [
+          "12",
+          "-x"
+        ],
+        [
+          "4",
+          "-x"
+        ],
+        [
+          "4",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 39.015515209000114
+    },
+    {
+      "state_key": "b8502b4d2d250b08a1baeabed7d3b6b9723fb63c1481a2498b933df61d4ad27f",
+      "removed": 1,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "2",
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 66,
+      "accepted": [
+        [
+          "12",
+          "+x"
+        ],
+        [
+          "12",
+          "-x"
+        ],
+        [
+          "3",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 70.64149116699991
+    },
+    {
+      "state_key": "92e36d2af92f05024cd866d1d203a951bf2a884be4125f4ce0ab7dbae10539bc",
+      "removed": 2,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "2",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 60,
+      "accepted": [
+        [
+          "12",
+          "+x"
+        ],
+        [
+          "12",
+          "-x"
+        ]
+      ],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 99.38681550000001
+    },
+    {
+      "state_key": "586ec156e11958eceabe8b1931deb90b2247efaab99f177193a833750d8a808a",
+      "removed": 3,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "2",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 54,
+      "accepted": [],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 136.654498417
+    },
+    {
+      "state_key": "3eec5fa8bfe47b6651910ed0be7db4bde0f4dae26c6eba11082c8724abbc8e07",
+      "removed": 2,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "2",
+        "3",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 60,
+      "accepted": [
+        [
+          "3",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 175.52023687500014
+    },
+    {
+      "state_key": "fae001ba5d8292147a1ce023d74d08277593f2b1e7d04a906f465b019d9303c1",
+      "removed": 1,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 66,
+      "accepted": [
+        [
+          "4",
+          "-x"
+        ],
+        [
+          "4",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {
+        "0": [
+          "7"
+        ],
+        "7": [
+          "0"
+        ]
+      },
+      "elapsed_seconds": 213.14068029200007
+    }
+  ],
+  "final": true
+}

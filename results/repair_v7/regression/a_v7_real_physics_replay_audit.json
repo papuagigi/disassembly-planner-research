@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-20T06:51:33.282320+00:00",
+  "result_sha256": "77fdb9562b81433e34421df9b134fd65d3a28e7c3ee47531792546bfafb484e3",
+  "case_sha256": "fc148e0011f4ddb1c3f3271723dc10e00243f6db95219275822fdc81f63f0243",
+  "physical_queries_replayed": 240,
+  "guarded_requests_replayed": 5,
+  "restores_verified": 16,
+  "final_physical_state_key": "2ab637233b9210e0671f201d6e5a114b69719ea60f08fd0a1dddb8b2e009f1a5",
+  "no_model_calls": true,
+  "unfinished_query_events": [],
+  "charged_unfinished_checks": 0
+}

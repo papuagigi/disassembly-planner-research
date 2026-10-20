@@ -1,0 +1,151 @@
+{
+  "utc": "2026-10-20T08:00:15.604940+00:00",
+  "cursor": 23,
+  "selected": [
+    "asap_06146"
+  ],
+  "statuses": [
+    {
+      "id": "03153",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 281.0100178749999,
+      "split": "training"
+    },
+    {
+      "id": "03090",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 166.1457719580003,
+      "split": "training"
+    },
+    {
+      "id": "01951",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 295.9848116250005,
+      "split": "training"
+    },
+    {
+      "id": "01974",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 127.34044033400005,
+      "split": "training"
+    },
+    {
+      "id": "01926",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.25926812499983,
+      "split": "training"
+    },
+    {
+      "id": "04355",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 130.83798733299955,
+      "split": "training"
+    },
+    {
+      "id": "02286",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 290.21276466699965,
+      "split": "training"
+    },
+    {
+      "id": "03107",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 24.252374749999944,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "07436",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 93.25527883300038,
+      "split": "training"
+    },
+    {
+      "id": "06742",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 382.93072420799945,
+      "split": "training"
+    },
+    {
+      "id": "02591",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 446.50022287499996,
+      "split": "training"
+    },
+    {
+      "id": "06074",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 317.65870279199953,
+      "split": "training"
+    },
+    {
+      "id": "02929",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 248.38428004199977,
+      "split": "training"
+    },
+    {
+      "id": "02308",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 112.92108679099965,
+      "split": "training"
+    },
+    {
+      "id": "02428",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 214.5270892920007,
+      "split": "training"
+    },
+    {
+      "id": "01879",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 171.01689312500002,
+      "split": "training"
+    },
+    {
+      "id": "07683",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 97.15463004100002,
+      "split": "training"
+    },
+    {
+      "id": "07684",
+      "status": "duplicate_geometry_excluded",
+      "elapsed_seconds": 97.7419333329999,
+      "split": "training"
+    },
+    {
+      "id": "02869",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 229.39204158400025,
+      "split": "training"
+    },
+    {
+      "id": "01625",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 139.04237404200012,
+      "split": "training"
+    },
+    {
+      "id": "06146",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 57.13508075000027,
+      "split": "training",
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "06714",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 208.00602416699985,
+      "split": "training"
+    },
+    {
+      "id": "06601",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 270.7701525830007,
+      "split": "training"
+    }
+  ]
+}

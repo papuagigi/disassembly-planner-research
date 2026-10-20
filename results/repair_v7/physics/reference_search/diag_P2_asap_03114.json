@@ -1,0 +1,174 @@
+{
+  "case_id": "asap_03114",
+  "case_path": "<workspace>/disassembly_final_v6/cases/evaluation/asap_03114.json",
+  "utc": "2026-10-20T07:13:04.610910+00:00",
+  "status": "search_exhausted_no_complete_path_with_remaining_set_pruning",
+  "wall_cap_seconds": 7200.0,
+  "check_cap": 2500,
+  "physics_variant": "P2_persist_up_to_stable_penetration",
+  "seeded_prefix": [],
+  "elapsed_seconds": 626.4448337919985,
+  "workers": 8,
+  "method": "Physical feasibility control: non-LLM reference search with the evaluated checker.\n\nEach state is fully expanded: every canonical candidate (non-fixed part x\nallowed direction) is removed from that exact state by the unchanged\nFullDisassemblySim (source-axis straight extraction, source-mesh path check,\nMuJoCo residual stability). Expansions run in parallel worker processes, each\nwith its own simulator restored to the exact parent state. Accepted children\nare explored depth-first in a fixed generic order (higher part center first,\nthen ID, then direction). The search stops on n-1 removals (a complete\nreference sequence), exhaustion, or the wall cap.\n\nThis is a control for interpreting planner failure. Its sequence is never given\nto a planner. Absence of a found path is not an impossibility proof; the\nper-state sample-0 lock records explain what blocked progress.\nPruning by remaining-part set (approximation) is recorded when used.",
+  "prune_remaining_set": true,
+  "total_parts": 22,
+  "required_removals": 21,
+  "fixed": [
+    "24"
+  ],
+  "stats": {
+    "checks": 480,
+    "accepted": 4,
+    "rejected_by_reason": {
+      "path_collision": 476
+    }
+  },
+  "reference_sequence": null,
+  "max_removed_reached": 2,
+  "expanded_states": [
+    {
+      "state_key": "c2ce1657178473adda87dd1f82b1471d535bdc63a61d63c4c358a08cae9268a1",
+      "removed": 0,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 126,
+      "accepted": [
+        [
+          "25",
+          "-y"
+        ],
+        [
+          "27",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 184.1033865419995
+    },
+    {
+      "state_key": "4fc749e56391e19dc57ffa2b5f3ae0a8fb070af75f7e318a873bfb08e3cf8d22",
+      "removed": 1,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "22",
+        "23",
+        "24",
+        "26",
+        "27",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 120,
+      "accepted": [
+        [
+          "27",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 348.96161445799953
+    },
+    {
+      "state_key": "9acf0a6d70a15d322533e968a5c4cc4186d79daa9e930c38a865d73f8c89e543",
+      "removed": 2,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "22",
+        "23",
+        "24",
+        "26",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 114,
+      "accepted": [],
+      "sample0_locked": {},
+      "elapsed_seconds": 484.485973249999
+    },
+    {
+      "state_key": "21fe1fcb8e5705f71f7a45e9b75f3848bbcb6720880a07fd68a916a953c99c73",
+      "removed": 1,
+      "remaining": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "candidates": 120,
+      "accepted": [
+        [
+          "25",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 626.168294916999
+    }
+  ],
+  "final": true
+}

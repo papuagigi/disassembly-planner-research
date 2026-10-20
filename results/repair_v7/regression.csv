@@ -1,0 +1,9 @@
+scenario,termination,final_removed,best_removed,checks,first_valid_action_check,accepted_edge_reentries,guarded_requests,restores,auto_checkpoints,llm_calls,recomputed_child_key_mismatches,wall_seconds,total_tokens
+a_v6_repro,v6_runtime_BudgetLimit,2,3,160,5,59,0,120,0,,0,60,
+v6 asap_05954/A,wall_time_budget_exhausted,3,3,160,5,59,-,118,-,1,-,900,21863
+a_v7,check_budget_exhausted,3,3,240,5,0,5,16,6,1,0,594,
+b_v6_repro,v6_runtime_returned,3,3,113,7,0,0,0,0,,0,1,
+v6 asap_05954/B,call_budget_exhausted,3,3,113,7,0,-,0,-,8,-,588,757811
+b_v7,no_progress_stop,3,3,113,7,0,0,0,3,4,0,37,
+v6 asap_06444/C,wall_time_budget_exhausted,0,0,82,,0,-,0,-,8,-,900,540358
+c_v7,wall_time_budget_exhausted,1,1,132,71,0,0,0,1,6,0,905,

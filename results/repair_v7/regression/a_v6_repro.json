@@ -1,0 +1,32 @@
+{
+  "scenario": "a_v6_repro",
+  "utc": "2026-10-20T05:30:31.599013+00:00",
+  "wall_seconds": 60.35623691699993,
+  "success": false,
+  "termination": "v6_runtime_BudgetLimit",
+  "final_removed": 2,
+  "best_removed": 3,
+  "checks": 160,
+  "first_valid_action_check": 5,
+  "accepted_edge_reentries": 59,
+  "guarded_requests": 0,
+  "restores": 120,
+  "checkpoints": 4,
+  "auto_checkpoints": 0,
+  "llm_calls": null,
+  "error": {
+    "type": "BudgetLimit",
+    "message": "shared checker budget exhausted"
+  },
+  "failure_reasons": {
+    "path_collision": 97,
+    "unstable_remainder": 1
+  },
+  "replay_sources": {
+    "recorded": 98,
+    "recorded_with_recorded_child_pose": 62
+  },
+  "recomputed_child_key_mismatches": 0,
+  "trace_identical_to_v6": true,
+  "scope": "Offline regression on a known v6 CAD; preserved responses replayed; not a first encounter."
+}

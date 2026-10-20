@@ -1,0 +1,466 @@
+{
+  "case_id": "asap_06444",
+  "case_path": "<workspace>/disassembly_final_v6/cases/evaluation/asap_06444.json",
+  "utc": "2026-10-20T07:16:49.740874+00:00",
+  "status": "search_exhausted_no_complete_path_with_remaining_set_pruning",
+  "wall_cap_seconds": 7200.0,
+  "check_cap": 2500,
+  "physics_variant": "evaluated_physics_unchanged",
+  "seeded_prefix": [
+    [
+      "20",
+      "+y"
+    ],
+    [
+      "17",
+      "+y"
+    ],
+    [
+      "11",
+      "+y"
+    ],
+    [
+      "16",
+      "+y"
+    ],
+    [
+      "6",
+      "+y"
+    ],
+    [
+      "10",
+      "+y"
+    ],
+    [
+      "15",
+      "+y"
+    ],
+    [
+      "5",
+      "+y"
+    ],
+    [
+      "19",
+      "+y"
+    ],
+    [
+      "9",
+      "+y"
+    ],
+    [
+      "14",
+      "+y"
+    ]
+  ],
+  "elapsed_seconds": 3100.0467016249995,
+  "workers": 6,
+  "method": "Physical feasibility control: non-LLM reference search with the evaluated checker.\n\nEach state is fully expanded: every canonical candidate (non-fixed part x\nallowed direction) is removed from that exact state by the unchanged\nFullDisassemblySim (source-axis straight extraction, source-mesh path check,\nMuJoCo residual stability). Expansions run in parallel worker processes, each\nwith its own simulator restored to the exact parent state. Accepted children\nare explored depth-first in a fixed generic order (higher part center first,\nthen ID, then direction). The search stops on n-1 removals (a complete\nreference sequence), exhaustion, or the wall cap.\n\nThis is a control for interpreting planner failure. Its sequence is never given\nto a planner. Absence of a found path is not an impossibility proof; the\nper-state sample-0 lock records explain what blocked progress.\nPruning by remaining-part set (approximation) is recorded when used.",
+  "prune_remaining_set": true,
+  "total_parts": 21,
+  "required_removals": 20,
+  "fixed": [
+    "1"
+  ],
+  "stats": {
+    "checks": 492,
+    "accepted": 26,
+    "rejected_by_reason": {
+      "path_collision": 457,
+      "unstable_remainder": 9
+    }
+  },
+  "reference_sequence": null,
+  "max_removed_reached": 19,
+  "expanded_states": [
+    {
+      "state_key": "429f019936e5c7bba347b7f32dd5f9a7ca42f795258570a86f6cb03f2e737a97",
+      "removed": 11,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8"
+      ],
+      "candidates": 54,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "4",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 335.67277470799945
+    },
+    {
+      "state_key": "c6795c78fc5f019367a5aa7b91d40cec435441226f93541586b0391cebd3ed22",
+      "removed": 12,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "7",
+        "8"
+      ],
+      "candidates": 48,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "8",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 525.92179975
+    },
+    {
+      "state_key": "bf3e2ff74381d7fe699c21753fd06b89ecce89f92e4bfa68e72bf013851b0cc8",
+      "removed": 13,
+      "remaining": [
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "7",
+        "8"
+      ],
+      "candidates": 42,
+      "accepted": [
+        [
+          "8",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 713.6579481669996
+    },
+    {
+      "state_key": "38f8aeb41503af0abdd55287be4d55a2f1de402eb9f80c7cecf3f9090e9ee77a",
+      "removed": 14,
+      "remaining": [
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "7"
+      ],
+      "candidates": 36,
+      "accepted": [
+        [
+          "13",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 882.4834122499997
+    },
+    {
+      "state_key": "43905403932901991f6ab4f8d7cd8cbfa29c4a8c235f8791283c0c0688387ee2",
+      "removed": 15,
+      "remaining": [
+        "1",
+        "12",
+        "18",
+        "2",
+        "3",
+        "7"
+      ],
+      "candidates": 30,
+      "accepted": [
+        [
+          "3",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 1171.1898924999996
+    },
+    {
+      "state_key": "97ed1047dd151b9e1c6d34d54929d5ac266de96f901cbb867d85a020fb014618",
+      "removed": 16,
+      "remaining": [
+        "1",
+        "12",
+        "18",
+        "2",
+        "7"
+      ],
+      "candidates": 24,
+      "accepted": [
+        [
+          "7",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 1383.5692612080002
+    },
+    {
+      "state_key": "74dc665386a91646258e05cf7145f120bd82da267bf051615971b297e32de2b0",
+      "removed": 17,
+      "remaining": [
+        "1",
+        "12",
+        "18",
+        "2"
+      ],
+      "candidates": 18,
+      "accepted": [
+        [
+          "12",
+          "+y"
+        ],
+        [
+          "2",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 1526.3788033749997
+    },
+    {
+      "state_key": "d2e6ba9c261756f27aa84bec5a4c69b5f667f045f7fcac5770de8abff706ddda",
+      "removed": 18,
+      "remaining": [
+        "1",
+        "18",
+        "2"
+      ],
+      "candidates": 12,
+      "accepted": [
+        [
+          "2",
+          "+y"
+        ],
+        [
+          "2",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 1812.6442550829997
+    },
+    {
+      "state_key": "79a17411caa1bae9e8d59a30d525fae2695832a1c10d21532610bddb481b31d5",
+      "removed": 19,
+      "remaining": [
+        "1",
+        "18"
+      ],
+      "candidates": 6,
+      "accepted": [],
+      "sample0_locked": {},
+      "elapsed_seconds": 1906.5298535419997
+    },
+    {
+      "state_key": "c69a969abd6f34332017d6db583f4d0abc0c573e03414627dd2c2fb1a8a0f79d",
+      "removed": 18,
+      "remaining": [
+        "1",
+        "12",
+        "18"
+      ],
+      "candidates": 12,
+      "accepted": [
+        [
+          "12",
+          "+y"
+        ],
+        [
+          "12",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2006.843646708
+    },
+    {
+      "state_key": "ebbcd613bbccdbd6d9cb4218fb90f04409872d283a063fa97fb327cb830d8755",
+      "removed": 13,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "7"
+      ],
+      "candidates": 42,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "13",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2120.7670105829993
+    },
+    {
+      "state_key": "7046f708199c636faba8d378b0c62276b27c471023937625ee2e2ab483807e31",
+      "removed": 14,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "18",
+        "2",
+        "3",
+        "7"
+      ],
+      "candidates": 36,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "3",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2360.3937701669993
+    },
+    {
+      "state_key": "e79ce1bf293da9844e33faea925ce74385c9529a24298d5492ae79761df13536",
+      "removed": 15,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "18",
+        "2",
+        "7"
+      ],
+      "candidates": 30,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "7",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2470.8483562499996
+    },
+    {
+      "state_key": "c0ec67ecb6ba9db5a78403956e5de9814033815a64d979030380132f13ec3e12",
+      "removed": 16,
+      "remaining": [
+        "0",
+        "1",
+        "12",
+        "18",
+        "2"
+      ],
+      "candidates": 24,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "12",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2566.319789583001
+    },
+    {
+      "state_key": "d5557c682b4fe9aae6397adc56b159b1f9d76c05188bba9d16396be49b965b5f",
+      "removed": 17,
+      "remaining": [
+        "0",
+        "1",
+        "18",
+        "2"
+      ],
+      "candidates": 18,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ],
+        [
+          "2",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2807.716680667
+    },
+    {
+      "state_key": "db7212d3a4738f49bd52fb2de6a7ce06b8f28889aaf0fec388af2ae5720eeebd",
+      "removed": 18,
+      "remaining": [
+        "0",
+        "1",
+        "18"
+      ],
+      "candidates": 12,
+      "accepted": [
+        [
+          "0",
+          "-y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 2884.390561542
+    },
+    {
+      "state_key": "81b3523c5e7e69e33ab41d065b535dabed07fe9d4b9335a3a36bd45944f3b7bb",
+      "removed": 12,
+      "remaining": [
+        "1",
+        "12",
+        "13",
+        "18",
+        "2",
+        "3",
+        "4",
+        "7",
+        "8"
+      ],
+      "candidates": 48,
+      "accepted": [
+        [
+          "4",
+          "+y"
+        ]
+      ],
+      "sample0_locked": {},
+      "elapsed_seconds": 3099.8840450830003
+    }
+  ],
+  "final": true
+}

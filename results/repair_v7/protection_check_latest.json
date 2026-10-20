@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-20T07:49:12.666270+00:00",
+  "checked": 162,
+  "mismatches": [],
+  "status": "PASS",
+  "source": "claude_repair_handoff/evidence.json protected_sha256"
+}

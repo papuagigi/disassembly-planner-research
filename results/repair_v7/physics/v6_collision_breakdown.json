@@ -1,0 +1,26 @@
+{
+ "source": "v6 raw traces, all arms, read-only",
+ "breakdown": {
+  "asap_05954": {
+   "path_collision_within_2mm": 259,
+   "accepted": 68,
+   "includes_unresolved_conservative": 5,
+   "path_collision_at_sample0": 60,
+   "path_collision_after_2mm": 42,
+   "includes_floor_contact": 39,
+   "unstable_remainder": 5
+  },
+  "asap_06444": {
+   "path_collision_within_2mm": 199,
+   "includes_floor_contact": 29,
+   "accepted": 11,
+   "path_collision_at_sample0": 4
+  },
+  "asap_03114": {
+   "path_collision_at_sample0": 430,
+   "path_collision_within_2mm": 8,
+   "path_collision_after_2mm": 1,
+   "accepted": 3
+  }
+ }
+}

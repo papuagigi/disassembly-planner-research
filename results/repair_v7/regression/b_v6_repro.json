@@ -1,0 +1,27 @@
+{
+  "scenario": "b_v6_repro",
+  "utc": "2026-10-20T05:30:32.164154+00:00",
+  "wall_seconds": 0.5504681249999521,
+  "success": false,
+  "termination": "v6_runtime_returned",
+  "final_removed": 3,
+  "best_removed": 3,
+  "checks": 113,
+  "first_valid_action_check": 7,
+  "accepted_edge_reentries": 0,
+  "guarded_requests": 0,
+  "restores": 0,
+  "checkpoints": 2,
+  "auto_checkpoints": 0,
+  "llm_calls": null,
+  "error": null,
+  "failure_reasons": {
+    "path_collision": 108,
+    "unstable_remainder": 2
+  },
+  "replay_sources": {},
+  "recomputed_child_key_mismatches": 0,
+  "new_checks": 0,
+  "start_checks": 113,
+  "scope": "Offline regression on a known v6 CAD; preserved responses replayed; not a first encounter."
+}

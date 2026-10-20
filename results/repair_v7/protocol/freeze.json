@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_BEFORE_PILOT_GEOMETRY",
+  "utc": "2026-10-20T06:10:30.205443+00:00",
+  "v7_version": "v7.0",
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "limits": {
+    "max_calls": 8,
+    "max_checks": 240,
+    "timeout_seconds": 900.0,
+    "max_steps": 10000000,
+    "max_checkpoints": 128,
+    "max_restores": 256,
+    "max_rss_bytes": 4294967296,
+    "max_prompt_bytes": 512000,
+    "max_response_bytes": 64000
+  },
+  "arms": {
+    "A": {
+      "architecture": "code",
+      "bank": "S0"
+    },
+    "B": {
+      "architecture": "code",
+      "bank": "S3"
+    },
+    "C": {
+      "architecture": "graph_dfs",
+      "bank": "S3"
+    }
+  },
+  "bank_sha256": "4242bbb2c39ea829f2efcebb77188528dddb983c21b7b62cab8961f354fc09c4",
+  "bank_content_sha256": "6235329cf469a5c770b7b21438849f8169cea5325d9f1c4b2ecea16de2bdcc91",
+  "bank_identical_to_v6_S3": true,
+  "no_progress_limit": 2,
+  "sha256": {
+    "<workspace>/disassembly_repair_v7/__init__.py": "5ea37975695f60fb6be11279132c661ae3ec39f4c8efe495262fab27ee89f28b",
+    "<workspace>/disassembly_repair_v7/common.py": "4f37c293f5a214207bb781bb7dbb2e0497c714c1a44c277a62bcf0afc4764cff",
+    "<workspace>/disassembly_repair_v7/contracts.py": "cf18baf8d0492f558af1c5e8a369ec932bf55acc218f8e7eaa21b9010d5d4894",
+    "<workspace>/disassembly_repair_v7/shared_api.py": "d82453f0024a0d794bd102b0eff604bd8cf3cf9ca5856672b3c0b60955cb7f07",
+    "<workspace>/disassembly_repair_v7/runtime.py": "3307071e2963238e9d5ffd3da9fefe8243c1335e58e2436ca7a17bcf4accdab8",
+    "<workspace>/disassembly_repair_v7/controller.py": "673c09d894fd2b535e0f05ec20a7bfcdb8776a4f51b54c7e1e983c114dc62fe3",
+    "<workspace>/disassembly_repair_v7/actors.py": "1b82dc95925e1ba53564bdafe310a666b5eb22d658112bb8cf1c65621029e97e",
+    "<workspace>/disassembly_repair_v7/driver.py": "35016145e6ba75383e45e17724aadafb72275ff4f82eb1753ba6c95e0145776f",
+    "<workspace>/disassembly_repair_v7/campaign.py": "eddc1d6b97b9ddb8912c4c311aa7a6feb5462d7d73db828cd4449d0a54870127",
+    "<workspace>/disassembly_repair_v7/metrics.py": "ca12180458f8009510bbaed2be84197a08caa70dd72ce3341681cb0aae89f5e4",
+    "<workspace>/disassembly_repair_v7/protocol.py": "489436998530bd75b4f926f59f631020bcfa40c2a82471920c3825a99e327577",
+    "<workspace>/disassembly_repair_v7/pilot_inputs.py": "b32d4ade6e3a55fd0a4f839fb00bde38f96daee0d7edeeeaa4d5aa8c70e149c7",
+    "<workspace>/disassembly_repair_v7/physics_audit.py": "5ca57e02791e8fdb4f1a692c11b523e8e3e33db52545d355fa64160a041151ac",
+    "<workspace>/disassembly_repair_v7/feasibility.py": "92aa60db7b20a1f51ec5a3acae827c79be823417ddacd24eca2129d0ba09fbfb",
+    "<workspace>/disassembly_repair_v7/physics_variants.py": "0387cde6019dcf7931677d2124a9ac92fb635cca8c2e3f6df841ac8a0e47a637",
+    "<workspace>/disassembly_repair_v7/replay_verify.py": "78f0967627656a87d72757756f2abbd1b39d9983226800ed3c17365e88d89a79",
+    "<workspace>/disassembly_repair_v7/data_tools/convert_cad.py": "955472a6227ce478fb3a291df401f5967b5411822cb05efea7cfd4baa9a82a46",
+    "<workspace>/disassembly_repair_v7/outputs/protocol/conversion_pilot.json": "24d0988462266fb232aaaa5b8aee86a85c8b967a47979426f405e9f23c76d85e",
+    "<workspace>/disassembly_repair_v7/outputs/protocol/pilot_candidates.json": "f96a0aaec90573e7a57dd191de60f30e06dca74632aea3d9cde8453f7e99fbb7",
+    "<workspace>/disassembly_final_v6/contracts.py": "719249b0488d4544481c320b5b2c96c2d02b202b13bfd7ab41ba36ed0b18a412",
+    "<workspace>/disassembly_final_v6/controller.py": "6ce712e0c6013110ba296a5c41a88fd05a2f47eb6317fc20ed9fb74200198d51",
+    "<workspace>/disassembly_final_v6/documents.py": "0fe49d1bbefe1372ba15e7f718e0e7d1c8dd3660a6b39a334b1b59f64bff610d",
+    "<workspace>/disassembly_final_v6/native_health.py": "e3b2e0ac34bb630d77983b538a8882581e5171f6a931f61306f32bd2ed94cb60",
+    "<workspace>/disassembly_final_v6/common.py": "53ae68346a776f30e5c884ba09d0465313df876ae7e2b38bd80a81201105f2a6",
+    "<workspace>/disassembly_real_v3/simulator.py": "2a01e7614ea0dacd45d9e2f56e38820b788b2e4e8e50d5cdf522e150c671e27c",
+    "<workspace>/disassembly_real_v3/source_collision.py": "d8644a8266792054a9b68253267de45c0a53ee50d5692b68057b4456f7bb5c85",
+    "<workspace>/disassembly_real_v3/code_actor.py": "c4e180f3fb53165c43e1aa698043980d0ad145af2db397ce4d6bcea088f08841",
+    "<workspace>/disassembly_real_v2/simulator.py": "1acf4fd093be1c5d62bd0d2ff3b08b4daf49054139ecf67abef12d082570c766",
+    "<workspace>/disassembly_real_v1/simulator.py": "1acf4fd093be1c5d62bd0d2ff3b08b4daf49054139ecf67abef12d082570c766",
+    "<workspace>/disassembly_mujoco/simulator.py": "e1b76e46323df8a4388e9303ababf29267d9a7dda9d0dad16143986590234204",
+    "<workspace>/disassembly_learning_v3/shared_api.py": "4e6e70523a5f49d6083a7ab0990786d9fb491eaa76816dd997881c30cfb3ae74",
+    "<workspace>/disassembly_recovery/shared_api.py": "6472e0a67fef8a5ea332b722158f3cd15d956125b717dc32dcbbaea49ea8eccb",
+    "<workspace>/disassembly_recovery/shared_observation.py": "72f6687a6b4740f56f8e1600485cb16715e8d722da2f3aeea0cd7d07eaf21444",
+    "<workspace>/disassembly_hybrid/graph.py": "bd3fb972acea9ce1f10a95fdfc9d63979998f0586c4b00e9c299f6cc10248884",
+    "<workspace>/disassembly_planner_2d/planner2d/code_runtime.py": "8da0770d528cae8f494a22a311ac7b032286e2a1795c1448c04ff7eaf0e4adcd",
+    "<workspace>/disassembly_planner_2d/planner2d/code_worker.py": "55e759a4e789723bb3b717f6b94ff9965b9e50c4b222b986e8d721464e120676",
+    "<workspace>/disassembly_planner_2d/planner2d/llm.py": "a60c9132533901b9a4e1d82a0f6e7ca991abd944bfd42f57a5a8fa2742f2c3af",
+    "<workspace>/disassembly_docskills_v1/data_tools/inventory_sources.py": "41f493d57d89975e3f470e28d6f4b063ad245a91cd72c7650cfdfc8cddf000ce",
+    "<workspace>/disassembly_final_v6/memory/S0.json": "cc74cd7466ef7067e9193ee266e14eef1b823bc54020280d062386cbea7572ac",
+    "<workspace>/disassembly_final_v6/memory/S3.json": "4242bbb2c39ea829f2efcebb77188528dddb983c21b7b62cab8961f354fc09c4",
+    "<workspace>/disassembly_final_v6/memory/prior/physical-disassembly-failure-repair/SKILL.md": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c",
+    "<workspace>/disassembly_final_v6/memory/prior/physical-disassembly-failure-repair/references/admission.json": "5f4d8019bef1e4529c1333608587b3efc21142de94e57f3092a6d72f72f141da",
+    "<workspace>/disassembly_final_v6/memory/prior/physical-directional-clearance/SKILL.md": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+    "<workspace>/disassembly_final_v6/memory/prior/physical-directional-clearance/references/admission.json": "cd724f6ea4920c612367e4a55dbde4e14c6c47d97b195c87a5985977ae869e8b"
+  },
+  "regression_summaries": {
+    "<workspace>/disassembly_repair_v7/outputs/regression/a_v6_repro/summary.json": "26e42e414b6d68680f0de7cc1311d0f65084152b0a2103bb20cd1e2cda9465a1",
+    "<workspace>/disassembly_repair_v7/outputs/regression/a_v7/summary.json": "70d37bbc2d759422b39bc8f55b581aa4badb413796519ecfff442906b6d0c982",
+    "<workspace>/disassembly_repair_v7/outputs/regression/b_resume_probe/summary.json": "45f1480b427dc058299535a5a22297c95f9db3c65a60bc2844095ae2af8f9c23",
+    "<workspace>/disassembly_repair_v7/outputs/regression/b_v6_repro/summary.json": "4e1053392c8ad6d51b0660531c9756aa5047f2ea31427884be59367f13556704",
+    "<workspace>/disassembly_repair_v7/outputs/regression/b_v7/summary.json": "991a29a8b6b5280d63365cae03dcf01432517051c6e0aa91d2144aca62949fa6",
+    "<workspace>/disassembly_repair_v7/outputs/regression/c_v7/summary.json": "c2b3ed29093bfe9045a8c386ecff0a13c77cc28f25c8d629126910d287a6e963"
+  },
+  "pilot": {
+    "target_cases": 3,
+    "arms_per_case": 3,
+    "planned_episodes": 9,
+    "arm_order_rule": "case index i (selection order) runs arms ABC rotated by i mod 3: ABC, BCA, CAB (v6 rule)",
+    "one_planner_at_a_time": true,
+    "no_reruns": true,
+    "no_outcome_driven_changes": true,
+    "no_reference_given_to_planners": true,
+    "selection": "pilot_inputs.py docstring; candidates frozen in outputs/protocol/pilot_candidates.json",
+    "background_heavy_processes_during_episodes": false,
+    "stop_rule": "Run each selected case once per arm; report all outcomes; no favorable-result loop."
+  },
+  "metrics": "metrics.py summarize/classify",
+  "interpretation_limits": [
+    "v6->v7 changes several mechanisms at once; a v7 result is not a causal estimate of SKILL.md alone.",
+    "B-C differs in search architecture and scheduling, not only memory.",
+    "Three CADs x one episode per arm is a small pilot, not industrial validation."
+  ]
+}

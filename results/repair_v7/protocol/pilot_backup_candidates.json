@@ -1,0 +1,149 @@
+{
+  "created_utc": "2026-10-20T07:49:12.606113+00:00",
+  "status": "FROZEN_BEFORE_EXTRACTION",
+  "archive": "<workspace>/disassembly_final_v6/data/source/test_assembly.zip",
+  "archive_sha256": "c89ea240b1962e3230b00487bf23f3fcbb8b5cd7b6ce1a6816e043a31cac09c2",
+  "split": "official test_assembly (never opened by this project)",
+  "candidates": [
+    {
+      "id": "00161",
+      "part_count": 10,
+      "obj_bytes": 561140,
+      "split": "test"
+    },
+    {
+      "id": "03936",
+      "part_count": 10,
+      "obj_bytes": 849181,
+      "split": "test"
+    },
+    {
+      "id": "05808",
+      "part_count": 10,
+      "obj_bytes": 874551,
+      "split": "test"
+    },
+    {
+      "id": "08222",
+      "part_count": 10,
+      "obj_bytes": 1027627,
+      "split": "test"
+    },
+    {
+      "id": "04383",
+      "part_count": 10,
+      "obj_bytes": 1209636,
+      "split": "test"
+    },
+    {
+      "id": "05627",
+      "part_count": 10,
+      "obj_bytes": 1816176,
+      "split": "test"
+    },
+    {
+      "id": "01350",
+      "part_count": 10,
+      "obj_bytes": 2452736,
+      "split": "test"
+    },
+    {
+      "id": "02656",
+      "part_count": 10,
+      "obj_bytes": 2537359,
+      "split": "test"
+    },
+    {
+      "id": "01641",
+      "part_count": 10,
+      "obj_bytes": 5402377,
+      "split": "test"
+    },
+    {
+      "id": "01355",
+      "part_count": 9,
+      "obj_bytes": 634932,
+      "split": "test"
+    },
+    {
+      "id": "01513",
+      "part_count": 9,
+      "obj_bytes": 763850,
+      "split": "test"
+    },
+    {
+      "id": "04824",
+      "part_count": 9,
+      "obj_bytes": 844506,
+      "split": "test"
+    },
+    {
+      "id": "07802",
+      "part_count": 9,
+      "obj_bytes": 1047360,
+      "split": "test"
+    },
+    {
+      "id": "05657",
+      "part_count": 9,
+      "obj_bytes": 1123108,
+      "split": "test"
+    },
+    {
+      "id": "03094",
+      "part_count": 9,
+      "obj_bytes": 1280954,
+      "split": "test"
+    },
+    {
+      "id": "07029",
+      "part_count": 9,
+      "obj_bytes": 1409683,
+      "split": "test"
+    },
+    {
+      "id": "01289",
+      "part_count": 9,
+      "obj_bytes": 2287772,
+      "split": "test"
+    },
+    {
+      "id": "04730",
+      "part_count": 8,
+      "obj_bytes": 2476549,
+      "split": "test"
+    },
+    {
+      "id": "03068",
+      "part_count": 7,
+      "obj_bytes": 671867,
+      "split": "test"
+    },
+    {
+      "id": "05245",
+      "part_count": 7,
+      "obj_bytes": 5615152,
+      "split": "test"
+    },
+    {
+      "id": "08233",
+      "part_count": 6,
+      "obj_bytes": 678062,
+      "split": "test"
+    },
+    {
+      "id": "05952",
+      "part_count": 6,
+      "obj_bytes": 1332057,
+      "split": "test"
+    },
+    {
+      "id": "00561",
+      "part_count": 5,
+      "obj_bytes": 731954,
+      "split": "test"
+    }
+  ],
+  "used_only_if_primary_yields_fewer_than": 3,
+  "order_rule": "part_count desc, obj_bytes, id"
+}

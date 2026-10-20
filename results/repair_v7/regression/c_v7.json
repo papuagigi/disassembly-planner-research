@@ -1,0 +1,32 @@
+{
+  "scenario": "c_v7",
+  "utc": "2026-10-20T05:56:29.334148+00:00",
+  "wall_seconds": 905.1409493340002,
+  "success": false,
+  "termination": "wall_time_budget_exhausted",
+  "final_removed": 1,
+  "best_removed": 1,
+  "checks": 132,
+  "first_valid_action_check": 71,
+  "accepted_edge_reentries": 0,
+  "guarded_requests": 0,
+  "restores": 0,
+  "checkpoints": 2,
+  "auto_checkpoints": 1,
+  "llm_calls": 6,
+  "error": {
+    "type": "LimitError",
+    "message": "wall_time_budget_exhausted"
+  },
+  "failure_reasons": {
+    "path_collision": 130,
+    "unstable_remainder": 1
+  },
+  "replay_sources": {
+    "recorded": 69,
+    "real_physics_unrecorded": 63
+  },
+  "recomputed_child_key_mismatches": 0,
+  "replayed_responses": 8,
+  "scope": "Offline regression on a known v6 CAD; preserved responses replayed; not a first encounter."
+}

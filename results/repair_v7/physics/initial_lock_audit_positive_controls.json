@@ -1,0 +1,1137 @@
+{
+  "utc": "2026-10-20T05:20:47.366690+00:00",
+  "method": "Initial-interference lock audit with the unchanged evaluation collision checker.\n\nQuestion: which parts are rejected at path sample 0 (before any motion)?\nAt sample 0 the moving part is at its current pose, so that test is the same\nfor all six labels: a part locked there cannot leave in ANY allowed direction\nwhile the reported blocker remains. The audit compares two poses with the\nidentical checker and tolerances:\n  * evaluated: case['initial_poses'] (MuJoCo convex-hull settling, as evaluated)\n  * cad_posed: parts[].position/quaternion before that settling\nNo planner, model call, reference order or tolerance change is involved.",
+  "cases": [
+    {
+      "case_id": "asap_02402",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_02402.json",
+      "utc": "2026-10-20T05:20:10.282096+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "0"
+        ],
+        "movable": 12,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 0.17064141599985305
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "0"
+        ],
+        "movable": 12,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 0.4976883330000419
+      }
+    },
+    {
+      "case_id": "asap_03674",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_03674.json",
+      "utc": "2026-10-20T05:20:11.103892+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "1"
+        ],
+        "movable": 11,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 2.825310332999834
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "1"
+        ],
+        "movable": 11,
+        "locked_parts": 4,
+        "fixture_locked_parts": [
+          "11",
+          "6",
+          "8",
+          "9"
+        ],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [
+              "1"
+            ],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": [
+              "unresolved_surface_intersection"
+            ]
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [
+              "1"
+            ],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": [
+              "unresolved_surface_intersection"
+            ]
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [
+              "1"
+            ],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": [
+              "unresolved_surface_intersection"
+            ]
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [
+              "1"
+            ],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": [
+              "unresolved_surface_intersection"
+            ]
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": true,
+        "seconds": 3.574845582999842
+      }
+    },
+    {
+      "case_id": "asap_02406",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_02406.json",
+      "utc": "2026-10-20T05:20:17.555163+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "0"
+        ],
+        "movable": 12,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 0.3842139580001458
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "0"
+        ],
+        "movable": 12,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 0.6063905420000992
+      }
+    },
+    {
+      "case_id": "asap_05459",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_05459.json",
+      "utc": "2026-10-20T05:20:18.608469+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "16"
+        ],
+        "movable": 16,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "13",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "14",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "15",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 1.300182292000045
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "16"
+        ],
+        "movable": 16,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "11",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "12",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "13",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "14",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "15",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 3.45074116700016
+      }
+    },
+    {
+      "case_id": "asap_01613",
+      "case_path": "<workspace>/disassembly_final_v5/cases/development/asap_01613.json",
+      "utc": "2026-10-20T05:20:23.496370+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "2"
+        ],
+        "movable": 10,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 7.821079999999711
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "2"
+        ],
+        "movable": 10,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "1",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 8.035807417000342
+      }
+    },
+    {
+      "case_id": "asap_07375",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_07375.json",
+      "utc": "2026-10-20T05:20:39.436257+00:00",
+      "physics": {
+        "penetration_tolerance_m": 0.0002,
+        "resting_contact_slack_m": 2e-05,
+        "stable_penetration_m": 0.001,
+        "path_step_m": 0.001,
+        "path_mode": "straight_source_axes",
+        "extraction_collision": "source_mesh_bvh"
+      },
+      "evaluated": {
+        "label": "evaluated_initial_poses_after_mujoco_settling",
+        "fixed": [
+          "1"
+        ],
+        "movable": 10,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 4.052331790999688
+      },
+      "cad_posed": {
+        "label": "cad_pose_before_settling",
+        "fixed": [
+          "1"
+        ],
+        "movable": 10,
+        "locked_parts": 0,
+        "fixture_locked_parts": [],
+        "mutual_locked_pairs": [],
+        "floor_locked_parts": [],
+        "rows": [
+          {
+            "part_id": "0",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "2",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "3",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "4",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "5",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "6",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "7",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "8",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "9",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          },
+          {
+            "part_id": "10",
+            "blockers_at_sample0": [],
+            "worst_signed_depth_m": 0.0,
+            "detail_kinds": []
+          }
+        ],
+        "unchanged_pose_full_disassembly_blocked": false,
+        "seconds": 3.8170705420002378
+      }
+    }
+  ]
+}
