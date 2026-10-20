@@ -1,0 +1,536 @@
+{
+  "status": "FINITE_SELECTION_COMPLETE",
+  "utc": "2026-10-20T10:26:00.842290+00:00",
+  "target": 3,
+  "cases": [
+    {
+      "case_id": "asap_06146",
+      "source_assembly_id": "06146",
+      "part_count": 15,
+      "required_removals": 14,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_06146.json",
+      "case_sha256": "77c43a818c6a0ed28f91d5c61f7d562083ae4170becbc467f8aae061bb239ceb",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/shared.json",
+      "shared_sha256": "93de56fe7d50bcf93ca646cc6f6b0f96f3604e81774f9a91a0043d01ed7f292a",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "6be549d8333335cb15d1f711c128130f345ae1c17c378104a45eda0cb1eeffae",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_03012",
+      "source_assembly_id": "03012",
+      "part_count": 13,
+      "required_removals": 12,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_03012.json",
+      "case_sha256": "d7b546b940eb3746342af910843e82c88511315c69b7bb4b3f9fe53864d6419b",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/shared.json",
+      "shared_sha256": "4b3a006b4151e573e27670fce0b8e188e0ff0cbb9c70f66a7d57763931ff794b",
+      "fixture_ids": [
+        "2"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "b3aa6f4dd32424a474fdb8637126339e2c5d1a12e0fa7f212e6ff39d3aca61f3",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_05902",
+      "source_assembly_id": "05902",
+      "part_count": 12,
+      "required_removals": 11,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_05902.json",
+      "case_sha256": "4e8d6de4b805df1b532599ceced69a5cf52f5187283e2d071d137b4d589050f9",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/shared.json",
+      "shared_sha256": "d94846d834ba64fc04569e0f4c1daae3bcf471d6124edb541783208f8f2c76b9",
+      "fixture_ids": [
+        "4"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "9d59928b53f1a0df302997d4647ca0de6b21cc87a7df21e8664e2194fbbff987",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/reference_search_P2.json"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "03153",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 281.0100178749999,
+      "split": "training"
+    },
+    {
+      "id": "03090",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 166.1457719580003,
+      "split": "training"
+    },
+    {
+      "id": "01951",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 295.9848116250005,
+      "split": "training"
+    },
+    {
+      "id": "01974",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 127.34044033400005,
+      "split": "training"
+    },
+    {
+      "id": "01926",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.25926812499983,
+      "split": "training"
+    },
+    {
+      "id": "04355",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 130.83798733299955,
+      "split": "training"
+    },
+    {
+      "id": "02286",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 290.21276466699965,
+      "split": "training"
+    },
+    {
+      "id": "03107",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 24.252374749999944,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "07436",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 93.25527883300038,
+      "split": "training"
+    },
+    {
+      "id": "06742",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 382.93072420799945,
+      "split": "training"
+    },
+    {
+      "id": "02591",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 446.50022287499996,
+      "split": "training"
+    },
+    {
+      "id": "06074",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 317.65870279199953,
+      "split": "training"
+    },
+    {
+      "id": "02929",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 248.38428004199977,
+      "split": "training"
+    },
+    {
+      "id": "02308",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 112.92108679099965,
+      "split": "training"
+    },
+    {
+      "id": "02428",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 214.5270892920007,
+      "split": "training"
+    },
+    {
+      "id": "01879",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 171.01689312500002,
+      "split": "training"
+    },
+    {
+      "id": "07683",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 97.15463004100002,
+      "split": "training"
+    },
+    {
+      "id": "07684",
+      "status": "duplicate_geometry_excluded",
+      "elapsed_seconds": 97.7419333329999,
+      "split": "training"
+    },
+    {
+      "id": "02869",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 229.39204158400025,
+      "split": "training"
+    },
+    {
+      "id": "01625",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 139.04237404200012,
+      "split": "training"
+    },
+    {
+      "id": "06146",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 57.13508075000027,
+      "split": "training",
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "06714",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 208.00602416699985,
+      "split": "training"
+    },
+    {
+      "id": "06601",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 270.7701525830007,
+      "split": "training"
+    },
+    {
+      "id": "03012",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 110.20985491700048,
+      "split": "training",
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "03285",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 136.11898887499956,
+      "split": "training"
+    },
+    {
+      "id": "04175",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 357.58674854199853,
+      "split": "training"
+    },
+    {
+      "id": "03669",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 362.1277931250006,
+      "split": "training"
+    },
+    {
+      "id": "04081",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 183.8267392079997,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04285",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 222.0135693329994,
+      "split": "training"
+    },
+    {
+      "id": "02769",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 234.13245779200042,
+      "split": "training"
+    },
+    {
+      "id": "01856",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 63.22936304200084,
+      "split": "training"
+    },
+    {
+      "id": "02860",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 113.20820408299915,
+      "split": "training"
+    },
+    {
+      "id": "03966",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 98.22863920899908,
+      "split": "training"
+    },
+    {
+      "id": "03788",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 102.65731004200097,
+      "split": "training"
+    },
+    {
+      "id": "04556",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.30569724999987,
+      "split": "training"
+    },
+    {
+      "id": "02054",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 190.12592050000057,
+      "split": "training"
+    },
+    {
+      "id": "03495",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 164.53485275000094,
+      "split": "training"
+    },
+    {
+      "id": "02439",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 395.3390329590002,
+      "split": "training"
+    },
+    {
+      "id": "03808",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 231.26967433299978,
+      "split": "training"
+    },
+    {
+      "id": "01860",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 91.66953595800078,
+      "split": "training"
+    },
+    {
+      "id": "01695",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 236.30057179100004,
+      "split": "training"
+    },
+    {
+      "id": "02182",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 260.56144270799996,
+      "split": "training"
+    },
+    {
+      "id": "05870",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 82.0612907499999,
+      "split": "training"
+    },
+    {
+      "id": "08073",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 97.60130629100058,
+      "split": "training"
+    },
+    {
+      "id": "05838",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 98.49333416700028,
+      "split": "training"
+    },
+    {
+      "id": "04602",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.1684298750005837,
+      "split": "training"
+    },
+    {
+      "id": "07189",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 158.3404363339996,
+      "split": "training"
+    },
+    {
+      "id": "03986",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 149.94681837500138,
+      "split": "training"
+    },
+    {
+      "id": "05918",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 298.3747535000002,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04927",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 150.00582008299898,
+      "split": "training"
+    },
+    {
+      "id": "03418",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.3524937080001,
+      "split": "training"
+    },
+    {
+      "id": "07561",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 129.07207241600008,
+      "split": "training"
+    },
+    {
+      "id": "03517",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 357.7712200829992,
+      "split": "training"
+    },
+    {
+      "id": "04261",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 432.7082626659994,
+      "split": "training"
+    },
+    {
+      "id": "06347",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 41.83649499999956,
+      "split": "training"
+    },
+    {
+      "id": "07409",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 194.13300454199998,
+      "split": "training"
+    },
+    {
+      "id": "02686",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 156.49180533400067,
+      "split": "training"
+    },
+    {
+      "id": "05306",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 217.37286654099807,
+      "split": "training"
+    },
+    {
+      "id": "03930",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 19.782737042000008,
+      "split": "training"
+    },
+    {
+      "id": "04409",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.16040708299988182,
+      "split": "training"
+    },
+    {
+      "id": "05265",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 230.44446312500077,
+      "split": "training"
+    },
+    {
+      "id": "07764",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 111.62244987500162,
+      "split": "training"
+    },
+    {
+      "id": "07438",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 117.6896258750021,
+      "split": "training"
+    },
+    {
+      "id": "05206",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.17470712499925867,
+      "split": "training"
+    },
+    {
+      "id": "03946",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 99.32862454199858,
+      "split": "training"
+    },
+    {
+      "id": "06186",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 231.11234762499953,
+      "split": "training",
+      "v7_physical_screen": "native_engine_resource_excluded",
+      "reference_status": "native_engine_error"
+    },
+    {
+      "id": "03007",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 373.2399741249974,
+      "split": "training"
+    },
+    {
+      "id": "05494",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 456.33049929200206,
+      "split": "training"
+    },
+    {
+      "id": "03613",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 247.56774620799843,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "05771",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 132.8838942500006,
+      "split": "training"
+    },
+    {
+      "id": "02613",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 218.6616743329978,
+      "split": "training"
+    },
+    {
+      "id": "08181",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 287.4282730419982,
+      "split": "training"
+    },
+    {
+      "id": "04446",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 147.62440683300156,
+      "split": "training"
+    },
+    {
+      "id": "00574",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 159.84761183400042,
+      "split": "training"
+    },
+    {
+      "id": "05902",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 102.1963617500005,
+      "split": "training",
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    }
+  ],
+  "attempted": 75,
+  "candidates_frozen_sha256": "f96a0aaec90573e7a57dd191de60f30e06dca74632aea3d9cde8453f7e99fbb7",
+  "backup_candidates_frozen_sha256": "0c8f102dbf65c6857d00f08594b6af41c6db5d35b488623b0c2a537b5a94e97e",
+  "physics_variant": "P2_persist_up_to_stable_penetration",
+  "no_planner_outcome_used": true,
+  "reference_search_used_for_selection": true,
+  "reference_given_to_planners": false
+}
