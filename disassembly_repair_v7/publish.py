@@ -91,7 +91,38 @@ def pilot(written):
             _put(ROOT / 'replay' / name, out / ('replay_' + name), written)
 
 
-GROUPS = dict(code=code, docs=docs, evidence=evidence, pilot=pilot)
+def v72(written):
+    """disassembly_repair_v7_2: code, docs, learned SKILL.md banks, protocol/decision records, summaries (no raw traces)."""
+    base = ROOT.parent / 'disassembly_repair_v7_2'
+    out = REPO / 'disassembly_repair_v7_2'
+    if not base.exists():
+        return
+    for p in sorted(base.glob('*.py')) + sorted(base.glob('*.md')):
+        _put(p, out / p.name, written)
+    for sub in ('tests', 'offline'):
+        for p in sorted((base / sub).glob('*')):
+            if p.suffix in ('.py', '.sh'):
+                _put(p, out / sub / p.name, written)
+    for p in sorted((base / 'analysis').rglob('*')):
+        if p.is_file() and p.suffix in ('.md', '.json', '.csv'):
+            _put(p, REPO / 'results/repair_v7_2' / p.relative_to(base / 'analysis'), written)
+    mem = base / 'memory'
+    if mem.exists():
+        for p in sorted(mem.rglob('*')):
+            if p.is_file() and p.suffix in ('.md', '.json'):
+                _put(p, REPO / 'results/repair_v7_2/memory' / p.relative_to(mem), written)
+    o = base / 'outputs'
+    for rel in ('protocol', 'validation', 'retry', 'smoke', 'skill_writer', 'note_writer', 'mining', 'collection'):
+        d = o / rel
+        if not d.exists():
+            continue
+        for p in sorted(d.rglob('*.json')):
+            if p.name in ('result.json', 'progress.json', 'job.json') or 'llm_calls' in p.parts or p.stat().st_size >= MAX_BYTES:
+                continue
+            _put(p, REPO / 'results/repair_v7_2/outputs' / p.relative_to(o), written)
+
+
+GROUPS = dict(code=code, docs=docs, evidence=evidence, pilot=pilot, v72=v72)
 
 
 def main():

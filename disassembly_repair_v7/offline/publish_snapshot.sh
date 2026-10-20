@@ -10,8 +10,8 @@ GROUPS=(${@:-code docs evidence pilot})
 REPO=disassembly-planner-research
 git -C $REPO checkout -q claude/repair-v7
 PYTHONDONTWRITEBYTECODE=1 disassembly_learning_v1/.venv/bin/python -B -m disassembly_repair_v7.publish $GROUPS >/dev/null
-if grep -rlqE "/Use[r]s/[A-Za-z]" $REPO/disassembly_repair_v7 $REPO/results/repair_v7; then echo "local path leak; abort"; exit 1; fi
-git -C $REPO add disassembly_repair_v7 results/repair_v7
+if grep -rlqE "/Use[r]s/[A-Za-z]" $REPO/disassembly_repair_v7 $REPO/results/repair_v7 $REPO/disassembly_repair_v7_2 $REPO/results/repair_v7_2 2>/dev/null; then echo "local path leak; abort"; exit 1; fi
+git -C $REPO add disassembly_repair_v7 results/repair_v7 $( [ -d $REPO/disassembly_repair_v7_2 ] && echo disassembly_repair_v7_2 ) $( [ -d $REPO/results/repair_v7_2 ] && echo results/repair_v7_2 )
 if ! git -C $REPO diff --cached --quiet; then
   git -C $REPO commit -q -m "$MSG" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
 fi
