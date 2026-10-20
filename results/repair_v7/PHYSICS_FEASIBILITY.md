@@ -42,11 +42,23 @@ P2 (adopted rule) reproduces the P0 reachable space exactly on 05954 (378 checks
 At the 19-removal state {1, 18} (path rebuilt from the search and re-verified), part 18 fails in all six labels under **both P0 and P2**:
 - ±x, +y, ±z: rejected at ~1 mm; penetration into fixture 1 grows to 1.14–1.18 mm (initial 0.15–0.19 mm) — the part sits inside the fixture body.
 - −y: travels 6.97 mm, then one sample reaches 0.203 mm against a 0.200 mm permit (initial 0.176 mm). A **3 µm** margin decides the last removal.
-So 06444's full sequence is blocked at its final step by a near-threshold tolerance case, not by an all-direction initial lock. P2 does not change it (initial depth < 0.2 mm). Whether a part-local axis (after settling tilt) clears it is measured by `offline/motion_probe.py`.
+So 06444's full sequence is blocked at its final step by a near-threshold tolerance case, not by an all-direction initial lock. P2 does not change it (initial depth < 0.2 mm).
 
-## 4. Interpretation (verified vs. inferred)
+## 4. Motion-primitive diagnostic (`analysis/physics/motion_probe.json`, P2, diagnostic only)
+
+Every probed part was checked along 32 directions: the 6 evaluated labels, the 20 source-frame diagonals, and the 6 source axes rotated by the part's own settling rotation (part-local axes).
+
+| state | probed parts | settling tilt since CAD | accepted in any of 32 directions |
+|---|---|---|---|
+| 05954 initial | 0, 7 (locked pair) | 1.2°, 1.17° | none |
+| 03114 initial | 18 locked parts | 0.04°–3.6° | none |
+| 06444 end {1, 18} | 18 | 0.02° | none (−y and local −y reach 6.97 mm; all diagonals stop at 1 mm) |
+
+The settling-tilt hypothesis (tilted part × assembly-axis motion × 0.02 mm slack) is rejected for these cases: part-local axes behave like the evaluated axes, and diagonals are worse. Wider straight-line motion sets would not unlock these three development CADs; rotations or multi-part motions were not tested.
+
+## 5. Interpretation (verified vs. inferred)
 
 - Verified: under the evaluated checker, 05954 and 03114 reach at most 3 and 2 removals in the explored reachable space; v6 A/B on 05954 (3) and every arm on 03114 (1) were at or near those limits. Full disassembly was not available to any planner there within the explored space.
 - Not a proof: remaining-set pruning can skip a pose variant of an already explored part set (a planned no-pruning 05954 rerun was cancelled when the physics decision took priority). 03114's reachable space is tiny and identical under P0 and P2, so the conclusion there is strong but still empirical.
 - 06444: its initial fixture lock is not permanent; 19/20 removals are physically reachable from v6 A's prefix, and the final part fails by 3 µm along −y. v6 B/C (0 removals) and A (11) were far from that physical ceiling, so 06444's v6 shortfall is mostly planner/budget, with a final-step tolerance limit.
-- Binding constraint (updated after P2): the sample-0 interference rule is NOT what limits 05954/03114 — removing it (P2) leaves the reachable space unchanged because the same parts collide within ~1 mm of straight travel (enclosing neighbours, or growing interference with the fixture). 05954 parts 0/7 stay blocked in all 32 probed directions (6 axes, 20 diagonals, 6 part-local axes). The remaining question is whether other motion primitives would matter elsewhere (`analysis/physics/motion_probe.json`). The P1 diagnostic was superseded by P2 and not run.
+- Binding constraint (updated after P2): the sample-0 interference rule is NOT what limits 05954/03114 — removing it (P2) leaves the reachable space unchanged because the same parts collide within ~1 mm of straight travel (enclosing neighbours, or growing interference with the fixture). 05954 parts 0/7 stay blocked in all 32 probed directions (6 axes, 20 diagonals, 6 part-local axes). Straight motion along 32 directions does not help either (section 4). The P1 diagnostic was superseded by P2 and not run.

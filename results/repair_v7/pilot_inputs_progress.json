@@ -1,6 +1,6 @@
 {
-  "utc": "2026-10-20T08:17:13.161154+00:00",
-  "cursor": 26,
+  "utc": "2026-10-20T08:53:36.872444+00:00",
+  "cursor": 48,
   "selected": [
     "asap_06146",
     "asap_03012"
@@ -166,6 +166,140 @@
       "id": "04175",
       "status": "initial_physics_or_capacity_excluded",
       "elapsed_seconds": 357.58674854199853,
+      "split": "training"
+    },
+    {
+      "id": "03669",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 362.1277931250006,
+      "split": "training"
+    },
+    {
+      "id": "04081",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 183.8267392079997,
+      "split": "training",
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04285",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 222.0135693329994,
+      "split": "training"
+    },
+    {
+      "id": "02769",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 234.13245779200042,
+      "split": "training"
+    },
+    {
+      "id": "01856",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 63.22936304200084,
+      "split": "training"
+    },
+    {
+      "id": "02860",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 113.20820408299915,
+      "split": "training"
+    },
+    {
+      "id": "03966",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 98.22863920899908,
+      "split": "training"
+    },
+    {
+      "id": "03788",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 102.65731004200097,
+      "split": "training"
+    },
+    {
+      "id": "04556",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.30569724999987,
+      "split": "training"
+    },
+    {
+      "id": "02054",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 190.12592050000057,
+      "split": "training"
+    },
+    {
+      "id": "03495",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 164.53485275000094,
+      "split": "training"
+    },
+    {
+      "id": "02439",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 395.3390329590002,
+      "split": "training"
+    },
+    {
+      "id": "03808",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 231.26967433299978,
+      "split": "training"
+    },
+    {
+      "id": "01860",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 91.66953595800078,
+      "split": "training"
+    },
+    {
+      "id": "01695",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 236.30057179100004,
+      "split": "training"
+    },
+    {
+      "id": "02182",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 260.56144270799996,
+      "split": "training"
+    },
+    {
+      "id": "05870",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 82.0612907499999,
+      "split": "training"
+    },
+    {
+      "id": "08073",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 97.60130629100058,
+      "split": "training"
+    },
+    {
+      "id": "05838",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 98.49333416700028,
+      "split": "training"
+    },
+    {
+      "id": "04602",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.1684298750005837,
+      "split": "training"
+    },
+    {
+      "id": "07189",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 158.3404363339996,
+      "split": "training"
+    },
+    {
+      "id": "03986",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 149.94681837500138,
       "split": "training"
     }
   ]
