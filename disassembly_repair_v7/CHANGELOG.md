@@ -50,6 +50,11 @@ No v6 file is edited. v7 imports v6/legacy modules read-only and keeps adapted c
 - Prompt for all arms gets `PHYSICS_NOTES[P2]`; `observation.physics.initial_interference_rule` states the rule. Software repairs R1–R6 unchanged.
 - Pilot amendment (user-approved, before outcomes): backup pool of never-opened official test products (5–10 parts, part count descending) after the primary training pool.
 
+## Selection amendment A1 (2026-10-20 09:49 UTC, before any pilot episode)
+- Trigger: candidate 06186 (v6-qualified) crashed MuJoCo during its P2 reference search (`mj_stackAlloc: out of memory … ncon=5499`) after 966 checks; the selector and the queued pipeline stopped.
+- Rule: a native MuJoCo engine failure during the v7 physical screen excludes the candidate (`native_engine_resource_excluded`), mirroring v6's exclusion of initial native warnings. Implemented in the new `pilot_inputs_amend.py` wrapper; frozen `pilot_inputs.py` and the v7.1 freeze hashes are unchanged. Record: `outputs/protocol/amendment_A1_native_engine.json`.
+- Evaluation: `post_run.summarize_v71` labels episodes whose error comes from a MuJoCo FatalError as `native_engine_resource` and counts `native_engine_errors` (frozen `metrics.py` unchanged).
+
 ## Physics: evaluated checker in v6 and v7 regression (P0)
 - The evaluated collision/stability rules, tolerances, fixture rule and six source-axis motions are unchanged in v7.
 - New diagnostic tools only: `physics_audit.py` (sample-0 lock audit), `feasibility.py` (non-LLM reference search with the same simulator).

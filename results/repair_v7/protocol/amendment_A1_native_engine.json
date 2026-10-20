@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-20T09:48:36.301930+00:00",
+  "amendment": "A1",
+  "before_any_pilot_episode": true,
+  "trigger": {
+    "candidate": "06186",
+    "cursor": 66,
+    "error": "mujoco.FatalError: mj_stackAlloc: out of memory, stack overflow at PrimalAllocate, line 1341\n  max = 622200, available = 622176, requested = 687024\n nefc = 16497, ncon = 5499"
+  },
+  "rule": "Native MuJoCo engine failure during the v7 physical screen -> native_engine_resource_excluded.",
+  "implementation": {
+    "path": "disassembly_repair_v7/pilot_inputs_amend.py",
+    "sha256": "5236f4b7f646d49efb24912e162b2c13144a4a809fd10cfbefca427223df9a50"
+  },
+  "frozen_files_unchanged": true,
+  "evaluation_classification": "post_run relabels episode errors from MuJoCo FatalError as native_engine_resource (metrics.py frozen, unchanged)."
+}

@@ -7,7 +7,7 @@ V7=disassembly_repair_v7
 stage(){ echo "{\"utc\":\"$(date -u +%FT%TZ)\",\"stage\":\"$1\"}" > $V7/outputs/pipeline_stage.json; echo "STAGE $1 $(date -u +%FT%TZ)"; }
 stage waiting_for_pilot_selection
 until [ -f $V7/outputs/protocol/pilot_selected_P2.json ]; do
-  if ! pgrep -f "disassembly_repair_v7.pilot_inputs select" >/dev/null; then echo "SELECTION_PROCESS_ENDED_WITHOUT_RESULT"; stage selection_failed; exit 1; fi
+  if ! pgrep -f "disassembly_repair_v7.pilot_inputs" >/dev/null; then echo "SELECTION_PROCESS_ENDED_WITHOUT_RESULT"; stage selection_failed; exit 1; fi
   sleep 30
 done
 stage waiting_for_physics_diagnostics

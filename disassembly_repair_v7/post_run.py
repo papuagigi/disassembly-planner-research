@@ -17,6 +17,21 @@ LABELS = {'A': 'A7 · LLM 코드 / 문서 없음', 'B': 'B7 · LLM 코드 / 같�
 TRIALS = ROOT / 'outputs/pilot/trials'
 
 
+def native_engine_errors(result):
+    """Amendment A1: count MuJoCo engine failures so they are not read as planner errors."""
+    texts = [str(result.get('error') or '')] + [str(d.get('execution_error') or '') for d in result.get('decisions', [])]
+    return sum(1 for t in texts if 'mj_' in t or 'FatalError' in t)
+
+
+def summarize_v71(result):
+    m = summarize(result)
+    n = native_engine_errors(result)
+    m['native_engine_errors'] = n
+    if n and m['termination_class'] in ('planner_or_schema_error', 'other_limit'):
+        m['termination_class'] = 'native_engine_resource'
+    return m
+
+
 def rel(path, base):
     return os.path.relpath(Path(path).resolve(), Path(base).resolve())
 
@@ -97,7 +112,7 @@ def replay_all():
                     errors.append(dict(case_id=case['case_id'], arm=arm, error=repr(exc)[:1500]))
                     continue
                 health = native(TRIALS / case['case_id'] / arm)
-                summary = dict(**summarize({**result, 'condition': arm}), condition=arm, method_label=LABELS[arm], reference=False,
+                summary = dict(**summarize_v71({**result, 'condition': arm}), condition=arm, method_label=LABELS[arm], reference=False,
                                model=manifest['model'], reasoning_effort=manifest['reasoning_effort'], limits=manifest['limits'],
                                required_removals=case['required_removals'], actions=result.get('actions', []),
                                replay_audit=audit['status'], native_engine_health=health['status'],
@@ -136,7 +151,7 @@ def aggregate():
                 rows.append(dict(case_id=case['case_id'], condition=arm, status='NOT_RUN'))
                 continue
             r = read(rp)
-            m = summarize({**r, 'condition': arm})
+            m = summarize_v71({**r, 'condition': arm})
             m['native_engine_health'] = native(TRIALS / case['case_id'] / arm)['status']
             m['reference_length'] = len(read(case['reference_path'])['reference_sequence'])
             rows.append(m)
@@ -161,7 +176,7 @@ def aggregate():
 
 
 def markdown(rows, by_arm):
-    cols = ['case_id', 'condition', 'success', 'termination_class', 'final_removed', 'best_removed', 'required_removed',
+    cols = ['case_id', 'condition', 'success', 'termination_class', 'native_engine_errors', 'final_removed', 'best_removed', 'required_removed',
             'reference_length', 'checks', 'first_valid_action_check', 'accepted_edge_revisits', 'repeated_rejected_queries',
             'guarded_requests', 'restores_with_state_change', 'restores_without_state_change', 'no_progress_calls',
             'llm_calls', 'total_tokens', 'unknown_usage_calls', 'elapsed_seconds', 'native_engine_health']
