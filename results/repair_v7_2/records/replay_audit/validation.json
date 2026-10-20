@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-20T17:22:01.057668+00:00",
+  "status": "PASS",
+  "episodes": [
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/A_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 12,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/A_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 12,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/B_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 12,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/B_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 2,
+      "guarded_or_cached_replayed": 2992,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/C_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 12,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/C_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 12,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/A_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 177,
+      "guarded_or_cached_replayed": 12,
+      "restores_verified": 2,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/A_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 46,
+      "guarded_or_cached_replayed": 21,
+      "restores_verified": 2,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/B_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 0,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/B_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 37,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 3,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/C_r1/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 16,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/C_r2/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 16,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    }
+  ]
+}
