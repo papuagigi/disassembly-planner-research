@@ -66,6 +66,10 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 - Do NOT run the old `collaboration_tools/publish_snapshot.py` for v7: it regenerates README/CLAUDE/AGENTS with v6 text and commits to main directly.
 - Main merged and pushed at `49355f1` (2026-10-20, fast-forward). First branch push: 8 commits, head `1a5819a` (v7 code, tests, physics tools, pilot pipeline, docs, evidence, README/CLAUDE/AGENTS pointers).
 
+## Pilot incidents (recorded as they happen; no rerun, no code change during the campaign)
+
+- 06146/C (10:4xZ): `termination=limit`, `LimitError: same 4 GiB resident-memory ceiling exceeded` after 119 s, 19 checks, 8/14 removals, 8 calls. Peak RSS 4.32 GiB vs 06146 A 1.64 / B 1.44 GiB and v6 C 1.0–2.2 GiB → a v7 C-path memory growth (cause not yet identified), classified as infrastructure (`memory_guard`), not planner failure. Diagnose after the campaign by replaying the saved C responses with RSS/tracemalloc sampling; any fix becomes a separately labeled condition (v7.2) proposed to the user.
+
 ## Next actions
 
 1. Let `pipeline_P2.log` proceed (selection → protect → campaign → post_run → protect). Never rerun a started episode.
