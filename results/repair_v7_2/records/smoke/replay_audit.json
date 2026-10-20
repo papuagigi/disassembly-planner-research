@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-20T13:54:17.545937+00:00",
+  "status": "PASS",
+  "episodes": [
+    {
+      "result": "disassembly_repair_v7_2/outputs/smoke/asap_01613/A/result.json",
+      "status": "PASS_VERIFIED_PREFIX",
+      "physical_queries_replayed": 32,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 1
+    },
+    {
+      "result": "disassembly_repair_v7_2/outputs/smoke/asap_01613/B/result.json",
+      "status": "PASS",
+      "physical_queries_replayed": 23,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 0
+    },
+    {
+      "result": "disassembly_repair_v7_2/outputs/smoke/asap_01613/C/result.json",
+      "status": "PASS_VERIFIED_PREFIX",
+      "physical_queries_replayed": 68,
+      "guarded_or_cached_replayed": 0,
+      "restores_verified": 0,
+      "charged_unfinished_checks": 1
+    }
+  ]
+}

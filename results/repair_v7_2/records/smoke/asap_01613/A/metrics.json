@@ -1,0 +1,50 @@
+{
+  "case_id": "asap_01613",
+  "condition": "A",
+  "success": false,
+  "termination": "wall_time_budget_exhausted",
+  "termination_class": "time_budget",
+  "required_removed": 10,
+  "final_removed": 1,
+  "best_removed": 1,
+  "final_progress": 0.1,
+  "best_progress": 0.1,
+  "checks": 33,
+  "failed_checks": 31,
+  "failure_causes": {
+    "unstable_remainder": 8,
+    "path_collision": 23
+  },
+  "first_valid_action_check": 8,
+  "accepted_removals": 1,
+  "accepted_edge_revisits": 0,
+  "repeated_rejected_queries": 0,
+  "guarded_requests": 0,
+  "restores": 0,
+  "restores_with_state_change": 0,
+  "restores_without_state_change": 0,
+  "checkpoints": 2,
+  "auto_checkpoints": 1,
+  "llm_calls": 1,
+  "no_progress_calls": 0,
+  "call_reasons": {
+    "execute_turn": 1
+  },
+  "input_tokens": 45572,
+  "cached_input_tokens": 21248,
+  "output_tokens": 914,
+  "total_tokens": 46486,
+  "unknown_usage_calls": 0,
+  "elapsed_seconds": 240.1875610829993,
+  "execution_steps": 827929,
+  "document_reads": 0,
+  "error": {
+    "type": "LimitError",
+    "message": "whole_episode_wall_deadline"
+  },
+  "cached_rejections": 0,
+  "deadline_stops": 0,
+  "native_engine_errors": 0,
+  "physics_variant": "P2_persist_up_to_stable_penetration",
+  "v7_version": "v7.2"
+}

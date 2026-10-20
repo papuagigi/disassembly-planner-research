@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-20T14:10:28.729248+00:00",
+  "version": "S4b",
+  "usage": {
+    "input_tokens": 20854,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2454,
+    "reasoning_output_tokens": 0
+  },
+  "gate": [
+    {
+      "name": "state-aware-action-budgeting",
+      "problems": []
+    },
+    {
+      "name": "defer-persistently-blocked-targets",
+      "problems": []
+    }
+  ],
+  "admitted_to_candidate_bank": [
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/state-aware-action-budgeting/SKILL.md",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/defer-persistently-blocked-targets/SKILL.md"
+  ],
+  "bundle_sha256": "c0900d114455614d80cf9140bf14f115aa6fb3ff8267035972750a51086f8704",
+  "writer": "gpt-6-luna/low via CodexCLIProvider"
+}

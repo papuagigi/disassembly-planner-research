@@ -1,0 +1,27 @@
+{
+  "stage": "validation",
+  "utc": "2026-10-20T14:10:51.146439+00:00",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "bank": "<workspace>/disassembly_repair_v7_2/memory/S4b.json",
+  "bank_sha256": "1c1d97bc00b337e4b6b164531a507b98894d8116b5ed66b8e02df9ba3ee4f8d5",
+  "bank_content_sha256": "e4f580d32c2a0646abef71778a24e725919e4886622d8b2baa2242b1a1ca59a9",
+  "rules": "v7.2 validation and same-assembly retry evaluation (sequential, frozen, no reruns).\n\nPre-registered here (before any validation or retry outcome):\nVALIDATION  CADs 05459, 02402 (development; not used for collection). Arms A(S0), B(S4), C(S4), 2 repeats each.\n            Admission of S4: for X in {B, C}: X \"passes\" if success_X > success_A, or success_X == success_A and\n            the median charged checks over X's successful runs <= A's (if no arm succeeded: mean best_removed).\n            S4 is admitted iff at least one of B, C passes and neither B nor C has fewer successes than A.\n            If not admitted, the retry evaluation uses the last admitted bank S3 (copied byte-identically).\nRETRY       CADs 05902, 06146 (v7.1 pilot CADs; never used to build S4). For each CAD:\n            attempt 1: A(S0), B(Sx), C(Sx) once each (Sx = S4 if admitted else S3);\n            assembly note: gpt-6-luna/low writes one note from those three attempt records only;\n            attempt 2: B(Sx+note) x2, C(Sx+note) x2, B(Sx) x1, C(Sx) x1, A(S0) x1, in a fixed interleaved order.\n            Primary metrics: success, charged checks, elapsed seconds, tokens; reported as-is.\nModel gpt-6-luna/low, v7.2 limits (8 calls, 240 checks, 900 s, 8 GiB), physics P2, one episode at a time.",
+  "physics": "P2_persist_up_to_stable_penetration",
+  "sha256": {
+    "<workspace>/disassembly_repair_v7_2/actors.py": "7b88850153e499379a843eb0a8338ab4dd4bc89c9720f04d7bde5fa43b0afc8d",
+    "<workspace>/disassembly_repair_v7_2/shared_api.py": "1dd929b9f5090060049d58636fc64870c064bf901667f20521c31ec740673354",
+    "<workspace>/disassembly_repair_v7_2/runtime.py": "2407e398a1d545a0af690bf06b06c2c57741d7abcd7c1ecf0409a4eb69b7d23c",
+    "<workspace>/disassembly_repair_v7_2/controller.py": "78461d7537696b89260483eb2187d3f120ebff379a92f6c1088d6835729466e0",
+    "<workspace>/disassembly_repair_v7_2/contracts.py": "cae54d3e447ea8cc56bc1e3231442ee0bbefc9a7de959c5a73ec4c116e634f8e",
+    "<workspace>/disassembly_repair_v7_2/driver.py": "0a458546e54fa932e1ed11d67265f0837b98195bca425ff8d5103bbdd9373fce",
+    "<workspace>/disassembly_repair_v7_2/metrics.py": "94dc1b824945f5699fd3da64c8c8c0993473d79ba3c584cf29edfd3c630e02e3",
+    "<workspace>/disassembly_repair_v7_2/campaign.py": "fb34449883849a3bd9afda70f23de5cc597692c075a826473a81e6ed3294adbc",
+    "<workspace>/disassembly_repair_v7_2/learning.py": "c72e8cdfffd926b166fa1647d2b92d6b70d9f2c757fff6bfbf84b0dd19e313f6",
+    "<workspace>/disassembly_repair_v7_2/skill_writer.py": "9b8834e3bba7a674fe166d5e72fa763c7ed4ed43bbb73895ce74aabc9aec32bb",
+    "<workspace>/disassembly_repair_v7_2/procs.py": "ce5afbb04b4168935192a26a92c1dcb123b4055ea11ef941d11f5c12592ce4a1",
+    "<workspace>/disassembly_repair_v7_2/replay_verify.py": "194583547becd9029e362358031baf62119348d04229ba689f8ff3aa1829f5ba",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b.json": "1c1d97bc00b337e4b6b164531a507b98894d8116b5ed66b8e02df9ba3ee4f8d5",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/state-aware-action-budgeting/SKILL.md": "a7b1cce1bff8f6d540853152679716ffa08d5a8c7ba4fe9c5bea22613553973a",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/defer-persistently-blocked-targets/SKILL.md": "d4eb5c60051e580477426ba91afb812edb3af126ced9497fbca3a4d3ea717f0f"
+  }
+}

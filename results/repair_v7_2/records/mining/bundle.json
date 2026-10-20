@@ -1,0 +1,463 @@
+{
+  "utc": "2026-10-20T14:08:57.215889+00:00",
+  "inputs": 21,
+  "episodes": [
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 18,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 2,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 107,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 9,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 49,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 27,
+      "cached_rejections": 0,
+      "llm_calls": 3
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 18,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 2,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 189,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 26,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 15,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 3
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 0,
+      "removed": 0,
+      "required": 11,
+      "termination": "no_progress_stop",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 86,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 7,
+      "cached_rejections": 31,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 25,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 5,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 24,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 4,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 11,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 17,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 174,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 103,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 128,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 67,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 140,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 112,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 160,
+      "removed": 3,
+      "required": 12,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 5,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 113,
+      "removed": 3,
+      "required": 12,
+      "termination": "call_budget_exhausted",
+      "first_accept_check": 7,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 161,
+      "removed": 1,
+      "required": 12,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 15,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 35,
+      "removed": 11,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 98,
+      "removed": 0,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 81,
+      "removed": 0,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    }
+  ],
+  "total_checks": 1649,
+  "p_accept_given_k_prior_rejections_same_part_same_state": {
+    "0": 0.154,
+    "1": 0.104,
+    "2": 0.132,
+    "3": 0.058,
+    "4": 0.011,
+    "5": 0.268
+  },
+  "tries_by_k": {
+    "0": 435,
+    "1": 357,
+    "2": 242,
+    "3": 207,
+    "4": 180,
+    "5": 228
+  },
+  "checks_spent_on_parts_with_3plus_rejections_at_state": 540,
+  "accept_rate_by_feature": {
+    "dir:down": {
+      "rate": 0.0,
+      "tried": 279
+    },
+    "dir:lateral": {
+      "rate": 0.103,
+      "tried": 1055
+    },
+    "dir:up": {
+      "rate": 0.324,
+      "tried": 315
+    },
+    "height:bottom_third": {
+      "rate": 0.041,
+      "tried": 221
+    },
+    "height:middle_third": {
+      "rate": 0.011,
+      "tried": 174
+    },
+    "height:top_third": {
+      "rate": 0.038,
+      "tried": 183
+    },
+    "volume:bottom_third": {
+      "rate": 0.032,
+      "tried": 219
+    },
+    "volume:middle_third": {
+      "rate": 0.01,
+      "tried": 200
+    },
+    "volume:top_third": {
+      "rate": 0.057,
+      "tried": 159
+    }
+  },
+  "blocker_named_part_next_query_accept_rate": {
+    "rate": 0.042,
+    "tried": 431
+  },
+  "accept_rate_reusing_last_successful_direction": {
+    "rate": 0.489,
+    "tried": 274
+  },
+  "accept_rate_other_directions_after_a_success": {
+    "rate": 0.074,
+    "tried": 797
+  },
+  "per_condition": {
+    "v7.2:A": {
+      "episodes": 4,
+      "checks": 60,
+      "checks_by_direction_family": {
+        "lateral": 51,
+        "up": 9
+      },
+      "accepted_by_direction_family": {
+        "up": 8,
+        "lateral": 24
+      },
+      "checks_on_parts_with_3plus_rejections": 0,
+      "first_accept_checks": [
+        2,
+        2,
+        null,
+        4
+      ]
+    },
+    "v7.2:B": {
+      "episodes": 4,
+      "checks": 393,
+      "checks_by_direction_family": {
+        "lateral": 241,
+        "up": 48,
+        "down": 104
+      },
+      "accepted_by_direction_family": {
+        "up": 20,
+        "lateral": 34
+      },
+      "checks_on_parts_with_3plus_rejections": 76,
+      "first_accept_checks": [
+        9,
+        26,
+        7,
+        1
+      ]
+    },
+    "v7.2:C": {
+      "episodes": 4,
+      "checks": 106,
+      "checks_by_direction_family": {
+        "lateral": 84,
+        "up": 15,
+        "down": 7
+      },
+      "accepted_by_direction_family": {
+        "up": 8,
+        "lateral": 35
+      },
+      "checks_on_parts_with_3plus_rejections": 13,
+      "first_accept_checks": [
+        27,
+        1,
+        5,
+        3
+      ]
+    },
+    "v6:A": {
+      "episodes": 3,
+      "checks": 369,
+      "checks_by_direction_family": {
+        "lateral": 201,
+        "up": 117,
+        "down": 51
+      },
+      "accepted_by_direction_family": {
+        "up": 61,
+        "lateral": 13
+      },
+      "checks_on_parts_with_3plus_rejections": 120,
+      "first_accept_checks": [
+        103,
+        5,
+        3
+      ]
+    },
+    "v6:B": {
+      "episodes": 3,
+      "checks": 339,
+      "checks_by_direction_family": {
+        "lateral": 225,
+        "up": 59,
+        "down": 55
+      },
+      "accepted_by_direction_family": {
+        "up": 3,
+        "lateral": 1
+      },
+      "checks_on_parts_with_3plus_rejections": 165,
+      "first_accept_checks": [
+        67,
+        7,
+        null
+      ]
+    },
+    "v6:C": {
+      "episodes": 3,
+      "checks": 382,
+      "checks_by_direction_family": {
+        "lateral": 253,
+        "down": 62,
+        "up": 67
+      },
+      "accepted_by_direction_family": {
+        "up": 2,
+        "lateral": 2
+      },
+      "checks_on_parts_with_3plus_rejections": 166,
+      "first_accept_checks": [
+        112,
+        15,
+        null
+      ]
+    }
+  },
+  "checks_at_known_dead_end_states": 30,
+  "generated_code_execution_errors": {
+    "LimitError: whole_episode_wall_deadline": 5,
+    "ValueError: augmented assignment is supported only for names": 1,
+    "NameError: name 'next' is not defined": 1,
+    "KeyError: 'accepted_edges'": 1
+  },
+  "anonymized_examples": [
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 3,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 3,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 4,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    }
+  ],
+  "scope": "Counts over every recorded query of development episodes; no CAD IDs, part IDs or reference sequences."
+}

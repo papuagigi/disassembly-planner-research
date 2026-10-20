@@ -1,0 +1,31 @@
+{
+  "utc": "2026-10-20T13:57:44.016317+00:00",
+  "jobs": [
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/C",
+      "arm": "C",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_02406/C",
+      "arm": "C",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_03674/C",
+      "arm": "C",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_07375/C",
+      "arm": "C",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    }
+  ],
+  "workers": 2,
+  "note": "Development only; concurrent runs share CPU, so wall-time pressure differs from sequential evaluation."
+}

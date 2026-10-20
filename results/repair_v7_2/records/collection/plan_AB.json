@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-20T13:55:18.424342+00:00",
+  "jobs": [
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/A",
+      "arm": "A",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S0.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/B",
+      "arm": "B",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_02406/A",
+      "arm": "A",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S0.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_02406/B",
+      "arm": "B",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_03674/A",
+      "arm": "A",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S0.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_03674/B",
+      "arm": "B",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_07375/A",
+      "arm": "A",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S0.json",
+      "phase": "collection"
+    },
+    {
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_07375/B",
+      "arm": "B",
+      "bank_path": "<workspace>/disassembly_final_v6/memory/S3.json",
+      "phase": "collection"
+    }
+  ],
+  "workers": 2,
+  "note": "Development only; concurrent runs share CPU, so wall-time pressure differs from sequential evaluation."
+}

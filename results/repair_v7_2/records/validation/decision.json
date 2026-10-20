@@ -1,0 +1,151 @@
+{
+  "utc": "2026-10-20T14:32:17.562857+00:00",
+  "rows": [
+    {
+      "case_id": "asap_05459",
+      "arm": "A",
+      "rep": 1,
+      "success": true,
+      "checks": 177,
+      "removed": 16,
+      "elapsed": 206.89575141599926,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/A_r1"
+    },
+    {
+      "case_id": "asap_05459",
+      "arm": "B",
+      "rep": 1,
+      "success": false,
+      "checks": 0,
+      "removed": 0,
+      "elapsed": 18.526963291995344,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/B_r1"
+    },
+    {
+      "case_id": "asap_05459",
+      "arm": "C",
+      "rep": 1,
+      "success": true,
+      "checks": 16,
+      "removed": 16,
+      "elapsed": 70.76760387499962,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/C_r1"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "B",
+      "rep": 1,
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "elapsed": 22.30680887500057,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/B_r1"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "C",
+      "rep": 1,
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "elapsed": 19.346609291998902,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/C_r1"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "A",
+      "rep": 1,
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "elapsed": 18.482652083002904,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/A_r1"
+    },
+    {
+      "case_id": "asap_05459",
+      "arm": "A",
+      "rep": 2,
+      "success": true,
+      "checks": 46,
+      "removed": 16,
+      "elapsed": 91.68500366700027,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/A_r2"
+    },
+    {
+      "case_id": "asap_05459",
+      "arm": "B",
+      "rep": 2,
+      "success": true,
+      "checks": 37,
+      "removed": 16,
+      "elapsed": 100.11202150000463,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/B_r2"
+    },
+    {
+      "case_id": "asap_05459",
+      "arm": "C",
+      "rep": 2,
+      "success": true,
+      "checks": 16,
+      "removed": 16,
+      "elapsed": 68.77320808300283,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_05459/C_r2"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "B",
+      "rep": 2,
+      "success": false,
+      "checks": 2,
+      "removed": 1,
+      "elapsed": 608.9333169170059,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/B_r2"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "C",
+      "rep": 2,
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "elapsed": 21.337755791995733,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/C_r2"
+    },
+    {
+      "case_id": "asap_02402",
+      "arm": "A",
+      "rep": 2,
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "elapsed": 18.05770283399761,
+      "folder": "<workspace>/disassembly_repair_v7_2/outputs/validation/asap_02402/A_r2"
+    }
+  ],
+  "stats": {
+    "A": {
+      "successes": 4,
+      "runs": 4,
+      "median_checks_successful": 29.0,
+      "mean_removed": 14
+    },
+    "B": {
+      "successes": 2,
+      "runs": 4,
+      "median_checks_successful": 24.5,
+      "mean_removed": 7.25
+    },
+    "C": {
+      "successes": 4,
+      "runs": 4,
+      "median_checks_successful": 14.0,
+      "mean_removed": 14
+    }
+  },
+  "passes": {
+    "B": false,
+    "C": true
+  },
+  "admitted": false,
+  "rule": "see campaign.py docstring"
+}

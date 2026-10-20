@@ -1,0 +1,34 @@
+{
+  "stage": "retry",
+  "utc": "2026-10-20T14:38:03.935577+00:00",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "bank": "<workspace>/disassembly_repair_v7_2/memory/S3copy.json",
+  "bank_sha256": "b7f35ddbef907efaf6c47b96aecef64a8288989dc3e7d7a68f94cb5da48b3321",
+  "bank_content_sha256": "215c0314160cb65b65484a6ea035d257ae1809772d551f8d34e36d9632a78d14",
+  "extra_banks": [
+    "<workspace>/disassembly_repair_v7_2/memory/S4b.json"
+  ],
+  "rules": "v7.2 validation and same-assembly retry evaluation (sequential, frozen, no reruns).\n\nPre-registered here (before any validation or retry outcome):\nVALIDATION  CADs 05459, 02402 (development; not used for collection). Arms A(S0), B(S4), C(S4), 2 repeats each.\n            Admission of S4: for X in {B, C}: X \"passes\" if success_X > success_A, or success_X == success_A and\n            the median charged checks over X's successful runs <= A's (if no arm succeeded: mean best_removed).\n            S4 is admitted iff at least one of B, C passes and neither B nor C has fewer successes than A.\n            If not admitted, the retry evaluation uses the last admitted bank S3 (copied byte-identically).\nRETRY       CADs 05902, 06146 (v7.1 pilot CADs; never used to build S4). For each CAD:\n            attempt 1: A(S0), B(Sx), C(Sx) once each (Sx = S4 if admitted else S3);\n            assembly note: gpt-6-luna/low writes one note from those three attempt records only;\n            attempt 2: B(Sx+note) x2, C(Sx+note) x2, B(Sx) x1, C(Sx) x1, A(S0) x1, in a fixed interleaved order.\n            Primary metrics: success, charged checks, elapsed seconds, tokens; reported as-is.\nModel gpt-6-luna/low, v7.2 limits (8 calls, 240 checks, 900 s, 8 GiB), physics P2, one episode at a time.\n\nRETRY AMENDMENT A2 (written after the validation decision, before any retry episode; frozen with the retry protocol):\n            Validation result: A 4/4, B(S4b) 2/4, C(S4b) 4/4 -> S4b NOT admitted (B has fewer successes than A).\n            Both B failures were engine/infrastructure-level and are kept as scored failures:\n              05459/B_r1 provider tool-use rejection (empty built-in web_search call), 0 checks;\n              02402/B_r2 generated code re-requested one cached rejection 2,992 times (instruction budget).\n            H5: every arm and the note writer use provider.NoWebSearchCodexProvider (web search disabled).\n            H6: shared_api RepeatedRejectionLoop ends a generated-code turn after > max(64, 12 x parts)\n                consecutive cached answers (code arms; the host DFS never re-requests a recorded rejection).\n            Primary design above is unchanged (base bank = S3 by the rule).\n            Exploratory S4b branch (added because S4b was not admitted; reported separately, never pooled with\n            the primary rows): per CAD attempt 1 B(S4b), C(S4b); a second note written from A + B(S4b) + C(S4b)\n            attempt-1 records; attempt 2 B(S4b+note), C(S4b+note) once each.\n            Per-CAD order: first A, B, C, B(S4b), C(S4b); notes; second B note, C note, B S4b-note, C S4b-note,\n            B base, C base, A, B note r2, C note r2.",
+  "physics": "P2_persist_up_to_stable_penetration",
+  "sha256": {
+    "<workspace>/disassembly_repair_v7_2/actors.py": "6f3e710bc2cda8ec0e477b69a13d62a5fdccef7492e1d655f7cbdacb6e96dd05",
+    "<workspace>/disassembly_repair_v7_2/shared_api.py": "88ce05f017b9540813e78bb765235956b14db5b8edfd81872e69b824f02a27c3",
+    "<workspace>/disassembly_repair_v7_2/runtime.py": "2407e398a1d545a0af690bf06b06c2c57741d7abcd7c1ecf0409a4eb69b7d23c",
+    "<workspace>/disassembly_repair_v7_2/controller.py": "78461d7537696b89260483eb2187d3f120ebff379a92f6c1088d6835729466e0",
+    "<workspace>/disassembly_repair_v7_2/contracts.py": "b9d39256d78502d69cd34c9fbfdbf0549c56662a4c4d26767f6585a5ee7a1aa0",
+    "<workspace>/disassembly_repair_v7_2/driver.py": "b530839a386b486d81c4d27dfb2c2aae6d11219598aabc6b7ea9f499523c9438",
+    "<workspace>/disassembly_repair_v7_2/metrics.py": "70be520cdde96365e65a0074586a9b8f05c65d2a6ebf54af002d51a91113f49c",
+    "<workspace>/disassembly_repair_v7_2/campaign.py": "1fd44dfff842f858fbf52d0282432a92776f9356ba8ef588cdc6462290af1b39",
+    "<workspace>/disassembly_repair_v7_2/learning.py": "c72e8cdfffd926b166fa1647d2b92d6b70d9f2c757fff6bfbf84b0dd19e313f6",
+    "<workspace>/disassembly_repair_v7_2/skill_writer.py": "625d6cfec36f1e9e65b2c5e6dae90a64b0389336138d9816afaf82e32e50a478",
+    "<workspace>/disassembly_repair_v7_2/procs.py": "ce5afbb04b4168935192a26a92c1dcb123b4055ea11ef941d11f5c12592ce4a1",
+    "<workspace>/disassembly_repair_v7_2/replay_verify.py": "ebfb4725c52c027794ece34d7193660ca81b3bb3129abad11f1ceea4e6399983",
+    "<workspace>/disassembly_repair_v7_2/provider.py": "0c73e0afce50b579c6848d1e8e5bb88a49ddfb1faa1f96fd47282d8b5b00f6f5",
+    "<workspace>/disassembly_repair_v7_2/memory/S3copy.json": "b7f35ddbef907efaf6c47b96aecef64a8288989dc3e7d7a68f94cb5da48b3321",
+    "<workspace>/disassembly_repair_v7_2/memory/S3copy/physical-disassembly-failure-repair/SKILL.md": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c",
+    "<workspace>/disassembly_repair_v7_2/memory/S3copy/physical-directional-clearance/SKILL.md": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b.json": "1c1d97bc00b337e4b6b164531a507b98894d8116b5ed66b8e02df9ba3ee4f8d5",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/state-aware-action-budgeting/SKILL.md": "a7b1cce1bff8f6d540853152679716ffa08d5a8c7ba4fe9c5bea22613553973a",
+    "<workspace>/disassembly_repair_v7_2/memory/S4b/defer-persistently-blocked-targets/SKILL.md": "d4eb5c60051e580477426ba91afb812edb3af126ced9497fbca3a4d3ea717f0f"
+  }
+}

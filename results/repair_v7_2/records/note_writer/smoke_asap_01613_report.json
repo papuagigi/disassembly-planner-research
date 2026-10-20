@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-20T14:37:56.669276+00:00",
+  "case_id": "smoke_asap_01613",
+  "usage": {
+    "input_tokens": 14567,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1573,
+    "reasoning_output_tokens": 0
+  },
+  "problems": [],
+  "note": "<workspace>/disassembly_repair_v7_2/memory/notes/smoke_asap_01613/assembly-removal-memory/SKILL.md",
+  "writer_errors": [],
+  "inputs": [
+    "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/A/result.json",
+    "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/B/result.json",
+    "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/C/result.json"
+  ]
+}
