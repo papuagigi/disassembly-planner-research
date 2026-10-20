@@ -1,0 +1,1201 @@
+{
+  "utc": "2026-10-20T18:45:29.504351+00:00",
+  "inputs": 55,
+  "episodes": [
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 174,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 103,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 128,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 67,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 140,
+      "removed": 1,
+      "required": 21,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 112,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 160,
+      "removed": 3,
+      "required": 12,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 5,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 113,
+      "removed": 3,
+      "required": 12,
+      "termination": "call_budget_exhausted",
+      "first_accept_check": 7,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 161,
+      "removed": 1,
+      "required": 12,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 15,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": false,
+      "checks": 35,
+      "removed": 11,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 98,
+      "removed": 0,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 81,
+      "removed": 0,
+      "required": 20,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 82,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 13,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 39,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 61,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 25,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 75,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 9,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 130,
+      "removed": 2,
+      "required": 11,
+      "termination": "episode_worker_failed_or_hard_timeout",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 82,
+      "removed": 9,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 9,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 71,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 122,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 19,
+      "removed": 8,
+      "required": 14,
+      "termination": "limit",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 18,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 2,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 107,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 9,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 49,
+      "removed": 10,
+      "required": 10,
+      "termination": "goal_reached",
+      "first_accept_check": 27,
+      "cached_rejections": 0,
+      "llm_calls": 3
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 81,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 3,
+      "cached_rejections": 52,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 135,
+      "removed": 2,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 12,
+      "cached_rejections": 144,
+      "llm_calls": 4
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 124,
+      "removed": 3,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 2,
+      "cached_rejections": 144,
+      "llm_calls": 3
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 119,
+      "removed": 10,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 23,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 100,
+      "removed": 5,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 8,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 101,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 6,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 115,
+      "removed": 0,
+      "required": 11,
+      "termination": "wall_time_budget_exhausted",
+      "first_accept_check": 2,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 108,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 5,
+      "cached_rejections": 144,
+      "llm_calls": 3
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 11,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 3
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 11,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 11,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 0,
+      "removed": 0,
+      "required": 11,
+      "termination": "execution_or_provider_error",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 11,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 11,
+      "removed": 11,
+      "required": 11,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 225,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 7,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 53,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 38,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 83,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 7,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 54,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 8
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 48,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 27,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 3,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 40,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 14,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 3
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 14,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 14,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 42,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 7
+    },
+    {
+      "condition": "C",
+      "success": false,
+      "checks": 0,
+      "removed": 0,
+      "required": 14,
+      "termination": "execution_or_provider_error",
+      "first_accept_check": null,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 14,
+      "removed": 14,
+      "required": 14,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "A",
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 1
+    },
+    {
+      "condition": "B",
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "B",
+      "success": false,
+      "checks": 2,
+      "removed": 1,
+      "required": 12,
+      "termination": "execution_budget_exhausted",
+      "first_accept_check": 1,
+      "cached_rejections": 2992,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    },
+    {
+      "condition": "C",
+      "success": true,
+      "checks": 12,
+      "removed": 12,
+      "required": 12,
+      "termination": "goal_reached",
+      "first_accept_check": 1,
+      "cached_rejections": 0,
+      "llm_calls": 2
+    }
+  ],
+  "total_checks": 3611,
+  "p_accept_given_k_prior_rejections_same_part_same_state": {
+    "0": 0.282,
+    "1": 0.106,
+    "2": 0.136,
+    "3": 0.028,
+    "4": 0.076,
+    "5": 0.152
+  },
+  "tries_by_k": {
+    "0": 1189,
+    "1": 640,
+    "2": 530,
+    "3": 427,
+    "4": 397,
+    "5": 428
+  },
+  "checks_spent_on_parts_with_3plus_rejections_at_state": 1145,
+  "accept_rate_by_feature": {
+    "dir:down": {
+      "rate": 0.0,
+      "tried": 546
+    },
+    "dir:lateral": {
+      "rate": 0.147,
+      "tried": 2177
+    },
+    "dir:up": {
+      "rate": 0.295,
+      "tried": 888
+    },
+    "height:bottom_third": {
+      "rate": 0.032,
+      "tried": 250
+    },
+    "height:middle_third": {
+      "rate": 0.068,
+      "tried": 220
+    },
+    "height:top_third": {
+      "rate": 0.136,
+      "tried": 228
+    },
+    "volume:bottom_third": {
+      "rate": 0.118,
+      "tried": 271
+    },
+    "volume:middle_third": {
+      "rate": 0.052,
+      "tried": 229
+    },
+    "volume:top_third": {
+      "rate": 0.051,
+      "tried": 198
+    }
+  },
+  "blocker_named_part_next_query_accept_rate": {
+    "rate": 0.072,
+    "tried": 1311
+  },
+  "accept_rate_same_direction_as_most_recent_committed_removal_of_ANY_part": {
+    "rate": 0.412,
+    "tried": 828,
+    "meaning": "After some part P was removed along direction label L, later queries on OTHER remaining parts that also used label L were accepted at this rate (assemblies often share one insertion axis)."
+  },
+  "accept_rate_other_directions_after_a_committed_removal": {
+    "rate": 0.091,
+    "tried": 2088,
+    "meaning": "Same situation, queries using any label different from the most recent successful label L."
+  },
+  "per_condition": {
+    "v6:A": {
+      "episodes": 3,
+      "checks": 369,
+      "checks_by_direction_family": {
+        "lateral": 201,
+        "up": 117,
+        "down": 51
+      },
+      "accepted_by_direction_family": {
+        "up": 61,
+        "lateral": 13
+      },
+      "checks_on_parts_with_3plus_rejections": 120,
+      "first_accept_checks": [
+        103,
+        5,
+        3
+      ]
+    },
+    "v6:B": {
+      "episodes": 3,
+      "checks": 339,
+      "checks_by_direction_family": {
+        "lateral": 225,
+        "up": 59,
+        "down": 55
+      },
+      "accepted_by_direction_family": {
+        "up": 3,
+        "lateral": 1
+      },
+      "checks_on_parts_with_3plus_rejections": 165,
+      "first_accept_checks": [
+        67,
+        7,
+        null
+      ]
+    },
+    "v6:C": {
+      "episodes": 3,
+      "checks": 382,
+      "checks_by_direction_family": {
+        "lateral": 253,
+        "down": 62,
+        "up": 67
+      },
+      "accepted_by_direction_family": {
+        "up": 2,
+        "lateral": 2
+      },
+      "checks_on_parts_with_3plus_rejections": 166,
+      "first_accept_checks": [
+        112,
+        15,
+        null
+      ]
+    },
+    "v7.1:A": {
+      "episodes": 3,
+      "checks": 228,
+      "checks_by_direction_family": {
+        "down": 85,
+        "lateral": 95,
+        "up": 48
+      },
+      "accepted_by_direction_family": {
+        "lateral": 27,
+        "up": 10
+      },
+      "checks_on_parts_with_3plus_rejections": 42,
+      "first_accept_checks": [
+        13,
+        9,
+        1
+      ]
+    },
+    "v7.1:B": {
+      "episodes": 3,
+      "checks": 291,
+      "checks_by_direction_family": {
+        "down": 28,
+        "up": 38,
+        "lateral": 225
+      },
+      "accepted_by_direction_family": {
+        "lateral": 27,
+        "up": 3
+      },
+      "checks_on_parts_with_3plus_rejections": 107,
+      "first_accept_checks": [
+        3,
+        3,
+        1
+      ]
+    },
+    "v7.1:C": {
+      "episodes": 3,
+      "checks": 162,
+      "checks_by_direction_family": {
+        "down": 28,
+        "up": 54,
+        "lateral": 80
+      },
+      "accepted_by_direction_family": {
+        "lateral": 22,
+        "up": 7
+      },
+      "checks_on_parts_with_3plus_rejections": 33,
+      "first_accept_checks": [
+        25,
+        9,
+        1
+      ]
+    },
+    "v7.2:A": {
+      "episodes": 7,
+      "checks": 497,
+      "checks_by_direction_family": {
+        "lateral": 322,
+        "up": 118,
+        "down": 57
+      },
+      "accepted_by_direction_family": {
+        "up": 25,
+        "lateral": 63
+      },
+      "checks_on_parts_with_3plus_rejections": 169,
+      "first_accept_checks": [
+        2,
+        3,
+        6,
+        7,
+        1,
+        1,
+        1
+      ]
+    },
+    "v7.2:B": {
+      "episodes": 15,
+      "checks": 811,
+      "checks_by_direction_family": {
+        "lateral": 484,
+        "up": 233,
+        "down": 94
+      },
+      "accepted_by_direction_family": {
+        "up": 78,
+        "lateral": 84
+      },
+      "checks_on_parts_with_3plus_rejections": 254,
+      "first_accept_checks": [
+        9,
+        12,
+        2,
+        2,
+        5,
+        1,
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "v7.2:C": {
+      "episodes": 15,
+      "checks": 532,
+      "checks_by_direction_family": {
+        "lateral": 292,
+        "up": 154,
+        "down": 86
+      },
+      "accepted_by_direction_family": {
+        "up": 73,
+        "lateral": 81
+      },
+      "checks_on_parts_with_3plus_rejections": 89,
+      "first_accept_checks": [
+        27,
+        23,
+        8,
+        1,
+        null,
+        1,
+        1,
+        7,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "first_ten_checks_direction_family": {
+    "v6:A": {
+      "lateral": 21,
+      "up": 5,
+      "down": 4
+    },
+    "v6:B": {
+      "lateral": 18,
+      "up": 8,
+      "down": 4
+    },
+    "v6:C": {
+      "lateral": 26,
+      "down": 2,
+      "up": 2
+    },
+    "v7.1:A": {
+      "down": 12,
+      "up": 9,
+      "lateral": 9
+    },
+    "v7.1:B": {
+      "down": 3,
+      "up": 4,
+      "lateral": 23
+    },
+    "v7.1:C": {
+      "down": 13,
+      "up": 7,
+      "lateral": 10
+    },
+    "v7.2:A": {
+      "lateral": 45,
+      "up": 23,
+      "down": 2
+    },
+    "v7.2:B": {
+      "lateral": 68,
+      "up": 68,
+      "down": 6
+    },
+    "v7.2:C": {
+      "lateral": 53,
+      "up": 59,
+      "down": 18
+    }
+  },
+  "checks_at_known_dead_end_states": 420,
+  "generated_code_execution_errors": {
+    "ValueError: forbidden name: _": 3,
+    "ValueError: augmented assignment is supported only for names": 1,
+    "RepeatedRejectionLoop: 144 consecutive requests repeated rejections already recorded at their exact states (no new physics; last: 2 +x). This code turn was stopped. Before choosing, e": 1,
+    "RepeatedRejectionLoop: 144 consecutive requests repeated rejections already recorded at their exact states (no new physics; last: 0 +z). This code turn was stopped. Before choosing, e": 1,
+    "RepeatedRejectionLoop: 144 consecutive requests repeated rejections already recorded at their exact states (no new physics; last: 0 +x). This code turn was stopped. Before choosing, e": 1
+  },
+  "anonymized_examples": [
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    },
+    {
+      "kind": "enclosed_part",
+      "directions_rejected": 6,
+      "note": "A part rejected in several directions at one exact state; later accepted removals were other parts."
+    }
+  ],
+  "scope": "Counts over every recorded query of development episodes; no CAD IDs, part IDs or reference sequences.",
+  "world": {
+    "per_cad_world_families": {
+      "asap_01613": {
+        "accepted": {
+          "up": 19,
+          "lateral": 11
+        },
+        "tried": {
+          "lateral": 117,
+          "up": 38,
+          "down": 19
+        },
+        "labels_remapped": true
+      },
+      "asap_02402": {
+        "accepted": {
+          "lateral": 25,
+          "up": 36
+        },
+        "tried": {
+          "lateral": 26,
+          "up": 36
+        },
+        "labels_remapped": true
+      },
+      "asap_03012": {
+        "accepted": {
+          "lateral": 36
+        },
+        "tried": {
+          "down": 92,
+          "lateral": 47,
+          "up": 43
+        },
+        "labels_remapped": true
+      },
+      "asap_03114": {
+        "accepted": {
+          "up": 3
+        },
+        "tried": {
+          "lateral": 290,
+          "up": 80,
+          "down": 72
+        },
+        "labels_remapped": true
+      },
+      "asap_05902": {
+        "accepted": {
+          "lateral": 155
+        },
+        "tried": {
+          "up": 212,
+          "lateral": 848,
+          "down": 165
+        },
+        "labels_remapped": true
+      },
+      "asap_05954": {
+        "accepted": {
+          "lateral": 5,
+          "up": 63
+        },
+        "tried": {
+          "lateral": 262,
+          "down": 55,
+          "up": 117
+        },
+        "labels_remapped": true
+      },
+      "asap_06146": {
+        "accepted": {
+          "up": 141,
+          "lateral": 77
+        },
+        "tried": {
+          "up": 316,
+          "down": 102,
+          "lateral": 460
+        },
+        "labels_remapped": false
+      },
+      "asap_06444": {
+        "accepted": {
+          "lateral": 11
+        },
+        "tried": {
+          "up": 46,
+          "down": 41,
+          "lateral": 127
+        },
+        "labels_remapped": true
+      }
+    },
+    "later_accepts_in_first_accept_family": {
+      "rate": 0.733,
+      "n": 531
+    },
+    "accept_rate_after_first_accept": {
+      "other_family": {
+        "rate": 0.112,
+        "tried": 1268
+      },
+      "same_family": {
+        "rate": 0.236,
+        "tried": 1648
+      }
+    },
+    "check_seconds_by_outcome": {
+      "path_collision": {
+        "median": 2.12,
+        "mean": 3.8,
+        "n": 2887
+      },
+      "ok": {
+        "median": 3.76,
+        "mean": 8.62,
+        "n": 582
+      },
+      "unstable_remainder": {
+        "median": 19.61,
+        "mean": 20.44,
+        "n": 142
+      }
+    },
+    "checks_before_first_accept": {
+      "median": 1,
+      "max": 111,
+      "episodes": 51
+    },
+    "meaning": "Families are WORLD directions from direction_vectors_world (+z world is up). Labels are only names."
+  },
+  "same_assembly_notes_v72": [
+    {
+      "assembly": "asap_05902",
+      "base_bank": "S3",
+      "text": "---\nname: \"planner2d-same-assembly-memory\"\ndescription: \"Checkable removal guidance from three first-attempt runs on this assembly geometry.\"\n---\n## Triggers\n\nApply only when the assembly geometry fingerprint matches this assembly. Direction labels use the planner's recorded world vectors: `+z` = `[0, 1, 0]`, `-z` = `[0, -1, 0]`, `+x` = `[1, 0, 0]`, and `+y` = `[0, 0, -1]`.\n\n## Procedure\n\nUse condition A's complete accepted sequence as the main starting order:\n\n1. `11 -z`\n2. `2 +z`\n3. `8 +z`\n4. `10 -z`\n5. `9 -z`\n6. `6 +z`\n7. `7 -z`\n8. `0 +z`\n9. `1 -z`\n10. `3 -z`\n11. `5 -z`\n\nThis order reached all 11 required removals. Check the indicated direction first for each part; after every removal, re-check the next part against the current assembly state. If sequence conditions differ, use the accepted directions as candidate hints rather than assuming they are interchangeable across states. Condition C accepted an alternate early order (`2 +z`, `11 +z`, `7 +z`, `8 +z`, `0 +z`, `10 -z`, `9 -z`, `3 +z`, `6 +z`, `5 +x`) but stopped at 10/11 under the time limit; it provides candidates, not a complete procedure.\n\n## CODE application\n\nNo CODE-specific records were supplied. Apply the sequence above as candidate checks, recording each result and stopping direction sweeps once the current state confirms a removal or rejects that direction. Do not infer a CODE-specific success from these runs.\n\n## GRAPH_DFS application\n\nNo GRAPH_DFS-specific records were supplied. Seed its next search with condition A's complete order and the recorded accepted direction per part. Avoid spending the initial search on directions that were rejected for that part in condition A; re-evaluate only if the assembly state has changed enough to justify a new check.\n\n## Evidence\n\n- Condition A succeeded: 81 checks, 11/11 removed, 684 seconds. Accepted in time order: `11 -z` (check 3), `2 +z` (5), `8 +z` (7), `10 -z` (15), `9 -z` (17), `6 +z` (26), `3 -z` (41), `3 +z` (66), `7 -z` (71), `0 +z` (73), `1 -z` (76), `3 -z` (79), `5 -z` (81). The accepted-removal log contains repeated `3` entries, while the final sequence lists part 3 once; treat the final sequence as the run's removal order and the log as check history, not as proof that part 3 was removed multiple times.\n- Condition B exhausted 900 seconds after 135 checks and 2 removals. Its final sequence was `1 +z`, `6 +z`; its accepted-check log also records `7 +z` and `7 -z`, and repeats checks for 1 and 6. This discrepancy means the accepted-check log is not a reliable final removal sequence for B.\n- Condition C exhausted 900 seconds after 119 checks and 10 removals. Its final sequence is listed above. Its accepted checks occurred at 23, 29, 52, 67, 78, 90, 94, 101, 114, and 117 respectively. The run did not complete the required 11 removals.\n- At the start of A, all six directions were rejected for parts `9`, `0`, `1`, `7`, and `5`. Parts `2`, `8`, `10`, and `11` each had only `-y` rejected; part `6` had `+x` and `-y` rejected; part `3` had `+x`, `+y`, `-x`, and `-y` rejected.\n- Across all runs, repeated full-direction failures were common: A rejected all six for `9`, `0`, `1`, `7`, and `5`; B rejected all six for `2`, `0`, `5`, `8`, `3`, `9`, `10`, and `11`; C rejected all six for `1`, `0`, `9`, and `5`. These are run-specific observations, not universal geometric impossibility claims.\n- Checks/time were spent on exhaustive direction sweeps for those all-six-rejected parts, and B repeated accepted candidates (`1 +z`, `6 +z`) in its accepted-check log. In A, part 3 had accepted checks at 41 and 66 before the final sequence's `3 -z` at 79; these checks did not correspond to its final-sequence position, so avoid treating that log as a simple sequential trace.\n- No direction is shown to never work across the assembly: the runs accepted `+x` for `5` in C, `+z` and `-z` in accepted records, and `+z`/`-z` removals elsewhere. Within a specific recorded run, A rejected `+x` and `+y` for part 3 and all six directions for part 5; B and C have their own part-specific failures as detailed in the records. Treat rejections as state- and run-specific.\n\n## Limits\n\nThese notes summarize only the three supplied first-attempt records. They do not establish that a rejected direction is impossible in every assembly state, explain why a direction was blocked, or identify behavior for any named planner beyond the available records. The A accepted-check history has repeated part 3 entries that do not match its final sequence; B's accepted-check history also conflicts with its final removal sequence. Prefer the explicit final sequence for removal order and use accepted-check entries only as evidence that a candidate was accepted at that check. The condition-specific removal orders differ, so the proposed order is a tested starting point, not a guarantee under different search conditions.\n"
+    },
+    {
+      "assembly": "asap_05902_S4b",
+      "base_bank": "S4b",
+      "text": "---\nname: \"assembly-removal-memory\"\ndescription: \"First-attempt removal guidance for this assembly fingerprint, including accepted moves, failed directions, and search costs.\"\n---\n## Triggers\n\nUse this note only when the planner sees the same assembly geometry fingerprint. Direction labels use the recorded world vectors: `+x` = `[1,0,0]`, `-x` = `[-1,0,0]`, `+y` = `[0,0,-1]`, `-y` = `[0,0,1]`, `+z` = `[0,1,0]`, and `-z` = `[0,-1,0]`.\n\n## Procedure\n\nFor the successful A run, replay the accepted removal order:\n\n1. `11 -z`\n2. `2 +z`\n3. `8 +z`\n4. `10 -z`\n5. `9 -z`\n6. `6 +z`\n7. `7 -z`\n8. `0 +z`\n9. `1 -z`\n10. `3 -z`\n11. `5 -z`\n\nThis sequence removed all 11 required parts in 81 checks. The accepted check numbers were 3, 5, 7, 15, 17, 26, 71, 73, 76, 79, and 81 respectively. Treat the order as the observed successful sequence; intervening accepted moves for part 3 are discussed below.\n\nAt the start, parts `0`, `1`, `5`, `7`, and `9` were rejected in all six directions in A. Parts `2`, `8`, `10`, and `11` had `-y` rejected but were accepted later in one direction each. Part `6` had `+x` and `-y` rejected, and was accepted `+z`. Part `3` had `+x`, `+y`, `-x`, and `-y` rejected, but `-z` was accepted.\n\nDo not spend an opening sweep on every direction for the initially blocked parts. Condition B spent checks on broad rejection lists and removed only three parts before its 900-second budget ended. In A, several parts initially rejected in every direction became removable later, so defer them and retry after the early accepted removals rather than treating initial rejection as permanent.\n\n## CODE application\n\nTry the A sequence directly as the next candidate procedure. Preserve its recorded order and directions. If an attempted move fails in the current state, continue the search rather than concluding that the part is permanently blocked: the records show successful later moves for parts that had six-direction rejection lists at the start.\n\nAvoid repeating `7 +z` or `6 -z` as a preferred move. They appeared in B and C attempts, but neither is part of the complete A sequence; B later accepted `7 -z` and `6 -z` only after many checks, while C accepted `7 +z` and `6 -z` without completing. Evidence does not establish these as globally impossible, only that the successful full sequence uses different directions for those parts.\n\n## GRAPH_DFS application\n\nPrioritize the known successful edges in this order: `11 -z`, `2 +z`, `8 +z`, `10 -z`, `9 -z`, `6 +z`, `7 -z`, `0 +z`, `1 -z`, `3 -z`, `5 -z`. Use the successful prefix to guide branch ordering and avoid spending the wall-time budget on exhaustive direction sweeps for parts that the records show as initially blocked.\n\nPart `3` has an unusual history in A: accepted `-z` at checks 41 and 79, and accepted `+z` at check 66, while the final sequence lists its successful removal once at check 79. The records do not explain why earlier accepted entries did not appear in the final removal sequence. Do not infer that these entries represent three distinct permanent removals; use the final sequence for the known completion order and treat the earlier entries as state-dependent search events.\n\n## Evidence\n\n- A succeeded: `goal_reached`, 81 checks, 11 of 11 removed, 684 seconds. Its final removal sequence is the 11-move procedure above.\n- B exhausted its 900-second budget after 124 checks and 3 of 11 removals. It accepted `1 +z`, `6 +z`, and `7 +z` early, then logged repeated `7 -z` and `6 -z` acceptances at checks 92–120.\n- C exhausted its 900-second budget after 100 checks and 5 of 11 removals. It accepted `6 -z`, `7 +z`, then `1 -z` and `1 +z`, followed by `2 +z`, `10 -z`, and `11 -z`; its final sequence lists five removals.\n- All three records show repeated attempts or acceptances that do not correspond one-to-one with the final removal sequence. Check counts and accepted-event lists are therefore search history, not a simple count of distinct removed parts.\n\n## Limits\n\nOnly first-attempt planner records were provided; there are no reference solutions or geometry details. A is the sole complete run. The B and C rejection lists do not give a reliable complete map of failed directions at the initial state, because their recorded accepted moves conflict with the apparent scope of those lists. The observations support prioritizing A's sequence, but do not prove alternate directions impossible or establish why B and C diverged.\n"
+    },
+    {
+      "assembly": "asap_06146",
+      "base_bank": "S3",
+      "text": "---\nname: \"assembly-removal-memory\"\ndescription: \"Assembly-specific removal guidance derived from the three recorded first attempts.\"\n---\n## Triggers\n\nUse this note only when the assembly geometry fingerprint matches this exact assembly. Direction labels refer to world axes: `+x`, `-x`, `+y`, `-y`, `+z`, and `-z`.\n\n## Procedure\n\nBest next attempt: follow condition B's successful sequence, which reached all 14 removals in 53 checks (121 seconds):\n\n1. `12 +z`\n2. `13 +z`\n3. `11 +z`\n4. `14 +z`\n5. `10 +z`\n6. `9 +z`\n7. `5 +z`\n8. `1 +z`\n9. `3 +z`\n10. `8 +x`\n11. `2 -x`\n12. `6 +x`\n13. `7 +x`\n14. `4 +z`\n\nThese are accepted removals in observed order, not a claim that each is the only valid move at its step. Other successful sequences were recorded: A removed `2 -x, 3 +x, 7 +y, 8 +y, 11 +z, 10 +z, 12 +z, 9 +z, 4 -y, 5 +z, 6 +x, 13 +z, 14 +z, 1 +y`; C removed `11 +z, 14 +z, 1 +z, 7 +y, 3 +x, 10 +z, 12 +x, 13 +z, 2 -x, 8 +y, 9 +z, 6 +x, 5 +z, 4 -y`.\n\nAt the start, condition B accepted `12 +z`, `13 +z`, `11 +z`, and `14 +z` immediately on checks 1–4. Prioritize these four before spending checks exploring directions for other parts.\n\n## CODE application\n\n- Try the recorded B sequence first. It is the lowest-check successful attempt in the records.\n- At the initial state, check the four immediate `+z` removals in B order: `12`, `13`, `11`, `14`.\n- Then continue with B's observed accepted order and directions. Avoid cycling through directions already rejected at the current state; a later state may change what is removable, so treat rejections as state-specific evidence rather than permanent impossibility.\n- If following a different sequence, the records support `2 -x`, `3 +x`, `7 +y`, `8 +y`, `11 +z`, `10 +z`, `12 +z`, `9 +z`, `4 -y`, `5 +z`, `6 +x`, `13 +z`, `14 +z`, and `1 +y` as accepted moves in A, and the C sequence above as another complete route.\n\n## GRAPH_DFS application\n\n- Use the B order as the preferred path through the removal-state graph: it is the observed successful route with the fewest checks.\n- Preserve the exact direction per observed edge. In particular, B uses `8 +x`, `2 -x`, `6 +x`, and `7 +x` late in the sequence; the successful runs also show that those parts can have other accepted directions under different states.\n- If a candidate path stalls, use the alternate accepted sequences from A or C as evidence for alternative state transitions. Do not assume the final-removal sequences from separate conditions can be combined into a single valid path.\n\n## Evidence\n\nAll three records reached the goal and removed 14 of 14 parts. Check counts and elapsed times were: A, 225 checks / 637 seconds; B, 53 / 121; C, 83 / 435. B is best on both recorded measures.\n\nParts with all six directions rejected at the initial state in at least one recorded condition:\n\n- A: `1`, `4`, `5`, `6`, `9`, `10`.\n- C: `1`, `4`, `5`, `6`.\n- B: no part had all six directions listed as rejected.\n\nThus `1`, `4`, `5`, and `6` were each blocked in every direction at the start in both A and C, yet were later removed in all successful attempts. Their initial blockage is not permanent. Parts `9` and `10` were blocked in every direction at the start in A, but later removed there as well.\n\nDirections never accepted for a given part across these three successful records (based on all accepted removals and listed rejections):\n\n- `1`: `-x`, `-y`, `-z` (accepted `+y` in A, `+z` in B and C).\n- `2`: `+y`, `-y`, `-z` (accepted `-x` in all runs; also `+x` in C).\n- `3`: `-x`, `-y`, `-z` (accepted `+x` in A and C, `+z` in B).\n- `4`: `-x` (accepted `-y` in A/C, `+z` in B).\n- `5`: `-x`, `-y`, `-z` (accepted `+z` in all runs).\n- `6`: `-x`, `-y`, `-z` (accepted `+x` in all runs).\n- `7`: `-y`, `-z` (accepted `+y` in A/C, `+x` in B).\n- `8`: `-x`, `-y`, `-z` (accepted `+y` in A/C, `+x` in B).\n- `9`: `-x`, `-y` (accepted `+z` in all runs).\n- `10`: `-x`, `-y`, `-z` (accepted `+z` in all runs).\n- `11`: `-x`, `-y`, `-z` (accepted `+z` in all runs).\n- `12`: `-y`, `-z` (accepted `+z` in A/B, `+x` in C).\n- `13`: `-x`, `-y`, `-z` (accepted `+z` in all runs).\n- `14`: `-x`, `-y`, `-z` (accepted `+z` in all runs).\n\nThere is no direction label that was never accepted for every part: across the assembly, each of the six labels appears in at least one accepted removal. For `4`, `-x` is the only direction never accepted in these records.\n\nChecks are cumulative attempt check numbers. The accepted moves in A occurred as late as checks 101–225; C's final five accepted moves were at checks 59, 76, 79, 81, and 83. This indicates substantial search/check overhead relative to B, especially late in A and C. The records do not identify individual failed checks, so they cannot show exactly which rejected direction checks consumed the time. B also had gaps before accepted removals (`10` at 12, `9` at 20, `5` at 27, `1` at 34, `3` at 41), so even the best route involved some unsuccessful checks.\n\n## Limits\n\nThese are observations from only three first-attempt records for this geometry fingerprint. Rejected-direction lists are reported per condition, and the records do not specify the state at each rejection; do not treat them as globally impossible directions. “Never accepted” means absent from all three accepted-removal sequences, not proven geometrically impossible. Check counts and elapsed time are observed outcomes; the cause and exact placement of failed checks are not recoverable from the supplied data.\n"
+    },
+    {
+      "assembly": "asap_06146_S4b",
+      "base_bank": "S4b",
+      "text": "---\nname: \"assembly-removal-memory\"\ndescription: \"Assembly-specific removal guidance derived from the three recorded first attempts.\"\n---\n## Triggers\n\nUse this note only when the same assembly geometry fingerprint is encountered. Directions are world-axis labels: +x=[1,0,0], -x=[-1,0,0], +y=[0,1,0], -y=[0,-1,0], +z=[0,0,1], -z=[0,0,-1].\n\n## Procedure\n\nTry the successful 14-step sequence from condition B first; it reached the goal in 38 checks and 95 seconds:\n\n1. 11 +z\n2. 10 +z\n3. 12 +z\n4. 13 +z\n5. 14 +z\n6. 1 +z\n7. 3 +z\n8. 9 +z\n9. 4 +z\n10. 5 +z\n11. 6 +x\n12. 7 +x\n13. 8 +x\n14. 2 -x\n\nThe other successful attempts confirm a recurring pattern: remove the +z-accessible group before the +x group (6, 7, 8), and remove part 2 toward -x. If a planned step fails, re-check current geometry before changing direction: acceptance varies with assembly state. Condition C also succeeded with this order: 13, 14, 11, 12, 10, 9, 4, 5, 1, 3 all +z; then 6 +x, 2 -x, 7 +x, 8 +x.\n\n## CODE application\n\nPrioritize the condition B sequence as a compact candidate order. Its recorded accepted checks were 3, 5, 7, 9, 11, 12, 14, 21, 23, 25, 31, 33, 35, and 38. In condition C, the same late-stage direction choices worked, with parts 6 +x and 2 -x accepted at checks 47 and 52 before 7 +x and 8 +x. Avoid spending checks on directions that were rejected across repeated attempts (see Evidence).\n\n## GRAPH_DFS application\n\nUse successful removals to guide branch ordering, not as a proof that a branch is impossible: rejected directions were recorded at particular intermediate states. The repeated successful tail is 6 +x, 7 +x, 8 +x, with 2 -x also successful (condition B places it last; condition C places it between 6 and 7). Keep +z candidates early for parts 11, 10, 12, 13, 14, 9, 4, and 5; part 1 and part 3 also succeeded along +z in B and C. Re-evaluate candidates after each removal.\n\n## Evidence\n\nAll three conditions reached the goal and removed 14 of 14 parts.\n\n- Condition A: 225 checks, 637 seconds. Accepted sequence: 2 -x, 3 +x, 7 +y, 8 +y, 11 +z, 10 +z, 12 +z, 9 +z, 4 -y, 5 +z, 6 +x, 13 +z, 14 +z, 1 +y.\n- Condition B: 38 checks, 95 seconds. Accepted sequence is the recommended sequence above.\n- Condition C: 54 checks, 173 seconds. Accepted sequence is listed under Procedure.\n- Parts 1, 4, 5, 6, 9, and 10 were each rejected in all six directions in condition A. This marks broad initial blockage in that attempt, though some later succeeded after the state changed.\n- +z was rejected for parts 1, 4, 5, 6, and 10 in both B and C, yet each part was eventually accepted in +z in at least one of those conditions (parts 1, 4, 5 in B; 6 and 10 in C). Treat these as state-dependent failures, not permanently invalid directions.\n- No accepted removal used -z in any condition. It was explicitly rejected for parts 1, 7, and 8 in C; no broader -z rejection record is available.\n- Checks between accepted removals show the costly stretches: A had gaps of up to 37 checks (between 8 and 11); B had gaps up to 7 (between 3 and 9); C had gaps up to 10 (between 14 and 9). Records do not identify the specific rejected checks within those gaps.\n\n## Limits\n\nThese are first-attempt planner records, not reference solutions. They provide no per-check trace beyond accepted check indices and the listed per-part rejected directions, so the exact wasted candidate checks and the conditions that caused each rejection cannot be reconstructed. Condition labels do not establish which search strategy produced each run. The recommended order is the fastest recorded successful sequence, not a guarantee of identical performance.\n"
+    }
+  ],
+  "v72_outcomes_of_previous_documents": {
+    "S4b": "Up>lateral>down prior + reuse latest successful label: on an up-axis development CAD C needed 16 checks (A 46-177); on 05902 (all removals lateral, labels remapped) B and C applied it to LABEL names and ran out of 900 s.",
+    "S3": "Retry other directions of the same part: B swept all six directions evenly (6.6 % lateral accept rate on 05902).",
+    "notes": "Exact-assembly notes reduced the second attempt to the minimum checks in 9 of 10 successes; one B program ignored the note and reused a generic loop from a general document."
+  },
+  "input_paths": [
+    "disassembly_final_v6/outputs/evaluation/trials/asap_03114/A/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_03114/B/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_03114/C/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_05954/A/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_05954/B/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_05954/C/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_06444/A/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_06444/B/result.json",
+    "disassembly_final_v6/outputs/evaluation/trials/asap_06444/C/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_03012/A/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_03012/B/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_03012/C/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_05902/A/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_05902/B/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_05902/C/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_06146/A/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_06146/B/result.json",
+    "disassembly_repair_v7/outputs/pilot/trials/asap_06146/C/result.json",
+    "disassembly_repair_v7_2/outputs/collection/asap_01613/A/result.json",
+    "disassembly_repair_v7_2/outputs/collection/asap_01613/B/result.json",
+    "disassembly_repair_v7_2/outputs/collection/asap_01613/C/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/first_A/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/first_B/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/first_B_S4b/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/first_C/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/first_C_S4b/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_A_none_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_B_S4bnote_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_B_base_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_B_note_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_B_note_r2/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_C_S4bnote_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_C_base_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_C_note_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_05902/second_C_note_r2/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/first_A/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/first_B/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/first_B_S4b/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/first_C/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/first_C_S4b/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_A_none_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_B_S4bnote_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_B_base_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_B_note_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_B_note_r2/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_C_S4bnote_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_C_base_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_C_note_r1/result.json",
+    "disassembly_repair_v7_2/outputs/retry/asap_06146/second_C_note_r2/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/A_r1/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/A_r2/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/B_r1/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/B_r2/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/C_r1/result.json",
+    "disassembly_repair_v7_2/outputs/validation/asap_02402/C_r2/result.json"
+  ],
+  "input_split": {
+    "s5_input_cads": [
+      "asap_05902",
+      "asap_06146",
+      "asap_03012",
+      "asap_01613",
+      "asap_02402"
+    ],
+    "validation_cads_held_out": [
+      "asap_05459",
+      "asap_02406",
+      "asap_07375",
+      "asap_03674"
+    ]
+  }
+}

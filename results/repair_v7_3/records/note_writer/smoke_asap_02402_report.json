@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-20T18:52:36.368643+00:00",
+  "case_id": "smoke_asap_02402",
+  "usage": {
+    "input_tokens": 15018,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 900,
+    "reasoning_output_tokens": 0
+  },
+  "problems": [],
+  "note": "<workspace>/disassembly_repair_v7_3/memory/notes/smoke_asap_02402/assembly-note-upward-and-sideways-disassembly/SKILL.md",
+  "writer_errors": [],
+  "inputs": [
+    "<workspace>/disassembly_repair_v7_3/outputs/smoke/asap_02402/A/result.json",
+    "<workspace>/disassembly_repair_v7_3/outputs/smoke/asap_02402/B/result.json",
+    "<workspace>/disassembly_repair_v7_3/outputs/smoke/asap_02402/C/result.json"
+  ],
+  "recorded_sequence_source": {
+    "condition": "A",
+    "success": true,
+    "length": 12
+  }
+}

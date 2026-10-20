@@ -1,0 +1,271 @@
+{
+  "utc": "2026-10-20T19:37:08.834150+00:00",
+  "base_call": 1,
+  "refinements": [
+    {
+      "call": 2,
+      "documents": [
+        {
+          "name": "world-family-disassembly-search",
+          "description": "A state-aware search procedure that discovers useful world-direction families, avoids repeated failures, and backtracks from known dead ends.",
+          "markdown_body": "## Triggers\n\nUse for full disassembly of an unfamiliar assembly. At each state, read `direction_vectors_world` and classify labels by their world vectors: up has positive world z, down has negative world z, and lateral has near-zero world z. Direction labels are names only.\n\nIf a loaded exact-assembly document has an ID starting with `assembly-note-`, put its Recorded sequence first and check each step in order. Switch to general search only when a recorded step is rejected or the sequence ends. Use other same-assembly notes only for cross-assembly patterns; never copy their part IDs or sequences.\n\n## Procedure\n\n1. Read the available physical procedure document before the first action. Inspect the snapshot, nonfixed parts, `allowed_directions`, `state_key`, `search_ledger`, and checkpoints.\n2. If an exact-assembly Recorded sequence is loaded, try its next action first at each matching state. On rejection, leave sequence replay and continue with general search.\n3. Discover the working world family with a small probe of available actions. Do not spend early checks on down-family actions: down had zero acceptances in 546 recorded tries. Probe up and lateral; evidence shows that the working family varies by assembly.\n4. After a stable removal, rank other-part actions in its world family first. Recompute each label's family from `direction_vectors_world`. Across the records, 73.3% of later acceptances were in the first accepted family; the same direction label on another part was accepted in 41.2% of post-removal queries versus 9.1% for other labels.\n5. Use `remove` when ready to commit. It validates path and stability in one charged check. Avoid a separate `check` followed by `remove` for the same candidate. A path-collision result may omit stability; access nested stability with `feedback.get('stability') or {}`.\n6. Track rejections by exact `state_key`, part, and direction. Do not request an action already rejected at that exact state; the cache cannot change deterministic physics. After three or more rejections for a part at one state, defer it while other candidates remain. Reconsider it after the state changes. Do not immediately choose a part named as a blocker: those next queries were accepted in 7.2% of 1,311 tries.\n7. When the current state's preferred-family candidates are exhausted, try untested actions from the other non-down family. Rank parts with fewer current-state rejections first. Avoid exhausting one part's directions while other parts have untested actions. After every committed removal, refresh the snapshot and ledger and rank again from the latest accepted family.\n8. Use `search_ledger` to identify exhausted states and accepted edges into dead ends. Do not re-enter a `known_dead_end`. When current actions are exhausted, restore a resumable checkpoint with untested actions. Restore does not refund checks, time, or model calls.\n9. Continue until at most one part remains. Do not stop when `target_id` is removed. Keep within the shared limits of 240 charged checks, 900 seconds, and 8 model calls. Unstable-remainder checks had a 19.61-second median, versus 2.12 seconds for path collisions, so avoid broad low-yield probing that can trigger stability simulation.\n\n## CODE application\n\nPut any loaded exact-assembly Recorded sequence at the start of the program, before generic search. For generic search, derive families from world z, then maintain the latest accepted family and label. Use the ledger and exact state key to skip rejected actions and known-dead-end edges. Defer a part after three state-local rejections when alternatives exist. Recompute candidates after each removal or restore.\n\nSearch must retain alternatives, not just the latest successful branch. When a child becomes a known dead end, restore the nearest resumable checkpoint with untested actions and continue there. Do not stop after one branch fails or after one pass through the current state's candidates. Avoid loops over cached answers; they do not add feedback or physics progress.\n\n## Reference implementation\n\n```python\ndef run(api):\n    latest_label = ''\n    latest_family = ''\n    initial = api.snapshot()\n    vectors = initial.get('direction_vectors_world', {})\n    family = {}\n    for label in vectors:\n        vec = vectors[label]\n        z = vec[2]\n        if z > 0.5:\n            family[label] = 'up'\n        elif z < -0.5:\n            family[label] = 'down'\n        else:\n            family[label] = 'lateral'\n    attempted = {}\n    while True:\n        snap = api.snapshot()\n        if snap.get('remaining_part_count', len(snap.get('remaining_parts', []))) <= 1:\n            return\n        state = snap.get('state_key', '')\n        ledger = snap.get('search_ledger') or {}\n        current = ledger.get('current') or {}\n        rows = ledger.get('states', [])\n        if current.get('known_dead_end'):\n            checkpoints = api.checkpoints()\n            restored = False\n            for cp in reversed(checkpoints):\n                key = cp.get('state_key', '')\n                row = None\n                for item in rows:\n                    if item.get('state_key') == key:\n                        row = item\n                if row and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                    api.restore(cp.get('handle'))\n                    restored = True\n                    break\n            if restored:\n                continue\n            return\n        feedback = snap.get('current_state_feedback', [])\n        rejected = set()\n        reject_count = {}\n        for item in feedback:\n            if not item.get('valid'):\n                pid = item.get('part_id', '')\n                direction = item.get('direction', '')\n                rejected.add((pid, direction))\n                reject_count[pid] = reject_count.get(pid, 0) + 1\n        attempted_here = attempted.get(state, set())\n        actions = []\n        for part in snap.get('remaining_parts', []):\n            if part.get('fixed'):\n                continue\n            pid = part.get('id', '')\n            for direction in part.get('allowed_directions', []):\n                pair = (pid, direction)\n                if pair in rejected or pair in attempted_here:\n                    continue\n                actions.append((pid, direction, family.get(direction, 'lateral')))\n        if not actions:\n            checkpoints = api.checkpoints()\n            restored = False\n            for cp in reversed(checkpoints):\n                key = cp.get('state_key', '')\n                row = None\n                for item in rows:\n                    if item.get('state_key') == key:\n                        row = item\n                if row and key != state and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                    api.restore(cp.get('handle'))\n                    restored = True\n                    break\n            if restored:\n                continue\n            return\n        preferred = latest_family\n        if not preferred:\n            counts = {'up': 0, 'lateral': 0, 'down': 0}\n            for pid, direction, fam in actions:\n                counts[fam] = counts.get(fam, 0) + 1\n            if counts.get('up', 0) and counts.get('lateral', 0):\n                preferred = 'up'\n            elif counts.get('up', 0):\n                preferred = 'up'\n            elif counts.get('lateral', 0):\n                preferred = 'lateral'\n        def rank(action):\n            pid, direction, fam = action\n            if preferred and fam == preferred:\n                fam_rank = 0\n            elif fam == 'up':\n                fam_rank = 1\n            elif fam == 'lateral':\n                fam_rank = 2\n            else:\n                fam_rank = 3\n            if latest_label and direction == latest_label:\n                label_rank = 0\n            else:\n                label_rank = 1\n            deferred = 1 if reject_count.get(pid, 0) >= 3 else 0\n            return (deferred, fam_rank, label_rank, reject_count.get(pid, 0), pid, direction)\n        actions = sorted(actions, key=rank)\n        if state not in attempted:\n            attempted[state] = set()\n        moved = False\n        for pid, direction, fam in actions:\n            attempted[state].add((pid, direction))\n            result = api.remove(pid, direction)\n            if result.get('valid'):\n                latest_label = direction\n                latest_family = fam\n                moved = True\n                break\n        if moved:\n            continue\n        fresh = api.snapshot()\n        fresh_ledger = fresh.get('search_ledger') or {}\n        fresh_rows = fresh_ledger.get('states', [])\n        checkpoints = api.checkpoints()\n        restored = False\n        for cp in reversed(checkpoints):\n            key = cp.get('state_key', '')\n            row = None\n            for item in fresh_rows:\n                if item.get('state_key') == key:\n                    row = item\n            if row and key != fresh.get('state_key', '') and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                api.restore(cp.get('handle'))\n                restored = True\n                break\n        if not restored:\n            return\n\nrun(api)\n```\n\n## GRAPH_DFS application\n\nRank actions from world vectors. Probe up and lateral to discover the assembly's working family; defer down-family actions. After a stable removal, rank the latest accepted family first, with the same label on other parts near the top. Suppress actions rejected at the current exact state and defer parts after three rejections while other candidates remain. Use ledger dead-end flags and resumable checkpoints to backtrack, and continue exploring alternatives after a branch fails. If an exact-assembly Recorded sequence is loaded, rank its next action first until rejection or sequence end.\n\n## Evidence\n\n- The development set recorded **3,611 checks across 55 inputs**. Acceptance was **0.0% for down (546 tries)**, **14.7% for lateral (2,177 tries)**, and **29.5% for up (888 tries)**.\n- Assembly variation is material: one assembly accepted only lateral actions (**36 accepted**), another only up (**3 accepted**), and others accepted both. Later acceptances remained in the first accepted family **73.3% of the time (n=531)**.\n- After a committed removal, the same direction label on a different part was accepted **41.2% (828 tries)**, versus **9.1% (2,088 tries)** for other labels.\n- Acceptance after **0, 1, 2, 3, 4, and 5** prior rejections of the same part at the same state was **28.2% (1,189), 10.6% (640), 13.6% (530), 2.8% (427), 7.6% (397), and 15.2% (428)**. At least **1,145 checks** were spent on parts with three or more rejections at a state. The rates are non-monotonic; deferral is a budget heuristic, not proof of impossibility.\n- The next query naming a blocker was accepted in **7.2% of 1,311 tries**.\n- Median check time was **2.12 seconds for path collisions (n=2,887)**, **3.76 seconds for accepted outcomes (n=582)**, and **19.61 seconds for unstable remainders (n=142)**.\n- Development recorded **420 checks at known dead-end states**. The exact-state rejection cache avoids physics work for repeats, but restores refund no costs.\n- Matching exact-assembly notes reduced the second attempt to minimum checks in **9 of 10 successes** in the supplied summary. This supports trying a matching Recorded sequence first, not copying it to another assembly.\n\n## Limits\n\nThese aggregate observations are not controlled causal estimates or guarantees for unseen assemblies. Family rates vary across assemblies, and a lower aggregate rate may still identify the only working family. Rejections, accepted edges, and dead ends apply to exact states. Restore exposes saved states but costs time and does not refund budgets. The reference program is generic and contains no assembly-specific sequence; when a matching note is loaded, its Recorded sequence must be tried before generic search."
+        }
+      ],
+      "problems": [],
+      "usage": {
+        "input_tokens": 30042,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2812,
+        "reasoning_output_tokens": 0
+      },
+      "gate": {
+        "utc": "2026-10-20T19:18:38.789520+00:00",
+        "passed": true,
+        "successes": 4,
+        "rows": [
+          {
+            "case_id": "asap_05902",
+            "success": false,
+            "removed": 1,
+            "checks": 240,
+            "seconds": 1168.5,
+            "error": {
+              "type": "BudgetLimit",
+              "message": "shared checker budget exhausted"
+            },
+            "ended": "error",
+            "first_accept_check": 17,
+            "untested_actions_at_end": 41,
+            "resumable_checkpoints_at_end": 2,
+            "known_dead_end_states": 4,
+            "accepted_by_world_family": {
+              "lateral": 9
+            },
+            "queried_by_world_family": {
+              "up": 45,
+              "lateral": 161,
+              "down": 34
+            }
+          },
+          {
+            "case_id": "asap_06146",
+            "success": true,
+            "removed": 14,
+            "checks": 36,
+            "seconds": 84.5,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 3,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 15,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 10,
+              "lateral": 4
+            },
+            "queried_by_world_family": {
+              "up": 29,
+              "lateral": 7
+            }
+          },
+          {
+            "case_id": "asap_03012",
+            "success": true,
+            "removed": 12,
+            "checks": 40,
+            "seconds": 165.8,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 13,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 13,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "lateral": 12
+            },
+            "queried_by_world_family": {
+              "up": 12,
+              "lateral": 28
+            }
+          },
+          {
+            "case_id": "asap_01613",
+            "success": true,
+            "removed": 10,
+            "checks": 31,
+            "seconds": 103.8,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 3,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 11,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 9,
+              "lateral": 1
+            },
+            "queried_by_world_family": {
+              "up": 30,
+              "lateral": 1
+            }
+          },
+          {
+            "case_id": "asap_02402",
+            "success": true,
+            "removed": 12,
+            "checks": 12,
+            "seconds": 5.8,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 1,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 13,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 12
+            },
+            "queried_by_world_family": {
+              "up": 12
+            }
+          }
+        ],
+        "rule": ">= 4 of 5 full disassemblies within 240 checks (model-free reference implementation)"
+      }
+    },
+    {
+      "call": 3,
+      "documents": [
+        {
+          "name": "world-family-disassembly-search",
+          "description": "A state-aware search procedure that discovers useful world-direction families, avoids repeated failures, and backtracks from known dead ends.",
+          "markdown_body": "## Triggers\n\nUse for full disassembly of an unfamiliar assembly. Read `direction_vectors_world` and classify each label by its world vector: up has positive world z, down has negative world z, and lateral has near-zero world z. Labels are names; never infer geometry from them.\n\nIf a loaded exact-assembly document has an ID starting with `assembly-note-`, try its Recorded sequence first, checking each step in order and switching to general search only if a step is rejected or the sequence ends. Use other same-assembly notes only for cross-assembly patterns; never copy their part IDs or sequences.\n\n## Procedure\n\n1. Read available physical procedure documents before the first action. Inspect the snapshot, nonfixed parts, `allowed_directions`, `state_key`, search ledger, and checkpoints.\n2. If an exact-assembly Recorded sequence is loaded, try its next recorded action first at each state. A rejection ends replay; continue with general search.\n3. Discover the working world family with a small probe of available actions. Do not probe down early: it had **0 acceptances in 546 tries**. Probe up and lateral; the evidence includes assemblies where only lateral worked and one where only up worked.\n4. After the first accepted stable removal, prioritize its world family for other parts. **73.3% of later acceptances** were in the first accepted family. Prioritize the latest accepted direction label on other parts as well: it succeeded in **41.2%** of queries, versus **9.1%** for other labels. Recompute world families from the vectors; labels remain names.\n5. Use `remove` when ready to commit. It validates path and stability in one charged check; checking first would cost two. On rejection, use the reported feedback. Stability may be absent for a path collision; access it as `feedback.get('stability') or {}`.\n6. Track actions by exact state, part, and direction. Never request an action already rejected at that exact state. After three rejections for a part at one state, defer it while other candidates remain; resume after a state change. Do not immediately query the named blocker: those queries succeeded in **7.2% of 1,311 tries**.\n7. Continue probing untested up and lateral actions, favoring parts with fewer rejections at the current state. Do not exhaust one part's directions while other candidates remain. After each committed removal, refresh the snapshot and ledger, then rank again using the latest accepted family and label.\n8. Use the ledger to avoid states marked `known_dead_end`. When the current state has no useful untested actions, restore a resumable checkpoint with untested actions. Restore does not refund checks, time, or calls. Avoid spending checks on a branch whose accepted edge leads to a known dead end.\n9. Continue until at most one part remains, not merely until `target_id` is removed. Keep within 240 charged checks, 900 seconds, and 8 model calls. Unstable-remainder checks had a **19.61 s median**, compared with **2.12 s** for path collisions, so prioritize evidence-backed candidates over broad probing.\n\n## CODE application\n\nPut any loaded exact-assembly Recorded sequence before the generic loop. Use iterative search, current-state feedback, `search_ledger`, and `state_key` to skip rejected actions, defer parts with at least three rejections, and avoid known-dead-end children. Maintain the latest successful family and label. When the current state is exhausted, restore a resumable checkpoint with untested actions. Do not stop at a dead end if another resumable state exists, and do not return merely because the same state was seen before: return only when at most one part remains or no resumable branch remains. The reference program implements this search and includes bounded family discovery and checkpoint recovery.\n\n## Reference implementation\n\n```python\ndef run(api):\n    latest_label = ''\n    latest_family = ''\n    initial = api.snapshot()\n    vectors = initial.get('direction_vectors_world', {})\n    family = {}\n    for label in vectors:\n        vec = vectors[label]\n        if vec[2] > 0.5:\n            family[label] = 'up'\n        elif vec[2] < -0.5:\n            family[label] = 'down'\n        else:\n            family[label] = 'lateral'\n    probe_done = set()\n    while True:\n        snap = api.snapshot()\n        parts = snap.get('remaining_parts', [])\n        if snap.get('remaining_part_count', len(parts)) <= 1:\n            return\n        state = snap.get('state_key', '')\n        ledger = snap.get('search_ledger') or {}\n        current = ledger.get('current') or {}\n        rows = ledger.get('states', [])\n        if current.get('known_dead_end'):\n            choices = api.checkpoints()\n            restored = False\n            for cp in reversed(choices):\n                key = cp.get('state_key', '')\n                row = None\n                for item in rows:\n                    if item.get('state_key') == key:\n                        row = item\n                if row and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                    api.restore(cp.get('handle'))\n                    restored = True\n                    break\n            if restored:\n                continue\n            return\n        rejected = set()\n        rejects_by_part = {}\n        for item in snap.get('current_state_feedback', []):\n            if not item.get('valid'):\n                pid = item.get('part_id', '')\n                direction = item.get('direction', '')\n                rejected.add((pid, direction))\n                rejects_by_part[pid] = rejects_by_part.get(pid, 0) + 1\n        accepted_dead = set()\n        for row in rows:\n            if row.get('state_key') == state:\n                for edge in row.get('accepted_edges', []):\n                    if edge.get('child_known_dead_end'):\n                        accepted_dead.add((edge.get('part_id'), edge.get('direction')))\n        actions = []\n        for part in parts:\n            if part.get('fixed'):\n                continue\n            pid = part.get('id', '')\n            for direction in part.get('allowed_directions', []):\n                if (pid, direction) in rejected or (pid, direction) in accepted_dead:\n                    continue\n                actions.append((pid, direction, family.get(direction, 'lateral')))\n        if not actions:\n            choices = api.checkpoints()\n            restored = False\n            for cp in reversed(choices):\n                key = cp.get('state_key', '')\n                row = None\n                for item in rows:\n                    if item.get('state_key') == key:\n                        row = item\n                if row and key != state and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                    api.restore(cp.get('handle'))\n                    restored = True\n                    break\n            if restored:\n                continue\n            return\n        if not latest_family:\n            eligible = []\n            for action in actions:\n                if action[2] == 'down':\n                    continue\n                key = (state, action[2])\n                if key not in probe_done:\n                    eligible.append(action)\n            actions = eligible if eligible else actions\n        def rank(action):\n            pid, direction, fam = action\n            if latest_label and direction == latest_label:\n                recent = 0\n            else:\n                recent = 1\n            if latest_family and fam == latest_family:\n                family_rank = 0\n            elif fam == 'up':\n                family_rank = 1\n            elif fam == 'lateral':\n                family_rank = 2\n            else:\n                family_rank = 3\n            deferred = 1 if rejects_by_part.get(pid, 0) >= 3 else 0\n            return (deferred, recent, family_rank, rejects_by_part.get(pid, 0), pid, direction)\n        actions = sorted(actions, key=rank)\n        committed = False\n        for pid, direction, fam in actions:\n            probe_done.add((state, fam))\n            result = api.remove(pid, direction)\n            if result.get('valid'):\n                latest_label = direction\n                latest_family = fam\n                committed = True\n                break\n        if committed:\n            continue\n        fresh = api.snapshot()\n        fresh_ledger = fresh.get('search_ledger') or {}\n        fresh_rows = fresh_ledger.get('states', [])\n        choices = api.checkpoints()\n        restored = False\n        for cp in reversed(choices):\n            key = cp.get('state_key', '')\n            row = None\n            for item in fresh_rows:\n                if item.get('state_key') == key:\n                    row = item\n            if row and key != fresh.get('state_key', '') and not row.get('known_dead_end') and row.get('untested_action_count', 0) > 0:\n                api.restore(cp.get('handle'))\n                restored = True\n                break\n        if not restored:\n            return\n\nrun(api)\n```\n\n## GRAPH_DFS application\n\nAt each state, rank only available actions. Initially probe up and lateral to discover the working family; defer down. After the first accepted removal, rank the latest successful family and direction label first. Skip exact-state rejections and accepted edges into known dead ends; defer parts with at least three current-state rejections. Use resumable checkpoints with untested actions when a branch is exhausted. If an exact-assembly Recorded sequence is loaded, rank its next action first until rejection or sequence completion.\n\n## Evidence\n\n- The development set recorded **3,611 checks across 55 inputs**. World-family acceptance was **0.0% for down (546 tries)**, **14.7% for lateral (2,177 tries)**, and **29.5% for up (888 tries)**.\n- By assembly, one example accepted only lateral actions (**36 accepted**) and another only up (**3 accepted**). Across assemblies, **73.3% of later acceptances** were in the first accepted family (**n=531**).\n- After a committed removal, the same direction label on another part was accepted **41.2% (828 tries)**, versus **9.1% (2,088 tries)** for other labels.\n- Acceptance after **0, 1, 2, 3, 4, and 5** prior same-part, same-state rejections was **28.2% (1,189), 10.6% (640), 13.6% (530), 2.8% (427), 7.6% (397), and 15.2% (428)**. Checks spent on parts with at least three such rejections totaled **1,145**; the threshold supports deferral, not permanent exclusion.\n- Queries naming the immediately preceding blocker next were accepted **7.2% (1,311 tries)**.\n- Median check time was **19.61 s for unstable remainders (n=142)**, **3.76 s for accepted checks (n=582)**, and **2.12 s for path collisions (n=2,887)**.\n- **420 checks** were spent at known-dead-end states. The ledger and dead-end re-entry guard provide state-specific information for avoiding those branches. Exact-state rejection repeats are cached; restore does not refund costs.\n- Exact-assembly notes reduced the second attempt to minimum checks in **9 of 10 successes** in the supplied summary.\n- In the model-free reference gate, the program completed **4 of 5** development assemblies. The failing run removed **2 parts in 79 checks over 575 s**, with its first acceptance at check **17**. A later attempt on the same case removed **1 part in 240 checks over 1,168.5 s**, with **41 untested actions**, **2 resumable checkpoints**, and **4 known-dead-end states** at termination. Its accepted removals were lateral (**9**); queried actions were up (**45**), lateral (**161**), and down (**34**). These results support limiting early family probes, using checkpoints for alternative branches, and avoiding early unstable-remnant queries.\n\n## Limits\n\nThese aggregate observations are not controlled causal estimates or guarantees. A family with a lower aggregate rate may be the only working family for an assembly. Rejections and dead ends apply to exact states. The supplied gate rows do not identify which action choices caused the failing branch or establish a universally better recovery order. The reference program cannot guarantee completion within the episode budgets; its behavior should be judged by observed checker results and ledger state."
+        }
+      ],
+      "problems": [],
+      "usage": {
+        "input_tokens": 30733,
+        "cached_input_tokens": 11008,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2845,
+        "reasoning_output_tokens": 0
+      },
+      "gate": {
+        "utc": "2026-10-20T19:37:08.832942+00:00",
+        "passed": true,
+        "successes": 4,
+        "rows": [
+          {
+            "case_id": "asap_05902",
+            "success": false,
+            "removed": 1,
+            "checks": 240,
+            "seconds": 1084.5,
+            "error": {
+              "type": "BudgetLimit",
+              "message": "shared checker budget exhausted"
+            },
+            "ended": "error",
+            "first_accept_check": 17,
+            "untested_actions_at_end": 41,
+            "resumable_checkpoints_at_end": 2,
+            "known_dead_end_states": 4,
+            "accepted_by_world_family": {
+              "lateral": 9
+            },
+            "queried_by_world_family": {
+              "up": 45,
+              "lateral": 161,
+              "down": 34
+            }
+          },
+          {
+            "case_id": "asap_06146",
+            "success": true,
+            "removed": 14,
+            "checks": 36,
+            "seconds": 131.4,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 3,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 15,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 10,
+              "lateral": 4
+            },
+            "queried_by_world_family": {
+              "up": 29,
+              "lateral": 7
+            }
+          },
+          {
+            "case_id": "asap_03012",
+            "success": true,
+            "removed": 12,
+            "checks": 40,
+            "seconds": 241.0,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 13,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 13,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "lateral": 12
+            },
+            "queried_by_world_family": {
+              "up": 12,
+              "lateral": 28
+            }
+          },
+          {
+            "case_id": "asap_01613",
+            "success": true,
+            "removed": 10,
+            "checks": 31,
+            "seconds": 156.9,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 3,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 11,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 9,
+              "lateral": 1
+            },
+            "queried_by_world_family": {
+              "up": 30,
+              "lateral": 1
+            }
+          },
+          {
+            "case_id": "asap_02402",
+            "success": true,
+            "removed": 12,
+            "checks": 12,
+            "seconds": 12.2,
+            "error": null,
+            "ended": "success",
+            "first_accept_check": 1,
+            "untested_actions_at_end": 0,
+            "resumable_checkpoints_at_end": 13,
+            "known_dead_end_states": 0,
+            "accepted_by_world_family": {
+              "up": 12
+            },
+            "queried_by_world_family": {
+              "up": 12
+            }
+          }
+        ],
+        "rule": ">= 4 of 5 full disassemblies within 240 checks (model-free reference implementation)"
+      }
+    }
+  ],
+  "adopted_call": 1,
+  "adopted": false,
+  "rule": "replace only if more gate successes, or equal and fewer total checks"
+}

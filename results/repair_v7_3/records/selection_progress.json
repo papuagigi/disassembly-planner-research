@@ -1,0 +1,71 @@
+{
+  "utc": "2026-10-20T18:52:18.733274+00:00",
+  "cursor": 8,
+  "selected": [],
+  "statuses": [
+    {
+      "id": "01904",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 480.914924167002,
+      "split": "training",
+      "tier": 1,
+      "part_count": 14
+    },
+    {
+      "id": "07554",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.71063916700223,
+      "split": "training",
+      "tier": 1,
+      "part_count": 12
+    },
+    {
+      "id": "00808",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 123.68018891700194,
+      "split": "training",
+      "tier": 1,
+      "part_count": 15
+    },
+    {
+      "id": "04370",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 156.82428216699918,
+      "split": "training",
+      "tier": 1,
+      "part_count": 14
+    },
+    {
+      "id": "06628",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.8597817080008,
+      "split": "training",
+      "tier": 1,
+      "part_count": 13
+    },
+    {
+      "id": "07582",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.91248312500102,
+      "split": "training",
+      "tier": 1,
+      "part_count": 14
+    },
+    {
+      "id": "08189",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 139.87458229200274,
+      "split": "training",
+      "tier": 1,
+      "part_count": 12
+    },
+    {
+      "id": "01428",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 90.87698575000104,
+      "split": "training",
+      "tier": 1,
+      "part_count": 13
+    }
+  ]
+}
