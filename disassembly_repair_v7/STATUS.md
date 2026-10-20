@@ -70,6 +70,8 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 
 - 06146/C (10:4xZ): `termination=limit`, `LimitError: same 4 GiB resident-memory ceiling exceeded` after 119 s, 19 checks, 8/14 removals, 8 calls. Peak RSS 4.32 GiB vs 06146 A 1.64 / B 1.44 GiB and v6 C 1.0–2.2 GiB → classified as infrastructure (`memory_guard`), not planner failure. Update: 03012/C peaked at only 0.62 GiB while completing 12/12, so the spike is not a general C-path leak; working hypothesis (unverified) = a state-specific native MuJoCo allocation (very many contacts) on the 06146 states C visited, similar to the 06186 qualification crash. Diagnose after the campaign by replaying the saved C responses with RSS/tracemalloc sampling; any fix becomes a separately labeled condition (v7.2) proposed to the user.
 
+- 05902/B (11:35Z): driver hard-kill (returncode −9) at 920 s → `episode_worker_failed_or_hard_timeout`; finalized from progress without retry. Events 133–139 (7 checks) completed AFTER the 900 s budget (11:35:07Z) and a new check had started at kill time; neither SIGALRM nor the policy wall guard stopped the turn. Final/best progress unchanged since 860 s (2/11), so the outcome is unaffected; treat as time budget with an enforcement anomaly. Offline reproductions (same generated code, synthetic world and real 05902 physics) stop correctly with both mechanisms, so the cause is unresolved. Hardening proposal for a later version: check the episode deadline inside the common API before each physics query.
+
 ## Next actions
 
 1. Let `pipeline_P2.log` proceed (selection → protect → campaign → post_run → protect). Never rerun a started episode.
