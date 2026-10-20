@@ -55,7 +55,7 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 
 - P2 adopted by the pre-specified rule (monotone; 0 implausible new acceptances). On development CADs P2 changes the reported cause/location of rejections but not feasibility: 05954 max 3/12 and 03114 max 2/21 under both P0 and P2.
 - Binding constraint on those CADs: six-label straight translation through tight/enclosing geometry; rejections at ~1 mm. Hypothesis under test: settling tilt (e.g. 03114 part 0 ≈1.4°) × straight assembly-axis motion × 0.02 mm growth slack. `offline/motion_probe.py` (diagnostic only, P2, axes6 vs diag20 vs part-local axes) → `analysis/physics/motion_probe.json`.
-- 06444 under P0 from v6 A prefix: 19/20, every branch ends with part 18 on fixture 1. `offline/probe_06444_last_part.py` tests part 18 under P0/P2 → `analysis/physics/06444_last_part_probe.json`.
+- 06444 under P0 from v6 A prefix: 19/20, every branch ends with part 18 on fixture 1. Last-part probe (P0 and P2 identical): 5 labels blocked at ~1 mm (part inside the fixture body), −y travels 6.97 mm then exceeds the 0.2 mm permit by 3 µm. v6 B/C (0) and A (11) were far below the physical ceiling of 19.
 - Motion-primitive changes would alter planners' action space; not adopted without a separate decision.
 
 ## Publication (user request 2026-10-20)

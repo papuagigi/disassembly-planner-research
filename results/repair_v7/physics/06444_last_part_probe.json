@@ -1,0 +1,369 @@
+{
+  "utc": "2026-10-20T08:15:29.944699+00:00",
+  "path": [
+    [
+      "20",
+      "+y"
+    ],
+    [
+      "17",
+      "+y"
+    ],
+    [
+      "11",
+      "+y"
+    ],
+    [
+      "16",
+      "+y"
+    ],
+    [
+      "6",
+      "+y"
+    ],
+    [
+      "10",
+      "+y"
+    ],
+    [
+      "15",
+      "+y"
+    ],
+    [
+      "5",
+      "+y"
+    ],
+    [
+      "19",
+      "+y"
+    ],
+    [
+      "9",
+      "+y"
+    ],
+    [
+      "14",
+      "+y"
+    ],
+    [
+      "4",
+      "+y"
+    ],
+    [
+      "0",
+      "-y"
+    ],
+    [
+      "8",
+      "+y"
+    ],
+    [
+      "13",
+      "+y"
+    ],
+    [
+      "3",
+      "+y"
+    ],
+    [
+      "7",
+      "+y"
+    ],
+    [
+      "12",
+      "+y"
+    ],
+    [
+      "2",
+      "+y"
+    ]
+  ],
+  "results": {
+    "P0": {
+      "remaining": [
+        "1",
+        "18"
+      ],
+      "part18": [
+        {
+          "direction": "+x",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.0009977303809865909,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011372652503172957,
+            "initial_signed_depth_m": 0.0001869106704341267,
+            "permitted_depth_m": 0.0002069106704341267,
+            "owner_local_point_m": [
+              0.02446462884,
+              0.073669635,
+              -0.00628144908
+            ]
+          }
+        },
+        {
+          "direction": "-x",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000998577312420357,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011365157376096145,
+            "initial_signed_depth_m": 0.00014521214030750512,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              -0.02504066964,
+              0.0444688434,
+              -0.00330749844
+            ]
+          }
+        },
+        {
+          "direction": "+y",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.0009974217425181137,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "1",
+            "other_part": "18",
+            "signed_depth_m": 0.00022222413257707576,
+            "initial_signed_depth_m": 0.00014001963545368082,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.0077919046799999996,
+              0.016663369679999995,
+              -0.023886895079999998
+            ]
+          }
+        },
+        {
+          "direction": "-y",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.006967847614832976,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "1",
+            "other_part": "18",
+            "signed_depth_m": 0.00020317990933816434,
+            "initial_signed_depth_m": 0.0001759657389310682,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.00157234552,
+              0.07035645023999999,
+              0.025040080800000003
+            ]
+          }
+        },
+        {
+          "direction": "+z",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000997922377404731,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011792875354221613,
+            "initial_signed_depth_m": 0.00018181456963425248,
+            "permitted_depth_m": 0.00020181456963425248,
+            "owner_local_point_m": [
+              0.00158597292,
+              0.073669635,
+              0.02520831924
+            ]
+          }
+        },
+        {
+          "direction": "-z",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000998055122939806,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.00117020225860494,
+            "initial_signed_depth_m": 0.00017259660706355986,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.00158597292,
+              0.07673920308,
+              -0.02520831924
+            ]
+          }
+        }
+      ]
+    },
+    "P2_persist_up_to_stable_penetration": {
+      "remaining": [
+        "1",
+        "18"
+      ],
+      "part18": [
+        {
+          "direction": "+x",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.0009977303809865909,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011372652503172957,
+            "initial_signed_depth_m": 0.0001869106704341267,
+            "permitted_depth_m": 0.0002069106704341267,
+            "owner_local_point_m": [
+              0.02446462884,
+              0.073669635,
+              -0.00628144908
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        },
+        {
+          "direction": "-x",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000998577312420357,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011365157376096145,
+            "initial_signed_depth_m": 0.00014521214030750512,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              -0.02504066964,
+              0.0444688434,
+              -0.00330749844
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        },
+        {
+          "direction": "+y",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.0009974217425181137,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "1",
+            "other_part": "18",
+            "signed_depth_m": 0.00022222413257707576,
+            "initial_signed_depth_m": 0.00014001963545368082,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.0077919046799999996,
+              0.016663369679999995,
+              -0.023886895079999998
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        },
+        {
+          "direction": "-y",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.006967847614832976,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "1",
+            "other_part": "18",
+            "signed_depth_m": 0.00020317990933816434,
+            "initial_signed_depth_m": 0.0001759657389310682,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.00157234552,
+              0.07035645023999999,
+              0.025040080800000003
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        },
+        {
+          "direction": "+z",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000997922377404731,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.0011792875354221613,
+            "initial_signed_depth_m": 0.00018181456963425248,
+            "permitted_depth_m": 0.00020181456963425248,
+            "owner_local_point_m": [
+              0.00158597292,
+              0.073669635,
+              0.02520831924
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        },
+        {
+          "direction": "-z",
+          "valid": false,
+          "reason": "path_collision",
+          "blockers": [
+            "1"
+          ],
+          "collision_distance_m": 0.000998055122939806,
+          "detail": {
+            "kind": "source_material_sample",
+            "sample_owner": "18",
+            "other_part": "1",
+            "signed_depth_m": 0.00117020225860494,
+            "initial_signed_depth_m": 0.00017259660706355986,
+            "permitted_depth_m": 0.0002,
+            "owner_local_point_m": [
+              0.00158597292,
+              0.07673920308,
+              -0.02520831924
+            ],
+            "diagnostic_variant": "P2_persist_up_to_stable_penetration"
+          }
+        }
+      ]
+    }
+  }
+}
