@@ -58,6 +58,13 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 - 06444 under P0 from v6 A prefix: 19/20, every branch ends with part 18 on fixture 1. `offline/probe_06444_last_part.py` tests part 18 under P0/P2 → `analysis/physics/06444_last_part_probe.json`.
 - Motion-primitive changes would alter planners' action space; not adopted without a separate decision.
 
+## Publication (user request 2026-10-20)
+
+- Public repo: https://github.com/papuagigi/disassembly-planner-research, branch **`claude/repair-v7`** (repo AGENTS.md: additional work on branches; main untouched unless the user asks to merge).
+- Rule from the user: commit detailed changes; **push at every core update** (e.g. physics decision, pilot selection complete, pilot results, final interpretation).
+- Tool: `disassembly_repair_v7/offline/publish_snapshot.sh "<subject>" [push] [groups]` → `publish.py` allowlist (code, docs, evidence, pilot summaries), secret-pattern fail, `<workspace>` path redaction; no raw CAD, traces, provider logs or PPT.
+- First push: 8 commits, head `1a5819a` (v7 code, tests, physics tools, pilot pipeline, docs, evidence, README/CLAUDE/AGENTS pointers).
+
 ## Next actions
 
 1. Let `pipeline_P2.log` proceed (selection → protect → campaign → post_run → protect). Never rerun a started episode.
