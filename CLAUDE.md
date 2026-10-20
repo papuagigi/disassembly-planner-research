@@ -1,9 +1,7 @@
-# Claude Code repair entry
+# Claude Code entry
 
-Read [the current task](claude_repair_handoff/TASK_PROMPT.md), [handoff](claude_repair_handoff/README.md), [failure diagnosis](claude_repair_handoff/FAILURE_DIAGNOSIS.md), and `claude_repair_handoff/evidence.json` first. The user is preparing to assign a new problem-solving task; this file itself does not start Claude or another agent.
+Current work: `disassembly_repair_v7/` (user-assigned repair of v6 search bookkeeping/scheduling plus a physics feasibility control). Read [STATUS](disassembly_repair_v7/STATUS.md) and [CHANGELOG](disassembly_repair_v7/CHANGELOG.md) first, then `claude_repair_handoff/`.
 
-The v6 three-CAD/nine-episode experiment is COMPLETE. Preserve it as the baseline. Do not restart its supervisor or change its frozen code, dependencies, documents or scores. User-authorized fixes belong in a separate version; suggested disassembly_repair_v7 is not implemented yet. The old docs/CLAUDE_CONTINUATION_PROMPT.md and recovery stop rules describe the completed experiment, not this new repair task. Now-known v6 CADs are development/regression cases in the next version, never fresh first encounters.
+`disassembly_final_v6` is COMPLETE and frozen; never restart or edit it. Its CADs (05954, 06444, 03114) are development/regression cases only. Keep A (generated code, no documents), B (generated code + S3 SKILL.md), C (conditional graph + LLM priorities + fixed DFS + the same S3 documents); evaluated model gpt-6-luna/low; v6 limits. The v7.1 pilot uses physics P2 (pre-registered in results/repair_v7/PHYSICS_DECISION.md). Never rerun a started episode; do not iterate until a favored arm wins. No PPT until user review.
 
-Keep arm identities, equal model/API/budget conditions and a common B/C SKILL.md bank. Claude is the coding coordinator; the evaluated model remains gpt-6-luna/low unless a separately authorized, matched protocol changes it. Verify physical feasibility and search defects separately. Do not force B/C to win. No PPT yet.
-
-The public snapshot omits full native environments, raw source CAD and provider episodes. Read the handoff's public/local path mapping. Use the original workspace to inspect those raw files; do not imply that a fresh clone contains them. Portable replay is separate from running native physics or the planner.
+This public snapshot omits raw CAD, native environments and provider logs; exact runs need the original workspace.

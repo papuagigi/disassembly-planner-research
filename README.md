@@ -1,5 +1,16 @@
 # Failure-driven disassembly planner
 
+## 현재 작업: disassembly_repair_v7 (Claude Code, 진행 중)
+
+v6 완료 결과는 보존하고, 별도 버전 `disassembly_repair_v7/`에서 문제를 수정·검증합니다. 진행 상황은 [STATUS](disassembly_repair_v7/STATUS.md), 변경 이유는 [CHANGELOG](disassembly_repair_v7/CHANGELOG.md)를 먼저 읽으세요.
+
+- 소프트웨어 수정(A/B/C 공통): 정확한 상태별 탐색 기록, 막다른 자식 재진입 차단(무비용), 상태 자동 checkpoint, A/B 무진행 2회 종료, C 상태별 순위·예산 분산 호출, 프롬프트 요약. 학습된 분해 절차가 아닙니다. [회귀 검증](results/repair_v7/REGRESSION.md)
+- 물리: v6 거부의 절반(494/1,003)이 이동 전 위치에서 발생. 0.2 mm 초과 CAD 겹침 규칙을 같은 모델의 1 mm 기준과 맞춘 P2를 사전 기준으로 채택했지만, 05954·03114는 P2에서도 직선 이동 충돌로 막힙니다. [결정](results/repair_v7/PHYSICS_DECISION.md), [실현 가능성](results/repair_v7/PHYSICS_FEASIBILITY.md)
+- 파일럿: 한 번도 열지 않은 CAD, 사전 등록 선정 규칙(LLM 없는 완전 분해 기준 경로 필요, 계획기에는 비공개), gpt-6-luna/low와 v6 예산 유지. 결과는 `results/repair_v7/pilot/`에 생성되면 갱신합니다.
+- 05954·06444·03114는 v7에서 개발/회귀용입니다. 새 제품 첫 실행으로 세지 않습니다. 모델 가중치 학습 없음, 새 SKILL.md 없음(B/C는 v6 S3 문서 2개를 그대로 사용), PPT 없음.
+
+공개본은 코드·요약 근거만 포함합니다. 원본 CAD, 원시 실행 기록, provider 프롬프트/응답 로그는 올리지 않으며 로컬 절대경로는 `<workspace>`로 치환했습니다.
+
 ## 새 문제 수정 작업의 인계
 
 v6 예비 실험은 완료됐습니다. 현재 사용자는 Claude Code에 별도 버전의 문제 수정을 맡기려 합니다. [새 인계 안내](claude_repair_handoff/README.md),[실제 로그 진단](claude_repair_handoff/FAILURE_DIAGNOSIS.md),[입력할 프롬프트](claude_repair_handoff/TASK_PROMPT.md)를 먼저 읽으세요. 인계 문서 작성만 완료했으며 새 planner 수정·평가는 아직 실행하지 않았습니다. 아래 v6 결과는 보존한 기준 실험이며, 그 pipeline을 다시 시작하지 않습니다. 기존 중단 복구 프롬프트는 새 문제 해결 작업의 지시가 아닙니다.
