@@ -1,6 +1,15 @@
 # Failure-driven disassembly planner
 
-## 현재 작업: disassembly_repair_v7 (Claude Code, 진행 중)
+## 최신 결과: disassembly_repair_v7_2 (학습 사이클 + 같은 조립체 재시도, 완료)
+
+엔진 보강 → 개발 CAD 실패 수집 → SKILL.md(S4b) 생성 → 고정 검증 → 고정 재시도 평가 순서로 진행했습니다. 모델은 gpt-6-luna/low로 같고, 예산은 호출 8 / 검사 240 / 900초입니다. [STATUS](disassembly_repair_v7_2/STATUS.md), [재시도 결과](results/repair_v7_2/RETRY_RESULTS.md), [검증 결과](results/repair_v7_2/VALIDATION_RESULTS.md), [전체 표](results/repair_v7_2/RESULT_TABLES.md)
+
+- **같은 조립체 2차 시도:** 1차 시도 기록으로 모델이 쓴 조립체 노트(SKILL.md)를 사용한 B(S3+노트)는 4/4, C(S3+노트)는 3/4 성공했고, 검사 수는 11~14회(=필요 제거 수, 실패 검사 0)였습니다. 기억 없는 A는 48~101회, 노트 없는 B·C는 40~108회였습니다. 05902에서는 1차의 900초 실패가 2차에서 약 130초 성공으로 바뀌었습니다.
+- **처음 보는 조립체(일반 SKILL.md):** 06146에서는 B·C가 A보다 검사를 2.7~5.9배 적게 썼고, 05902에서는 A만 성공했습니다. 일반 문서는 그 가정(분해 축)이 맞을 때만 도움이 됐습니다.
+- **검증:** 개발 CAD 05459·02402에서 A 4/4, B(S4b) 2/4, C(S4b) 4/4였습니다. 사전 규칙에 따라 S4b는 불승인됐고, 재시도에서는 탐색 분기로만 보고합니다. B의 실패 2건은 provider 도구 거부와 캐시 반복 루프였고, 이후 H5(web_search 차단)와 H6(루프 턴 중단)으로 수정했습니다.
+- **인프라·계약 실패:** 모두 실패로 집계했고 재실행하지 않았습니다. 독립 재생 검증 40/40 PASS. 표본이 작아(CAD 2개, 조건당 1~2회) 일반화는 주장하지 않습니다.
+
+## 이전 작업: disassembly_repair_v7 (완료)
 
 v6 완료 결과는 보존하고, 별도 버전 `disassembly_repair_v7/`에서 문제를 수정·검증합니다. 진행 상황은 [STATUS](disassembly_repair_v7/STATUS.md), 변경 이유는 [CHANGELOG](disassembly_repair_v7/CHANGELOG.md)를 먼저 읽으세요.
 

@@ -112,7 +112,7 @@ def v72(written):
             if p.is_file() and p.suffix in ('.md', '.json'):
                 _put(p, REPO / 'results/repair_v7_2/memory' / p.relative_to(mem), written)
     o = base / 'outputs'
-    for rel in ('protocol', 'validation', 'retry', 'smoke', 'skill_writer', 'note_writer', 'mining', 'collection'):
+    for rel in ('protocol', 'validation', 'retry', 'replay', 'smoke', 'skill_writer', 'note_writer', 'mining', 'collection'):
         d = o / rel
         if not d.exists():
             continue
@@ -120,7 +120,7 @@ def v72(written):
             if (p.name in ('result.json', 'progress.json', 'job.json') or 'llm_calls' in p.parts
                     or any(part.startswith('call_') for part in p.parts) or p.stat().st_size >= MAX_BYTES):
                 continue   # no raw traces and no provider prompt/response/metadata logs (writer calls included)
-            _put(p, REPO / 'results/repair_v7_2/outputs' / p.relative_to(o), written)
+            _put(p, REPO / 'results/repair_v7_2/records' / p.relative_to(o), written)   # public .gitignore drops **/outputs/
 
 
 GROUPS = dict(code=code, docs=docs, evidence=evidence, pilot=pilot, v72=v72)

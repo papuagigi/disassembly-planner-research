@@ -1,0 +1,259 @@
+{
+  "utc": "2026-10-20T17:19:36.722998+00:00",
+  "base_bank": "S3",
+  "exploratory_s4b": true,
+  "results": [
+    {
+      "case_id": "asap_05902",
+      "label": "first_A",
+      "arm": "A",
+      "bank": "S0",
+      "success": true,
+      "checks": 81,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "first_B",
+      "arm": "B",
+      "bank": "S3copy",
+      "success": false,
+      "checks": 135,
+      "termination": "wall_time_budget_exhausted"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "first_C",
+      "arm": "C",
+      "bank": "S3copy",
+      "success": false,
+      "checks": 119,
+      "termination": "wall_time_budget_exhausted"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "first_B_S4b",
+      "arm": "B",
+      "bank": "S4b",
+      "success": false,
+      "checks": 125,
+      "termination": "wall_time_budget_exhausted"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "first_C_S4b",
+      "arm": "C",
+      "bank": "S4b",
+      "success": false,
+      "checks": 101,
+      "termination": "wall_time_budget_exhausted"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_B_note_r1",
+      "arm": "B",
+      "bank": "S3_note_asap_05902",
+      "success": true,
+      "checks": 11,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_C_note_r1",
+      "arm": "C",
+      "bank": "S3_note_asap_05902",
+      "success": true,
+      "checks": 11,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_B_S4bnote_r1",
+      "arm": "B",
+      "bank": "S4b_note_asap_05902",
+      "success": false,
+      "checks": 116,
+      "termination": "wall_time_budget_exhausted"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_C_S4bnote_r1",
+      "arm": "C",
+      "bank": "S4b_note_asap_05902",
+      "success": true,
+      "checks": 11,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_B_base_r1",
+      "arm": "B",
+      "bank": "S3copy",
+      "success": true,
+      "checks": 108,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_C_base_r1",
+      "arm": "C",
+      "bank": "S3copy",
+      "success": false,
+      "checks": 0,
+      "termination": "execution_or_provider_error"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_A_none_r1",
+      "arm": "A",
+      "bank": "S0",
+      "success": true,
+      "checks": 101,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_B_note_r2",
+      "arm": "B",
+      "bank": "S3_note_asap_05902",
+      "success": true,
+      "checks": 11,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_05902",
+      "label": "second_C_note_r2",
+      "arm": "C",
+      "bank": "S3_note_asap_05902",
+      "success": true,
+      "checks": 11,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "first_A",
+      "arm": "A",
+      "bank": "S0",
+      "success": true,
+      "checks": 225,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "first_B",
+      "arm": "B",
+      "bank": "S3copy",
+      "success": true,
+      "checks": 53,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "first_C",
+      "arm": "C",
+      "bank": "S3copy",
+      "success": true,
+      "checks": 83,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "first_B_S4b",
+      "arm": "B",
+      "bank": "S4b",
+      "success": true,
+      "checks": 38,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "first_C_S4b",
+      "arm": "C",
+      "bank": "S4b",
+      "success": true,
+      "checks": 54,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_B_note_r1",
+      "arm": "B",
+      "bank": "S3_note_asap_06146",
+      "success": true,
+      "checks": 14,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_C_note_r1",
+      "arm": "C",
+      "bank": "S3_note_asap_06146",
+      "success": false,
+      "checks": 0,
+      "termination": "execution_or_provider_error"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_B_S4bnote_r1",
+      "arm": "B",
+      "bank": "S4b_note_asap_06146",
+      "success": true,
+      "checks": 27,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_C_S4bnote_r1",
+      "arm": "C",
+      "bank": "S4b_note_asap_06146",
+      "success": true,
+      "checks": 14,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_B_base_r1",
+      "arm": "B",
+      "bank": "S3copy",
+      "success": true,
+      "checks": 40,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_C_base_r1",
+      "arm": "C",
+      "bank": "S3copy",
+      "success": true,
+      "checks": 42,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_A_none_r1",
+      "arm": "A",
+      "bank": "S0",
+      "success": true,
+      "checks": 48,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_B_note_r2",
+      "arm": "B",
+      "bank": "S3_note_asap_06146",
+      "success": true,
+      "checks": 14,
+      "termination": "goal_reached"
+    },
+    {
+      "case_id": "asap_06146",
+      "label": "second_C_note_r2",
+      "arm": "C",
+      "bank": "S3_note_asap_06146",
+      "success": true,
+      "checks": 14,
+      "termination": "goal_reached"
+    }
+  ]
+}

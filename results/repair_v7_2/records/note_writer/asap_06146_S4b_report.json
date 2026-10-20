@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-20T17:07:24.829246+00:00",
+  "case_id": "asap_06146_S4b",
+  "usage": {
+    "input_tokens": 14905,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1105,
+    "reasoning_output_tokens": 0
+  },
+  "problems": [],
+  "note": "<workspace>/disassembly_repair_v7_2/memory/notes/asap_06146_S4b/assembly-removal-memory/SKILL.md",
+  "writer_errors": [],
+  "inputs": [
+    "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_06146/first_A/result.json",
+    "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_06146/first_B_S4b/result.json",
+    "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_06146/first_C_S4b/result.json"
+  ]
+}

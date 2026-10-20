@@ -46,4 +46,88 @@
 | 05459 | C_r1 | C/S4b | Y | 16/16 | 16 | 0 | 2 | 48806 | 70.8 | success |
 | 05459 | C_r2 | C/S4b | Y | 16/16 | 16 | 0 | 2 | 48750 | 68.8 | success |
 
+## retry
+
+| group | runs | success | median checks (successful) | mean checks | mean removed | mean s | mean calls | mean tokens |
+|---|---|---|---|---|---|---|---|---|
+| first/A/none | 2 | 2/2 | 153.0 | 153 | 12.5 | 660.3 | 1 | 20437.5 |
+| first/B/S3 | 2 | 1/2 | 53 | 94 | 8.5 | 510.5 | 3 | 68132.5 |
+| first/B/S4b | 2 | 1/2 | 38 | 81.5 | 8.5 | 497.9 | 2.5 | 58003.5 |
+| first/C/S3 | 2 | 1/2 | 83 | 101 | 12 | 667.6 | 8 | 236007.5 |
+| first/C/S4b | 2 | 1/2 | 54 | 77.5 | 9.5 | 536.6 | 8 | 236667 |
+| second/A/none | 2 | 2/2 | 74.5 | 74.5 | 12.5 | 416.0 | 1 | 20479 |
+| second/B/S3 | 2 | 2/2 | 74.0 | 74 | 12.5 | 448.1 | 2.5 | 65292 |
+| second/B/S3+note | 4 | 4/4 | 12.5 | 12.5 | 12.5 | 110.0 | 2.5 | 69405.8 |
+| second/B/S4b+note | 2 | 1/2 | 27 | 71.5 | 8.5 | 494.3 | 2 | 44810 |
+| second/C/S3 | 2 | 1/2 | 42 | 21 | 7 | 81.3 | 4 | 94544 |
+| second/C/S3+note | 4 | 3/4 | 11 | 9 | 9 | 82.8 | 2 | 44971.5 |
+| second/C/S4b+note | 2 | 2/2 | 12.5 | 12.5 | 12.5 | 100.5 | 2 | 44699.5 |
+
+| CAD | run | arm/memory | success | removed/required | checks | cached rej. | calls | tokens | s | end |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 05902 | first_A | A/none | Y | 11/11 | 81 | 52 | 1 | 20358 | 683.9 | success |
+| 05902 | first_B | B/S3 | N | 3/11 | 135 | 144 | 4 | 92630 | 900.1 | time_budget |
+| 05902 | first_B_S4b | B/S4b | N | 3/11 | 125 | 144 | 3 | 72619 | 900.5 | time_budget |
+| 05902 | first_C | C/S3 | N | 10/11 | 119 | 0 | 8 | 233091 | 900.0 | time_budget |
+| 05902 | first_C_S4b | C/S4b | N | 5/11 | 101 | 0 | 8 | 253980 | 900.3 | time_budget |
+| 05902 | second_A_none_r1 | A/none | Y | 11/11 | 101 | 0 | 1 | 20552 | 753.6 | success |
+| 05902 | second_B_S4bnote_r1 | B/S4b+note | N | 3/11 | 116 | 0 | 2 | 44847 | 900.4 | time_budget |
+| 05902 | second_B_base_r1 | B/S3 | Y | 11/11 | 108 | 144 | 3 | 86704 | 792.1 | success |
+| 05902 | second_B_note_r1 | B/S3+note | Y | 11/11 | 11 | 0 | 3 | 95212 | 154.5 | success |
+| 05902 | second_B_note_r2 | B/S3+note | Y | 11/11 | 11 | 0 | 2 | 45034 | 129.3 | success |
+| 05902 | second_C_S4bnote_r1 | C/S4b+note | Y | 11/11 | 11 | 0 | 2 | 44416 | 132.5 | success |
+| 05902 | second_C_base_r1 | C/S3 | N | 0/11 | 0 | 0 | 1 | 0 | 6.1 | provider_error |
+| 05902 | second_C_note_r1 | C/S3+note | Y | 11/11 | 11 | 0 | 2 | 44517 | 125.9 | success |
+| 05902 | second_C_note_r2 | C/S3+note | Y | 11/11 | 11 | 0 | 2 | 44558 | 128.1 | success |
+| 06146 | first_A | A/none | Y | 14/14 | 225 | 0 | 1 | 20517 | 636.7 | success |
+| 06146 | first_B | B/S3 | Y | 14/14 | 53 | 0 | 2 | 43635 | 120.9 | success |
+| 06146 | first_B_S4b | B/S4b | Y | 14/14 | 38 | 0 | 2 | 43388 | 95.3 | success |
+| 06146 | first_C | C/S3 | Y | 14/14 | 83 | 0 | 8 | 238924 | 435.3 | success |
+| 06146 | first_C_S4b | C/S4b | Y | 14/14 | 54 | 0 | 8 | 219354 | 172.9 | success |
+| 06146 | second_A_none_r1 | A/none | Y | 14/14 | 48 | 0 | 1 | 20406 | 78.4 | success |
+| 06146 | second_B_S4bnote_r1 | B/S4b+note | Y | 14/14 | 27 | 0 | 2 | 44773 | 88.3 | success |
+| 06146 | second_B_base_r1 | B/S3 | Y | 14/14 | 40 | 0 | 2 | 43880 | 104.0 | success |
+| 06146 | second_B_note_r1 | B/S3+note | Y | 14/14 | 14 | 0 | 3 | 91488 | 84.6 | success |
+| 06146 | second_B_note_r2 | B/S3+note | Y | 14/14 | 14 | 0 | 2 | 45889 | 71.5 | success |
+| 06146 | second_C_S4bnote_r1 | C/S4b+note | Y | 14/14 | 14 | 0 | 2 | 44983 | 68.6 | success |
+| 06146 | second_C_base_r1 | C/S3 | Y | 14/14 | 42 | 0 | 7 | 189088 | 156.5 | success |
+| 06146 | second_C_note_r1 | C/S3+note | N | 0/14 | 0 | 0 | 2 | 45274 | 9.1 | planner_or_schema_error |
+| 06146 | second_C_note_r2 | C/S3+note | Y | 14/14 | 14 | 0 | 2 | 45537 | 67.9 | success |
+
+### retry asap_05902
+
+| group | runs | success | median checks (successful) | mean checks | mean removed | mean s | mean calls | mean tokens |
+|---|---|---|---|---|---|---|---|---|
+| first/A/none | 1 | 1/1 | 81 | 81 | 11 | 683.9 | 1 | 20358 |
+| first/B/S3 | 1 | 0/1 | None | 135 | 3 | 900.1 | 4 | 92630 |
+| first/B/S4b | 1 | 0/1 | None | 125 | 3 | 900.5 | 3 | 72619 |
+| first/C/S3 | 1 | 0/1 | None | 119 | 10 | 900.0 | 8 | 233091 |
+| first/C/S4b | 1 | 0/1 | None | 101 | 5 | 900.3 | 8 | 253980 |
+| second/A/none | 1 | 1/1 | 101 | 101 | 11 | 753.6 | 1 | 20552 |
+| second/B/S3 | 1 | 1/1 | 108 | 108 | 11 | 792.1 | 3 | 86704 |
+| second/B/S3+note | 2 | 2/2 | 11.0 | 11 | 11 | 141.9 | 2.5 | 70123 |
+| second/B/S4b+note | 1 | 0/1 | None | 116 | 3 | 900.4 | 2 | 44847 |
+| second/C/S3 | 1 | 0/1 | None | 0 | 0 | 6.1 | 1 | 0 |
+| second/C/S3+note | 2 | 2/2 | 11.0 | 11 | 11 | 127.0 | 2 | 44537.5 |
+| second/C/S4b+note | 1 | 1/1 | 11 | 11 | 11 | 132.5 | 2 | 44416 |
+
+### retry asap_06146
+
+| group | runs | success | median checks (successful) | mean checks | mean removed | mean s | mean calls | mean tokens |
+|---|---|---|---|---|---|---|---|---|
+| first/A/none | 1 | 1/1 | 225 | 225 | 14 | 636.7 | 1 | 20517 |
+| first/B/S3 | 1 | 1/1 | 53 | 53 | 14 | 120.9 | 2 | 43635 |
+| first/B/S4b | 1 | 1/1 | 38 | 38 | 14 | 95.3 | 2 | 43388 |
+| first/C/S3 | 1 | 1/1 | 83 | 83 | 14 | 435.3 | 8 | 238924 |
+| first/C/S4b | 1 | 1/1 | 54 | 54 | 14 | 172.9 | 8 | 219354 |
+| second/A/none | 1 | 1/1 | 48 | 48 | 14 | 78.4 | 1 | 20406 |
+| second/B/S3 | 1 | 1/1 | 40 | 40 | 14 | 104.0 | 2 | 43880 |
+| second/B/S3+note | 2 | 2/2 | 14.0 | 14 | 14 | 78.0 | 2.5 | 68688.5 |
+| second/B/S4b+note | 1 | 1/1 | 27 | 27 | 14 | 88.3 | 2 | 44773 |
+| second/C/S3 | 1 | 1/1 | 42 | 42 | 14 | 156.5 | 7 | 189088 |
+| second/C/S3+note | 2 | 1/2 | 14 | 7 | 7 | 38.5 | 2 | 45405.5 |
+| second/C/S4b+note | 1 | 1/1 | 14 | 14 | 14 | 68.6 | 2 | 44983 |
+
 S4b admission (pre-registered rule): admitted=False, passes={'B': False, 'C': True}
+
+Independent replays: validation PASS (12), retry PASS (28)

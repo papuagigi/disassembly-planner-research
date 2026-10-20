@@ -1,0 +1,32 @@
+{
+  "version": "S4b_note_asap_05902",
+  "created_utc": "2026-10-20T15:50:29.575499+00:00",
+  "skills": [
+    {
+      "id": "state-aware-action-budgeting",
+      "path": "S4b/state-aware-action-budgeting/SKILL.md",
+      "sha256": "a7b1cce1bff8f6d540853152679716ffa08d5a8c7ba4fe9c5bea22613553973a"
+    },
+    {
+      "id": "defer-persistently-blocked-targets",
+      "path": "S4b/defer-persistently-blocked-targets/SKILL.md",
+      "sha256": "d4eb5c60051e580477426ba91afb812edb3af126ced9497fbca3a4d3ea717f0f"
+    },
+    {
+      "id": "assembly-removal-memory",
+      "path": "notes/asap_05902_S4b/assembly-removal-memory/SKILL.md",
+      "sha256": "f244f13fe48f3019197eb364de2b011d11f1c9f27ce140de5603a899370cebdd"
+    }
+  ],
+  "admission_evidence": {
+    "case_id": "asap_05902_S4b",
+    "first_attempts": [
+      "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_05902/first_A/result.json",
+      "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_05902/first_B_S4b/result.json",
+      "<workspace>/disassembly_repair_v7_2/outputs/retry/asap_05902/first_C_S4b/result.json"
+    ],
+    "note_problems": []
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}
