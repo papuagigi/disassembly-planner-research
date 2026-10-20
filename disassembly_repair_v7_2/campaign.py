@@ -12,20 +12,38 @@ RETRY       CADs 05902, 06146 (v7.1 pilot CADs; never used to build S4). For eac
             attempt 2: B(Sx+note) x2, C(Sx+note) x2, B(Sx) x1, C(Sx) x1, A(S0) x1, in a fixed interleaved order.
             Primary metrics: success, charged checks, elapsed seconds, tokens; reported as-is.
 Model gpt-6-luna/low, v7.2 limits (8 calls, 240 checks, 900 s, 8 GiB), physics P2, one episode at a time.
+
+RETRY AMENDMENT A2 (written after the validation decision, before any retry episode; frozen with the retry protocol):
+            Validation result: A 4/4, B(S4b) 2/4, C(S4b) 4/4 -> S4b NOT admitted (B has fewer successes than A).
+            Both B failures were engine/infrastructure-level and are kept as scored failures:
+              05459/B_r1 provider tool-use rejection (empty built-in web_search call), 0 checks;
+              02402/B_r2 generated code re-requested one cached rejection 2,992 times (instruction budget).
+            H5: every arm and the note writer use provider.NoWebSearchCodexProvider (web search disabled).
+            H6: shared_api RepeatedRejectionLoop ends a generated-code turn after > max(64, 12 x parts)
+                consecutive cached answers (code arms; the host DFS never re-requests a recorded rejection).
+            Primary design above is unchanged (base bank = S3 by the rule).
+            Exploratory S4b branch (added because S4b was not admitted; reported separately, never pooled with
+            the primary rows): per CAD attempt 1 B(S4b), C(S4b); a second note written from A + B(S4b) + C(S4b)
+            attempt-1 records; attempt 2 B(S4b+note), C(S4b+note) once each.
+            Per-CAD order: first A, B, C, B(S4b), C(S4b); notes; second B note, C note, B S4b-note, C S4b-note,
+            B base, C base, A, B note r2, C note r2.
 """
 from __future__ import annotations
 import argparse
 import shutil
 import statistics
+from pathlib import Path
 
 from .common import ROOT, V7, V6, read, write, utc, sha
 from .learning import case, job, BANKS, VALIDATION, PHYSICS
 from .procs import project_processes
 
 RETRY_CADS = ('asap_05902', 'asap_06146')
+S4_BANK = ROOT / 'memory/S4b.json'   # S4a superseded before validation (outputs/mining/S4a_superseded.json)
 FREEZE = {'validation': ROOT / 'outputs/protocol/freeze_validation.json', 'retry': ROOT / 'outputs/protocol/freeze_retry.json'}
 CODE_FILES = ['actors.py', 'shared_api.py', 'runtime.py', 'controller.py', 'contracts.py', 'driver.py', 'metrics.py',
               'campaign.py', 'learning.py', 'skill_writer.py', 'procs.py', 'replay_verify.py']
+RETRY_CODE_FILES = CODE_FILES + ['provider.py']   # H5; validation-time code is kept in outputs/protocol/validation_code_snapshot/
 
 
 def retry_case(cid):
@@ -34,16 +52,18 @@ def retry_case(cid):
     return dict(case_id=cid, case_path=c['case_path'], shared_path=c['shared_path'])
 
 
-def freeze(stage, bank_path):
+def freeze(stage, bank_path, extra_banks=()):
     path = FREEZE[stage]
     if path.exists():
         return verify(stage)
     from disassembly_final_v6.documents import DocumentBank
     bank = DocumentBank(bank_path)
-    files = [ROOT / f for f in CODE_FILES] + [bank.path] + [bank.path.parent / r['path'] for r in bank.manifest['skills']]
+    files = [ROOT / f for f in (RETRY_CODE_FILES if stage == 'retry' else CODE_FILES)]
+    for b in (bank, *[DocumentBank(x) for x in extra_banks]):
+        files += [b.path] + [b.path.parent / r['path'] for r in b.manifest['skills']]
     value = dict(stage=stage, utc=utc(), status='FROZEN_BEFORE_OUTCOMES', bank=str(bank.path), bank_sha256=bank.sha256,
-                 bank_content_sha256=bank.content_sha256, rules=__doc__.strip(), physics=PHYSICS,
-                 sha256={str(p): sha(p) for p in files})
+                 bank_content_sha256=bank.content_sha256, extra_banks=[str(x) for x in extra_banks], rules=__doc__.strip(),
+                 physics=PHYSICS, sha256={str(p): sha(p) for p in files})
     write(path, value, exclusive=True)
     return value
 
@@ -75,14 +95,14 @@ def run_one(spec):
 
 
 def validation():
-    frozen = freeze('validation', ROOT / 'memory/S4.json')
+    frozen = freeze('validation', S4_BANK)
     rows = []
     for rep in (1, 2):
         for i, cid in enumerate(VALIDATION):
             order = ['A', 'B', 'C'][i:] + ['A', 'B', 'C'][:i]
             for arm in order:
                 verify('validation')
-                bank = BANKS['S0'] if arm == 'A' else ROOT / 'memory/S4.json'
+                bank = BANKS['S0'] if arm == 'A' else S4_BANK
                 folder = ROOT / 'outputs/validation' / cid / f'{arm}_r{rep}'
                 spec = job(cid, arm, bank, 'validation', folder)
                 spec['protocol_sha256'] = sha(FREEZE['validation'])
@@ -119,7 +139,7 @@ def admission(rows):
 def bank_for_retry():
     d = read(ROOT / 'outputs/validation/decision.json')
     if d['admitted']:
-        return ROOT / 'memory/S4.json', 'S4'
+        return S4_BANK, 'S4b'
     # copy S3 under v7_2/memory so notes can be bundled with it (bytes identical)
     from disassembly_final_v6.documents import DocumentBank, make_bank
     target = ROOT / 'memory/S3copy.json'
@@ -137,45 +157,51 @@ def bank_for_retry():
     return target, 'S3'
 
 
-SECOND = [('B', 'note', 1), ('C', 'note', 1), ('B', 'base', 1), ('C', 'base', 1), ('A', 'none', 1),
-          ('B', 'note', 2), ('C', 'note', 2)]
+SECOND = [('B', 'note', 1), ('C', 'note', 1), ('B', 'S4bnote', 1), ('C', 'S4bnote', 1), ('B', 'base', 1), ('C', 'base', 1),
+          ('A', 'none', 1), ('B', 'note', 2), ('C', 'note', 2)]   # 'S4bnote' rows run only in the exploratory branch
 
 
 def retry():
     from .contracts import LIMITS, ARMS
-    from .driver import run
     from .skill_writer import write_note
     base_bank, label = bank_for_retry()
-    frozen = freeze('retry', base_bank)
+    exploratory = label != 'S4b'
+    freeze('retry', base_bank, extra_banks=(S4_BANK,) if exploratory else ())
     results = []
+
+    def episode(cid, c, arm, bank, name, phase):
+        verify('retry')
+        folder = ROOT / 'outputs/retry' / cid / name
+        spec = dict(folder=str(folder), case_path=c['case_path'], shared_path=c['shared_path'],
+                    architecture=ARMS[arm]['architecture'], bank_path=str(bank), limits=LIMITS, phase=phase,
+                    arm=arm, protocol_sha256=sha(FREEZE['retry']), physics_variant=PHYSICS)
+        r = run_one(spec)
+        results.append(dict(case_id=cid, label=name, arm=arm, bank=Path(bank).stem, success=bool(r['success']),
+                            checks=r.get('checker_calls'), termination=r.get('termination')))
+        write(ROOT / 'outputs/retry/progress.json', dict(utc=utc(), base_bank=label, exploratory_s4b=exploratory, results=results))
+        return folder / 'result.json'
+
     for cid in RETRY_CADS:
         c = retry_case(cid)
-        first = []
-        for arm in ('A', 'B', 'C'):
-            verify('retry')
-            bank = BANKS['S0'] if arm == 'A' else base_bank
-            folder = ROOT / 'outputs/retry' / cid / f'first_{arm}'
-            spec = dict(folder=str(folder), case_path=c['case_path'], shared_path=c['shared_path'],
-                        architecture=ARMS[arm]['architecture'], bank_path=str(bank), limits=LIMITS, phase='retry_first_attempt',
-                        arm=arm, protocol_sha256=sha(FREEZE['retry']), physics_variant=PHYSICS)
-            r = run_one(spec)
-            first.append(folder / 'result.json')
-            results.append(dict(case_id=cid, label=f'first_{arm}', success=bool(r['success']), checks=r.get('checker_calls')))
-        note_bank = ROOT / 'memory' / f'{label}_note_{cid}.json'
-        if not note_bank.exists():
-            write_note(cid, first, note_bank, base_bank)
+        first = {'A': episode(cid, c, 'A', BANKS['S0'], 'first_A', 'retry_first_attempt')}
+        for arm in ('B', 'C'):
+            first[arm] = episode(cid, c, arm, base_bank, f'first_{arm}', 'retry_first_attempt')
+        if exploratory:
+            for arm in ('B', 'C'):
+                first[arm + '-S4b'] = episode(cid, c, arm, S4_BANK, f'first_{arm}_S4b', 'retry_first_attempt_exploratory')
+        banks = {'none': BANKS['S0'], 'base': base_bank, 'note': ROOT / 'memory' / f'{label}_note_{cid}.json'}
+        if not banks['note'].exists():
+            write_note(cid, [first['A'], first['B'], first['C']], banks['note'], base_bank)
+        if exploratory:
+            banks['S4bnote'] = ROOT / 'memory' / f'S4b_note_{cid}.json'
+            if not banks['S4bnote'].exists():
+                write_note(cid + '_S4b', [first['A'], first['B-S4b'], first['C-S4b']], banks['S4bnote'], S4_BANK)
         for arm, memory, rep in SECOND:
-            verify('retry')
-            bank = BANKS['S0'] if arm == 'A' else (note_bank if memory == 'note' else base_bank)
-            folder = ROOT / 'outputs/retry' / cid / f'second_{arm}_{memory}_r{rep}'
-            spec = dict(folder=str(folder), case_path=c['case_path'], shared_path=c['shared_path'],
-                        architecture=ARMS[arm]['architecture'], bank_path=str(bank), limits=LIMITS, phase='retry_second_attempt',
-                        arm=arm, protocol_sha256=sha(FREEZE['retry']), physics_variant=PHYSICS)
-            r = run_one(spec)
-            results.append(dict(case_id=cid, label=f'second_{arm}_{memory}_r{rep}', success=bool(r['success']),
-                                checks=r.get('checker_calls')))
-            write(ROOT / 'outputs/retry/progress.json', dict(utc=utc(), results=results))
-    write(ROOT / 'outputs/retry/complete.json', dict(utc=utc(), base_bank=label, results=results), exclusive=True)
+            if memory in banks:
+                phase = 'retry_second_attempt_exploratory' if memory == 'S4bnote' else 'retry_second_attempt'
+                episode(cid, c, arm, banks[memory], f'second_{arm}_{memory}_r{rep}', phase)
+    write(ROOT / 'outputs/retry/complete.json', dict(utc=utc(), base_bank=label, exploratory_s4b=exploratory, results=results),
+          exclusive=True)
 
 
 if __name__ == '__main__':

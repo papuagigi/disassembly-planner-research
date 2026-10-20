@@ -1,0 +1,32 @@
+{
+  "version": "smoke_note_asap_01613",
+  "created_utc": "2026-10-20T14:37:56.667156+00:00",
+  "skills": [
+    {
+      "id": "physical-disassembly-failure-repair",
+      "path": "S3copy/physical-disassembly-failure-repair/SKILL.md",
+      "sha256": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c"
+    },
+    {
+      "id": "physical-directional-clearance",
+      "path": "S3copy/physical-directional-clearance/SKILL.md",
+      "sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+    },
+    {
+      "id": "assembly-removal-memory",
+      "path": "notes/smoke_asap_01613/assembly-removal-memory/SKILL.md",
+      "sha256": "242351d890c2d10a66c271f7d09d4550680a703e09dd907d27728341026ac8da"
+    }
+  ],
+  "admission_evidence": {
+    "case_id": "smoke_asap_01613",
+    "first_attempts": [
+      "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/A/result.json",
+      "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/B/result.json",
+      "<workspace>/disassembly_repair_v7_2/outputs/collection/asap_01613/C/result.json"
+    ],
+    "note_problems": []
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

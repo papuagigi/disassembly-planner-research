@@ -1,0 +1,18 @@
+{
+  "version": "S4",
+  "created_utc": "2026-10-20T14:09:14.814911+00:00",
+  "skills": [
+    {
+      "id": "state-first-removal-prioritization",
+      "path": "S4/state-first-removal-prioritization/SKILL.md",
+      "sha256": "ab7ff5235af6e5783dd4ff9319bde1e569d300c8c08168efd13398235688c1f4"
+    }
+  ],
+  "admission_evidence": {
+    "bundle": "<workspace>/disassembly_repair_v7_2/outputs/mining/bundle.json",
+    "bundle_sha256": "8de89ba06ddf75fc83ed3f14f6972e02204edcee46d24fb647eb2f622e1861a0",
+    "status": "candidate_pending_validation"
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

@@ -117,8 +117,9 @@ def v72(written):
         if not d.exists():
             continue
         for p in sorted(d.rglob('*.json')):
-            if p.name in ('result.json', 'progress.json', 'job.json') or 'llm_calls' in p.parts or p.stat().st_size >= MAX_BYTES:
-                continue
+            if (p.name in ('result.json', 'progress.json', 'job.json') or 'llm_calls' in p.parts
+                    or any(part.startswith('call_') for part in p.parts) or p.stat().st_size >= MAX_BYTES):
+                continue   # no raw traces and no provider prompt/response/metadata logs (writer calls included)
             _put(p, REPO / 'results/repair_v7_2/outputs' / p.relative_to(o), written)
 
 

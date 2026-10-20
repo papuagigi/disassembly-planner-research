@@ -1,0 +1,13 @@
+stage,case_id,label,arm,memory,rep,success,termination_class,best_removed,required_removed,checks,failed_checks,cached_rejections,restores,llm_calls,input_tokens,output_tokens,total_tokens,elapsed_seconds,first_valid_action_check,document_reads,deadline_stops,native_engine_errors
+collection,asap_01613,A,A,none,1,True,success,10,10,18,8,0,0,2,42958,2041,44999,104.4,2,0,0,0
+collection,asap_01613,B,B,S3,1,True,success,10,10,107,97,0,0,2,50193,1220,51413,696.5,9,2,0,0
+collection,asap_01613,C,C,S3,1,True,success,10,10,49,39,0,0,3,84232,1445,85677,221.2,27,2,0,0
+collection,asap_02406,A,A,none,1,True,success,12,12,18,6,0,0,1,22012,719,22731,22.5,2,0,0,0
+collection,asap_02406,B,B,S3,1,True,success,12,12,189,177,0,0,2,51472,1167,52639,151.4,26,2,0,0
+collection,asap_02406,C,C,S3,1,True,success,12,12,15,3,0,0,3,83633,1360,84993,40.0,1,2,0,0
+collection,asap_03674,A,A,none,1,False,no_progress_rule,0,11,0,0,0,0,2,43053,1658,44711,23.0,,0,0,0
+collection,asap_03674,B,B,S3,1,True,success,11,11,86,64,31,11,2,50299,1568,51867,389.0,7,2,0,0
+collection,asap_03674,C,C,S3,1,True,success,11,11,25,14,0,0,2,50401,1030,51431,65.9,5,2,0,0
+collection,asap_07375,A,A,none,1,True,success,10,10,24,14,0,0,1,21376,941,22317,91.6,4,0,0,0
+collection,asap_07375,B,B,S3,1,True,success,10,10,11,1,0,0,2,50183,1182,51365,62.3,1,2,0,0
+collection,asap_07375,C,C,S3,1,True,success,10,10,17,7,0,0,2,71734,697,72431,72.4,3,2,0,0

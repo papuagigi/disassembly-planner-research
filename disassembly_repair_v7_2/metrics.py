@@ -14,6 +14,7 @@ def summarize(result):
     rec = result.get('recovery_state', {}) or {}
     m['cached_rejections'] = len(rec.get('cached_rejections', []))
     m['deadline_stops'] = len(rec.get('deadline_stops', []))
+    m['repeat_loop_stops'] = len(rec.get('repeat_loop_stops', []))
     m['native_engine_errors'] = native_engine_errors(result)
     if m['native_engine_errors'] and m['termination_class'] in ('planner_or_schema_error', 'other_limit'):
         m['termination_class'] = 'native_engine_resource'

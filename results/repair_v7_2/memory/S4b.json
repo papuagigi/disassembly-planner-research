@@ -1,0 +1,23 @@
+{
+  "version": "S4b",
+  "created_utc": "2026-10-20T14:10:28.730040+00:00",
+  "skills": [
+    {
+      "id": "state-aware-action-budgeting",
+      "path": "S4b/state-aware-action-budgeting/SKILL.md",
+      "sha256": "a7b1cce1bff8f6d540853152679716ffa08d5a8c7ba4fe9c5bea22613553973a"
+    },
+    {
+      "id": "defer-persistently-blocked-targets",
+      "path": "S4b/defer-persistently-blocked-targets/SKILL.md",
+      "sha256": "d4eb5c60051e580477426ba91afb812edb3af126ced9497fbca3a4d3ea717f0f"
+    }
+  ],
+  "admission_evidence": {
+    "bundle": "<workspace>/disassembly_repair_v7_2/outputs/mining/bundle_b.json",
+    "bundle_sha256": "c0900d114455614d80cf9140bf14f115aa6fb3ff8267035972750a51086f8704",
+    "status": "candidate_pending_validation"
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

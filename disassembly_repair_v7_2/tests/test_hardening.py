@@ -117,3 +117,58 @@ class C72Scheduler(unittest.TestCase):
         self.assertNotIn('first_visit_of_exact_state', reasons)
         self.assertTrue(r['success'])
         self.assertLess(r['llm_calls'], 8)   # easy descent: inherited orders, no call per new state
+
+
+LOOP_CODE = 'def run(api):\n    while True:\n        api.remove("b", "+x")\nrun(api)\n'   # never excludes its own rejection
+
+
+class CachedRepeatLoop(unittest.TestCase):
+    def test_api_stops_after_limit_without_charge(self):
+        from disassembly_repair_v7_2.shared_api import RepeatedRejectionLoop
+        sim = trap_world()
+        api = HardenedAPI(sim)
+        api.remove('b', '+x')                       # charged rejection
+        for _ in range(64):
+            self.assertTrue(api.remove('b', '+x')['cached'])
+        with self.assertRaises(RepeatedRejectionLoop):
+            api.remove('b', '+x')
+        self.assertEqual(sim.checks, 1)
+        rec = api.export_recovery_state()
+        self.assertEqual(len(rec['cached_rejections']), 64)
+        self.assertEqual(rec['repeat_loop_stops'][0]['consecutive_cached'], 64)
+
+    def test_streak_resets_on_a_charged_query_and_can_be_disabled(self):
+        sim = trap_world()
+        api = HardenedAPI(sim)
+        api.remove('b', '+x')
+        for _ in range(60):
+            api.remove('b', '+x')
+        api.remove('b', '+z')                       # new charged query resets the streak
+        for _ in range(60):
+            api.remove('b', '+x')
+        api.cached_streak_limit = None
+        for _ in range(200):
+            api.remove('b', '+x')
+        self.assertEqual(sim.checks, 2)
+
+    def test_runtime_turn_ends_with_loop_error_not_instruction_budget(self):
+        from disassembly_repair_v7_2 import runtime
+        runtime.guards.memory_check = lambda: None
+        sim = trap_world()
+        payload = dict(code=LOOP_CODE, max_checks=240, max_steps=10**7, timeout_seconds=600., recovery_state=None,
+                       max_checkpoints=128, max_restores=256, deadline_monotonic=time.monotonic() + 600)
+        r = runtime.execute_payload(payload, sim, callback=lambda e: None)
+        self.assertEqual(r['error']['type'], 'RepeatedRejectionLoop')
+        self.assertEqual(sim.checks, 1)
+        self.assertLess(r['steps'], 10**6)
+
+    def test_actor_continues_to_next_turn_after_loop_stop(self):
+        from disassembly_repair_v7_2.actors import solve
+        provider = FunctionProvider(lambda p, s, c: dict(operation='execute', skill_ids=[], code=LOOP_CODE, ordered_actions=[],
+                                                         applied_skill_ids=[], document_plan=[], summary='x'))
+        r = solve('fake', provider, S0, 'code', sim_factory=lambda: trap_world())
+        errors = [d.get('execution_error', {}).get('type') for d in r['decisions'] if d.get('execution_error')]
+        self.assertEqual(errors, ['RepeatedRejectionLoop'] * 3)   # turn 1 (1 check), turns 2-3 without progress
+        self.assertEqual(r['termination'], 'no_progress_stop')
+        self.assertEqual(r['checker_calls'], 1)
+        self.assertIn('RepeatedRejectionLoop', str(r['turn_progress']))   # the next prompt's turn_progress_feedback

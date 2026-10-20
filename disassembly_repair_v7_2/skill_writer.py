@@ -7,14 +7,11 @@ size, required sections, and no CAD IDs / part numbers / reference sequences.
 """
 from __future__ import annotations
 import json
-import os
 import re
-import sys
 from pathlib import Path
 
-from .common import ROOT, WORKSPACE, V6, read, write, utc, sha
+from .common import ROOT, V6, read, write, utc, sha
 
-CODEX_DIR = '/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS'
 SCHEMA = {'type': 'object', 'properties': {
     'documents': {'type': 'array', 'minItems': 1, 'maxItems': 2, 'items': {'type': 'object', 'properties': {
         'name': {'type': 'string'}, 'description': {'type': 'string'}, 'markdown_body': {'type': 'string'}},
@@ -50,11 +47,10 @@ MEASURED STATISTICS (development only):
 
 
 def provider(log_dir):
-    os.environ['PATH'] = CODEX_DIR + os.pathsep + os.environ.get('PATH', '')
-    sys.path.insert(0, str(WORKSPACE / 'disassembly_planner_2d'))
-    from planner2d.llm import CodexCLIProvider
+    # H5: web search disabled (S4a/S4b were written before H5 with planner2d's CodexCLIProvider)
+    from .provider import NoWebSearchCodexProvider
     from .contracts import MODEL, EFFORT
-    return CodexCLIProvider(log_dir, model=MODEL, reasoning_effort=EFFORT, timeout=120)
+    return NoWebSearchCodexProvider(log_dir, model=MODEL, reasoning_effort=EFFORT, timeout=120)
 
 
 def static_gate(name, description, body, forbidden_ids):
@@ -138,11 +134,20 @@ def write_note(case_id, attempt_paths, out_bank, base_bank_path):
     summaries = [attempt_summary(p) for p in attempt_paths]
     prompt = NOTE_PROMPT + json.dumps(summaries, ensure_ascii=False)
     log = ROOT / 'outputs/note_writer' / case_id
-    response, meta = provider(log).complete(prompt, SCHEMA, 1)
-    d = response['documents'][0]
-    problems = [p for p in static_gate(d['name'], d['description'], d['markdown_body'], ()) if p != 'mentions a numbered part']
-    folder = ROOT / 'memory/notes' / case_id
-    note = materialize(folder, d['name'], d['description'], d['markdown_body']) if not problems else None
+    response, meta, writer_errors = None, {}, []
+    for index in (1, 2):   # one retry of the writer call; if both fail the bank holds the base documents only
+        try:
+            response, meta = provider(log).complete(prompt, SCHEMA, index)
+            break
+        except Exception as exc:  # ProviderError, timeout or malformed output
+            writer_errors.append(f'{type(exc).__name__}: {str(exc)[:300]}')
+    if response is None:
+        problems, note = ['note_writer_failed'], None
+    else:
+        d = response['documents'][0]
+        problems = [p for p in static_gate(d['name'], d['description'], d['markdown_body'], ()) if p != 'mentions a numbered part']
+        folder = ROOT / 'memory/notes' / case_id
+        note = materialize(folder, d['name'], d['description'], d['markdown_body']) if not problems else None
     base = DocumentBank(base_bank_path)
     docs = [(Path(base_bank_path).parent / row['path']).resolve() for row in base.manifest['skills']]
     if note:
@@ -151,5 +156,5 @@ def write_note(case_id, attempt_paths, out_bank, base_bank_path):
               evidence=dict(case_id=case_id, first_attempts=[str(p) for p in attempt_paths], note_problems=problems))
     write(ROOT / 'outputs/note_writer' / (case_id + '_report.json'),
           dict(utc=utc(), case_id=case_id, usage=meta.get('usage'), problems=problems, note=str(note) if note else None,
-               inputs=[str(p) for p in attempt_paths]))
+               writer_errors=writer_errors, inputs=[str(p) for p in attempt_paths]))
     return note, problems

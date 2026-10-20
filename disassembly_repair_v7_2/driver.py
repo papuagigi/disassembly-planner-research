@@ -49,7 +49,7 @@ def finalize_interrupted(job, returncode=None, elapsed=0.):
 def worker(job_path):
     os.environ['PATH'] = CODEX_DIR + os.pathsep + os.environ.get('PATH', '')
     sys.path.insert(0, str(WORKSPACE / 'disassembly_planner_2d'))
-    from planner2d.llm import CodexCLIProvider
+    from .provider import NoWebSearchCodexProvider   # H5 (retry stage onward; validation used planner2d CodexCLIProvider)
     from .actors import solve, LimitError
     from .metrics import summarize
     from .contracts import MODEL, EFFORT
@@ -61,7 +61,7 @@ def worker(job_path):
         raise LimitError('whole_episode_wall_deadline')
     signal.signal(signal.SIGALRM, deadline)
     signal.setitimer(signal.ITIMER_REAL, limits['timeout_seconds'])
-    provider = CodexCLIProvider(folder / 'llm_calls', model=MODEL, reasoning_effort=EFFORT, timeout=120)
+    provider = NoWebSearchCodexProvider(folder / 'llm_calls', model=MODEL, reasoning_effort=EFFORT, timeout=120)
     try:
         result = solve(job['case_path'], provider, job['bank_path'], job['architecture'], shared=read(job['shared_path']),
                        limits=limits, progress_path=folder / 'progress.json',

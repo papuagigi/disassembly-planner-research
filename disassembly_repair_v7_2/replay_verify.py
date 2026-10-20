@@ -47,6 +47,7 @@ def replay_result(result_path, *, shared_path=None, output=None, capture=False, 
     sim = sim or FullDisassemblySim(cp, max_checks=max_checks, state=shared['state'] if shared else None, capture=capture)
     api = LedgerAPI(sim, recovery_state=shared['recovery_state'] if shared else None, max_checks=max_checks,
                     max_checkpoints=original['limits']['max_checkpoints'], max_restores=original['limits']['max_restores'])
+    api.cached_streak_limit = None  # H6 counts per code turn; a replay re-issues all turns' events through one API
     skip = len(shared['recovery_state']['events']) if shared else 0
     handles = {h: h for h in (shared['recovery_state']['checkpoints'] if shared else {})}
     count = restores = guarded = 0

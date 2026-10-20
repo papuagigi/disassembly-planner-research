@@ -34,6 +34,13 @@ def mine(result_paths, out_path=None):
     blocker_first = [0, 0]                  # after a collision naming Q, Q's next query at same state accepted?
     episodes, wasted_enclosed, total_checks, deadend_checks = [], 0, 0, 0
     examples = []
+    code_errors = collections.Counter()     # generated-code execution errors (type: message), anonymized
+    first_ten = collections.defaultdict(collections.Counter)  # condition -> direction family of each episode's first 10 checks
+    reuse = [0, 0]                          # direction == last committed removal's direction
+    other_after_success = [0, 0]            # other directions once some removal has succeeded
+    per_condition = collections.defaultdict(lambda: dict(episodes=0, checks=0, dir_family=collections.Counter(),
+                                                         accepted_family=collections.Counter(), enclosed_checks=0,
+                                                         first_accepts=[]))
     for p in result_paths:
         r = read(p)
         obs = r.get('initial_observation') or {}
@@ -44,11 +51,26 @@ def mine(result_paths, out_path=None):
         state_rejects = collections.defaultdict(lambda: collections.defaultdict(set))
         blockers_seen = collections.defaultdict(set)
         parts_by_state = {}
+        source = 'v6' if 'disassembly_final_v6' in str(p) else 'v7.2'
+        pc = per_condition[source + ':' + str(r.get('condition') or 'unknown')]
+        for d in r.get('decisions', []):
+            e = d.get('execution_error')
+            if e and e.get('type') not in ('LimitError', 'WallTimeLimit', 'InstructionLimit', 'MemoryLimit'):
+                code_errors[f"{e.get('type')}: {str(e.get('message'))[:160]}"] += 1
+        pc['episodes'] += 1
+        pc['checks'] += len(trace)
+        last_dir = None
         for t in trace:
             st = t.get('physical_state_key_before')
             pid, d = t.get('part_id'), t.get('direction')
             if st is None or pid is None:
                 continue
+            if last_dir is not None:
+                bucket = reuse if d == last_dir else other_after_success
+                bucket[1] += 1
+                bucket[0] += bool(t.get('valid'))
+            if t.get('committed'):
+                last_dir = d
             k = len(state_rejects[st][pid])
             by_k[min(k, 5)] += 1
             if t.get('valid'):
@@ -58,6 +80,13 @@ def mine(result_paths, out_path=None):
             # world direction family
             v = vectors.get(d)
             fam = 'unknown' if not v else ('up' if v[2] > UP else ('down' if v[2] < -UP else 'lateral'))
+            pc['dir_family'][fam] += 1
+            if trace.index(t) < 10:
+                first_ten[source + ':' + str(r.get('condition') or 'unknown')][fam] += 1
+            if t.get('valid'):
+                pc['accepted_family'][fam] += 1
+            elif k >= 3:
+                pc['enclosed_checks'] += 1
             feat['dir:' + fam][1] += 1
             feat['dir:' + fam][0] += bool(t.get('valid'))
             # blocker-first rule
@@ -90,6 +119,7 @@ def mine(result_paths, out_path=None):
         dead = {s['state_key'] for s in led.get('states', []) if s.get('known_dead_end')}
         deadend_checks += sum(1 for t in trace if t.get('physical_state_key_before') in dead)
         accepted = [t for t in trace if t.get('committed')]
+        pc['first_accepts'].append(accepted[0]['checker_call'] if accepted else None)
         episodes.append(dict(condition=r.get('condition'), success=bool(r.get('success')), checks=len(trace),
                              removed=len(r.get('actions', [])), required=r.get('required_removals'),
                              termination=r.get('termination'), first_accept_check=accepted[0]['checker_call'] if accepted else None,
@@ -108,7 +138,20 @@ def mine(result_paths, out_path=None):
         checks_spent_on_parts_with_3plus_rejections_at_state=wasted_enclosed,
         accept_rate_by_feature={k: dict(rate=_rate(a, n), tried=n) for k, (a, n) in sorted(feat.items())},
         blocker_named_part_next_query_accept_rate=dict(rate=_rate(*blocker_first), tried=blocker_first[1]),
+        accept_rate_same_direction_as_most_recent_committed_removal_of_ANY_part=dict(
+            rate=_rate(*reuse), tried=reuse[1],
+            meaning='After some part P was removed along direction label L, later queries on OTHER remaining parts '
+                    'that also used label L were accepted at this rate (assemblies often share one insertion axis).'),
+        accept_rate_other_directions_after_a_committed_removal=dict(
+            rate=_rate(*other_after_success), tried=other_after_success[1],
+            meaning='Same situation, queries using any label different from the most recent successful label L.'),
+        per_condition={c: dict(episodes=v['episodes'], checks=v['checks'], checks_by_direction_family=dict(v['dir_family']),
+                               accepted_by_direction_family=dict(v['accepted_family']),
+                               checks_on_parts_with_3plus_rejections=v['enclosed_checks'], first_accept_checks=v['first_accepts'])
+                       for c, v in per_condition.items()},
+        first_ten_checks_direction_family=first_ten,
         checks_at_known_dead_end_states=deadend_checks,
+        generated_code_execution_errors=dict(code_errors.most_common(12)),
         anonymized_examples=examples,
         scope='Counts over every recorded query of development episodes; no CAD IDs, part IDs or reference sequences.')
     if out_path:

@@ -100,6 +100,7 @@ def solve(case_path, provider, bank_path, architecture, shared=None, limits=None
     api = LedgerAPI(sim, recovery_state=shared['recovery_state'] if shared else None, max_checks=limits['max_checks'],
                     max_checkpoints=limits['max_checkpoints'], max_restores=limits['max_restores'])
     api.deadline, api.deadline_exception = deadline, LimitError   # H1 (C arm and host-side calls)
+    api.cached_streak_limit = None   # H6 guards generated code only; the host DFS never re-requests a recorded rejection
     initial = api.snapshot()
     loaded, loaded_references, reads, decisions, usage = {}, {}, [], [], {}
     calls = steps = 0
@@ -283,6 +284,7 @@ def solve(case_path, provider, bank_path, architecture, shared=None, limits=None
                                 max_checkpoints=limits['max_checkpoints'], max_restores=limits['max_restores'],
                                 callback=live_progress)
                 api.deadline, api.deadline_exception = deadline, LimitError
+                api.cached_streak_limit = None
                 restores1, guarded1, cps1 = recovery_counts()
                 key1 = physical_state_key(sim.export_state())
                 ledger = SearchLedger(sim.parts, sim.trace, len(sim.parts))
