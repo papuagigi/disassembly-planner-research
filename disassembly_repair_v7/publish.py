@@ -27,7 +27,7 @@ MAX_BYTES = 4_000_000
 def _public_text(source):
     text = Path(source).read_text(encoding='utf-8')
     assert not SECRET.search(text), source
-    return text.replace(str(WORKSPACE), '<workspace>')
+    return text.replace(str(WORKSPACE), '<workspace>').replace(str(Path.home()), '<home>')
 
 
 def _put(source, destination, written):
@@ -71,6 +71,9 @@ def evidence(written):
     for name in ('protection_check_latest.json',):
         if (ROOT / 'outputs' / name).exists():
             _put(ROOT / 'outputs' / name, out / name, written)
+    for p in sorted((ROOT / 'outputs/diagnostics').glob('*/*.json')):
+        if p.name != 'progress.json':
+            _put(p, out / 'diagnostics' / p.parent.name / p.name, written)
     progress = ROOT / 'outputs/pilot_inputs/progress.json'
     if progress.exists():
         _put(progress, out / 'pilot_inputs_progress.json', written)

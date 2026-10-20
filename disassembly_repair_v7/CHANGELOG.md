@@ -55,6 +55,10 @@ No v6 file is edited. v7 imports v6/legacy modules read-only and keeps adapted c
 - Rule: a native MuJoCo engine failure during the v7 physical screen excludes the candidate (`native_engine_resource_excluded`), mirroring v6's exclusion of initial native warnings. Implemented in the new `pilot_inputs_amend.py` wrapper; frozen `pilot_inputs.py` and the v7.1 freeze hashes are unchanged. Record: `outputs/protocol/amendment_A1_native_engine.json`.
 - Evaluation: `post_run.summarize_v71` labels episodes whose error comes from a MuJoCo FatalError as `native_engine_resource` and counts `native_engine_errors` (frozen `metrics.py` unchanged).
 
+## Post-hoc tooling fixes after the pilot (scores unaffected)
+- `post_run.py`: replay summary built with a duplicate `condition` key (TypeError at 11:54Z); fixed and replays rerun in parallel (untimed). `summarize_v71` labels MuJoCo engine errors.
+- Diagnostics added: `offline/memory_probe.py` (06146/C exact counterfactual without the 4 GiB cap).
+
 ## Physics: evaluated checker in v6 and v7 regression (P0)
 - The evaluated collision/stability rules, tolerances, fixture rule and six source-axis motions are unchanged in v7.
 - New diagnostic tools only: `physics_audit.py` (sample-0 lock audit), `feasibility.py` (non-LLM reference search with the same simulator).

@@ -1,0 +1,92 @@
+{
+  "utc": "2026-10-20T10:26:08.218615+00:00",
+  "protocol_sha256": "95e6c1c75e39861cda43bc7989b0e96a18e024f1b496d2cc16694b7aabf2d234",
+  "cases": [
+    {
+      "case_id": "asap_06146",
+      "source_assembly_id": "06146",
+      "part_count": 15,
+      "required_removals": 14,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_06146.json",
+      "case_sha256": "77c43a818c6a0ed28f91d5c61f7d562083ae4170becbc467f8aae061bb239ceb",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/shared.json",
+      "shared_sha256": "93de56fe7d50bcf93ca646cc6f6b0f96f3604e81774f9a91a0043d01ed7f292a",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "6be549d8333335cb15d1f711c128130f345ae1c17c378104a45eda0cb1eeffae",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/06146/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_03012",
+      "source_assembly_id": "03012",
+      "part_count": 13,
+      "required_removals": 12,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_03012.json",
+      "case_sha256": "d7b546b940eb3746342af910843e82c88511315c69b7bb4b3f9fe53864d6419b",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/shared.json",
+      "shared_sha256": "4b3a006b4151e573e27670fce0b8e188e0ff0cbb9c70f66a7d57763931ff794b",
+      "fixture_ids": [
+        "2"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "b3aa6f4dd32424a474fdb8637126339e2c5d1a12e0fa7f212e6ff39d3aca61f3",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/03012/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_05902",
+      "source_assembly_id": "05902",
+      "part_count": 12,
+      "required_removals": 11,
+      "case_path": "<workspace>/disassembly_repair_v7/cases/pilot/asap_05902.json",
+      "case_sha256": "4e8d6de4b805df1b532599ceced69a5cf52f5187283e2d071d137b4d589050f9",
+      "shared_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/shared.json",
+      "shared_sha256": "d94846d834ba64fc04569e0f4c1daae3bcf471d6124edb541783208f8f2c76b9",
+      "fixture_ids": [
+        "4"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "9d59928b53f1a0df302997d4647ca0de6b21cc87a7df21e8664e2194fbbff987",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "reference_path": "<workspace>/disassembly_repair_v7/outputs/pilot_inputs/05902/reference_search_P2.json"
+    }
+  ],
+  "selection_status": "FINITE_SELECTION_COMPLETE",
+  "planned_episodes": 9,
+  "arms": {
+    "A": {
+      "architecture": "code",
+      "bank": "S0"
+    },
+    "B": {
+      "architecture": "code",
+      "bank": "S3"
+    },
+    "C": {
+      "architecture": "graph_dfs",
+      "bank": "S3"
+    }
+  },
+  "limits": {
+    "max_calls": 8,
+    "max_checks": 240,
+    "timeout_seconds": 900.0,
+    "max_steps": 10000000,
+    "max_checkpoints": 128,
+    "max_restores": 256,
+    "max_rss_bytes": 4294967296,
+    "max_prompt_bytes": 512000,
+    "max_response_bytes": 64000
+  },
+  "model": "gpt-6-luna",
+  "reasoning_effort": "low",
+  "first_encounter": true,
+  "reference_given_to_planners": false,
+  "physics_variant": "P2_persist_up_to_stable_penetration"
+}

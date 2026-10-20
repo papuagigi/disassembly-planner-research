@@ -1,0 +1,62 @@
+{
+  "status": "COMPLETE",
+  "utc": "2026-10-20T11:35:27.619063+00:00",
+  "episodes": [
+    {
+      "case_id": "asap_06146",
+      "arm": "A",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_06146/A/result.json",
+      "sha256": "553c10fc5c368020407f4c2f23ec9593ef85893f1e07b2d0958f935cfdca47c8"
+    },
+    {
+      "case_id": "asap_06146",
+      "arm": "B",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_06146/B/result.json",
+      "sha256": "a2268e91dd42a00ebc77c8b3dae514019da429af4e8b6b3a8d848316b403fe1f"
+    },
+    {
+      "case_id": "asap_06146",
+      "arm": "C",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_06146/C/result.json",
+      "sha256": "626e806f1596f4675f25c775129977159c6d9876e55d59ef40a32cd56b331a0d"
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "B",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_03012/B/result.json",
+      "sha256": "80af1df9691ea82775b2ae3d5022328253f6be387edbe2bc206d2b22aaf709a9"
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "C",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_03012/C/result.json",
+      "sha256": "126047ddc5ffeba96dcc6d12da911c662675dd2fd96ba1bfc6895dd2880b2883"
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "A",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_03012/A/result.json",
+      "sha256": "69b9a10b28bc83561df973e5cd40d3d8952e4ace0a30ff485e842e9f6695c22a"
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "C",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_05902/C/result.json",
+      "sha256": "63006735f6ea39222e2f573a0ea5210129d08c8adc31b3450deb41afafd2331e"
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "A",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_05902/A/result.json",
+      "sha256": "6d084d155322216ae848733740ab590e7c37be9e337a848ac94a313d59ea938a"
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "B",
+      "result": "<workspace>/disassembly_repair_v7/outputs/pilot/trials/asap_05902/B/result.json",
+      "sha256": "757553c59e0db8e48014fb951a863c2210dabf4c60e4b5b87571e1f1683755ec"
+    }
+  ],
+  "expected": 9,
+  "no_memory_updates": true
+}

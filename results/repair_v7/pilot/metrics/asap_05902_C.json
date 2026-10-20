@@ -1,0 +1,47 @@
+{
+  "case_id": "asap_05902",
+  "condition": "C",
+  "success": false,
+  "termination": "wall_time_budget_exhausted",
+  "termination_class": "time_budget",
+  "required_removed": 11,
+  "final_removed": 9,
+  "best_removed": 9,
+  "final_progress": 0.8181818181818182,
+  "best_progress": 0.8181818181818182,
+  "checks": 82,
+  "failed_checks": 73,
+  "failure_causes": {
+    "path_collision": 62,
+    "unstable_remainder": 11
+  },
+  "first_valid_action_check": 9,
+  "accepted_removals": 9,
+  "accepted_edge_revisits": 0,
+  "repeated_rejected_queries": 0,
+  "guarded_requests": 0,
+  "restores": 0,
+  "restores_with_state_change": 0,
+  "restores_without_state_change": 0,
+  "checkpoints": 10,
+  "auto_checkpoints": 9,
+  "llm_calls": 8,
+  "no_progress_calls": null,
+  "call_reasons": {
+    "document_read_phase": 1,
+    "first_visit_of_exact_state": 4,
+    "new_instability_at_state": 3
+  },
+  "input_tokens": 247587,
+  "cached_input_tokens": 54784,
+  "output_tokens": 5569,
+  "total_tokens": 253156,
+  "unknown_usage_calls": 0,
+  "elapsed_seconds": 915.8814166660013,
+  "execution_steps": 973336,
+  "document_reads": 2,
+  "error": {
+    "type": "LimitError",
+    "message": "wall_time_budget_exhausted"
+  }
+}

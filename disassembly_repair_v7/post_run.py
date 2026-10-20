@@ -100,12 +100,13 @@ def _replay_one(case, arm, ref_path, ref_steps, manifest):
     except Exception as exc:
         return dict(case_id=case['case_id'], arm=arm, error=repr(exc)[:1500])
     health = native(TRIALS / case['case_id'] / arm)
-    summary = dict(**summarize_v71({**result, 'condition': arm}), condition=arm, method_label=LABELS[arm], reference=False,
-                   model=manifest['model'], reasoning_effort=manifest['reasoning_effort'], limits=manifest['limits'],
-                   required_removals=case['required_removals'], actions=result.get('actions', []),
-                   replay_audit=audit['status'], native_engine_health=health['status'],
-                   native_warning_count=health['warning_count'],
-                   source_scope='v7 사전등록 새 CAD 첫 실행 · 로컬 물리 모델 조건부 결과')
+    summary = {**summarize_v71({**result, 'condition': arm}),
+               **dict(condition=arm, method_label=LABELS[arm], reference=False,
+                      model=manifest['model'], reasoning_effort=manifest['reasoning_effort'], limits=manifest['limits'],
+                      required_removals=case['required_removals'], actions=result.get('actions', []),
+                      replay_audit=audit['status'], native_engine_health=health['status'],
+                      native_warning_count=health['warning_count'],
+                      source_scope='v7 사전등록 새 CAD 첫 실행 · 로컬 물리 모델 조건부 결과')}
     summary.pop('error', None)
     sim.events = extra['events']
     sim.dump_demo(epath, title=case['case_id'] + ' · ' + LABELS[arm], summary=summary)

@@ -23,7 +23,7 @@ This file is the Codex↔Claude handoff entry. Update it at every meaningful che
 | 5. Saved-code/response regression on v6 CADs | DONE: A 59→0 re-entries; B no_progress_stop at call 4; C calls paced 0/35/70; resume probe restores 2-removal state | `analysis/REGRESSION.md`, `outputs/regression/` |
 | 6. Physics reference-path control on development CADs | PARTIAL: 01613 path found; 05954 max 3, 03114 max 2 (exhausted); 06444 unresolved (lock released after 5 removals); diagnostics running | `analysis/PHYSICS_FEASIBILITY.md` |
 | 7. Pre-registered fresh-CAD pilot | SELECTION COMPLETE 10:26Z: 06146 (15 parts), 03012 (13), 05902 (12), all never-opened training CADs, no sample-0 locks, P2 references 14/12/11 steps (75 candidates attempted; 8 v6-qualified). CAMPAIGN RUNNING since 10:26:08Z (`outputs/pilot/progress.json`). Earlier: Amendment A1 (native engine failure → exclusion; 06186) at 09:49Z; selector resumed via `pilot_inputs_amend` (`outputs/pilot_inputs/select_P2_resumeA1.log`), pipeline `outputs/pipeline_P2_resumeA1.log`. P2 ADOPTED (`analysis/PHYSICS_DECISION.md`); `freeze_v7.1_P2.json` 07:49Z; P2 selection RUNNING (`outputs/pilot_inputs/select_P2.log`; primary 98 training + 23 test backup); `offline/run_remaining_pipeline.sh` → `outputs/pipeline_P2.log` auto-runs campaign+post_run after selection | `pilot_inputs.py`, `protocol.py`, `campaign.py`, `driver.py`, `outputs/provider_check/latest.json` |
-| 8. Aggregate, replay, final handoff | PLANNED | |
+| 8. Aggregate, replay, final handoff | DONE: A 3/3, B 2/3, C 1/3 (official); replays PASS (9/9 verified); interpretation in `analysis/PILOT_INTERPRETATION.md` | `analysis/PILOT_RESULTS.md`, `replay/audit.json` |
 
 ## Stage 1 findings (verified on raw v6 result.json, read-only)
 
@@ -72,8 +72,17 @@ Interpretation: interference is CAD-intrinsic. Locks are certificates only while
 
 - 05902/B (11:35Z): driver hard-kill (returncode −9) at 920 s → `episode_worker_failed_or_hard_timeout`; finalized from progress without retry. Events 133–139 (7 checks) completed AFTER the 900 s budget (11:35:07Z) and a new check had started at kill time; neither SIGALRM nor the policy wall guard stopped the turn. Final/best progress unchanged since 860 s (2/11), so the outcome is unaffected; treat as time budget with an enforcement anomaly. Offline reproductions (same generated code, synthetic world and real 05902 physics) stop correctly with both mechanisms, so the cause is unresolved. Hardening proposal for a later version: check the episode deadline inside the common API before each physics query.
 
+- Orphaned idle workers: 19 `multiprocessing.spawn` workers left by diagnostic reference searches whose parents were stopped at ~07:5x–08:1xZ were still alive during the campaign (found 11:58Z: 0.0% CPU, ~35 MB RSS each; accumulated CPU 1–21 min each, consistent with the pre-campaign diagnostic window). The campaign's heavy-process guard matches module names and could not see them. They were killed after the campaign. Hardening for a later version: kill process groups of stopped searches and check for any v7 child processes, not only names.
+- post_run bug: `TypeError: dict() got multiple values for keyword argument 'condition'` in the replay summary (11:54Z, `post_run_error`); aggregation had already been written; scores unaffected. Fixed in post_run.py and replays rerun.
+
+## Current state (2026-10-20 ~12:30Z): BOUNDED CYCLE COMPLETE — waiting for a user decision
+
+- Official pilot (v7.1-P2): A 3/3, B 2/3, C 1/3 full disassembly; tokens A 90k, B 159k, C 826k; replays verified.
+- 06146/C failed only by the 4 GiB memory guard (exact counterfactual: same decisions reach 14/14 at check 46). 05902/B hit the wall budget with an unexplained 18 s enforcement overrun (outcome unaffected).
+- No SKILL.md benefit/harm can be claimed (n = 3 × 1, multiple differences between arms). See `analysis/PILOT_INTERPRETATION.md` §4–§6.
+- Do not start another experiment without the user. Options are listed in PILOT_INTERPRETATION.md §6.
+
 ## Next actions
 
-1. Let `pipeline_P2.log` proceed (selection → protect → campaign → post_run → protect). Never rerun a started episode.
-2. Fold motion_probe / 06444 results into `analysis/PHYSICS_FEASIBILITY.md` (not frozen).
-3. After PIPELINE_DONE: interpret `analysis/PILOT_RESULTS.md`; keep software-repair, physics and memory claims separate.
+1. Wait for the user's choice among PILOT_INTERPRETATION.md §6 options. Any new run needs a new freeze (new namespace or v7.2), not edits to v7.1 records.
+2. Keep publishing with `offline/publish_snapshot.sh` (commit details; push + main merge on core updates).

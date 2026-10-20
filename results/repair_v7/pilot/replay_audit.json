@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "episodes": [
+    {
+      "case_id": "asap_06146",
+      "arm": "A",
+      "status": "PASS",
+      "physical_queries_replayed": 71,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_06146",
+      "arm": "B",
+      "status": "PASS",
+      "physical_queries_replayed": 122,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_06146",
+      "arm": "C",
+      "status": "PASS",
+      "physical_queries_replayed": 19,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "A",
+      "status": "PASS",
+      "physical_queries_replayed": 82,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "B",
+      "status": "PASS",
+      "physical_queries_replayed": 39,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_03012",
+      "arm": "C",
+      "status": "PASS",
+      "physical_queries_replayed": 61,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "A",
+      "status": "PASS",
+      "physical_queries_replayed": 75,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "B",
+      "status": "PASS_VERIFIED_PREFIX",
+      "physical_queries_replayed": 130,
+      "guarded_requests_replayed": 3,
+      "restores_verified": 2
+    },
+    {
+      "case_id": "asap_05902",
+      "arm": "C",
+      "status": "PASS",
+      "physical_queries_replayed": 82,
+      "guarded_requests_replayed": 0,
+      "restores_verified": 0
+    }
+  ],
+  "errors": [],
+  "no_model_calls": true
+}

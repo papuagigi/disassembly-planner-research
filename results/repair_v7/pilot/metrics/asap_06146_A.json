@@ -1,0 +1,41 @@
+{
+  "case_id": "asap_06146",
+  "condition": "A",
+  "success": true,
+  "termination": "goal_reached",
+  "termination_class": "success",
+  "required_removed": 14,
+  "final_removed": 14,
+  "best_removed": 14,
+  "final_progress": 1.0,
+  "best_progress": 1.0,
+  "checks": 71,
+  "failed_checks": 57,
+  "failure_causes": {
+    "path_collision": 57
+  },
+  "first_valid_action_check": 1,
+  "accepted_removals": 14,
+  "accepted_edge_revisits": 0,
+  "repeated_rejected_queries": 0,
+  "guarded_requests": 0,
+  "restores": 0,
+  "restores_with_state_change": 0,
+  "restores_without_state_change": 0,
+  "checkpoints": 15,
+  "auto_checkpoints": 14,
+  "llm_calls": 1,
+  "no_progress_calls": 0,
+  "call_reasons": {
+    "execute_turn": 1
+  },
+  "input_tokens": 22059,
+  "cached_input_tokens": 0,
+  "output_tokens": 706,
+  "total_tokens": 22765,
+  "unknown_usage_calls": 0,
+  "elapsed_seconds": 197.27007108399994,
+  "execution_steps": 8524,
+  "document_reads": 0,
+  "error": null
+}

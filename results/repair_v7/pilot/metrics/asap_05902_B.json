@@ -1,0 +1,43 @@
+{
+  "case_id": "asap_05902",
+  "condition": "B",
+  "success": false,
+  "termination": "episode_worker_failed_or_hard_timeout",
+  "termination_class": "worker_failure",
+  "required_removed": 11,
+  "final_removed": 2,
+  "best_removed": 3,
+  "final_progress": 0.18181818181818182,
+  "best_progress": 0.2727272727272727,
+  "checks": 131,
+  "failed_checks": 126,
+  "failure_causes": {
+    "path_collision": 116,
+    "unstable_remainder": 10
+  },
+  "first_valid_action_check": 3,
+  "accepted_removals": 4,
+  "accepted_edge_revisits": 0,
+  "repeated_rejected_queries": 24,
+  "guarded_requests": 3,
+  "restores": 2,
+  "restores_with_state_change": 2,
+  "restores_without_state_change": 0,
+  "checkpoints": 4,
+  "auto_checkpoints": 3,
+  "llm_calls": 2,
+  "no_progress_calls": 0,
+  "call_reasons": {
+    "document_read_phase": 1,
+    "execute_turn": 1
+  },
+  "input_tokens": 51396,
+  "cached_input_tokens": 27392,
+  "output_tokens": 1275,
+  "total_tokens": 52671,
+  "unknown_usage_calls": 0,
+  "elapsed_seconds": 918.0892718329997,
+  "execution_steps": 0,
+  "document_reads": 2,
+  "error": null
+}
