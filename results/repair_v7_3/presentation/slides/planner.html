@@ -25,21 +25,17 @@
 <p style="font-size:24px;line-height:1.35;color:#C9D2DC">MuJoCo로 1.5초 시뮬레이션 (중력, 마찰 0.5). 무너지면 거절</p>
 </div>
 </div>
-<div style="flex:1;display:flex;flex-direction:column;gap:24px">
-<div style="display:flex;flex-direction:column;gap:10px;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:28px 36px">
-<h3 style="font-size:32px;font-weight:700;color:#1C2430">성공 조건</h3>
-<p style="font-size:26px;line-height:1.45;color:#4A5560">고정 부품 하나만 남을 때까지 모든 부품을 제거</p>
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-direction:column;gap:10px;align-items:center;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:20px 28px">
+<img src="/_blob/b1c4395b339226dcf98d72cc5e53c652" alt="평가 CAD 02260을 시뮬레이션 시작 상태로 렌더링한 그림" style="width:464px;height:300px;object-fit:contain">
+<p style="font-size:24px;line-height:1.4;color:#4A5560">평가 CAD 02260 · 부품 11개 중 1개 고정. 나머지 10개를 모두 빼면 성공</p>
 </div>
-<div style="display:flex;flex-direction:column;gap:10px;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:28px 36px">
-<h3 style="font-size:32px;font-weight:700;color:#1C2430">어려운 이유</h3>
-<p style="font-size:26px;line-height:1.45;color:#4A5560">막힘이 상태에 따라 바뀝니다. 지금 못 빼는 부품도 다른 부품이 빠지면 빠질 수 있고, 순서를 잘못 고르면 남은 구조가 무너집니다.</p>
-</div>
-<div style="display:flex;flex-direction:column;gap:10px;background:#F3E2CC;border-radius:20px;padding:28px 36px">
-<h3 style="font-size:32px;font-weight:700;color:#1C2430">검사는 비싸다</h3>
-<p style="font-size:26px;line-height:1.45;color:#3E4A57">충돌 거절 중앙값 2.1초, 불안정 판정 19.6초. 에피소드당 검사 240회, 900초 안에 끝내야 합니다.</p>
+<div style="display:flex;flex-direction:column;gap:8px;background:#F3E2CC;border-radius:20px;padding:24px 32px">
+<h3 style="font-size:30px;font-weight:700;color:#1C2430">어려운 이유</h3>
+<p style="font-size:24px;line-height:1.45;color:#3E4A57">막힘이 상태에 따라 바뀌고, 순서를 잘못 고르면 남은 구조가 무너집니다. 검사도 비쌉니다: 충돌 거절 중앙값 2.1초, 불안정 판정 19.6초, 에피소드당 검사 240회·900초</p>
 </div>
 </div>
 </div>
 <p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 4</p>
-<aside>Disassembly planner는 CAD 조립체를 입력으로 받아 어떤 부품을 어느 방향으로 어떤 순서로 뺄지 정합니다. 행동은 부품 하나와 여섯 개 방향 라벨 중 하나입니다. 행동마다 두 단계로 판정합니다. 먼저 원본 메시로 빼는 경로가 다른 부품과 겹치는지 보고, 통과하면 남은 부품을 MuJoCo로 1.5초 시뮬레이션해서 무너지지 않는지 확인합니다. 어려운 점은 막힘이 상태에 따라 바뀐다는 것, 그리고 검사가 비싸다는 것입니다. 충돌로 거절되는 검사는 중앙값 2초, 불안정 판정은 약 20초가 걸리고, 에피소드당 검사 240회와 900초라는 예산이 있습니다.</aside>
+<aside>오른쪽 그림은 평가에 쓴 CAD 02260입니다. 부품 열한 개 중 하나가 바닥에 고정되어 있고, 나머지 열 개를 모두 빼면 성공입니다. Disassembly planner는 CAD 조립체를 입력으로 받아 어떤 부품을 어느 방향으로 어떤 순서로 뺄지 정합니다. 행동은 부품 하나와 여섯 개 방향 라벨 중 하나입니다. 행동마다 두 단계로 판정합니다. 먼저 원본 메시로 빼는 경로가 다른 부품과 겹치는지 보고, 통과하면 남은 부품을 MuJoCo로 1.5초 시뮬레이션해서 무너지지 않는지 확인합니다. 어려운 점은 막힘이 상태에 따라 바뀐다는 것, 그리고 검사가 비싸다는 것입니다. 충돌로 거절되는 검사는 중앙값 2초, 불안정 판정은 약 20초가 걸리고, 에피소드당 검사 240회와 900초라는 예산이 있습니다.</aside>
 </section>

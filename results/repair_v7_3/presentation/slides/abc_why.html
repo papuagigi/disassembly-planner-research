@@ -40,8 +40,8 @@
 </div>
 <div style="display:flex;gap:24px;align-items:center;background:#F3E2CC;border-radius:20px;padding:22px 32px">
 <x-icon name="Settings" style="color:#A85A12;width:40px;height:40px"></x-icon>
-<p style="font-size:24px;line-height:1.45;color:#3E4A57"><b>공통 조건</b> 같은 모델(gpt-6-luna, low) · 같은 API · 같은 예산(호출 8, 검사 240, 900초) → 차이는 SKILL.md 유무와 역할 분담에서만 나옵니다</p>
+<p style="font-size:24px;line-height:1.45;color:#3E4A57"><b>공통 조건</b> 같은 모델(gpt-6-luna, low) · 같은 API · 같은 예산(호출 8, 검사 240, 900초) → 설계상 다른 점은 SKILL.md 유무와 역할 분담뿐입니다</p>
 </div>
 <p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 5</p>
-<aside>A, B, C 세 구조를 둔 이유는 두 가지 효과를 따로 재기 위해서입니다. A는 SKILL.md 없이 LLM이 Python 탐색 코드를 직접 쓰는 기준선입니다. B는 같은 방식이지만 SKILL.md를 먼저 읽고 코드에 반영합니다. C는 탐색 자체를 host의 고정 깊이 우선 탐색이 맡고, LLM은 후보 동작의 순위만 정하며, SKILL.md는 그 순위 판단에 참고합니다. 그래서 A와 B를 비교하면 SKILL.md의 효과를, B와 C를 비교하면 LLM에게 탐색까지 맡길 때와 순위 판단만 맡길 때의 차이, 즉 역할 분담의 효과를 볼 수 있습니다. 세 구조 모두 같은 모델, 같은 API, 같은 예산을 쓰기 때문에 차이는 이 두 가지에서만 나옵니다.</aside>
+<aside>A, B, C 세 구조를 둔 이유는 두 가지 효과를 따로 재기 위해서입니다. A는 SKILL.md 없이 LLM이 Python 탐색 코드를 직접 쓰는 기준선입니다. B는 같은 방식이지만 SKILL.md를 먼저 읽고 코드에 반영합니다. C는 탐색 자체를 host의 고정 깊이 우선 탐색이 맡고, LLM은 후보 동작의 순위만 정하며, SKILL.md는 그 순위 판단에 참고합니다. 그래서 A와 B를 비교하면 SKILL.md의 효과를, B와 C를 비교하면 LLM에게 탐색까지 맡길 때와 순위 판단만 맡길 때의 차이, 즉 역할 분담의 효과를 볼 수 있습니다. 세 구조 모두 같은 모델, 같은 API, 같은 예산을 쓰므로 설계상 다른 점은 이 두 가지뿐입니다. 다만 같은 조건에서도 결과가 흔들리기 때문에, 작은 차이는 조심해서 해석해야 합니다.</aside>
 </section>

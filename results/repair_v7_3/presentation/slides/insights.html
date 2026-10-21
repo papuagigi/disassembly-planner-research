@@ -7,8 +7,8 @@
 <div style="display:flex;gap:24px;align-items:start;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:28px 32px">
 <p style="font-size:72px;font-weight:700;line-height:1;color:#E0912F">1</p>
 <div style="flex:1;display:flex;flex-direction:column;gap:8px">
-<h3 style="font-size:32px;font-weight:700;line-height:1.25;color:#1C2430">조립체별 SKILL.md는 바로 효과가 있다</h3>
-<p style="font-size:24px;line-height:1.45;color:#4A5560">reasoning low 설정의 gpt-6-luna에서도 같은 조립체 2차 시도 24/24 성공, 그중 23번은 실패 검사 0</p>
+<h3 style="font-size:32px;font-weight:700;line-height:1.25;color:#1C2430">검증된 경로를 남기면 같은 조립체는 재현된다</h3>
+<p style="font-size:24px;line-height:1.45;color:#4A5560">gpt-6-luna(low) 설정에서 2차 시도 24/24 성공, 23번은 실패 검사 0. 주된 원인은 기록된 순서의 재사용</p>
 </div>
 </div>
 <div style="display:flex;gap:24px;align-items:start;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:28px 32px">
@@ -22,7 +22,7 @@
 <p style="font-size:72px;font-weight:700;line-height:1;color:#E0912F">3</p>
 <div style="flex:1;display:flex;flex-direction:column;gap:8px">
 <h3 style="font-size:32px;font-weight:700;line-height:1.25;color:#1C2430">탐색은 고정 알고리즘, 판단은 LLM</h3>
-<p style="font-size:24px;line-height:1.45;color:#4A5560">C는 처음 보는 조립체 1차 시도에서 S5·S3 모두 4/4로 가장 안정적. 대신 토큰은 A의 4~5배</p>
+<p style="font-size:24px;line-height:1.45;color:#4A5560">C는 처음 보는 조립체 1차에서 S5·S3 모두 4/4 (A·B는 3/4, CAD 1개 차이). 대신 토큰은 A의 4~5배</p>
 </div>
 </div>
 <div style="display:flex;gap:24px;align-items:start;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:20px;padding:28px 32px">
@@ -34,5 +34,5 @@
 </div>
 </div>
 <p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 12 · 모델 크기 비교는 하지 않았으므로 1번은 이 모델 설정에 대한 결과</p>
-<aside>이번 결과에서 알 수 있는 점은 네 가지입니다. 첫째, 같은 조립체에 대한 조립체별 SKILL.md는 바로 효과가 있었습니다. frontier 모델이 아닌 reasoning low 설정의 gpt-6-luna에서도 24번 모두 성공했습니다. 다만 모델 크기를 바꿔 비교하지는 않았으므로, 이 모델 설정에서의 결과입니다. 둘째, 처음 보는 조립체에 쓰는 범용 SKILL.md는 고정된 규칙이 아니라, 가정이 맞는지 먼저 확인하는 조건부 형태여야 합니다. 셋째, 탐색은 고정 알고리즘이 맡고 LLM은 순위 판단만 하는 C 구조가 S5와 S3 어느 쪽에서도 처음 보는 조립체 네 개를 모두 분해해 가장 안정적이었지만, 토큰 비용이 큽니다. 넷째, 미리 규칙을 고정하고, 재실행하지 않고, 기록을 재생해 확인하는 장치 덕분에 결과를 원하는 쪽으로 맞추지 않았습니다. 승인되지 않은 S5도 결과 그대로 보고했습니다.</aside>
+<aside>이번 결과에서 알 수 있는 점은 네 가지입니다. 첫째, 검증된 제거 순서를 조립체별 SKILL.md로 남기면 같은 조립체는 다시 분해할 때 그대로 재현됐습니다. reasoning low 설정의 gpt-6-luna에서 24번 모두 성공했고, 주된 원인은 기록된 순서의 재사용입니다. 모델 크기를 바꿔 비교하지는 않았으므로 이 모델 설정에서의 결과입니다. 둘째, 처음 보는 조립체에 쓰는 범용 SKILL.md는 고정된 규칙이 아니라, 가정이 맞는지 먼저 확인하는 조건부 형태여야 합니다. 셋째, 탐색은 고정 알고리즘이 맡고 LLM은 순위 판단만 하는 C 구조가 S5와 S3 어느 쪽에서도 처음 보는 조립체 네 개를 모두 분해했습니다. 다만 A와 B보다 CAD 하나를 더 푼 차이라 크다고 말하기는 어렵고, 토큰 비용이 큽니다. 넷째, 미리 규칙을 고정하고, 재실행하지 않고, 기록을 재생해 확인하는 장치 덕분에 결과를 원하는 쪽으로 맞추지 않았습니다. 승인되지 않은 S5도 결과 그대로 보고했습니다.</aside>
 </section>
