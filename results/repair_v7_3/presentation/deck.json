@@ -2,7 +2,7 @@
   "v": 4,
   "createdOnFiles": {"v": 1, "at": "2026-10-21T02:50:00Z"},
   "lists": "css",
-  "title": "실패에서 배우는 분해 계획",
+  "title": "SKILL.md와 Procedural Memory를 통한 LLM 기반 Disassembly Planner",
   "order": ["cover", "motivation", "goal", "planner", "abc_why", "skillmd", "skillmd2", "setup", "result1", "result2", "result3", "insights", "application", "limits", "closing"],
   "sections": {
     "s1": {"description": "연구 동기와 목표: 선행 연구의 한계에서 출발해, 실패 경험을 SKILL.md로 저장하고 재사용한다", "start": "cover"},

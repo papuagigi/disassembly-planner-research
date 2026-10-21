@@ -1,5 +1,7 @@
 # v7.3 발표 자료 (슬라이드 원본)
 
+발표 제목: **SKILL.md와 Procedural Memory를 통한 LLM 기반 Disassembly Planner**
+
 v7.3 결과를 논문식 흐름으로 정리한 최종 발표 자료 15장입니다. 슬라이드별 구성과 S5 기준으로 보여 주는 이유는 [PPT_OUTLINE.md](../PPT_OUTLINE.md)에 있습니다. 숫자는 `EVALUATION_RESULTS.md`, `VALIDATION_RESULTS.md`, `evaluation_runs.csv`에서 확인한 값만 썼습니다.
 
 ## 파일
