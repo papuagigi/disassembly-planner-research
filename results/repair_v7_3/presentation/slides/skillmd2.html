@@ -1,0 +1,43 @@
+<section id="skillmd2" data-transition="fade" style="background:#F6F5F1;color:#1C2430;font-family:'IBM Plex Sans KR', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:36px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;color:#A85A12">6 · 조립체별 SKILL.md를 만드는 방법</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.15;color:#1C2430">1차 시도 기록 → 모델의 설명 + 기록된 제거 순서</h2>
+</div>
+<div style="display:flex;gap:40px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:14px">
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:18px 26px">
+<p style="font-size:26px;font-weight:700;color:#1C2430">① 1차 시도</p>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">A, B·S5, C·S5가 그 조립체를 처음 분해한 기록 (성공·실패 모두)</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:18px 26px">
+<p style="font-size:26px;font-weight:700;color:#1C2430">② 모델이 작성</p>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">gpt-6-luna가 기록 3개만 읽고 막힌 부품, 낭비 지점, 다음 전략을 씀</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:18px 26px">
+<p style="font-size:26px;font-weight:700;color:#1C2430">③ host가 경로 첨부</p>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">가장 완전한 경로를 기록에서 그대로 붙임 (성공 중 검사가 가장 적은 경로, 성공이 없으면 가장 긴 부분 경로)</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:6px;background:#1C2430;border-radius:16px;padding:18px 26px">
+<p style="font-size:26px;font-weight:700;color:#F2EFE8">④ 사용 규칙</p>
+<p style="font-size:24px;line-height:1.4;color:#C9D2DC">같은 조립체의 조립체별 SKILL.md가 있으면 기록된 순서를 먼저 시도</p>
+</div>
+</div>
+<div style="width:820px;display:flex;flex-direction:column;gap:12px">
+<div style="background:#1C2430;border-radius:16px;padding:24px 28px;display:flex;flex-direction:column;gap:4px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#E9A54A">name: assembly-note-recorded-path-8c0e</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#E9A54A">## Procedure</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.35;color:#C9D2DC">Start with the appended Recorded sequence and try its steps in order. …</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.35;color:#C9D2DC">If a step is rejected, … re-check the current assembly state …</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#E9A54A">## Recorded sequence</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;line-height:1.35;color:#8E9BAA">Source: first-attempt condition B, complete success, 8 of 8 required removals …</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#C9D2DC">1. part 1 direction -y (world [-0.16, 0.0, 0.987])</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#C9D2DC">2. part 2 direction -y (world [-0.16, 0.0, 0.987])</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#8E9BAA">… 7. part 0 direction -y</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace;font-size:24px;color:#C9D2DC">8. part 4 direction +x (world [0.987, 0.0, 0.16])</p>
+</div>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">실제 파일 발췌: 평가 CAD 03937의 조립체별 SKILL.md (S5 분기, 일부 생략). 붙은 경로는 1차 중 검사가 가장 적었던 B·S5(19회)의 것</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 7 · 03937은 라벨 -y가 실제로는 위쪽 (world z = 0.987)</p>
+<aside>조립체별 SKILL.md는 한 조립체의 1차 시도 기록으로 만듭니다. A, 그리고 S5를 쓴 B와 C가 그 조립체를 처음 분해한 기록을 모으고, gpt-6-luna가 그 세 기록만 읽고 어떤 부품이 처음에 막혔는지, 어디서 검사가 낭비됐는지, 다음에는 어떻게 할지를 씁니다. 그다음 host가 기록 중 가장 완전한 경로, 즉 성공한 시도 중 검사가 가장 적은 경로를, 성공이 없으면 가장 멀리 간 부분 경로를 원본 기록에서 그대로 복사해 붙입니다. 사용할 때는 같은 조립체의 조립체별 SKILL.md가 있으면 기록된 순서를 먼저 시도합니다. 오른쪽은 평가 CAD 03937의 실제 파일입니다. 1차에서 검사 19번으로 가장 효율적이었던 B의 경로가 붙었고, 각 라벨의 실제 방향도 적혀 있습니다. 참고로 모델이 쓴 설명 부분에는 방향 벡터를 스스로 두 번 정정하는 혼동이 남아 있었고, 기록된 순서는 host가 원본 기록에서 복사한 것입니다.</aside>
+</section>

@@ -7,7 +7,7 @@
 - 용어는 SKILL.md, 범용 SKILL.md, 조립체별 SKILL.md 세 가지만 사용(노트·일반 문서·문서라는 말은 쓰지 않음). 파일 이름의 `assembly-note-` 접두어는 조립체별 SKILL.md 표시.
 - 범용 SKILL.md는 최신 버전 S5 기준으로 설명하고, 이전 버전 S3는 비교용으로 함께 표시.
 
-실제 슬라이드는 Slides artifact(비공개)에 있고, 공개 저장소에는 이 구성안만 둡니다. 숫자는 `EVALUATION_RESULTS.md`, `VALIDATION_RESULTS.md`, `evaluation_runs.csv`에서 확인한 값만 썼습니다.
+슬라이드 원본 15장은 [presentation/](presentation/)에 있습니다. 숫자는 `EVALUATION_RESULTS.md`, `VALIDATION_RESULTS.md`, `evaluation_runs.csv`에서 확인한 값만 썼습니다.
 
 ## S5 기준으로 보여 주는 이유와 공개 사항
 - S5는 v7.3에서 새로 만든 최신 범용 SKILL.md입니다. S3는 v6에서 만든 이전 버전 2개입니다.

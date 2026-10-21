@@ -1,0 +1,31 @@
+<section id="motivation" data-transition="fade" style="display:flex; flex-direction:column; gap:36px; padding:128px 128px 160px; background:#f6f5f1">
+  <div style="display:flex; flex-direction:column; gap:12px">
+    <p style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; font-weight:600; color:#a85a12">1 · 연구 동기</p>
+    <h2 style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:64px; font-weight:700; line-height:1.15; color:#1c2430">선행 연구가 남긴 질문</h2>
+  </div>
+  <div style="display:flex; flex-direction:row; gap:36px; flex:1">
+    <div style="display:flex; flex-direction:column; gap:14px; flex:1; padding:30px 36px; background:#fffefb; border:1px solid #dcd8cf; border-radius:20px">
+      <p style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; font-weight:600; color:#2f6e9a">ASAP · Tian et al.</p>
+      <h3 style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:30px; font-weight:700; line-height:1.25; color:#1c2430">물리적으로 가능한 조립 순서를 트리 탐색으로 찾는다</h3>
+      <p style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; font-weight:700; color:#a85a12">논문이 밝힌 실패 사례 (§VI)</p>
+      <ul style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; line-height:1.45; color:#3e4a57">
+        <li>탐색을 끝까지 해도 가능한 순서가 없음 (50%)</li>
+        <li>접촉이 복잡하면 물리 평가가 느림 (45%)</li>
+        <li>선후 제약이 엄격하면 제한된 예산 안에 해를 못 찾음 (5%)</li>
+      </ul>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px; flex:1; padding:30px 36px; background:#fffefb; border:1px solid #dcd8cf; border-radius:20px">
+      <p style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; font-weight:600; color:#2f6e9a">ASPIRE · Lu et al. (NVIDIA)</p>
+      <h3 style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:30px; font-weight:700; line-height:1.25; color:#1c2430">로봇 코드 디버깅 경험을 스킬 라이브러리로 쌓는다</h3>
+      <p style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; font-weight:700; color:#a85a12">논문이 밝힌 한계 (§5)</p>
+      <ul style="font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; line-height:1.45; color:#3e4a57">
+        <li>논문 작성 시점 기준 frontier LLM(Claude Opus 4.6)에 의존. 더 작거나 약한 LLM에서도 같은 루프가 유지되는지는 검증하지 않음</li>
+        <li>라이브러리가 커지면 오래되거나 지나치게 구체적인 항목이 새 작업을 오도할 수 있음</li>
+        <li>LLM 호출과 시뮬레이션이 많아 비용이 큼</li>
+      </ul>
+    </div>
+  </div>
+  <p style="padding:28px 40px; font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:30px; font-weight:600; line-height:1.45; color:#f2efe8; background:#1c2430; border-radius:20px">연구 동기 : 성능이 약한 LLM 모델에서도, 분해 실패에서 배운 절차를 SKILL.md로 남기면 분해 계획이 나아질까?</p>
+  <p style="position:absolute; bottom:64px; left:128px; width:1664px; font-family:'IBM Plex Sans KR', Arial, sans-serif; font-size:24px; color:#6b7480">SKILL.md 기반 Disassembly Planner · 2</p>
+  <aside>연구 동기는 두 선행 연구의 한계에서 출발합니다. ASAP은 물리 시뮬레이션으로 각 단계의 안정성을 확인하면서 조립 순서를 트리 탐색으로 찾는 방법입니다. 논문은 실패 사례 세 가지를 밝혔습니다. 탐색을 끝까지 해도 가능한 순서가 없는 경우가 50%, 접촉이 복잡해 물리 평가가 느린 경우가 45%, 선후 제약이 엄격해 제한된 예산 안에 해를 못 찾는 경우가 5%입니다. ASPIRE는 로봇 제어 코드를 디버깅한 경험을 스킬 라이브러리로 쌓아 재사용하는 방법인데, 스스로 밝힌 한계로 Claude Opus 4.6 같은 frontier LLM에 의존하며 더 작거나 약한 모델에서도 같은 학습 루프가 유지되는지 검증하지 않았다고 했습니다. 또 라이브러리가 커지면 오래되거나 너무 구체적인 항목이 새 작업을 오도할 수 있고, 호출과 시뮬레이션 비용이 크다고 했습니다. 그래서 이 연구는, 더 약한 LLM 설정에서도 분해 실패에서 배운 절차를 SKILL.md로 남기면 제한된 예산 안의 분해 계획이 나아지는지를 묻습니다.</aside>
+</section>

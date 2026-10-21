@@ -20,3 +20,4 @@ __pycache__/
 !demo/replay/**
 !development_demo/replay/
 !development_demo/replay/**
+!results/repair_v7_3/presentation/*.pptx

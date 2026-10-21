@@ -4,7 +4,7 @@
 
 용어: SKILL.md는 LLM이 읽는 절차 파일입니다. 범용 SKILL.md는 처음 보는 조립체용(이전 버전 S3, 최신 버전 S5)이고, 조립체별 SKILL.md는 한 조립체의 1차 시도 기록으로 만든 그 조립체 전용 파일입니다(파일 이름 `assembly-note-*`). 이전 기록 문서의 "노트"는 조립체별 SKILL.md, "일반 문서"는 범용 SKILL.md를 뜻합니다.
 
-진행 순서는 개선 사이클 → 고정 평가였습니다. 개선 사이클에서는 엔진 속도(판정 동일), 형식 위반 재요청, 조립체별 SKILL.md 우선·실제 방향 벡터 계약, 조립체별 SKILL.md 작성기 v2, 범용 SKILL.md S5와 모델 없는 규칙 검사를 넣었습니다. 고정 평가는 이전에 한 번도 쓰지 않은 ASAP CAD 4개(후보 92개 중 선정)로 했습니다. [STATUS](disassembly_repair_v7_3/STATUS.md), [평가 결과](results/repair_v7_3/EVALUATION_RESULTS.md), [개발 검증](results/repair_v7_3/VALIDATION_RESULTS.md), [전체 표](results/repair_v7_3/RESULT_TABLES.md), [발표 구성](results/repair_v7_3/PPT_OUTLINE.md)
+진행 순서는 개선 사이클 → 고정 평가였습니다. 개선 사이클에서는 엔진 속도(판정 동일), 형식 위반 재요청, 조립체별 SKILL.md 우선·실제 방향 벡터 계약, 조립체별 SKILL.md 작성기 v2, 범용 SKILL.md S5와 모델 없는 규칙 검사를 넣었습니다. 고정 평가는 이전에 한 번도 쓰지 않은 ASAP CAD 4개(후보 92개 중 선정)로 했습니다. [STATUS](disassembly_repair_v7_3/STATUS.md), [평가 결과](results/repair_v7_3/EVALUATION_RESULTS.md), [개발 검증](results/repair_v7_3/VALIDATION_RESULTS.md), [전체 표](results/repair_v7_3/RESULT_TABLES.md), [발표 구성](results/repair_v7_3/PPT_OUTLINE.md), [발표 자료 원본](results/repair_v7_3/presentation/)
 
 - **같은 조립체 2차 시도:** 조립체별 SKILL.md를 쓴 B·C는 **24/24 성공**이었고, 23번은 검사 수가 필요한 제거 수와 같았습니다(실패 검사 0). SKILL.md 없는 A와 조립체별 SKILL.md 없는 B·C는 9/12였습니다.
 - **처음 보는 조립체 1차 시도:**
@@ -91,7 +91,7 @@ PYTHONDONTWRITEBYTECODE=1 python -B -m disassembly_final_v6.pipeline
 
 추가 작업은 새 branch 또는 fork에서 진행하세요. `outputs/protocol/freeze.json`이 생긴 뒤에는 그 실험의 actor,physics,bank를 수정하지 않습니다. 테스트 실패를 학습 자료로 쓰면 해당 CAD의 결과를 새 제품 첫 실행 성능으로 재사용할 수 없습니다. 변경 제안은 원인·변경점·검증·비교 조건을 MD로 남겨 주세요. Claude에게 작업을 자동 할당하지 않습니다.
 
-데이터: [ASAP](https://github.com/yunshengtian/ASAP),[논문](https://arxiv.org/abs/2309.16909). 공식 데이터와 외부 라이브러리는 각각의 원래 배포 조건을 따릅니다. 원본 CAD archive,학술 PDF,발표자료,venv,인증 정보는 업로드하지 않습니다. viewer vendor의 라이선스 고지를 유지합니다.
+데이터: [ASAP](https://github.com/yunshengtian/ASAP),[논문](https://arxiv.org/abs/2309.16909). 공식 데이터와 외부 라이브러리는 각각의 원래 배포 조건을 따릅니다. 원본 CAD archive,학술 PDF,venv,인증 정보는 업로드하지 않습니다. 발표 자료는 v7.3 최종본만 PPTX와 슬라이드 원본으로 올립니다([results/repair_v7_3/presentation](results/repair_v7_3/presentation/)). viewer vendor의 라이선스 고지를 유지합니다.
 
 ## 내려받아 볼 수 있는 최종 다시보기
 

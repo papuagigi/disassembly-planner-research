@@ -1,0 +1,32 @@
+<section id="result3" data-transition="fade" style="background:#F6F5F1;color:#1C2430;font-family:'IBM Plex Sans KR', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;color:#A85A12">10 · 결과 ③ 최신 범용 SKILL.md(S5)의 개발 검증</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.15;color:#1C2430">S5는 불승인: “축 집중” 규칙이 부품을 가뒀다</h2>
+</div>
+<div style="display:flex;gap:44px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:20px">
+<table style="font-size:24px;color:#3E4A57;font-family:'IBM Plex Sans KR', Arial, sans-serif">
+<tr style="background:#1C2430"><th style="width:16%;text-align:left;color:#F2EFE8">조건</th><th style="width:48%;text-align:left;color:#F2EFE8">하는 일</th><th style="width:14%;text-align:center;color:#F2EFE8">성공</th><th style="width:22%;text-align:center;color:#F2EFE8">검사 수 중앙값</th></tr>
+<tr><td><b>A</b></td><td>SKILL.md 없이 LLM이 탐색 코드를 작성</td><td style="text-align:center">8/8</td><td style="text-align:center">23.5</td></tr>
+<tr style="background:#FFFEFB"><td><b>B · S5</b></td><td>S5를 읽고 LLM이 탐색 코드를 작성</td><td style="text-align:center;color:#A85A12"><b>6/8</b></td><td style="text-align:center">27</td></tr>
+<tr><td><b>C · S5</b></td><td>S5를 참고해 LLM은 순위만 정하고, 탐색은 고정 DFS</td><td style="text-align:center">8/8</td><td style="text-align:center">24.5</td></tr>
+</table>
+<p style="font-size:24px;line-height:1.45;color:#4A5560"><b style="color:#1C2430">검사 수</b> = 완전 분해까지 시도한 제거 동작(물리 판정) 횟수. <b style="color:#1C2430">중앙값</b>은 성공한 에피소드만으로 계산. 대상은 S5 작성에 쓰지 않은 개발 CAD 05459·02406·07375·03674, 조건마다 CAD당 2회</p>
+<p style="font-size:24px;line-height:1.45;color:#3E4A57;background:#F3E2CC;padding:22px 28px;border-radius:16px"><b>승인 규칙(실행 전 고정)</b> B·C 모두 성공률이 A 이상이고, 둘 중 하나는 A보다 나아야 함(성공률, 같으면 검사 수 중앙값). B는 6/8 &lt; 8/8, C는 성공률이 같고 중앙값 24.5 &gt; 23.5 → 불승인</p>
+</div>
+<div style="width:620px;display:flex;flex-direction:column;gap:18px">
+<h3 style="font-size:32px;font-weight:700;line-height:1.25;color:#1C2430">B가 실패한 03674: 부품 0은 옆으로 먼저 빠져야 한다</h3>
+<div style="background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:20px 26px;display:flex;flex-direction:column;gap:6px">
+<p style="font-size:26px;font-weight:700;color:#2F6E9A">C · S5 1회차 · 성공, 검사 12회</p>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">부품 0을 먼저 옆으로 → 나머지 10개를 위로</p>
+</div>
+<div style="background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:20px 26px;display:flex;flex-direction:column;gap:6px">
+<p style="font-size:26px;font-weight:700;color:#A85A12">B · S5 · 2회 모두 실패 (11개 중 10개 제거)</p>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">위로 빠지는 부품부터 제거 → 부품 0이 갇힘 → 같은 제거·복원 반복(복원 149회, 216회)으로 예산 소진</p>
+</div>
+<p style="font-size:24px;line-height:1.45;color:#1C2430"><b>교훈</b> “발견한 축에 집중”에는 “다른 축으로만 빠지는 부품은 먼저”라는 예외가 필요합니다.</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 11 · 불승인이어서 사전 규칙상 평가의 주 분석은 S3 · 이 CAD들은 A도 8/8로 풀어 개선 여지가 작았음</p>
+<aside>세 번째 결과는 최신 범용 SKILL.md인 S5를 평가에 쓰기 전에 승인할지 판정한 개발 검증입니다. 불승인됐기 때문에 미리 정한 규칙상 평가의 주 분석은 이전 버전 S3였고, 앞의 결과에서 S3를 함께 보여드린 이유가 이것입니다. 세 조건은 앞에서 본 구조 그대로입니다. A는 SKILL.md 없이 LLM이 탐색 코드를 쓰고, B는 S5를 읽고 탐색 코드를 쓰고, C는 S5를 참고해 LLM은 순위만 정하고 탐색은 고정 DFS가 합니다. 여기서 검사 수는 완전 분해까지 시도한 제거 동작, 즉 물리 판정 횟수이고, 중앙값은 성공한 에피소드만으로 계산했습니다. S5 작성에 쓰지 않은 개발 CAD 네 개에서 조건마다 두 번씩 돌렸습니다. 미리 정한 규칙은 B와 C 모두 A 이상이고 하나는 A보다 나아야 승인인데, B는 8번 중 6번 성공했고 C는 성공률은 같지만 검사 수 중앙값이 한 번 많아서 불승인됐습니다. B가 실패한 03674는 부품 0을 먼저 옆으로 빼야 나머지가 위로 빠지는 조립체입니다. C는 그렇게 해서 12번 검사로 끝냈지만, B는 S5의 축 집중 규칙대로 위로 빠지는 부품부터 뺐고, 부품 0이 갇힌 뒤 같은 제거와 복원을 반복하다 예산을 다 썼습니다.</aside>
+</section>

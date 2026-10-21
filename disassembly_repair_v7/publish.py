@@ -127,7 +127,8 @@ def v72(written):
 
 
 def v73(written):
-    """disassembly_repair_v7_3: code, docs, SKILL.md banks/notes, protocol/decision/gate records, summaries.
+    """disassembly_repair_v7_3: code, docs, SKILL.md banks/notes, protocol/decision/gate records, summaries,
+    final slide sources (presentation/project, user approval 2026-10-21; cut slides are not published).
     Never: data/ (raw CAD), cases/ (converted cases), per-candidate selection folders, raw results, provider logs."""
     base = ROOT.parent / 'disassembly_repair_v7_3'
     out = REPO / 'disassembly_repair_v7_3'
@@ -163,6 +164,22 @@ def v73(written):
     progress = o / 'selection_inputs/progress.json'
     if progress.exists():
         _put(progress, REPO / 'results/repair_v7_3/records/selection_progress.json', written)
+    pres = base / 'presentation'
+    if pres.exists():
+        slides = [pres / 'README.md', pres / 'project/deck.json'] + sorted((pres / 'project/slides').glob('*.html'))
+        for p in slides:
+            if p.is_file():
+                rel = p.relative_to(pres)
+                if rel.parts[0] == 'project':
+                    rel = Path(*rel.parts[1:])
+                _put(p, REPO / 'results/repair_v7_3/presentation' / rel, written)
+        for p in sorted(pres.glob('*.pptx')):
+            # exported deck (binary); user approval 2026-10-21, PPTX rather than PDF
+            assert p.stat().st_size < 50_000_000, p
+            destination = REPO / 'results/repair_v7_3/presentation' / p.name
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(p.read_bytes())
+            written.append(str(destination.relative_to(REPO)))
 
 
 GROUPS = dict(code=code, docs=docs, evidence=evidence, pilot=pilot, v72=v72, v73=v73)

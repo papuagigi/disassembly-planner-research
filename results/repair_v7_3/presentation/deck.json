@@ -1,0 +1,19 @@
+{
+  "v": 4,
+  "createdOnFiles": {"v": 1, "at": "2026-10-21T02:50:00Z"},
+  "lists": "css",
+  "title": "실패에서 배우는 분해 계획",
+  "order": ["cover", "motivation", "goal", "planner", "abc_why", "skillmd", "skillmd2", "setup", "result1", "result2", "result3", "insights", "application", "limits", "closing"],
+  "sections": {
+    "s1": {"description": "연구 동기와 목표: 선행 연구의 한계에서 출발해, 실패 경험을 SKILL.md로 저장하고 재사용한다", "start": "cover"},
+    "s2": {"description": "방법: disassembly planner, A·B·C 구조와 도입 이유, 최신 범용 SKILL.md(S5)와 조립체별 SKILL.md 작성법", "start": "planner"},
+    "s3": {"description": "실험 환경과 평가 설계", "start": "setup"},
+    "s4": {"description": "결과: 같은 조립체(조립체별 SKILL.md), 처음 보는 조립체(범용 SKILL.md S5, S3 비교), S5 개발 검증", "start": "result1"},
+    "s5": {"description": "시사점, 현장 적용 방안, 한계와 결론", "start": "insights"}
+  },
+  "faces": {
+    "ibm-plex-sans-kr": {"family": "IBM Plex Sans KR", "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap"},
+    "jetbrains-mono": {"family": "JetBrains Mono", "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap"}
+  },
+  "designSystems": []
+}

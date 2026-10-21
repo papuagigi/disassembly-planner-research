@@ -1,0 +1,30 @@
+<section id="result2" data-transition="fade" style="background:#F6F5F1;color:#1C2430;font-family:'IBM Plex Sans KR', Arial, sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:12px">
+<p style="font-size:24px;font-weight:600;color:#A85A12">9 · 결과 ② 처음 보는 조립체를 분해할 때</p>
+<h2 style="font-size:64px;font-weight:700;line-height:1.15;color:#1C2430">1차 시도: C·S5는 4/4, A와 B·S5는 3/4</h2>
+</div>
+<table style="font-size:26px;color:#3E4A57;font-family:'IBM Plex Sans KR', Arial, sans-serif">
+<tr style="background:#1C2430"><th style="width:28%;text-align:left;color:#F2EFE8">1차 시도 (검사 수)</th><th style="width:14%;text-align:center;color:#F2EFE8">02260</th><th style="width:14%;text-align:center;color:#F2EFE8">02991</th><th style="width:14%;text-align:center;color:#F2EFE8">05879</th><th style="width:14%;text-align:center;color:#F2EFE8">03937</th><th style="width:16%;text-align:center;color:#F2EFE8">성공</th></tr>
+<tr><td><b>A</b> SKILL.md 없음</td><td style="text-align:center;color:#A85A12">실패 3/10</td><td style="text-align:center">8</td><td style="text-align:center">17</td><td style="text-align:center">54</td><td style="text-align:center"><b>3/4</b></td></tr>
+<tr style="background:#FFFEFB"><td><b>B</b> 범용 S5</td><td style="text-align:center;color:#A85A12">실패 3/10</td><td style="text-align:center">8</td><td style="text-align:center">8</td><td style="text-align:center">19</td><td style="text-align:center"><b>3/4</b></td></tr>
+<tr><td><b>C</b> 범용 S5</td><td style="text-align:center">35</td><td style="text-align:center">8</td><td style="text-align:center">15</td><td style="text-align:center">55</td><td style="text-align:center;color:#2F6E9A"><b>4/4</b></td></tr>
+<tr style="background:#FFFEFB"><td style="color:#6B7480">B 범용 S3 (이전 버전)</td><td style="text-align:center;color:#6B7480">43</td><td style="text-align:center;color:#6B7480">실패 0/8</td><td style="text-align:center;color:#6B7480">8</td><td style="text-align:center;color:#6B7480">76</td><td style="text-align:center;color:#6B7480">3/4</td></tr>
+<tr><td style="color:#6B7480">C 범용 S3 (이전 버전)</td><td style="text-align:center;color:#6B7480">29</td><td style="text-align:center;color:#6B7480">8</td><td style="text-align:center;color:#6B7480">56</td><td style="text-align:center;color:#6B7480">68</td><td style="text-align:center;color:#6B7480">4/4</td></tr>
+</table>
+<div style="display:flex;gap:24px">
+<div style="flex:1;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:22px 28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:700;color:#1C2430">S5 · 최신 범용 SKILL.md</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">실제 방향으로 되는 축을 찾아 집중, 아래 방향 제외, 참조 코드 포함</p>
+</div>
+<div style="flex:1;background:#FFFEFB;border:1px solid #DCD8CF;border-radius:16px;padding:22px 28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:700;color:#1C2430">S3 · 이전 버전 (비교용)</h3>
+<p style="font-size:24px;line-height:1.4;color:#4A5560">성공 수는 S5와 같고, 검사 수는 CAD마다 엇갈림. 4개 CAD로는 우열을 판단할 수 없음</p>
+</div>
+<div style="flex:1;background:#F3E2CC;border-radius:16px;padding:22px 28px;display:flex;flex-direction:column;gap:8px">
+<h3 style="font-size:28px;font-weight:700;color:#1C2430">관찰</h3>
+<p style="font-size:24px;line-height:1.4;color:#3E4A57">A·B·S5는 느린 02260에서 900초 시간 초과. B·S3는 02991에서 생성 코드가 거부돼 검사 0회. C의 토큰은 A의 4~5배</p>
+</div>
+</div>
+<p style="position:absolute;left:128px;bottom:64px;width:1664px;font-size:24px;color:#6B7480">SKILL.md 기반 Disassembly Planner · 10 · 숫자는 성공까지의 물리 검사 수, “실패 a/b”는 제거한 수 / 필요한 수</p>
+<aside>두 번째 결과는 처음 보는 조립체입니다. 최신 범용 SKILL.md S5를 쓴 C는 네 CAD를 모두 1차에 분해했고, SKILL.md가 없는 A와 S5를 쓴 B는 넷 중 셋이었습니다. A와 B가 실패한 곳은 가장 느린 02260으로, 900초 동안 열 개 중 세 개만 뺐습니다. 회색 두 줄은 이전 버전 S3의 결과입니다. 성공 수는 S5와 같고, 검사 수는 CAD마다 S5가 적기도 하고 많기도 해서, 네 CAD로는 어느 버전이 낫다고 말할 수 없습니다. S3를 쓴 B는 02991에서 생성 코드가 런타임 규칙에 걸려 검사를 한 번도 못 했습니다. 정리하면, 처음 보는 조립체에서 범용 SKILL.md의 효과는 조립체별 SKILL.md만큼 분명하지 않았고, 가장 안정적이었던 C는 토큰을 A의 4~5배 썼습니다.</aside>
+</section>
