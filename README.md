@@ -1,6 +1,18 @@
 # Failure-driven disassembly planner
 
-## 최신 결과: disassembly_repair_v7_2 (학습 사이클 + 같은 조립체 재시도, 완료)
+## 최신 결과: disassembly_repair_v7_3 (새 CAD 4개 고정 평가, 완료)
+
+진행 순서는 개선 사이클 → 고정 평가였습니다. 개선 사이클에서는 엔진 속도(판정 동일), 형식 위반 재요청, 노트 우선·실제 방향 벡터 계약, 노트 작성기 v2, 일반 SKILL.md S5와 모델 없는 규칙 검사를 넣었습니다. 고정 평가는 이전에 한 번도 쓰지 않은 ASAP CAD 4개(후보 92개 중 선정)로 했습니다. [STATUS](disassembly_repair_v7_3/STATUS.md), [평가 결과](results/repair_v7_3/EVALUATION_RESULTS.md), [개발 검증](results/repair_v7_3/VALIDATION_RESULTS.md), [전체 표](results/repair_v7_3/RESULT_TABLES.md)
+
+- **같은 조립체 2차 시도:** 노트를 쓴 B·C는 **24/24 성공**이었고, 23번은 검사 수가 필요한 제거 수와 같았습니다(실패 검사 0). 기억 없는 A와 노트 없는 B·C는 9/12였습니다.
+- **처음 보는 조립체 1차 시도:**
+  - C는 일반 문서(S3·S5)로 8/8 성공했고, A는 3/4, B는 6/8이었습니다.
+  - A는 느린 CAD에서 시간 초과로 실패했고, B는 생성 코드가 런타임에 거부되는 오류로 실패했습니다.
+- **개발 검증:** A 8/8, B(S5) 6/8, C(S5) 8/8로, 사전 규칙에 따라 S5는 불승인됐습니다. 원인은 "발견한 축에 집중" 규칙이 다른 축으로 먼저 빠져야 하는 부품을 가둔 것입니다. 그래서 평가의 주 bank는 S3이고, S5는 탐색 분기로 따로 보고합니다.
+- **엔진 검증:** 물리 계산 가속(E1)은 기존 61개 에피소드를 재생해 판정이 하나도 바뀌지 않음을 확인했습니다. 재요청(R7) 8번은 모두 회복했습니다.
+- **한계:** 표본이 작습니다(CAD 4개, 조건당 1~2회). 6방향 직선 이동만 다루며, 실패 기록만으로 쓴 노트는 시험되지 않았습니다.
+
+## 이전 결과: disassembly_repair_v7_2 (학습 사이클 + 같은 조립체 재시도, 완료)
 
 엔진 보강 → 개발 CAD 실패 수집 → SKILL.md(S4b) 생성 → 고정 검증 → 고정 재시도 평가 순서로 진행했습니다. 모델은 gpt-6-luna/low로 같고, 예산은 호출 8 / 검사 240 / 900초입니다. [STATUS](disassembly_repair_v7_2/STATUS.md), [재시도 결과](results/repair_v7_2/RETRY_RESULTS.md), [검증 결과](results/repair_v7_2/VALIDATION_RESULTS.md), [전체 표](results/repair_v7_2/RESULT_TABLES.md)
 

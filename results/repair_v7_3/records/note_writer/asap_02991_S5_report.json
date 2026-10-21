@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-21T01:41:26.589629+00:00",
+  "case_id": "asap_02991_S5",
+  "usage": {
+    "input_tokens": 14372,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 856,
+    "reasoning_output_tokens": 0
+  },
+  "problems": [],
+  "note": "<workspace>/disassembly_repair_v7_3/memory/notes/asap_02991_S5/assembly-note-upward-minus-y/SKILL.md",
+  "writer_errors": [],
+  "inputs": [
+    "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02991/first_A/result.json",
+    "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02991/first_B_S5/result.json",
+    "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02991/first_C_S5/result.json"
+  ],
+  "recorded_sequence_source": {
+    "condition": "A",
+    "success": true,
+    "length": 8
+  }
+}

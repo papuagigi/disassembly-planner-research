@@ -1,0 +1,32 @@
+{
+  "version": "S3_note_asap_02260",
+  "created_utc": "2026-10-21T00:20:48.280350+00:00",
+  "skills": [
+    {
+      "id": "physical-disassembly-failure-repair",
+      "path": "S3copy/physical-disassembly-failure-repair/SKILL.md",
+      "sha256": "e749016ca7991cf0f9f2964fbb0cda260e66542a46cba59b64ed370d1843d52c"
+    },
+    {
+      "id": "physical-directional-clearance",
+      "path": "S3copy/physical-directional-clearance/SKILL.md",
+      "sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
+    },
+    {
+      "id": "assembly-note-removal-sequence",
+      "path": "notes/asap_02260/assembly-note-removal-sequence/SKILL.md",
+      "sha256": "5f7c034e17dc66cf2a1c7738a318c2c9c09837a9b5083709fa8a6e7f810c34b2"
+    }
+  ],
+  "admission_evidence": {
+    "case_id": "asap_02260",
+    "first_attempts": [
+      "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02260/first_A/result.json",
+      "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02260/first_B/result.json",
+      "<workspace>/disassembly_repair_v7_3/outputs/evaluation/asap_02260/first_C/result.json"
+    ],
+    "note_problems": []
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

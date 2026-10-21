@@ -109,7 +109,7 @@ def main():
     if (ROOT / 'outputs/validation/decision.json').exists():
         d = read(ROOT / 'outputs/validation/decision.json')
         summary['admission'] = dict(admitted=d['admitted'], passes=d['passes'])
-        md.append(f"\nS4b admission (pre-registered rule): admitted={d['admitted']}, passes={d['passes']}\n")
+        md.append(f"\nS5 admission (pre-registered rule): admitted={d['admitted']}, passes={d['passes']}\n")
     if summary.get('replay'):
         md.append('\nIndependent replays: ' + ', '.join(f"{k} {v['status']} ({v['episodes']})" for k, v in summary['replay'].items()) + '\n')
     write(analysis / 'summary_v73.json', summary)
