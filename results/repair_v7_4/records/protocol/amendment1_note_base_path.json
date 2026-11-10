@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-21T13:25:57.158723+00:00",
+  "status": "USER_APPROVED_AMENDMENT",
+  "user_approval": "amendment 1로 기록하고 경로 버그를 고친 뒤 평가를 이어서 실행해줘. 미완성 노트 산출물은 recovery 폴더로 옮기고 노트 작성은 다시 해.",
+  "problem": "After the 9 attempt-1 episodes of asap_08203, write_note -> make_bank raised ValueError: base-bank documents (v7_3/memory/S5/...) are not under the note bank folder (v7_4/memory), so relative_to failed. The writer call had already returned and its note was materialized, but no note bank was written; no attempt-2 episode started.",
+  "fix": "campaign74.local_base(): byte-identical copies of the base bank manifest and its SKILL.md files under v7_4/memory (sha256 asserted equal to v7.3) are passed to write_note. Planner modules, prompts, budgets, physics, bank contents and the schedule are unchanged; verify() accepts the amended campaign74.py hash only.",
+  "partial_outputs_moved_to": "outputs/recovery/aborted_note_writer_asap_08203 (writer log call_01 and its materialized note; never read by any episode)",
+  "note_rewrite": "the asap_08203 조립체별 SKILL.md is written again by a fresh gpt-6-luna/low writer call from the same three repeat-1 records",
+  "episodes_completed_before": [
+    "a1_B_base_r1@asap_08203",
+    "a1_C_base_r1@asap_08203",
+    "a1_A_none_r1@asap_08203",
+    "a1_C_base_r2@asap_08203",
+    "a1_A_none_r2@asap_08203",
+    "a1_B_base_r2@asap_08203",
+    "a1_A_none_r3@asap_08203",
+    "a1_B_base_r3@asap_08203",
+    "a1_C_base_r3@asap_08203"
+  ],
+  "campaign74_sha256_before": "aab93f9a8275d936e6deda121fe68964d37256916b72d0ff63924c3901e5c60e",
+  "sha256": {
+    "<workspace>/disassembly_repair_v7_4/campaign74.py": "8123d2bbde7e63086156eb7e99eec9bc9cf7fb2a028b5c7ec2d0321aa4d8ca21"
+  }
+}

@@ -1,0 +1,1313 @@
+{
+  "status": "FINITE_SELECTION_COMPLETE",
+  "utc": "2026-10-21T10:55:50.323414+00:00",
+  "target": 12,
+  "target_per_stratum": 4,
+  "per_stratum": {
+    "5": 4,
+    "6": 4,
+    "7": 4
+  },
+  "cases": [
+    {
+      "case_id": "asap_08203",
+      "source_assembly_id": "08203",
+      "part_count": 5,
+      "required_removals": 4,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_08203.json",
+      "case_sha256": "ba8ffce37d9665d84c6b05f3592a159ae4a34751b62484f5cbec938319d7d3c8",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08203/shared.json",
+      "shared_sha256": "d2191315700b6f09293b57ff89df37118ef0310da151e4c31a38d5c101689af9",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08203/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "35650d576e24f259418fd47621d0c96ab27ea0c4cfabe5dd070dd61c2f68ea16",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 5,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08203/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_03391",
+      "source_assembly_id": "03391",
+      "part_count": 6,
+      "required_removals": 5,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_03391.json",
+      "case_sha256": "b215eb1afffe6c1cb74749cb39a944928f6adb1eecfac49906e123835987b9d8",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/03391/shared.json",
+      "shared_sha256": "06e0480087693aaf424790aa0f01691de862b03dec1dd0e73496316e4f0cbd9a",
+      "fixture_ids": [
+        "5"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/03391/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "148751e9d5b7d472ea153b68d4a8acd4ceef8c4cb7d1eed736e2a73487470de7",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 6,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/03391/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_06262",
+      "source_assembly_id": "06262",
+      "part_count": 6,
+      "required_removals": 5,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_06262.json",
+      "case_sha256": "8c533cb5742b74ce4456a171d78772df884e3673a75935e7eb06b9b302c4712d",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06262/shared.json",
+      "shared_sha256": "94493ec0c4f1169362f7d3b6236a96dc531296cf4f1d5c1f64d7d2872127fab9",
+      "fixture_ids": [
+        "2"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06262/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "0dd1d867034ba95375f5603d58af1d84979a6c2ad21da1040a0f421979aea1da",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 6,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06262/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_06414",
+      "source_assembly_id": "06414",
+      "part_count": 6,
+      "required_removals": 5,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_06414.json",
+      "case_sha256": "042ff32ccc4a00c3478bbe08e551b0e46e3245076986aade62639db557907509",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06414/shared.json",
+      "shared_sha256": "64c568a1dc2eb866b4c302c3353caa430cfefa84f9a58a4a83e1d549d5ba9957",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06414/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "1cf2e170e508c46e7d714e73728a1a574d64009b39a71229f1c90d85d31b085b",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 6,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/06414/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_07711",
+      "source_assembly_id": "07711",
+      "part_count": 5,
+      "required_removals": 4,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_07711.json",
+      "case_sha256": "49fa57604d58ed4ab4f2dca7b16ce5610bcd91141c9203e5977ed3f65949e3d6",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07711/shared.json",
+      "shared_sha256": "ad24d48b19c9c1c6d8fb20475f898cbedfa1ffb9013c1b132f8a6744c73edf44",
+      "fixture_ids": [
+        "2"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07711/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "b0ffad35b5f29a63da00faff99f9e6f0dbadf015c76f3cd32d750a0d8d1a8bd9",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 5,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07711/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_04714",
+      "source_assembly_id": "04714",
+      "part_count": 6,
+      "required_removals": 5,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_04714.json",
+      "case_sha256": "d9d894cbe9a7d137c63aacf6d0e790022847fbf74deb6db97f974d9b2e1828ea",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04714/shared.json",
+      "shared_sha256": "236839907689de724bbeefdda1f6b67482b44c12da9a32e65a330e9402477344",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04714/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "2a429269da0b631750f5b6c9061eea7e7841cc02b1ac50b9329cdf6d334a0078",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 6,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04714/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_07714",
+      "source_assembly_id": "07714",
+      "part_count": 5,
+      "required_removals": 4,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_07714.json",
+      "case_sha256": "6ac7b0d528f4c6de87a12f4cb411174b61d79cdad0e4d920c293204448652b3e",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07714/shared.json",
+      "shared_sha256": "f758ddac37a479434285699d3812eba5bec37a4a9db11779f93106116876b336",
+      "fixture_ids": [
+        "4"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07714/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "b1b68b1192e3778a4b92844a6b62fa26618efe36c0ca438a6714f215e6b4dacf",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 5,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/07714/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_04098",
+      "source_assembly_id": "04098",
+      "part_count": 5,
+      "required_removals": 4,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_04098.json",
+      "case_sha256": "74a29f7d9567585d10fe915f899ab8e3d494cdbfb51d35c151f7bc7cc378bc1b",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04098/shared.json",
+      "shared_sha256": "2d0f75146aa1d4688cf95dd990b650b27eb2081f88fac18a4d81efb2fa2939c6",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04098/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "500669bda5f0941c56ef6f5efea8de417041537bd85175b980577c11a5fe6197",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 5,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/04098/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_08183",
+      "source_assembly_id": "08183",
+      "part_count": 7,
+      "required_removals": 6,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_08183.json",
+      "case_sha256": "30f4fe2d71870215105532063272de1cb1d30025c2b6176a0a6c339cfdca86f7",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08183/shared.json",
+      "shared_sha256": "856829cd628b6c10b69584a00200ca8068b7b37fdbd8e06585daeaa43859806f",
+      "fixture_ids": [
+        "6"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08183/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "57d0f4719b3b9a2cbbf48242fbb6adf771e48d41bdb7de3c95aa361c6f10494c",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 7,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/08183/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_02874",
+      "source_assembly_id": "02874",
+      "part_count": 7,
+      "required_removals": 6,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_02874.json",
+      "case_sha256": "9e2ad1f4eb3cabf2a0af2a5370db423a8025a917aff1c895b5a6420bf539f520",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/02874/shared.json",
+      "shared_sha256": "53a3e2e889f35bef4cbb4a2764f916c21e5ec4002570b1618bc0b1c75f88d848",
+      "fixture_ids": [
+        "13"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/02874/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "bcc4c2f1c5831a145f876180c97ece211ae2d9c2a1b9ffae75266e223a7c567d",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 7,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/02874/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_00650",
+      "source_assembly_id": "00650",
+      "part_count": 7,
+      "required_removals": 6,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_00650.json",
+      "case_sha256": "643ea85d23b62fd5a41e9f5d48433b0f635851bde9fed855337bd2b89abaf613",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/00650/shared.json",
+      "shared_sha256": "cbce2249eff45a1ef8749c9dc60707f52c7433b65464b5f08a7430e2c2233d12",
+      "fixture_ids": [
+        "4"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/00650/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "31a5535d2347eb7f01f4510eb85b1f1d98222c6d5445282ad9b0d81981b30130",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 7,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/00650/reference_search_P2.json"
+    },
+    {
+      "case_id": "asap_01680",
+      "source_assembly_id": "01680",
+      "part_count": 7,
+      "required_removals": 6,
+      "case_path": "<workspace>/disassembly_repair_v7_4/cases/pilot/asap_01680.json",
+      "case_sha256": "6d7fd78e9841221e3b3a5d01465fa7dfde4aeec09bba0d348fde572fea35432c",
+      "shared_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/01680/shared.json",
+      "shared_sha256": "6e28fa45407c6ee8e6f009dd9d28f2d587f49dc88daf33d80063c585f1d802ff",
+      "fixture_ids": [
+        "0"
+      ],
+      "source_inventory_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/01680/source_inventory.json",
+      "source_split": "training_assembly",
+      "geometry_fingerprint": "b55776f380651117c062a55c87effdfe063bfe2b8089463a0400d5993aaaa6e3",
+      "physics_variant": "P2_persist_up_to_stable_penetration",
+      "tier": 7,
+      "reference_path": "<workspace>/disassembly_repair_v7_4/outputs/selection_inputs/01680/reference_search_P2.json"
+    }
+  ],
+  "statuses": [
+    {
+      "id": "08203",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 26.65854429198953,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "01740",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 162.16664825000043,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "08070",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 43.91929654100386,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04089",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 106.85892629101,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07867",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 118.95484720800596,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02689",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 274.23223033400427,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "00945",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.13845191699510906,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "03391",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 128.02991412499978,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "04858",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 125.51604091600166,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "04245",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 155.0158369159908,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05368",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 60.79517058299098,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "03585",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 162.81435050000437,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07193",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 79.39531704199908,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05129",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.22788337500242,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06573",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.39425166600267,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06248",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 226.03169666598842,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07420",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 146.6770784160035,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "04840",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 283.3112890839984,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07224",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 134.25574166599836,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05872",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 31.689347374995123,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "08170",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.25742491599522,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "04431",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 52.98572983399208,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "07653",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 167.96584049999365,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "01640",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 304.7809503329918,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "05700",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 73.29814037500182,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "06262",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 36.30375204200391,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "05757",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 40.51090429100441,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "00191",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 129.86301637500583,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "06414",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 40.728765292005846,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "02845",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 169.62930779199814,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "07723",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 121.92480216600234,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "03725",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 291.832879833004,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "01515",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 115.47173650001059,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07711",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 44.77717712499725,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "05758",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 129.88633912500518,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "00279",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 32.4605852500099,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "07989",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 69.3989437919954,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "04714",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 81.0234572920017,
+      "split": "training",
+      "tier": 6,
+      "part_count": 6,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "02491",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 256.34771929099225,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07714",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 27.75307537500339,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "04414",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "05404",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 39.95934370900795,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04885",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 126.17247204200248,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "01448",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06423",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 12.60514366699499,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "04098",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 66.51948120798625,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "06445",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "05042",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 90.27608629199676,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "03570",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 41.74201012500271,
+      "split": "training",
+      "tier": 5,
+      "part_count": 5,
+      "v7_physical_screen": "reference_complete_stratum_already_full",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "05451",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "07250",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 164.10804562499106,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "08224",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "04930",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "08152",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 127.03489199999603,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "04366",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "04046",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02721",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 294.86207925000053,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06274",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05415",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06321",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 155.35719833298936,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "03832",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "02344",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "07024",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.3327311250032,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "05714",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07293",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "00814",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 172.925115207996,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "no_reference_search_exhausted_no_complete_path_with_remaining_set_pruning",
+      "reference_status": "search_exhausted_no_complete_path_with_remaining_set_pruning"
+    },
+    {
+      "id": "02850",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "02710",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "04967",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 185.90097958300612,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "05513",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07395",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02053",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 141.79047420900315,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "04029",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "08190",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "03955",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 90.15986545800115,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07006",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "01637",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "08183",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 74.13053629199567,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "03710",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "03412",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "04592",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 137.47265091599547,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "01374",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "04024",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "08024",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.31421666700044,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07816",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05326",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "01834",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.2288368330046,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "05187",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07272",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "03943",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 180.18597954200231,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "07780",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "04549",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02874",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 73.17912504199194,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "07943",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "06827",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02563",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 93.58272624999518,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "02739",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "02231",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02341",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 131.98600666600396,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "05862",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "06688",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "03005",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 92.3568199579895,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06833",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05553",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "02466",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 109.33762566599762,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06938",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "02011",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06394",
+      "status": "source_geometry_excluded",
+      "elapsed_seconds": 0.1179573330009589,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "02984",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "01496",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "07725",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 117.90235299999767,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "04963",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05786",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "00650",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 104.72965820800164,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    },
+    {
+      "id": "02863",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "02034",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "07706",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 37.97105812501104,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06603",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05732",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "01693",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 107.2277926250099,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "02298",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "06026",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "03931",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 169.07140633300878,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "03532",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "01667",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "05717",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 153.23207216599258,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "06416",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07459",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06705",
+      "status": "initial_physics_or_capacity_excluded",
+      "elapsed_seconds": 173.57083045798936,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "03013",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "07769",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "06218",
+      "status": "collision_preparation_excluded",
+      "elapsed_seconds": 125.26128800000879,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7
+    },
+    {
+      "id": "01739",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 5,
+      "part_count": 5
+    },
+    {
+      "id": "05387",
+      "status": "stratum_full_skipped",
+      "split": "training",
+      "tier": 6,
+      "part_count": 6
+    },
+    {
+      "id": "01680",
+      "status": "v6_initially_qualified",
+      "elapsed_seconds": 229.88832562499738,
+      "split": "training",
+      "tier": 7,
+      "part_count": 7,
+      "v7_physical_screen": "reference_complete",
+      "reference_status": "complete_reference_found"
+    }
+  ],
+  "attempted": 135,
+  "candidates_frozen_sha256": "a8695d213e9784ed3dcfcf29f7cdce72571cbe51da0a4e98f159ccfcf0b3018c",
+  "physics_variant": "P2_persist_up_to_stable_penetration",
+  "no_planner_outcome_used": true,
+  "reference_search_used_for_selection": true,
+  "reference_given_to_planners": false
+}

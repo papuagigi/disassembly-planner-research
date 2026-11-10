@@ -1,0 +1,27 @@
+{
+  "version": "S5_note_asap_08203",
+  "created_utc": "2026-10-21T13:26:23.324524+00:00",
+  "skills": [
+    {
+      "id": "world-family-disassembly-search",
+      "path": "S5/world-family-disassembly-search/SKILL.md",
+      "sha256": "5806572eb29f01ddf6f8d30621e9e23d33e5011e985aaac9d49c0a466763d680"
+    },
+    {
+      "id": "assembly-note-upward-removal-sequence",
+      "path": "notes/asap_08203/assembly-note-upward-removal-sequence/SKILL.md",
+      "sha256": "f7362d2bad00ac168af3009f0fa6180c38afa090b2784265ae6f67729450c6a6"
+    }
+  ],
+  "admission_evidence": {
+    "case_id": "asap_08203",
+    "first_attempts": [
+      "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_08203/a1_A_none_r1/result.json",
+      "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_08203/a1_B_base_r1/result.json",
+      "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_08203/a1_C_base_r1/result.json"
+    ],
+    "note_problems": []
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

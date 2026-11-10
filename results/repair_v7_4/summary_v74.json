@@ -1,0 +1,5014 @@
+{
+  "utc": "2026-10-21T16:47:41.259312+00:00",
+  "episodes": 180,
+  "invalid": [],
+  "groups": {
+    "a1/A/none": {
+      "runs": 36,
+      "successes": 36,
+      "success_rate": 1.0,
+      "wilson95": [
+        0.904,
+        1.0
+      ],
+      "wasted_checks": {
+        "median": 10.0,
+        "q1": 1.75,
+        "q3": 20.5,
+        "max": 61,
+        "mean": 13.64
+      },
+      "zero_waste": 8,
+      "tokens": {
+        "median": 19292.0,
+        "q1": 18984.25,
+        "q3": 19595.5,
+        "max": 39085,
+        "mean": 23462.97
+      },
+      "llm_calls": {
+        "median": 1.0,
+        "q1": 1.0,
+        "q3": 1.0,
+        "max": 2,
+        "mean": 1.22
+      },
+      "elapsed": {
+        "median": 30.15,
+        "q1": 22.199999999999996,
+        "q3": 117.37499999999999,
+        "max": 583.4,
+        "mean": 94.51
+      },
+      "model_seconds": {
+        "median": 10.65,
+        "q1": 9.45,
+        "q3": 12.425,
+        "max": 25.0,
+        "mean": 12.49
+      },
+      "other_seconds": {
+        "median": 17.9,
+        "q1": 9.975,
+        "q3": 105.39999999999999,
+        "max": 573.3,
+        "mean": 82.01
+      }
+    },
+    "a1/B/S5": {
+      "runs": 36,
+      "successes": 36,
+      "success_rate": 1.0,
+      "wilson95": [
+        0.904,
+        1.0
+      ],
+      "wasted_checks": {
+        "median": 6.0,
+        "q1": 4.5,
+        "q3": 9.75,
+        "max": 18,
+        "mean": 7.33
+      },
+      "zero_waste": 6,
+      "tokens": {
+        "median": 41384.0,
+        "q1": 41057.25,
+        "q3": 41709.0,
+        "max": 62784,
+        "mean": 42463.56
+      },
+      "llm_calls": {
+        "median": 2.0,
+        "q1": 2.0,
+        "q3": 2.0,
+        "max": 2,
+        "mean": 2
+      },
+      "elapsed": {
+        "median": 35.45,
+        "q1": 26.049999999999997,
+        "q3": 96.75,
+        "max": 221.1,
+        "mean": 74.51
+      },
+      "model_seconds": {
+        "median": 18.6,
+        "q1": 17.549999999999997,
+        "q3": 19.9,
+        "max": 26.8,
+        "mean": 18.85
+      },
+      "other_seconds": {
+        "median": 17.65,
+        "q1": 6.999999999999999,
+        "q3": 78.15,
+        "max": 202.9,
+        "mean": 55.65
+      }
+    },
+    "a1/C/S5": {
+      "runs": 36,
+      "successes": 36,
+      "success_rate": 1.0,
+      "wilson95": [
+        0.904,
+        1.0
+      ],
+      "wasted_checks": {
+        "median": 8.0,
+        "q1": 3.0,
+        "q3": 14.0,
+        "max": 48,
+        "mean": 11.67
+      },
+      "zero_waste": 5,
+      "tokens": {
+        "median": 62966.5,
+        "q1": 40072.0,
+        "q3": 89115.5,
+        "max": 237693,
+        "mean": 77107.36
+      },
+      "llm_calls": {
+        "median": 3.0,
+        "q1": 2.0,
+        "q3": 4.0,
+        "max": 8,
+        "mean": 3.42
+      },
+      "elapsed": {
+        "median": 40.1,
+        "q1": 24.650000000000002,
+        "q3": 105.1,
+        "max": 235.2,
+        "mean": 71.47
+      },
+      "model_seconds": {
+        "median": 21.7,
+        "q1": 14.975,
+        "q3": 28.325000000000003,
+        "max": 52.3,
+        "mean": 24.29
+      },
+      "other_seconds": {
+        "median": 16.7,
+        "q1": 8.65,
+        "q3": 84.05000000000001,
+        "max": 212.0,
+        "mean": 47.16
+      }
+    },
+    "a2/B/S5+note": {
+      "runs": 36,
+      "successes": 36,
+      "success_rate": 1.0,
+      "wilson95": [
+        0.904,
+        1.0
+      ],
+      "wasted_checks": {
+        "median": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "max": 6,
+        "mean": 0.17
+      },
+      "zero_waste": 35,
+      "tokens": {
+        "median": 43102.5,
+        "q1": 42680.25,
+        "q3": 43785.25,
+        "max": 109050,
+        "mean": 47559.08
+      },
+      "llm_calls": {
+        "median": 2.0,
+        "q1": 2.0,
+        "q3": 2.0,
+        "max": 3,
+        "mean": 2.06
+      },
+      "elapsed": {
+        "median": 31.9,
+        "q1": 27.475,
+        "q3": 55.35,
+        "max": 165.6,
+        "mean": 49.35
+      },
+      "model_seconds": {
+        "median": 20.2,
+        "q1": 18.375,
+        "q3": 21.775,
+        "max": 43.3,
+        "mean": 21.24
+      },
+      "other_seconds": {
+        "median": 10.8,
+        "q1": 5.7,
+        "q3": 20.725,
+        "max": 144.7,
+        "mean": 28.11
+      }
+    },
+    "a2/C/S5+note": {
+      "runs": 36,
+      "successes": 36,
+      "success_rate": 1.0,
+      "wilson95": [
+        0.904,
+        1.0
+      ],
+      "wasted_checks": {
+        "median": 0.0,
+        "q1": 0.0,
+        "q3": 0.0,
+        "max": 0,
+        "mean": 0
+      },
+      "zero_waste": 36,
+      "tokens": {
+        "median": 41112.0,
+        "q1": 40611.25,
+        "q3": 41472.0,
+        "max": 65350,
+        "mean": 41773.94
+      },
+      "llm_calls": {
+        "median": 2.0,
+        "q1": 2.0,
+        "q3": 2.0,
+        "max": 2,
+        "mean": 2
+      },
+      "elapsed": {
+        "median": 24.3,
+        "q1": 20.4,
+        "q3": 35.625,
+        "max": 170.3,
+        "mean": 42.55
+      },
+      "model_seconds": {
+        "median": 13.850000000000001,
+        "q1": 11.375,
+        "q3": 15.724999999999998,
+        "max": 17.5,
+        "mean": 13.63
+      },
+      "other_seconds": {
+        "median": 11.100000000000001,
+        "q1": 5.699999999999999,
+        "q3": 21.125,
+        "max": 157.1,
+        "mean": 28.93
+      }
+    }
+  },
+  "by_tier": {
+    "5": {
+      "a1/A/none": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 11.0,
+          "q1": 5.0,
+          "q3": 15.5,
+          "max": 40,
+          "mean": 12.42
+        },
+        "zero_waste": 2,
+        "tokens": {
+          "median": 18998.0,
+          "q1": 18925.0,
+          "q3": 37958.0,
+          "max": 38931,
+          "mean": 25428
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 31.25,
+          "q1": 21.7,
+          "q3": 59.625,
+          "max": 538.7,
+          "mean": 105.7
+        },
+        "model_seconds": {
+          "median": 10.45,
+          "q1": 10.024999999999999,
+          "q3": 19.599999999999998,
+          "max": 25.0,
+          "mean": 13.84
+        },
+        "other_seconds": {
+          "median": 9.75,
+          "q1": 3.575,
+          "q3": 50.2,
+          "max": 528.2,
+          "mean": 91.84
+        }
+      },
+      "a1/B/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 6.5,
+          "q1": 4.5,
+          "q3": 9.75,
+          "max": 18,
+          "mean": 7.75
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41014.0,
+          "q1": 40960.25,
+          "q3": 41054.75,
+          "max": 59366,
+          "mean": 42515.92
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 38.599999999999994,
+          "q1": 23.2,
+          "q3": 95.275,
+          "max": 221.1,
+          "mean": 79.57
+        },
+        "model_seconds": {
+          "median": 18.75,
+          "q1": 17.549999999999997,
+          "q3": 20.15,
+          "max": 23.2,
+          "mean": 19.11
+        },
+        "other_seconds": {
+          "median": 18.35,
+          "q1": 3.5,
+          "q3": 75.47500000000001,
+          "max": 202.9,
+          "mean": 60.46
+        }
+      },
+      "a1/C/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 2.5,
+          "q1": 0.75,
+          "q3": 7.0,
+          "max": 19,
+          "mean": 4.5
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 39182.0,
+          "q1": 39077.0,
+          "q3": 67497.5,
+          "max": 159075,
+          "mean": 62357.42
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 3.25,
+          "max": 7,
+          "mean": 3
+        },
+        "elapsed": {
+          "median": 25.15,
+          "q1": 18.474999999999998,
+          "q3": 84.1,
+          "max": 210.4,
+          "mean": 57.36
+        },
+        "model_seconds": {
+          "median": 16.1,
+          "q1": 13.799999999999999,
+          "q3": 25.699999999999996,
+          "max": 51.3,
+          "mean": 21.76
+        },
+        "other_seconds": {
+          "median": 10.100000000000001,
+          "q1": 3.7,
+          "q3": 40.7,
+          "max": 170.2,
+          "mean": 35.58
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 12,
+        "tokens": {
+          "median": 42528.0,
+          "q1": 42297.5,
+          "q3": 47273.25,
+          "max": 67197,
+          "mean": 47570.25
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 3,
+          "mean": 2.08
+        },
+        "elapsed": {
+          "median": 27.4,
+          "q1": 24.675,
+          "q3": 39.0,
+          "max": 69.2,
+          "mean": 35.38
+        },
+        "model_seconds": {
+          "median": 21.0,
+          "q1": 19.525000000000002,
+          "q3": 23.699999999999996,
+          "max": 31.6,
+          "mean": 22.3
+        },
+        "other_seconds": {
+          "median": 5.45,
+          "q1": 4.725,
+          "q3": 13.675,
+          "max": 38.1,
+          "mean": 13.08
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 12,
+        "tokens": {
+          "median": 40533.5,
+          "q1": 40329.25,
+          "q3": 40601.75,
+          "max": 40725,
+          "mean": 40470.92
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 20.799999999999997,
+          "q1": 18.85,
+          "q3": 28.799999999999997,
+          "max": 55.2,
+          "mean": 27.49
+        },
+        "model_seconds": {
+          "median": 14.850000000000001,
+          "q1": 12.749999999999998,
+          "q3": 16.05,
+          "max": 17.5,
+          "mean": 14.24
+        },
+        "other_seconds": {
+          "median": 5.5,
+          "q1": 4.825,
+          "q3": 13.925,
+          "max": 38.5,
+          "mean": 13.27
+        }
+      }
+    },
+    "6": {
+      "a1/A/none": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 8.0,
+          "q1": 0.75,
+          "q3": 13.0,
+          "max": 22,
+          "mean": 8.67
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 19147.5,
+          "q1": 18930.25,
+          "q3": 24030.25,
+          "max": 39085,
+          "mean": 23942.83
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.25,
+          "max": 2,
+          "mean": 1.25
+        },
+        "elapsed": {
+          "median": 28.55,
+          "q1": 20.05,
+          "q3": 69.39999999999999,
+          "max": 165.6,
+          "mean": 58.15
+        },
+        "model_seconds": {
+          "median": 11.3,
+          "q1": 8.4,
+          "q3": 13.65,
+          "max": 24.4,
+          "mean": 12.36
+        },
+        "other_seconds": {
+          "median": 15.100000000000001,
+          "q1": 11.874999999999998,
+          "q3": 53.974999999999994,
+          "max": 142.6,
+          "mean": 45.79
+        }
+      },
+      "a1/B/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 4.5,
+          "q1": 2.25,
+          "q3": 6.5,
+          "max": 8,
+          "mean": 4.25
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41251.0,
+          "q1": 41117.25,
+          "q3": 41495.25,
+          "max": 62784,
+          "mean": 43078.25
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 29.700000000000003,
+          "q1": 26.049999999999997,
+          "q3": 61.95,
+          "max": 145.3,
+          "mean": 57.02
+        },
+        "model_seconds": {
+          "median": 19.0,
+          "q1": 17.725,
+          "q3": 20.85,
+          "max": 26.8,
+          "mean": 19.53
+        },
+        "other_seconds": {
+          "median": 11.75,
+          "q1": 6.999999999999999,
+          "q3": 41.85,
+          "max": 121.0,
+          "mean": 37.47
+        }
+      },
+      "a1/C/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 9.0,
+          "q1": 5.75,
+          "q3": 12.0,
+          "max": 17,
+          "mean": 8.67
+        },
+        "zero_waste": 1,
+        "tokens": {
+          "median": 62966.5,
+          "q1": 62527.25,
+          "q3": 63513.0,
+          "max": 88564,
+          "mean": 63312.42
+        },
+        "llm_calls": {
+          "median": 3.0,
+          "q1": 3.0,
+          "q3": 3.0,
+          "max": 4,
+          "mean": 3
+        },
+        "elapsed": {
+          "median": 38.45,
+          "q1": 29.950000000000003,
+          "q3": 63.75,
+          "max": 235.2,
+          "mean": 65.74
+        },
+        "model_seconds": {
+          "median": 21.75,
+          "q1": 20.925,
+          "q3": 23.375,
+          "max": 29.9,
+          "mean": 21.63
+        },
+        "other_seconds": {
+          "median": 13.15,
+          "q1": 8.65,
+          "q3": 36.725,
+          "max": 212.0,
+          "mean": 44.1
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 6,
+          "mean": 0.5
+        },
+        "zero_waste": 11,
+        "tokens": {
+          "median": 43029.5,
+          "q1": 42777.25,
+          "q3": 43100.25,
+          "max": 109050,
+          "mean": 49944.92
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 3,
+          "mean": 2.08
+        },
+        "elapsed": {
+          "median": 31.0,
+          "q1": 27.475,
+          "q3": 80.95,
+          "max": 165.6,
+          "mean": 64.1
+        },
+        "model_seconds": {
+          "median": 21.2,
+          "q1": 19.65,
+          "q3": 21.625000000000004,
+          "max": 43.3,
+          "mean": 22.2
+        },
+        "other_seconds": {
+          "median": 9.15,
+          "q1": 6.475,
+          "q3": 44.5,
+          "max": 144.7,
+          "mean": 41.92
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 12,
+        "tokens": {
+          "median": 41118.5,
+          "q1": 40880.0,
+          "q3": 41196.25,
+          "max": 41280,
+          "mean": 41037.83
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 22.75,
+          "q1": 19.049999999999997,
+          "q3": 59.875,
+          "max": 170.3,
+          "mean": 56.6
+        },
+        "model_seconds": {
+          "median": 13.0,
+          "q1": 11.174999999999999,
+          "q3": 15.55,
+          "max": 16.9,
+          "mean": 13.21
+        },
+        "other_seconds": {
+          "median": 9.350000000000001,
+          "q1": 6.375,
+          "q3": 45.325,
+          "max": 157.1,
+          "mean": 43.39
+        }
+      }
+    },
+    "7": {
+      "a1/A/none": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 18.0,
+          "q1": 1.5,
+          "q3": 31.75,
+          "max": 61,
+          "mean": 19.83
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 19418.5,
+          "q1": 19318.25,
+          "q3": 19560.25,
+          "max": 38934,
+          "mean": 21018.08
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 2,
+          "mean": 1.08
+        },
+        "elapsed": {
+          "median": 61.8,
+          "q1": 23.450000000000003,
+          "q3": 135.67499999999998,
+          "max": 583.4,
+          "mean": 119.67
+        },
+        "model_seconds": {
+          "median": 10.8,
+          "q1": 9.875,
+          "q3": 12.3,
+          "max": 19.1,
+          "mean": 11.28
+        },
+        "other_seconds": {
+          "median": 51.0,
+          "q1": 14.075000000000001,
+          "q3": 123.225,
+          "max": 573.3,
+          "mean": 108.4
+        }
+      },
+      "a1/B/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 10.0,
+          "q1": 5.0,
+          "q3": 15.0,
+          "max": 15,
+          "mean": 10
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41797.0,
+          "q1": 41650.25,
+          "q3": 41890.0,
+          "max": 42207,
+          "mean": 41796.5
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 59.85,
+          "q1": 32.574999999999996,
+          "q3": 111.9,
+          "max": 205.5,
+          "mean": 86.96
+        },
+        "model_seconds": {
+          "median": 18.25,
+          "q1": 17.450000000000003,
+          "q3": 18.675,
+          "max": 20.0,
+          "mean": 17.91
+        },
+        "other_seconds": {
+          "median": 41.8,
+          "q1": 16.4,
+          "q3": 93.60000000000001,
+          "max": 186.5,
+          "mean": 69.03
+        }
+      },
+      "a1/C/S5": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 21.0,
+          "q1": 8.5,
+          "q3": 31.5,
+          "max": 48,
+          "mean": 21.83
+        },
+        "zero_waste": 1,
+        "tokens": {
+          "median": 90784.0,
+          "q1": 58018.0,
+          "q3": 134238.5,
+          "max": 237693,
+          "mean": 105652.25
+        },
+        "llm_calls": {
+          "median": 4.0,
+          "q1": 2.75,
+          "q3": 5.25,
+          "max": 8,
+          "mean": 4.25
+        },
+        "elapsed": {
+          "median": 96.4,
+          "q1": 46.825,
+          "q3": 107.475,
+          "max": 227.4,
+          "mean": 91.3
+        },
+        "model_seconds": {
+          "median": 26.55,
+          "q1": 17.6,
+          "q3": 38.85,
+          "max": 52.3,
+          "mean": 29.48
+        },
+        "other_seconds": {
+          "median": 54.55,
+          "q1": 22.374999999999996,
+          "q3": 87.075,
+          "max": 175.0,
+          "mean": 61.81
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 12,
+        "tokens": {
+          "median": 43616.5,
+          "q1": 43340.75,
+          "q3": 44054.5,
+          "max": 62287,
+          "mean": 45162.08
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 32.3,
+          "q1": 31.75,
+          "q3": 51.75,
+          "max": 99.3,
+          "mean": 48.57
+        },
+        "model_seconds": {
+          "median": 18.7,
+          "q1": 17.849999999999998,
+          "q3": 20.424999999999997,
+          "max": 22.2,
+          "mean": 19.22
+        },
+        "other_seconds": {
+          "median": 14.5,
+          "q1": 12.850000000000001,
+          "q3": 30.75,
+          "max": 78.9,
+          "mean": 29.32
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 12,
+        "successes": 12,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.757,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 12,
+        "tokens": {
+          "median": 41975.0,
+          "q1": 41502.0,
+          "q3": 42418.25,
+          "max": 65350,
+          "mean": 43813.08
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 29.200000000000003,
+          "q1": 26.425,
+          "q3": 46.150000000000006,
+          "max": 96.7,
+          "mean": 43.56
+        },
+        "model_seconds": {
+          "median": 13.55,
+          "q1": 11.675,
+          "q3": 15.075000000000001,
+          "max": 15.9,
+          "mean": 13.43
+        },
+        "other_seconds": {
+          "median": 14.75,
+          "q1": 13.174999999999999,
+          "q3": 31.55,
+          "max": 82.7,
+          "mean": 30.13
+        }
+      }
+    }
+  },
+  "per_cad": {
+    "asap_04098": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 7.0,
+          "q1": 6.0,
+          "q3": 10.5,
+          "max": 14,
+          "mean": 8.67
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 38408.0,
+          "q1": 28711.0,
+          "q3": 38669.5,
+          "max": 38931,
+          "mean": 32117.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 1.5,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 1.67
+        },
+        "elapsed": {
+          "median": 23.3,
+          "q1": 18.75,
+          "q3": 27.950000000000003,
+          "max": 32.6,
+          "mean": 23.37
+        },
+        "model_seconds": {
+          "median": 20.2,
+          "q1": 15.5,
+          "q3": 21.35,
+          "max": 22.5,
+          "mean": 17.83
+        },
+        "other_seconds": {
+          "median": 3.3,
+          "q1": 3.2,
+          "q3": 6.65,
+          "max": 10.0,
+          "mean": 5.47
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 6.0,
+          "q1": 6.0,
+          "q3": 6.0,
+          "max": 6,
+          "mean": 6
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 40937.0,
+          "q1": 40899.5,
+          "q3": 40952.5,
+          "max": 40968,
+          "mean": 40922.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 24.1,
+          "q1": 22.1,
+          "q3": 25.25,
+          "max": 26.4,
+          "mean": 23.53
+        },
+        "model_seconds": {
+          "median": 20.9,
+          "q1": 18.9,
+          "q3": 22.049999999999997,
+          "max": 23.2,
+          "mean": 20.33
+        },
+        "other_seconds": {
+          "median": 3.2,
+          "q1": 3.2,
+          "q3": 3.2,
+          "max": 3.2,
+          "mean": 3.2
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 6.0,
+          "q1": 4.5,
+          "q3": 6.5,
+          "max": 7,
+          "mean": 5.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 39165.0,
+          "q1": 39128.0,
+          "q3": 50685.5,
+          "max": 62206,
+          "mean": 46820.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.5,
+          "max": 3,
+          "mean": 2.33
+        },
+        "elapsed": {
+          "median": 28.5,
+          "q1": 24.45,
+          "q3": 32.5,
+          "max": 36.5,
+          "mean": 28.47
+        },
+        "model_seconds": {
+          "median": 17.2,
+          "q1": 16.1,
+          "q3": 21.049999999999997,
+          "max": 24.9,
+          "mean": 19.03
+        },
+        "other_seconds": {
+          "median": 11.3,
+          "q1": 8.350000000000001,
+          "q3": 11.4,
+          "max": 11.5,
+          "mean": 9.4
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42516.0,
+          "q1": 42484.5,
+          "q3": 42614.5,
+          "max": 42713,
+          "mean": 42560.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 24.8,
+          "q1": 24.55,
+          "q3": 25.200000000000003,
+          "max": 25.6,
+          "mean": 24.9
+        },
+        "model_seconds": {
+          "median": 19.6,
+          "q1": 19.450000000000003,
+          "q3": 20.05,
+          "max": 20.5,
+          "mean": 19.8
+        },
+        "other_seconds": {
+          "median": 5.1,
+          "q1": 5.1,
+          "q3": 5.15,
+          "max": 5.2,
+          "mean": 5.13
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 40597.0,
+          "q1": 40486.5,
+          "q3": 40606.5,
+          "max": 40616,
+          "mean": 40529.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 16.5,
+          "q1": 15.85,
+          "q3": 18.45,
+          "max": 20.4,
+          "mean": 17.37
+        },
+        "model_seconds": {
+          "median": 11.4,
+          "q1": 10.75,
+          "q3": 13.350000000000001,
+          "max": 15.3,
+          "mean": 12.27
+        },
+        "other_seconds": {
+          "median": 5.2,
+          "q1": 5.2,
+          "q3": 5.2,
+          "max": 5.2,
+          "mean": 5.2
+        }
+      }
+    },
+    "asap_07711": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 13.0,
+          "q1": 9.0,
+          "q3": 16.5,
+          "max": 20,
+          "mean": 12.67
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 18940.0,
+          "q1": 18907.0,
+          "q3": 18975.0,
+          "max": 19010,
+          "mean": 18941.33
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 1,
+          "mean": 1
+        },
+        "elapsed": {
+          "median": 382.0,
+          "q1": 252.35,
+          "q3": 460.35,
+          "max": 538.7,
+          "mean": 347.8
+        },
+        "model_seconds": {
+          "median": 10.4,
+          "q1": 10.3,
+          "q3": 10.45,
+          "max": 10.5,
+          "mean": 10.37
+        },
+        "other_seconds": {
+          "median": 371.8,
+          "q1": 242.05,
+          "q3": 450.0,
+          "max": 528.2,
+          "mean": 337.43
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 7.0,
+          "q1": 7.0,
+          "q3": 7.0,
+          "max": 7,
+          "mean": 7
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41010.0,
+          "q1": 40896.0,
+          "q3": 41015.0,
+          "max": 41020,
+          "mean": 40937.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 219.4,
+          "q1": 218.95,
+          "q3": 220.25,
+          "max": 221.1,
+          "mean": 219.67
+        },
+        "model_seconds": {
+          "median": 17.7,
+          "q1": 17.1,
+          "q3": 18.799999999999997,
+          "max": 19.9,
+          "mean": 18.03
+        },
+        "other_seconds": {
+          "median": 201.2,
+          "q1": 201.0,
+          "q3": 202.05,
+          "max": 202.9,
+          "mean": 201.63
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 2.0,
+          "q1": 1.5,
+          "q3": 4.5,
+          "max": 7,
+          "mean": 3.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 83372.0,
+          "q1": 72218.5,
+          "q3": 96106.0,
+          "max": 108840,
+          "mean": 84425.67
+        },
+        "llm_calls": {
+          "median": 4.0,
+          "q1": 3.5,
+          "q3": 4.5,
+          "max": 5,
+          "mean": 4
+        },
+        "elapsed": {
+          "median": 121.8,
+          "q1": 113.6,
+          "q3": 166.1,
+          "max": 210.4,
+          "mean": 145.87
+        },
+        "model_seconds": {
+          "median": 28.1,
+          "q1": 23.9,
+          "q3": 34.150000000000006,
+          "max": 40.2,
+          "mean": 29.33
+        },
+        "other_seconds": {
+          "median": 93.7,
+          "q1": 89.7,
+          "q3": 131.95,
+          "max": 170.2,
+          "mean": 116.53
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42686.0,
+          "q1": 42613.0,
+          "q3": 54941.5,
+          "max": 67197,
+          "mean": 50807.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.5,
+          "max": 3,
+          "mean": 2.33
+        },
+        "elapsed": {
+          "median": 59.5,
+          "q1": 57.95,
+          "q3": 64.35,
+          "max": 69.2,
+          "mean": 61.7
+        },
+        "model_seconds": {
+          "median": 21.5,
+          "q1": 19.9,
+          "q3": 26.55,
+          "max": 31.6,
+          "mean": 23.8
+        },
+        "other_seconds": {
+          "median": 38.0,
+          "q1": 37.8,
+          "q3": 38.05,
+          "max": 38.1,
+          "mean": 37.9
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 40687.0,
+          "q1": 40625.0,
+          "q3": 40706.0,
+          "max": 40725,
+          "mean": 40658.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 52.0,
+          "q1": 50.3,
+          "q3": 53.6,
+          "max": 55.2,
+          "mean": 51.93
+        },
+        "model_seconds": {
+          "median": 13.9,
+          "q1": 12.0,
+          "q3": 15.350000000000001,
+          "max": 16.8,
+          "mean": 13.6
+        },
+        "other_seconds": {
+          "median": 38.4,
+          "q1": 38.2,
+          "q3": 38.45,
+          "max": 38.5,
+          "mean": 38.3
+        }
+      }
+    },
+    "asap_07714": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 12.0,
+          "q1": 11.0,
+          "q3": 17.5,
+          "max": 23,
+          "mean": 15
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 18979.0,
+          "q1": 18929.5,
+          "q3": 28725.0,
+          "max": 38471,
+          "mean": 25443.33
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 30.2,
+          "q1": 24.0,
+          "q3": 31.25,
+          "max": 32.3,
+          "mean": 26.77
+        },
+        "model_seconds": {
+          "median": 10.2,
+          "q1": 9.25,
+          "q3": 17.6,
+          "max": 25.0,
+          "mean": 14.5
+        },
+        "other_seconds": {
+          "median": 9.5,
+          "q1": 8.4,
+          "q3": 14.75,
+          "max": 20.0,
+          "mean": 12.27
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 18.0,
+          "q1": 18.0,
+          "q3": 18.0,
+          "max": 18,
+          "mean": 18
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41115.0,
+          "q1": 41047.5,
+          "q3": 50240.5,
+          "max": 59366,
+          "mean": 47153.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 52.2,
+          "q1": 51.5,
+          "q3": 53.2,
+          "max": 54.2,
+          "mean": 52.4
+        },
+        "model_seconds": {
+          "median": 18.8,
+          "q1": 17.950000000000003,
+          "q3": 19.950000000000003,
+          "max": 21.1,
+          "mean": 19.0
+        },
+        "other_seconds": {
+          "median": 33.4,
+          "q1": 33.25,
+          "q3": 33.55,
+          "max": 33.7,
+          "mean": 33.4
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 8.0,
+          "q1": 4.5,
+          "q3": 13.5,
+          "max": 19,
+          "mean": 9.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 39072.0,
+          "q1": 39062.0,
+          "q3": 99073.5,
+          "max": 159075,
+          "mean": 79066.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 4.5,
+          "max": 7,
+          "mean": 3.67
+        },
+        "elapsed": {
+          "median": 21.8,
+          "q1": 18.9,
+          "q3": 49.4,
+          "max": 77.0,
+          "mean": 38.27
+        },
+        "model_seconds": {
+          "median": 12.9,
+          "q1": 12.65,
+          "q3": 32.1,
+          "max": 51.3,
+          "mean": 25.53
+        },
+        "other_seconds": {
+          "median": 8.9,
+          "q1": 6.25,
+          "q3": 17.3,
+          "max": 25.7,
+          "mean": 12.73
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 60954.0,
+          "q1": 51655.5,
+          "q3": 61070.0,
+          "max": 61186,
+          "mean": 54832.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 31.8,
+          "q1": 30.05,
+          "q3": 32.5,
+          "max": 33.2,
+          "mean": 31.1
+        },
+        "model_seconds": {
+          "median": 26.1,
+          "q1": 24.35,
+          "q3": 26.8,
+          "max": 27.5,
+          "mean": 25.4
+        },
+        "other_seconds": {
+          "median": 5.7,
+          "q1": 5.7,
+          "q3": 5.7,
+          "max": 5.7,
+          "mean": 5.7
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 40531.0,
+          "q1": 40516.0,
+          "q3": 40533.5,
+          "max": 40536,
+          "mean": 40522.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 21.8,
+          "q1": 21.1,
+          "q3": 22.0,
+          "max": 22.2,
+          "mean": 21.47
+        },
+        "model_seconds": {
+          "median": 15.9,
+          "q1": 15.15,
+          "q3": 16.2,
+          "max": 16.5,
+          "mean": 15.6
+        },
+        "other_seconds": {
+          "median": 5.9,
+          "q1": 5.85,
+          "q3": 5.9,
+          "max": 5.9,
+          "mean": 5.87
+        }
+      }
+    },
+    "asap_08203": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 20.0,
+          "max": 40,
+          "mean": 13.33
+        },
+        "zero_waste": 2,
+        "tokens": {
+          "median": 18986.0,
+          "q1": 18910.5,
+          "q3": 28397.0,
+          "max": 37808,
+          "mean": 25209.67
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 23.0,
+          "q1": 18.0,
+          "q3": 30.8,
+          "max": 38.6,
+          "mean": 24.87
+        },
+        "model_seconds": {
+          "median": 9.5,
+          "q1": 9.3,
+          "q3": 14.45,
+          "max": 19.4,
+          "mean": 12.67
+        },
+        "other_seconds": {
+          "median": 3.6,
+          "q1": 3.55,
+          "q3": 16.55,
+          "max": 29.5,
+          "mean": 12.2
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41043.0,
+          "q1": 41030.5,
+          "q3": 41066.5,
+          "max": 41090,
+          "mean": 41050.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 22.3,
+          "q1": 22.25,
+          "q3": 22.9,
+          "max": 23.5,
+          "mean": 22.67
+        },
+        "model_seconds": {
+          "median": 18.7,
+          "q1": 18.65,
+          "q3": 19.299999999999997,
+          "max": 19.9,
+          "mean": 19.07
+        },
+        "other_seconds": {
+          "median": 3.6,
+          "q1": 3.6,
+          "q3": 3.6,
+          "max": 3.6,
+          "mean": 3.6
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 39078.0,
+          "q1": 39076.0,
+          "q3": 39138.5,
+          "max": 39199,
+          "mean": 39117
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 17.8,
+          "q1": 15.9,
+          "q3": 18.25,
+          "max": 18.7,
+          "mean": 16.83
+        },
+        "model_seconds": {
+          "median": 14.1,
+          "q1": 12.2,
+          "q3": 14.55,
+          "max": 15.0,
+          "mean": 13.13
+        },
+        "other_seconds": {
+          "median": 3.7,
+          "q1": 3.6500000000000004,
+          "q3": 3.7,
+          "max": 3.7,
+          "mean": 3.67
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42091.0,
+          "q1": 42061.0,
+          "q3": 42105.0,
+          "max": 42119,
+          "mean": 42080.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 23.5,
+          "q1": 22.45,
+          "q3": 25.0,
+          "max": 26.5,
+          "mean": 23.8
+        },
+        "model_seconds": {
+          "median": 19.9,
+          "q1": 18.85,
+          "q3": 21.4,
+          "max": 22.9,
+          "mean": 20.2
+        },
+        "other_seconds": {
+          "median": 3.6,
+          "q1": 3.6,
+          "q3": 3.6,
+          "max": 3.6,
+          "mean": 3.6
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 40175.0,
+          "q1": 40165.0,
+          "q3": 40182.0,
+          "max": 40189,
+          "mean": 40173
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 19.5,
+          "q1": 18.2,
+          "q3": 20.35,
+          "max": 21.2,
+          "mean": 19.2
+        },
+        "model_seconds": {
+          "median": 15.8,
+          "q1": 14.5,
+          "q3": 16.65,
+          "max": 17.5,
+          "mean": 15.5
+        },
+        "other_seconds": {
+          "median": 3.7,
+          "q1": 3.7,
+          "q3": 3.7,
+          "max": 3.7,
+          "mean": 3.7
+        }
+      }
+    },
+    "asap_03391": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 20.0,
+          "q1": 15.0,
+          "q3": 21.0,
+          "max": 22,
+          "mean": 17.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 19151.0,
+          "q1": 19089.0,
+          "q3": 28650.0,
+          "max": 38149,
+          "mean": 25442.33
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 29.3,
+          "q1": 28.55,
+          "q3": 35.8,
+          "max": 42.3,
+          "mean": 33.13
+        },
+        "model_seconds": {
+          "median": 12.2,
+          "q1": 10.35,
+          "q3": 14.799999999999999,
+          "max": 17.4,
+          "mean": 12.7
+        },
+        "other_seconds": {
+          "median": 19.3,
+          "q1": 18.200000000000003,
+          "q3": 22.1,
+          "max": 24.9,
+          "mean": 20.43
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 8.0,
+          "q1": 8.0,
+          "q3": 8.0,
+          "max": 8,
+          "mean": 8
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41180.0,
+          "q1": 41151.0,
+          "q3": 41313.0,
+          "max": 41446,
+          "mean": 41249.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 34.3,
+          "q1": 32.55,
+          "q3": 35.45,
+          "max": 36.6,
+          "mean": 33.9
+        },
+        "model_seconds": {
+          "median": 18.0,
+          "q1": 16.3,
+          "q3": 19.25,
+          "max": 20.5,
+          "mean": 17.7
+        },
+        "other_seconds": {
+          "median": 16.2,
+          "q1": 16.15,
+          "q3": 16.25,
+          "max": 16.3,
+          "mean": 16.2
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 13.0,
+          "q1": 11.0,
+          "q3": 15.0,
+          "max": 17,
+          "mean": 13
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 63462.0,
+          "q1": 63426.5,
+          "q3": 76013.0,
+          "max": 88564,
+          "mean": 71805.67
+        },
+        "llm_calls": {
+          "median": 3.0,
+          "q1": 3.0,
+          "q3": 3.5,
+          "max": 4,
+          "mean": 3.33
+        },
+        "elapsed": {
+          "median": 40.5,
+          "q1": 40.1,
+          "q3": 45.25,
+          "max": 50.0,
+          "mean": 43.4
+        },
+        "model_seconds": {
+          "median": 23.9,
+          "q1": 23.35,
+          "q3": 26.45,
+          "max": 29.0,
+          "mean": 25.23
+        },
+        "other_seconds": {
+          "median": 16.9,
+          "q1": 16.7,
+          "q3": 18.95,
+          "max": 21.0,
+          "mean": 18.13
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42991.0,
+          "q1": 42956.5,
+          "q3": 76020.5,
+          "max": 109050,
+          "mean": 64987.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.5,
+          "max": 3,
+          "mean": 2.33
+        },
+        "elapsed": {
+          "median": 33.2,
+          "q1": 33.150000000000006,
+          "q3": 44.1,
+          "max": 55.0,
+          "mean": 40.43
+        },
+        "model_seconds": {
+          "median": 21.6,
+          "q1": 21.6,
+          "q3": 32.45,
+          "max": 43.3,
+          "mean": 28.83
+        },
+        "other_seconds": {
+          "median": 11.6,
+          "q1": 11.6,
+          "q3": 11.649999999999999,
+          "max": 11.7,
+          "mean": 11.63
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41116.0,
+          "q1": 40984.5,
+          "q3": 41118.5,
+          "max": 41121,
+          "mean": 41030
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 25.6,
+          "q1": 24.450000000000003,
+          "q3": 26.5,
+          "max": 27.4,
+          "mean": 25.43
+        },
+        "model_seconds": {
+          "median": 13.8,
+          "q1": 12.65,
+          "q3": 14.65,
+          "max": 15.5,
+          "mean": 13.6
+        },
+        "other_seconds": {
+          "median": 11.8,
+          "q1": 11.8,
+          "q3": 11.850000000000001,
+          "max": 11.9,
+          "mean": 11.83
+        }
+      }
+    },
+    "asap_04714": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 12.0,
+          "q1": 9.0,
+          "q3": 12.0,
+          "max": 12,
+          "mean": 10
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 18922.0,
+          "q1": 18877.5,
+          "q3": 18927.5,
+          "max": 18933,
+          "mean": 18896
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 1,
+          "mean": 1
+        },
+        "elapsed": {
+          "median": 19.9,
+          "q1": 17.75,
+          "q3": 20.0,
+          "max": 20.1,
+          "mean": 18.53
+        },
+        "model_seconds": {
+          "median": 8.1,
+          "q1": 7.9,
+          "q3": 8.7,
+          "max": 9.3,
+          "mean": 8.37
+        },
+        "other_seconds": {
+          "median": 10.9,
+          "q1": 9.25,
+          "q3": 11.55,
+          "max": 12.2,
+          "mean": 10.23
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 6.0,
+          "q1": 6.0,
+          "q3": 6.0,
+          "max": 6,
+          "mean": 6
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41103.0,
+          "q1": 41082.5,
+          "q3": 41127.0,
+          "max": 41151,
+          "mean": 41105.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 25.5,
+          "q1": 24.75,
+          "q3": 25.9,
+          "max": 26.3,
+          "mean": 25.27
+        },
+        "model_seconds": {
+          "median": 18.3,
+          "q1": 17.450000000000003,
+          "q3": 18.6,
+          "max": 18.9,
+          "mean": 17.93
+        },
+        "other_seconds": {
+          "median": 7.3,
+          "q1": 7.199999999999999,
+          "q3": 7.35,
+          "max": 7.4,
+          "mean": 7.27
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 12.0,
+          "q1": 9.0,
+          "q3": 12.0,
+          "max": 12,
+          "mean": 10
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 62973.0,
+          "q1": 62723.5,
+          "q3": 74921.0,
+          "max": 86869,
+          "mean": 70772
+        },
+        "llm_calls": {
+          "median": 3.0,
+          "q1": 3.0,
+          "q3": 3.5,
+          "max": 4,
+          "mean": 3.33
+        },
+        "elapsed": {
+          "median": 30.3,
+          "q1": 29.6,
+          "q3": 33.75,
+          "max": 37.2,
+          "mean": 32.13
+        },
+        "model_seconds": {
+          "median": 21.5,
+          "q1": 21.1,
+          "q3": 25.7,
+          "max": 29.9,
+          "mean": 24.03
+        },
+        "other_seconds": {
+          "median": 8.2,
+          "q1": 7.75,
+          "q3": 8.5,
+          "max": 8.8,
+          "mean": 8.1
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 3.0,
+          "max": 6,
+          "mean": 2
+        },
+        "zero_waste": 2,
+        "tokens": {
+          "median": 42666.0,
+          "q1": 42659.5,
+          "q3": 51940.0,
+          "max": 61214,
+          "mean": 48844.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 26.4,
+          "q1": 24.6,
+          "q3": 27.65,
+          "max": 28.9,
+          "mean": 26.03
+        },
+        "model_seconds": {
+          "median": 20.0,
+          "q1": 18.8,
+          "q3": 21.85,
+          "max": 23.7,
+          "mean": 20.43
+        },
+        "other_seconds": {
+          "median": 5.2,
+          "q1": 5.2,
+          "q3": 5.800000000000001,
+          "max": 6.4,
+          "mean": 5.6
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 40813.0,
+          "q1": 40719.5,
+          "q3": 40851.0,
+          "max": 40889,
+          "mean": 40776
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 21.1,
+          "q1": 18.5,
+          "q3": 21.65,
+          "max": 22.2,
+          "mean": 19.73
+        },
+        "model_seconds": {
+          "median": 15.7,
+          "q1": 13.1,
+          "q3": 16.299999999999997,
+          "max": 16.9,
+          "mean": 14.37
+        },
+        "other_seconds": {
+          "median": 5.3,
+          "q1": 5.3,
+          "q3": 5.35,
+          "max": 5.4,
+          "mean": 5.33
+        }
+      }
+    },
+    "asap_06262": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.5,
+          "max": 1,
+          "mean": 0.33
+        },
+        "zero_waste": 2,
+        "tokens": {
+          "median": 19310.0,
+          "q1": 19062.0,
+          "q3": 28966.0,
+          "max": 38622,
+          "mean": 25582
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 153.3,
+          "q1": 152.0,
+          "q3": 159.45,
+          "max": 165.6,
+          "mean": 156.53
+        },
+        "model_seconds": {
+          "median": 11.7,
+          "q1": 9.85,
+          "q3": 18.049999999999997,
+          "max": 24.4,
+          "mean": 14.7
+        },
+        "other_seconds": {
+          "median": 141.6,
+          "q1": 141.39999999999998,
+          "q3": 142.1,
+          "max": 142.6,
+          "mean": 141.8
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 3.0,
+          "q1": 3.0,
+          "q3": 3.0,
+          "max": 3,
+          "mean": 3
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41322.0,
+          "q1": 41208.5,
+          "q3": 52053.0,
+          "max": 62784,
+          "mean": 48400.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 143.0,
+          "q1": 140.5,
+          "q3": 144.15,
+          "max": 145.3,
+          "mean": 142.1
+        },
+        "model_seconds": {
+          "median": 23.3,
+          "q1": 20.1,
+          "q3": 25.05,
+          "max": 26.8,
+          "mean": 22.33
+        },
+        "other_seconds": {
+          "median": 119.7,
+          "q1": 119.1,
+          "q3": 120.35,
+          "max": 121.0,
+          "mean": 119.73
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 9.0,
+          "q1": 6.0,
+          "q3": 9.5,
+          "max": 10,
+          "mean": 7.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 62954.0,
+          "q1": 62749.5,
+          "q3": 62957.0,
+          "max": 62960,
+          "mean": 62819.67
+        },
+        "llm_calls": {
+          "median": 3.0,
+          "q1": 3.0,
+          "q3": 3.0,
+          "max": 3,
+          "mean": 3
+        },
+        "elapsed": {
+          "median": 150.9,
+          "q1": 127.95,
+          "q3": 193.05,
+          "max": 235.2,
+          "mean": 163.7
+        },
+        "model_seconds": {
+          "median": 22.0,
+          "q1": 21.5,
+          "q3": 22.6,
+          "max": 23.2,
+          "mean": 22.07
+        },
+        "other_seconds": {
+          "median": 128.9,
+          "q1": 106.4,
+          "q3": 170.45,
+          "max": 212.0,
+          "mean": 141.6
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 43077.0,
+          "q1": 42881.0,
+          "q3": 43087.5,
+          "max": 43098,
+          "mean": 42953.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 163.3,
+          "q1": 161.05,
+          "q3": 164.45,
+          "max": 165.6,
+          "mean": 162.57
+        },
+        "model_seconds": {
+          "median": 18.6,
+          "q1": 17.25,
+          "q3": 20.15,
+          "max": 21.7,
+          "mean": 18.73
+        },
+        "other_seconds": {
+          "median": 143.9,
+          "q1": 143.4,
+          "q3": 144.3,
+          "max": 144.7,
+          "mean": 143.83
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41189.0,
+          "q1": 41176.5,
+          "q3": 41203.5,
+          "max": 41218,
+          "mean": 41190.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 162.4,
+          "q1": 159.85000000000002,
+          "q3": 166.35000000000002,
+          "max": 170.3,
+          "mean": 163.33
+        },
+        "model_seconds": {
+          "median": 13.2,
+          "q1": 12.2,
+          "q3": 15.0,
+          "max": 16.8,
+          "mean": 13.73
+        },
+        "other_seconds": {
+          "median": 146.1,
+          "q1": 145.85,
+          "q3": 151.6,
+          "max": 157.1,
+          "mean": 149.6
+        }
+      }
+    },
+    "asap_06414": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 5.0,
+          "q1": 2.5,
+          "q3": 10.5,
+          "max": 16,
+          "mean": 7
+        },
+        "zero_waste": 1,
+        "tokens": {
+          "median": 19324.0,
+          "q1": 19234.0,
+          "q3": 29204.5,
+          "max": 39085,
+          "mean": 25851
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 25.6,
+          "q1": 21.55,
+          "q3": 27.85,
+          "max": 30.1,
+          "mean": 24.4
+        },
+        "model_seconds": {
+          "median": 12.4,
+          "q1": 11.65,
+          "q3": 15.05,
+          "max": 17.7,
+          "mean": 13.67
+        },
+        "other_seconds": {
+          "median": 12.4,
+          "q1": 9.5,
+          "q3": 12.75,
+          "max": 13.1,
+          "mean": 10.7
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41559.0,
+          "q1": 41516.5,
+          "q3": 41600.0,
+          "max": 41641,
+          "mean": 41558
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 26.2,
+          "q1": 25.9,
+          "q3": 27.4,
+          "max": 28.6,
+          "mean": 26.8
+        },
+        "model_seconds": {
+          "median": 19.5,
+          "q1": 19.3,
+          "q3": 20.7,
+          "max": 21.9,
+          "mean": 20.17
+        },
+        "other_seconds": {
+          "median": 6.7,
+          "q1": 6.65,
+          "q3": 6.7,
+          "max": 6.7,
+          "mean": 6.67
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 5.0,
+          "q1": 2.5,
+          "q3": 6.5,
+          "max": 8,
+          "mean": 4.33
+        },
+        "zero_waste": 1,
+        "tokens": {
+          "median": 39958.0,
+          "q1": 39945.5,
+          "q3": 51812.0,
+          "max": 63666,
+          "mean": 47852.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.5,
+          "max": 3,
+          "mean": 2.33
+        },
+        "elapsed": {
+          "median": 21.3,
+          "q1": 20.05,
+          "q3": 26.200000000000003,
+          "max": 31.1,
+          "mean": 23.73
+        },
+        "model_seconds": {
+          "median": 12.3,
+          "q1": 12.100000000000001,
+          "q3": 16.85,
+          "max": 21.4,
+          "mean": 15.2
+        },
+        "other_seconds": {
+          "median": 9.0,
+          "q1": 7.95,
+          "q3": 9.4,
+          "max": 9.8,
+          "mean": 8.57
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 43068.0,
+          "q1": 42938.0,
+          "q3": 43087.5,
+          "max": 43107,
+          "mean": 42994.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 27.8,
+          "q1": 27.15,
+          "q3": 27.8,
+          "max": 27.8,
+          "mean": 27.37
+        },
+        "model_seconds": {
+          "median": 21.2,
+          "q1": 20.6,
+          "q3": 21.2,
+          "max": 21.2,
+          "mean": 20.8
+        },
+        "other_seconds": {
+          "median": 6.6,
+          "q1": 6.55,
+          "q3": 6.65,
+          "max": 6.7,
+          "mean": 6.6
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41235.0,
+          "q1": 41092.5,
+          "q3": 41257.5,
+          "max": 41280,
+          "mean": 41155
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 18.0,
+          "q1": 17.15,
+          "q3": 18.7,
+          "max": 19.4,
+          "mean": 17.9
+        },
+        "model_seconds": {
+          "median": 11.1,
+          "q1": 10.3,
+          "q3": 11.95,
+          "max": 12.8,
+          "mean": 11.13
+        },
+        "other_seconds": {
+          "median": 6.8,
+          "q1": 6.75,
+          "q3": 6.85,
+          "max": 6.9,
+          "mean": 6.8
+        }
+      }
+    },
+    "asap_00650": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 34.0,
+          "q1": 32.5,
+          "q3": 35.5,
+          "max": 37,
+          "mean": 34
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 19594.0,
+          "q1": 19539.0,
+          "q3": 29264.0,
+          "max": 38934,
+          "mean": 26004
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.5,
+          "max": 2,
+          "mean": 1.33
+        },
+        "elapsed": {
+          "median": 206.9,
+          "q1": 201.4,
+          "q3": 395.15,
+          "max": 583.4,
+          "mean": 328.73
+        },
+        "model_seconds": {
+          "median": 12.3,
+          "q1": 11.2,
+          "q3": 15.700000000000001,
+          "max": 19.1,
+          "mean": 13.83
+        },
+        "other_seconds": {
+          "median": 187.8,
+          "q1": 185.7,
+          "q3": 380.54999999999995,
+          "max": 573.3,
+          "mean": 314.9
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 15.0,
+          "q1": 15.0,
+          "q3": 15.0,
+          "max": 15,
+          "mean": 15
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 42055.0,
+          "q1": 41953.5,
+          "q3": 42131.0,
+          "max": 42207,
+          "mean": 42038
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 203.0,
+          "q1": 200.8,
+          "q3": 204.25,
+          "max": 205.5,
+          "mean": 202.37
+        },
+        "model_seconds": {
+          "median": 18.3,
+          "q1": 18.05,
+          "q3": 18.6,
+          "max": 18.9,
+          "mean": 18.33
+        },
+        "other_seconds": {
+          "median": 185.1,
+          "q1": 182.7,
+          "q3": 185.8,
+          "max": 186.5,
+          "mean": 183.97
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 20.0,
+          "q1": 16.0,
+          "q3": 25.0,
+          "max": 30,
+          "mean": 20.67
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 90798.0,
+          "q1": 78036.0,
+          "q3": 142916.5,
+          "max": 195035,
+          "mean": 117035.67
+        },
+        "llm_calls": {
+          "median": 4.0,
+          "q1": 3.5,
+          "q3": 5.5,
+          "max": 7,
+          "mean": 4.67
+        },
+        "elapsed": {
+          "median": 137.2,
+          "q1": 125.3,
+          "q3": 182.3,
+          "max": 227.4,
+          "mean": 159.33
+        },
+        "model_seconds": {
+          "median": 27.0,
+          "q1": 22.75,
+          "q3": 39.65,
+          "max": 52.3,
+          "mean": 32.6
+        },
+        "other_seconds": {
+          "median": 110.3,
+          "q1": 102.55,
+          "q3": 142.65,
+          "max": 175.0,
+          "mean": 126.7
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 43685.0,
+          "q1": 43616.5,
+          "q3": 43692.0,
+          "max": 43699,
+          "mean": 43644
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 96.6,
+          "q1": 95.85,
+          "q3": 97.94999999999999,
+          "max": 99.3,
+          "mean": 97.0
+        },
+        "model_seconds": {
+          "median": 18.1,
+          "q1": 17.75,
+          "q3": 19.25,
+          "max": 20.4,
+          "mean": 18.63
+        },
+        "other_seconds": {
+          "median": 78.5,
+          "q1": 78.1,
+          "q3": 78.7,
+          "max": 78.9,
+          "mean": 78.37
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42043.0,
+          "q1": 41975.0,
+          "q3": 42050.0,
+          "max": 42057,
+          "mean": 42002.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 92.0,
+          "q1": 91.35,
+          "q3": 94.35,
+          "max": 96.7,
+          "mean": 93.13
+        },
+        "model_seconds": {
+          "median": 12.0,
+          "q1": 11.5,
+          "q3": 13.0,
+          "max": 14.0,
+          "mean": 12.33
+        },
+        "other_seconds": {
+          "median": 79.9,
+          "q1": 79.80000000000001,
+          "q3": 81.30000000000001,
+          "max": 82.7,
+          "mean": 80.77
+        }
+      }
+    },
+    "asap_01680": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 26.0,
+          "q1": 17.0,
+          "q3": 43.5,
+          "max": 61,
+          "mean": 31.67
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 19171.0,
+          "q1": 19125.0,
+          "q3": 19305.5,
+          "max": 19440,
+          "mean": 19230
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 1,
+          "mean": 1
+        },
+        "elapsed": {
+          "median": 78.1,
+          "q1": 61.8,
+          "q3": 86.35,
+          "max": 94.6,
+          "mean": 72.73
+        },
+        "model_seconds": {
+          "median": 10.0,
+          "q1": 8.9,
+          "q3": 10.85,
+          "max": 11.7,
+          "mean": 9.83
+        },
+        "other_seconds": {
+          "median": 68.2,
+          "q1": 51.0,
+          "q3": 77.5,
+          "max": 86.8,
+          "mean": 62.93
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 5.0,
+          "q1": 5.0,
+          "q3": 5.0,
+          "max": 5,
+          "mean": 5
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41698.0,
+          "q1": 41682.0,
+          "q3": 41720.0,
+          "max": 41742,
+          "mean": 41702
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 37.7,
+          "q1": 35.8,
+          "q3": 38.2,
+          "max": 38.7,
+          "mean": 36.77
+        },
+        "model_seconds": {
+          "median": 18.6,
+          "q1": 16.75,
+          "q3": 19.15,
+          "max": 19.7,
+          "mean": 17.73
+        },
+        "other_seconds": {
+          "median": 19.0,
+          "q1": 19.0,
+          "q3": 19.05,
+          "max": 19.1,
+          "mean": 19.03
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 22.0,
+          "q1": 15.5,
+          "q3": 29.0,
+          "max": 36,
+          "mean": 22.33
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 90770.0,
+          "q1": 65455.5,
+          "q3": 164231.5,
+          "max": 237693,
+          "mean": 122868
+        },
+        "llm_calls": {
+          "median": 4.0,
+          "q1": 3.0,
+          "q3": 6.0,
+          "max": 8,
+          "mean": 4.67
+        },
+        "elapsed": {
+          "median": 94.7,
+          "q1": 73.35,
+          "q3": 100.1,
+          "max": 105.5,
+          "mean": 84.07
+        },
+        "model_seconds": {
+          "median": 26.1,
+          "q1": 18.15,
+          "q3": 38.95,
+          "max": 51.8,
+          "mean": 29.37
+        },
+        "other_seconds": {
+          "median": 53.6,
+          "q1": 39.75,
+          "q3": 69.05,
+          "max": 84.5,
+          "mean": 54.67
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 43439.0,
+          "q1": 43403.0,
+          "q3": 52863.0,
+          "max": 62287,
+          "mean": 49697.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 35.6,
+          "q1": 33.95,
+          "q3": 36.45,
+          "max": 37.3,
+          "mean": 35.07
+        },
+        "model_seconds": {
+          "median": 20.5,
+          "q1": 18.85,
+          "q3": 21.35,
+          "max": 22.2,
+          "mean": 19.97
+        },
+        "other_seconds": {
+          "median": 15.1,
+          "q1": 15.1,
+          "q3": 15.1,
+          "max": 15.1,
+          "mean": 15.1
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41829.0,
+          "q1": 41673.0,
+          "q3": 53589.5,
+          "max": 65350,
+          "mean": 49565.33
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 28.5,
+          "q1": 27.65,
+          "q3": 29.9,
+          "max": 31.3,
+          "mean": 28.87
+        },
+        "model_seconds": {
+          "median": 13.1,
+          "q1": 12.2,
+          "q3": 14.5,
+          "max": 15.9,
+          "mean": 13.43
+        },
+        "other_seconds": {
+          "median": 15.4,
+          "q1": 15.4,
+          "q3": 15.45,
+          "max": 15.5,
+          "mean": 15.43
+        }
+      }
+    },
+    "asap_02874": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 19333.0,
+          "q1": 19303.5,
+          "q3": 19466.5,
+          "max": 19600,
+          "mean": 19402.33
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 1,
+          "mean": 1
+        },
+        "elapsed": {
+          "median": 21.6,
+          "q1": 20.5,
+          "q3": 22.0,
+          "max": 22.4,
+          "mean": 21.13
+        },
+        "model_seconds": {
+          "median": 11.5,
+          "q1": 10.5,
+          "q3": 11.9,
+          "max": 12.3,
+          "mean": 11.1
+        },
+        "other_seconds": {
+          "median": 10.1,
+          "q1": 10.0,
+          "q3": 10.1,
+          "max": 10.1,
+          "mean": 10.03
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 5.0,
+          "q1": 5.0,
+          "q3": 5.0,
+          "max": 5,
+          "mean": 5
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41538.0,
+          "q1": 41520.5,
+          "q3": 41570.5,
+          "max": 41603,
+          "mean": 41548
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 26.8,
+          "q1": 25.4,
+          "q3": 27.700000000000003,
+          "max": 28.6,
+          "mean": 26.47
+        },
+        "model_seconds": {
+          "median": 18.1,
+          "q1": 16.85,
+          "q3": 19.05,
+          "max": 20.0,
+          "mean": 17.9
+        },
+        "other_seconds": {
+          "median": 8.5,
+          "q1": 8.5,
+          "q3": 8.55,
+          "max": 8.6,
+          "mean": 8.53
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 6.0,
+          "q1": 3.0,
+          "q3": 6.5,
+          "max": 7,
+          "mean": 4.33
+        },
+        "zero_waste": 1,
+        "tokens": {
+          "median": 40162.0,
+          "q1": 40136.0,
+          "q3": 52066.0,
+          "max": 63970,
+          "mean": 48080.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.5,
+          "max": 3,
+          "mean": 2.33
+        },
+        "elapsed": {
+          "median": 25.6,
+          "q1": 23.4,
+          "q3": 28.450000000000003,
+          "max": 31.3,
+          "mean": 26.03
+        },
+        "model_seconds": {
+          "median": 14.9,
+          "q1": 14.350000000000001,
+          "q3": 18.4,
+          "max": 21.9,
+          "mean": 16.87
+        },
+        "other_seconds": {
+          "median": 9.5,
+          "q1": 7.9,
+          "q3": 10.65,
+          "max": 11.8,
+          "mean": 9.2
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 43251.0,
+          "q1": 43186.5,
+          "q3": 43256.5,
+          "max": 43262,
+          "mean": 43211.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 30.0,
+          "q1": 29.45,
+          "q3": 31.0,
+          "max": 32.0,
+          "mean": 30.3
+        },
+        "model_seconds": {
+          "median": 19.9,
+          "q1": 19.45,
+          "q3": 20.95,
+          "max": 22.0,
+          "mean": 20.3
+        },
+        "other_seconds": {
+          "median": 10.0,
+          "q1": 9.95,
+          "q3": 10.0,
+          "max": 10.0,
+          "mean": 9.97
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 41137.0,
+          "q1": 41122.5,
+          "q3": 41297.0,
+          "max": 41457,
+          "mean": 41234
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 21.9,
+          "q1": 21.5,
+          "q3": 23.6,
+          "max": 25.3,
+          "mean": 22.77
+        },
+        "model_seconds": {
+          "median": 11.8,
+          "q1": 11.4,
+          "q3": 13.350000000000001,
+          "max": 14.9,
+          "mean": 12.57
+        },
+        "other_seconds": {
+          "median": 10.2,
+          "q1": 10.149999999999999,
+          "q3": 10.3,
+          "max": 10.4,
+          "mean": 10.23
+        }
+      }
+    },
+    "asap_08183": {
+      "a1/A/none": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 10.0,
+          "q1": 6.0,
+          "q3": 19.5,
+          "max": 29,
+          "mean": 13.67
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 19397.0,
+          "q1": 19379.5,
+          "q3": 19473.0,
+          "max": 19549,
+          "mean": 19436
+        },
+        "llm_calls": {
+          "median": 1.0,
+          "q1": 1.0,
+          "q3": 1.0,
+          "max": 1,
+          "mean": 1
+        },
+        "elapsed": {
+          "median": 28.8,
+          "q1": 26.3,
+          "q3": 72.2,
+          "max": 115.6,
+          "mean": 56.07
+        },
+        "model_seconds": {
+          "median": 10.1,
+          "q1": 9.25,
+          "q3": 11.3,
+          "max": 12.5,
+          "mean": 10.33
+        },
+        "other_seconds": {
+          "median": 18.7,
+          "q1": 17.05,
+          "q3": 60.9,
+          "max": 103.1,
+          "mean": 45.73
+        }
+      },
+      "a1/B/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 15.0,
+          "q1": 15.0,
+          "q3": 15.0,
+          "max": 15,
+          "mean": 15
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 41862.0,
+          "q1": 41860.0,
+          "q3": 41918.0,
+          "max": 41974,
+          "mean": 41898
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 82.7,
+          "q1": 81.85,
+          "q3": 82.85,
+          "max": 83.0,
+          "mean": 82.23
+        },
+        "model_seconds": {
+          "median": 18.2,
+          "q1": 17.299999999999997,
+          "q3": 18.299999999999997,
+          "max": 18.4,
+          "mean": 17.67
+        },
+        "other_seconds": {
+          "median": 64.6,
+          "q1": 64.55,
+          "q3": 64.65,
+          "max": 64.7,
+          "mean": 64.6
+        }
+      },
+      "a1/C/S5": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 42.0,
+          "q1": 36.0,
+          "q3": 45.0,
+          "max": 48,
+          "mean": 40
+        },
+        "zero_waste": 0,
+        "tokens": {
+          "median": 127333.0,
+          "q1": 124459.5,
+          "q3": 141144.0,
+          "max": 154955,
+          "mean": 134624.67
+        },
+        "llm_calls": {
+          "median": 5.0,
+          "q1": 5.0,
+          "q3": 5.5,
+          "max": 6,
+          "mean": 5.33
+        },
+        "elapsed": {
+          "median": 98.1,
+          "q1": 93.5,
+          "q3": 99.19999999999999,
+          "max": 100.3,
+          "mean": 95.77
+        },
+        "model_seconds": {
+          "median": 37.6,
+          "q1": 37.35,
+          "q3": 40.1,
+          "max": 42.6,
+          "mean": 39.1
+        },
+        "other_seconds": {
+          "median": 55.5,
+          "q1": 53.4,
+          "q3": 59.35,
+          "max": 63.2,
+          "mean": 56.67
+        }
+      },
+      "a2/B/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 44086.0,
+          "q1": 44065.0,
+          "q3": 44120.5,
+          "max": 44155,
+          "mean": 44095
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 31.8,
+          "q1": 31.700000000000003,
+          "q3": 32.05,
+          "max": 32.3,
+          "mean": 31.9
+        },
+        "model_seconds": {
+          "median": 17.9,
+          "q1": 17.799999999999997,
+          "q3": 18.15,
+          "max": 18.4,
+          "mean": 18.0
+        },
+        "other_seconds": {
+          "median": 13.8,
+          "q1": 13.8,
+          "q3": 13.850000000000001,
+          "max": 13.9,
+          "mean": 13.83
+        }
+      },
+      "a2/C/S5+note": {
+        "runs": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "wilson95": [
+          0.438,
+          1.0
+        ],
+        "wasted_checks": {
+          "median": 0.0,
+          "q1": 0.0,
+          "q3": 0.0,
+          "max": 0,
+          "mean": 0
+        },
+        "zero_waste": 3,
+        "tokens": {
+          "median": 42476.0,
+          "q1": 42437.5,
+          "q3": 42476.5,
+          "max": 42477,
+          "mean": 42450.67
+        },
+        "llm_calls": {
+          "median": 2.0,
+          "q1": 2.0,
+          "q3": 2.0,
+          "max": 2,
+          "mean": 2
+        },
+        "elapsed": {
+          "median": 29.6,
+          "q1": 29.200000000000003,
+          "q3": 29.8,
+          "max": 30.0,
+          "mean": 29.47
+        },
+        "model_seconds": {
+          "median": 15.6,
+          "q1": 15.149999999999999,
+          "q3": 15.75,
+          "max": 15.9,
+          "mean": 15.4
+        },
+        "other_seconds": {
+          "median": 14.1,
+          "q1": 14.1,
+          "q3": 14.1,
+          "max": 14.1,
+          "mean": 14.1
+        }
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "x": "a1/A/none",
+      "y": "a1/B/S5",
+      "metric": "wasted_checks",
+      "per_cad": {
+        "asap_00650": [
+          34,
+          15
+        ],
+        "asap_01680": [
+          31.67,
+          5
+        ],
+        "asap_02874": [
+          0,
+          5
+        ],
+        "asap_03391": [
+          17.33,
+          8
+        ],
+        "asap_04098": [
+          8.67,
+          6
+        ],
+        "asap_04714": [
+          10,
+          6
+        ],
+        "asap_06262": [
+          0.33,
+          3
+        ],
+        "asap_06414": [
+          7,
+          0
+        ],
+        "asap_07711": [
+          12.67,
+          7
+        ],
+        "asap_07714": [
+          15,
+          18
+        ],
+        "asap_08183": [
+          13.67,
+          15
+        ],
+        "asap_08203": [
+          13.33,
+          0
+        ]
+      },
+      "y_lower": 8,
+      "y_higher": 4,
+      "ties": 0,
+      "median_diff_y_minus_x": -4.833333333333333,
+      "wilcoxon_p": 0.0522
+    },
+    {
+      "x": "a1/A/none",
+      "y": "a1/B/S5",
+      "metric": "total_tokens",
+      "per_cad": {
+        "asap_00650": [
+          26004,
+          42038
+        ],
+        "asap_01680": [
+          19230,
+          41702
+        ],
+        "asap_02874": [
+          19402.33,
+          41548
+        ],
+        "asap_03391": [
+          25442.33,
+          41249.33
+        ],
+        "asap_04098": [
+          32117.67,
+          40922.33
+        ],
+        "asap_04714": [
+          18896,
+          41105.33
+        ],
+        "asap_06262": [
+          25582,
+          48400.33
+        ],
+        "asap_06414": [
+          25851,
+          41558
+        ],
+        "asap_07711": [
+          18941.33,
+          40937.33
+        ],
+        "asap_07714": [
+          25443.33,
+          47153.67
+        ],
+        "asap_08183": [
+          19436,
+          41898
+        ],
+        "asap_08203": [
+          25209.67,
+          41050.33
+        ]
+      },
+      "y_lower": 0,
+      "y_higher": 12,
+      "ties": 0,
+      "median_diff_y_minus_x": 21853.166666666668,
+      "wilcoxon_p": 0.0005
+    },
+    {
+      "x": "a1/A/none",
+      "y": "a1/B/S5",
+      "metric": "elapsed_seconds",
+      "per_cad": {
+        "asap_00650": [
+          328.73,
+          202.37
+        ],
+        "asap_01680": [
+          72.73,
+          36.77
+        ],
+        "asap_02874": [
+          21.13,
+          26.47
+        ],
+        "asap_03391": [
+          33.13,
+          33.9
+        ],
+        "asap_04098": [
+          23.37,
+          23.53
+        ],
+        "asap_04714": [
+          18.53,
+          25.27
+        ],
+        "asap_06262": [
+          156.53,
+          142.1
+        ],
+        "asap_06414": [
+          24.4,
+          26.8
+        ],
+        "asap_07711": [
+          347.8,
+          219.67
+        ],
+        "asap_07714": [
+          26.77,
+          52.4
+        ],
+        "asap_08183": [
+          56.07,
+          82.23
+        ],
+        "asap_08203": [
+          24.87,
+          22.67
+        ]
+      },
+      "y_lower": 5,
+      "y_higher": 7,
+      "ties": 0,
+      "median_diff_y_minus_x": 0.4666666666666668,
+      "wilcoxon_p": 0.791
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a1/C/S5",
+      "metric": "wasted_checks",
+      "per_cad": {
+        "asap_00650": [
+          15,
+          20.67
+        ],
+        "asap_01680": [
+          5,
+          22.33
+        ],
+        "asap_02874": [
+          5,
+          4.33
+        ],
+        "asap_03391": [
+          8,
+          13
+        ],
+        "asap_04098": [
+          6,
+          5.33
+        ],
+        "asap_04714": [
+          6,
+          10
+        ],
+        "asap_06262": [
+          3,
+          7.33
+        ],
+        "asap_06414": [
+          0,
+          4.33
+        ],
+        "asap_07711": [
+          7,
+          3.33
+        ],
+        "asap_07714": [
+          18,
+          9.33
+        ],
+        "asap_08183": [
+          15,
+          40
+        ],
+        "asap_08203": [
+          0,
+          0
+        ]
+      },
+      "y_lower": 4,
+      "y_higher": 7,
+      "ties": 1,
+      "median_diff_y_minus_x": 4.166666666666666,
+      "wilcoxon_p": 0.1152
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a1/C/S5",
+      "metric": "total_tokens",
+      "per_cad": {
+        "asap_00650": [
+          42038,
+          117035.67
+        ],
+        "asap_01680": [
+          41702,
+          122868
+        ],
+        "asap_02874": [
+          41548,
+          48080.67
+        ],
+        "asap_03391": [
+          41249.33,
+          71805.67
+        ],
+        "asap_04098": [
+          40922.33,
+          46820.67
+        ],
+        "asap_04714": [
+          41105.33,
+          70772
+        ],
+        "asap_06262": [
+          48400.33,
+          62819.67
+        ],
+        "asap_06414": [
+          41558,
+          47852.33
+        ],
+        "asap_07711": [
+          40937.33,
+          84425.67
+        ],
+        "asap_07714": [
+          47153.67,
+          79066.33
+        ],
+        "asap_08183": [
+          41898,
+          134624.67
+        ],
+        "asap_08203": [
+          41050.33,
+          39117
+        ]
+      },
+      "y_lower": 1,
+      "y_higher": 11,
+      "ties": 0,
+      "median_diff_y_minus_x": 30111.5,
+      "wilcoxon_p": 0.001
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a1/C/S5",
+      "metric": "elapsed_seconds",
+      "per_cad": {
+        "asap_00650": [
+          202.37,
+          159.33
+        ],
+        "asap_01680": [
+          36.77,
+          84.07
+        ],
+        "asap_02874": [
+          26.47,
+          26.03
+        ],
+        "asap_03391": [
+          33.9,
+          43.4
+        ],
+        "asap_04098": [
+          23.53,
+          28.47
+        ],
+        "asap_04714": [
+          25.27,
+          32.13
+        ],
+        "asap_06262": [
+          142.1,
+          163.7
+        ],
+        "asap_06414": [
+          26.8,
+          23.73
+        ],
+        "asap_07711": [
+          219.67,
+          145.87
+        ],
+        "asap_07714": [
+          52.4,
+          38.27
+        ],
+        "asap_08183": [
+          82.23,
+          95.77
+        ],
+        "asap_08203": [
+          22.67,
+          16.83
+        ]
+      },
+      "y_lower": 6,
+      "y_higher": 6,
+      "ties": 0,
+      "median_diff_y_minus_x": 2.2499999999999982,
+      "wilcoxon_p": 0.9097
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a2/B/S5+note",
+      "metric": "wasted_checks",
+      "per_cad": {
+        "asap_00650": [
+          15,
+          0
+        ],
+        "asap_01680": [
+          5,
+          0
+        ],
+        "asap_02874": [
+          5,
+          0
+        ],
+        "asap_03391": [
+          8,
+          0
+        ],
+        "asap_04098": [
+          6,
+          0
+        ],
+        "asap_04714": [
+          6,
+          2
+        ],
+        "asap_06262": [
+          3,
+          0
+        ],
+        "asap_06414": [
+          0,
+          0
+        ],
+        "asap_07711": [
+          7,
+          0
+        ],
+        "asap_07714": [
+          18,
+          0
+        ],
+        "asap_08183": [
+          15,
+          0
+        ],
+        "asap_08203": [
+          0,
+          0
+        ]
+      },
+      "y_lower": 10,
+      "y_higher": 0,
+      "ties": 2,
+      "median_diff_y_minus_x": -5.5,
+      "wilcoxon_p": 0.002
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a2/B/S5+note",
+      "metric": "total_tokens",
+      "per_cad": {
+        "asap_00650": [
+          42038,
+          43644
+        ],
+        "asap_01680": [
+          41702,
+          49697.67
+        ],
+        "asap_02874": [
+          41548,
+          43211.67
+        ],
+        "asap_03391": [
+          41249.33,
+          64987.67
+        ],
+        "asap_04098": [
+          40922.33,
+          42560.67
+        ],
+        "asap_04714": [
+          41105.33,
+          48844.33
+        ],
+        "asap_06262": [
+          48400.33,
+          42953.33
+        ],
+        "asap_06414": [
+          41558,
+          42994.33
+        ],
+        "asap_07711": [
+          40937.33,
+          50807.67
+        ],
+        "asap_07714": [
+          47153.67,
+          54832.33
+        ],
+        "asap_08183": [
+          41898,
+          44095
+        ],
+        "asap_08203": [
+          41050.33,
+          42080.33
+        ]
+      },
+      "y_lower": 1,
+      "y_higher": 11,
+      "ties": 0,
+      "median_diff_y_minus_x": 1930.3333333333321,
+      "wilcoxon_p": 0.0093
+    },
+    {
+      "x": "a1/B/S5",
+      "y": "a2/B/S5+note",
+      "metric": "elapsed_seconds",
+      "per_cad": {
+        "asap_00650": [
+          202.37,
+          97.0
+        ],
+        "asap_01680": [
+          36.77,
+          35.07
+        ],
+        "asap_02874": [
+          26.47,
+          30.3
+        ],
+        "asap_03391": [
+          33.9,
+          40.43
+        ],
+        "asap_04098": [
+          23.53,
+          24.9
+        ],
+        "asap_04714": [
+          25.27,
+          26.03
+        ],
+        "asap_06262": [
+          142.1,
+          162.57
+        ],
+        "asap_06414": [
+          26.8,
+          27.37
+        ],
+        "asap_07711": [
+          219.67,
+          61.7
+        ],
+        "asap_07714": [
+          52.4,
+          31.1
+        ],
+        "asap_08183": [
+          82.23,
+          31.9
+        ],
+        "asap_08203": [
+          22.67,
+          23.8
+        ]
+      },
+      "y_lower": 5,
+      "y_higher": 7,
+      "ties": 0,
+      "median_diff_y_minus_x": 0.6666666666666661,
+      "wilcoxon_p": 0.5693
+    },
+    {
+      "x": "a1/C/S5",
+      "y": "a2/C/S5+note",
+      "metric": "wasted_checks",
+      "per_cad": {
+        "asap_00650": [
+          20.67,
+          0
+        ],
+        "asap_01680": [
+          22.33,
+          0
+        ],
+        "asap_02874": [
+          4.33,
+          0
+        ],
+        "asap_03391": [
+          13,
+          0
+        ],
+        "asap_04098": [
+          5.33,
+          0
+        ],
+        "asap_04714": [
+          10,
+          0
+        ],
+        "asap_06262": [
+          7.33,
+          0
+        ],
+        "asap_06414": [
+          4.33,
+          0
+        ],
+        "asap_07711": [
+          3.33,
+          0
+        ],
+        "asap_07714": [
+          9.33,
+          0
+        ],
+        "asap_08183": [
+          40,
+          0
+        ],
+        "asap_08203": [
+          0,
+          0
+        ]
+      },
+      "y_lower": 11,
+      "y_higher": 0,
+      "ties": 1,
+      "median_diff_y_minus_x": -8.333333333333334,
+      "wilcoxon_p": 0.001
+    },
+    {
+      "x": "a1/C/S5",
+      "y": "a2/C/S5+note",
+      "metric": "total_tokens",
+      "per_cad": {
+        "asap_00650": [
+          117035.67,
+          42002.33
+        ],
+        "asap_01680": [
+          122868,
+          49565.33
+        ],
+        "asap_02874": [
+          48080.67,
+          41234
+        ],
+        "asap_03391": [
+          71805.67,
+          41030
+        ],
+        "asap_04098": [
+          46820.67,
+          40529.67
+        ],
+        "asap_04714": [
+          70772,
+          40776
+        ],
+        "asap_06262": [
+          62819.67,
+          41190.33
+        ],
+        "asap_06414": [
+          47852.33,
+          41155
+        ],
+        "asap_07711": [
+          84425.67,
+          40658.33
+        ],
+        "asap_07714": [
+          79066.33,
+          40522.67
+        ],
+        "asap_08183": [
+          134624.67,
+          42450.67
+        ],
+        "asap_08203": [
+          39117,
+          40173
+        ]
+      },
+      "y_lower": 11,
+      "y_higher": 1,
+      "ties": 0,
+      "median_diff_y_minus_x": -30385.833333333336,
+      "wilcoxon_p": 0.001
+    },
+    {
+      "x": "a1/C/S5",
+      "y": "a2/C/S5+note",
+      "metric": "elapsed_seconds",
+      "per_cad": {
+        "asap_00650": [
+          159.33,
+          93.13
+        ],
+        "asap_01680": [
+          84.07,
+          28.87
+        ],
+        "asap_02874": [
+          26.03,
+          22.77
+        ],
+        "asap_03391": [
+          43.4,
+          25.43
+        ],
+        "asap_04098": [
+          28.47,
+          17.37
+        ],
+        "asap_04714": [
+          32.13,
+          19.73
+        ],
+        "asap_06262": [
+          163.7,
+          163.33
+        ],
+        "asap_06414": [
+          23.73,
+          17.9
+        ],
+        "asap_07711": [
+          145.87,
+          51.93
+        ],
+        "asap_07714": [
+          38.27,
+          21.47
+        ],
+        "asap_08183": [
+          95.77,
+          29.47
+        ],
+        "asap_08203": [
+          16.83,
+          19.2
+        ]
+      },
+      "y_lower": 11,
+      "y_higher": 1,
+      "ties": 0,
+      "median_diff_y_minus_x": -14.6,
+      "wilcoxon_p": 0.0015
+    }
+  ],
+  "note_writer": {
+    "notes": 12,
+    "problems": {},
+    "total_tokens": [
+      15403,
+      15674,
+      15080,
+      15270,
+      15130,
+      15144,
+      15310,
+      15264,
+      15201,
+      15108,
+      16074,
+      14643
+    ]
+  },
+  "all_repeats_succeeded": {
+    "a1/A/none": [
+      "asap_04098",
+      "asap_07711",
+      "asap_07714",
+      "asap_08203",
+      "asap_03391",
+      "asap_04714",
+      "asap_06262",
+      "asap_06414",
+      "asap_00650",
+      "asap_01680",
+      "asap_02874",
+      "asap_08183"
+    ],
+    "a1/B/S5": [
+      "asap_04098",
+      "asap_07711",
+      "asap_07714",
+      "asap_08203",
+      "asap_03391",
+      "asap_04714",
+      "asap_06262",
+      "asap_06414",
+      "asap_00650",
+      "asap_01680",
+      "asap_02874",
+      "asap_08183"
+    ],
+    "a1/C/S5": [
+      "asap_04098",
+      "asap_07711",
+      "asap_07714",
+      "asap_08203",
+      "asap_03391",
+      "asap_04714",
+      "asap_06262",
+      "asap_06414",
+      "asap_00650",
+      "asap_01680",
+      "asap_02874",
+      "asap_08183"
+    ],
+    "a2/B/S5+note": [
+      "asap_04098",
+      "asap_07711",
+      "asap_07714",
+      "asap_08203",
+      "asap_03391",
+      "asap_04714",
+      "asap_06262",
+      "asap_06414",
+      "asap_00650",
+      "asap_01680",
+      "asap_02874",
+      "asap_08183"
+    ],
+    "a2/C/S5+note": [
+      "asap_04098",
+      "asap_07711",
+      "asap_07714",
+      "asap_08203",
+      "asap_03391",
+      "asap_04714",
+      "asap_06262",
+      "asap_06414",
+      "asap_00650",
+      "asap_01680",
+      "asap_02874",
+      "asap_08183"
+    ]
+  },
+  "replay": null
+}

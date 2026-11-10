@@ -1,6 +1,16 @@
 # Failure-driven disassembly planner
 
-## 최신 결과: disassembly_repair_v7_3 (새 CAD 4개 고정 평가, 완료)
+## 최신 실행 결과: disassembly_repair_v7_4 (180회 완료, 독립 재생 검증 미완료)
+
+v7.3 planner를 유지하고, 처음 보는 부품 5~7개짜리 CAD 12종을 조건별 3회 반복 평가했습니다. A, B(S5), C(S5)의 1차 시도와 B·C의 조립체별 SKILL.md를 사용한 2차 시도에서 **각 36/36, 총 180/180회가 기록상 분해 목표에 도달**했습니다. 180종의 서로 다른 CAD를 평가한 것은 아닙니다.
+
+- **효율:** 성공 에피소드의 낭비 검사 수 중앙값은 1차 A 10회, B 6회, C 8회였고, 조립체별 SKILL.md를 사용한 2차 B·C는 각각 0회였습니다. 낭비 검사 수는 실제 검사 수에서 필요한 제거 수를 뺀 값입니다.
+- **평가 범위:** 부품 5~7개의 선정 기준을 통과한 CAD 12종입니다. 10개 이상 조립체의 일반 성능이나 대규모 산업 검증을 뒷받침하지 않습니다. 범용 SKILL.md S5는 v7.3 개발 검증에서 불승인됐지만, v7.4에서는 사용자 결정에 따라 실행 전에 고정했습니다.
+- **검증 상태:** 독립 재생 검증은 사용자의 요청으로 중단됐으며 전체 180회에 대해 완료되지 않았습니다. 2026-11-10 공개 과정에서는 저장 기록·집계의 일치와 고정 파일 해시를 확인했으며, 새 LLM 실행이나 재생 검증을 시작하지 않았습니다.
+
+[실험 상태](disassembly_repair_v7_4/STATUS.md), [사전 계획](disassembly_repair_v7_4/PLAN.md), [공개 범위와 한계](results/repair_v7_4/README.md), [결과표](results/repair_v7_4/RESULT_TABLES.md), [실행별 지표](results/repair_v7_4/evaluation_runs.csv), [집계 JSON](results/repair_v7_4/summary_v74.json)
+
+## 제출 버전 결과: disassembly_repair_v7_3 (새 CAD 4개 고정 평가, 완료)
 
 용어: SKILL.md는 LLM이 읽는 절차 파일입니다. 범용 SKILL.md는 처음 보는 조립체용(이전 버전 S3, 최신 버전 S5)이고, 조립체별 SKILL.md는 한 조립체의 1차 시도 기록으로 만든 그 조립체 전용 파일입니다(파일 이름 `assembly-note-*`). 이전 기록 문서의 "노트"는 조립체별 SKILL.md, "일반 문서"는 범용 SKILL.md를 뜻합니다.
 

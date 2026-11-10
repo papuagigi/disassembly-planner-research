@@ -1,0 +1,21 @@
+{
+  "version": "S5",
+  "created_utc": "2026-10-20T18:57:39.806375+00:00",
+  "skills": [
+    {
+      "id": "world-family-disassembly-search",
+      "path": "S5/world-family-disassembly-search/SKILL.md",
+      "sha256": "5806572eb29f01ddf6f8d30621e9e23d33e5011e985aaac9d49c0a466763d680"
+    }
+  ],
+  "admission_evidence": {
+    "bundle": "<workspace>/disassembly_repair_v7_3/outputs/mining/bundle_s5.json",
+    "bundle_sha256": "8e051ba59bc1fbf5f28305daedf33c39760f404d7d0214027c92d12d7d576f25",
+    "writer_call": 1,
+    "rule_gate_passed": true,
+    "rule_gate_successes": 4,
+    "status": "candidate_pending_validation"
+  },
+  "representation": "LLM-read procedural Markdown; no stored executable policy",
+  "weight_updates": false
+}

@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-21T13:34:23.573015+00:00",
+  "case_id": "asap_03391",
+  "usage": {
+    "input_tokens": 14140,
+    "cached_input_tokens": 11008,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1130,
+    "reasoning_output_tokens": 0
+  },
+  "problems": [],
+  "note": "<workspace>/disassembly_repair_v7_4/memory/notes/asap_03391/assembly-note-five-part-removal/SKILL.md",
+  "writer_errors": [],
+  "inputs": [
+    "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_03391/a1_A_none_r1/result.json",
+    "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_03391/a1_B_base_r1/result.json",
+    "<workspace>/disassembly_repair_v7_4/outputs/evaluation/asap_03391/a1_C_base_r1/result.json"
+  ],
+  "recorded_sequence_source": {
+    "condition": "B",
+    "success": true,
+    "length": 5
+  }
+}
