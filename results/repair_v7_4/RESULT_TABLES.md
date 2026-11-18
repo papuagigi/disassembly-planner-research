@@ -52,4 +52,6 @@
 
 Note writer: 12 notes, problems none, tokens per note 14643–16074.
 
+Independent replays: PASS (180), failed []
+
 Invalid (excluded) episodes: none

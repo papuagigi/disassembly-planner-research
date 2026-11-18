@@ -23,3 +23,11 @@ Reliability evaluation of the unchanged v7.3 planner on many easy NEW CADs with 
 - Remaining: independent replays (offline, no model call; safe to stop and rerun from scratch):
   `PYTHONDONTWRITEBYTECODE=1 disassembly_learning_v1/.venv/bin/python -B -m disassembly_repair_v7_4.offline.replay_all 6 evaluation` (from the workspace root), then rerun aggregate74 and write `analysis/EVALUATION_RESULTS.md`.
 - 2026-10-21T16:48:37Z: the replay run was stopped at the user's request before it finished; no outputs/replay/evaluation.json was written. Replays are NOT yet verified.
+
+## 2026-11-18 — independent replays COMPLETE (180/180 PASS), aggregate rerun, write-up
+- User instruction "replay 시작" (2026-11-18). Command as in the line above (`replay_all 6 evaluation`, 6 workers), 03:38:05Z–04:21:57Z, no model call. Log: `outputs/replay_run_2026-11-18.log`; result: `outputs/replay/evaluation.json`.
+- Result: 180/180 PASS. Physical queries replayed 2,081 = stored charged checks 2,081 (no per-episode mismatch); guarded/cached 65 (2 episodes); restores 10 (3 episodes); unfinished charged checks 0. Per condition: a1_A_none 671, a1_B_base 444, a1_C_base 600, a2_B_note 186, a2_C_note 180 queries, each 36/36 PASS.
+- `campaign74.verify()` OK after the replay (21 frozen files; amended `campaign74.py`). No `result.json` changed after 2026-10-22.
+- User approved the follow-up ("반영"): `offline/aggregate74` rerun. `evaluation_runs.csv` byte-identical; `summary_v74.json` changed only in `utc` and `replay` (PASS, 180, failed []); `RESULT_TABLES.md` gained the replay line, and its tier-table separator is now one valid row (the 2026-10-22 file had a 6-line broken separator that the current code does not produce; cause not determined). Pre-rerun copies were kept only in the session scratchpad.
+- Write-up: [analysis/EVALUATION_RESULTS.md](analysis/EVALUATION_RESULTS.md) (Korean).
+- Remaining: the public repo (`disassembly-planner-research`, snapshot `f3b7986`) still predates the replay; updating it and any push need separate user approval.
