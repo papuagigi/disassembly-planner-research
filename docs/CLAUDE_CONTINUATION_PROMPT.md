@@ -8,7 +8,7 @@
 
 이 컴퓨터에서 진행 중인 disassembly planner 연구를 이어받아 끝까지 마무리해줘.
 
-작업 폴더는 `/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습`이고, 현재 실험은 `disassembly_final_v6`야. 먼저 그 안의 `CLAUDE.md`, `AGENT_HANDOFF.md`, `OPERATIONS.md`와 최신 실행 상태를 읽어줘. GitHub 복제본에는 재개에 필요한 전체 CAD·가상환경·로그가 없으므로 기존 로컬 폴더를 사용해.
+작업 폴더는 `<workspace>`이고, 현재 실험은 `disassembly_final_v6`야. 먼저 그 안의 `CLAUDE.md`, `AGENT_HANDOFF.md`, `OPERATIONS.md`와 최신 실행 상태를 읽어줘. GitHub 복제본에는 재개에 필요한 전체 CAD·가상환경·로그가 없으므로 기존 로컬 폴더를 사용해.
 
 가장 먼저 supervisor와 planner가 실제로 실행 중인지 확인해. 살아 있으면 새로 실행하지 말고 기존 작업을 계속 관찰해. 멈췄다면 오류와 기록을 보존하고 원인을 해결한 뒤 남은 단계만 재개해. 이미 시작한 첫 평가를 삭제하거나 다시 시도하면 안 돼. 학습과 검증은 완료됐으므로 다시 하지 마.
 

@@ -6,7 +6,7 @@
 
 이 disassembly planner 프로젝트의 현재 문제를 실제 로그와 코드로 확인하고, **기존 결과를 보존한 새 버전에서 해결**해줘. 단순히 B나 C가 A보다 높게 나오게 만드는 것이 목적은 아니야. 목표는 **실제 분해 실패에서 배운 절차를 SKILL.md에 저장하고, 처음 보는 조립체를 분해할 때 이 경험이 도움이 되는 시스템**이야.
 
-작업 폴더는 `/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습`이야. 먼저 루트 `CLAUDE.md`, `claude_repair_handoff/README.md`, `FAILURE_DIAGNOSIS.md`, `evidence.json`을 읽어줘. 뒤의 세 파일은 `claude_repair_handoff/` 안에 있어. 분석 문서의 주장도 원본 로그로 확인하고, 동의하지 않는 부분은 근거를 제시해줘.
+작업 폴더는 `<workspace>`이야. 먼저 루트 `CLAUDE.md`, `claude_repair_handoff/README.md`, `FAILURE_DIAGNOSIS.md`, `evidence.json`을 읽어줘. 뒤의 세 파일은 `claude_repair_handoff/` 안에 있어. 분석 문서의 주장도 원본 로그로 확인하고, 동의하지 않는 부분은 근거를 제시해줘.
 
 `disassembly_final_v6`의 3 CAD × A·B·C = 9회 평가는 이미 완료됐어. 모두 완전 분해에 실패했고, 새 skill 후보도 검증에서 기각되어 기존 문서 2개를 사용했어. 이 평가를 재개하거나 수정하지 말고 새 디렉터리와 별도 결과 경로를 사용해. 05954·06444·03114는 이제 원인 분석·회귀 검증에만 쓰고, 다음 평가에서 ‘처음 보는 제품’으로 다시 세지 마.
 

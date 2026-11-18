@@ -35,31 +35,31 @@
   "prior5episodes_reused_without_rerun": [
     {
       "case_id": "asap_02406",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02406/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02406/result.json",
       "result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_02402",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02402/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02402/result.json",
       "result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_07722",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_07722/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_07722/result.json",
       "result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_03674",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_03674/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_03674/result.json",
       "result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_02429",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02429/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02429/result.json",
       "result_sha256": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
       "copied_without_model_call": true
     }

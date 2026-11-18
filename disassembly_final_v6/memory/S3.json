@@ -13,7 +13,7 @@
       "sha256": "bf218fcda0bf8a703c6571005236cc45d02311e72dd5c6f8a2d2d65b7f29fe88"
     }
   ],
-  "admission_evidence": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/new_document/admission.json",
+  "admission_evidence": "<workspace>/disassembly_final_v6/outputs/development/new_document/admission.json",
   "representation": "LLM-read procedural Markdown; no stored executable policy",
   "weight_updates": false
 }

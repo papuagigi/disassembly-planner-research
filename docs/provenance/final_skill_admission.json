@@ -403,7 +403,7 @@
         "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
       },
       "physical_audit": "PASS",
-      "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_03756/result.json",
+      "result_path": "<workspace>/disassembly_final_v6/outputs/development/full_validation/asap_03756/result.json",
       "result_sha256": "d37513d78ec0d42baaa787d8fdf2557827b9849b665f496b539f67b0d8a841c7",
       "actual_restores": 2,
       "candidate_was_available": true,
@@ -457,7 +457,7 @@
         "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
       },
       "physical_audit": "PASS_VERIFIED_PREFIX",
-      "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_08243/result.json",
+      "result_path": "<workspace>/disassembly_final_v6/outputs/development/full_validation/asap_08243/result.json",
       "result_sha256": "2d536189635d4fa5bec4e140edba402b9859a564862309d8f92744efcc17eef3",
       "actual_restores": 0,
       "candidate_was_available": true,
@@ -486,7 +486,7 @@
         "scope": "Observed native episode warnings only; not a proof of physical fidelity. Deterministic replay can reproduce a solver-overflow error. Original episode score, costs and logs remain unchanged."
       },
       "physical_audit": "PASS_VERIFIED_PREFIX",
-      "result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v6/outputs/development/full_validation/asap_05828/result.json",
+      "result_path": "<workspace>/disassembly_final_v6/outputs/development/full_validation/asap_05828/result.json",
       "result_sha256": "50e534170801bb294f14aa0d5e28ba60b4f6c29efec00767ef94f5f2cdc381a4",
       "actual_restores": 0,
       "candidate_was_available": true,

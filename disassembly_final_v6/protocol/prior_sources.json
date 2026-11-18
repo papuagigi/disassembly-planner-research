@@ -565,16 +565,16 @@
       "source_assembly_id": "02406",
       "part_count": 13,
       "required_removals": 12,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/cases/development/asap_02406.json",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_02406.json",
       "case_sha256": "e72746eaa5a0586c9ce0e4e1da9b726145d601022473edbcd77d1425204f665e",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/02406/shared.json",
+      "shared_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/02406/shared.json",
       "shared_sha256": "b0e362860b6524a9af8a3b93c524627ad4b0b15bb118c7e51d8703cb30a242db",
       "fixture_ids": [
         "0"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/02406/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/02406/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "2400c64729a6178bbe9787ceec51c570a0e8548de8dda36a4889b80edccf6d5f"
     },
@@ -583,16 +583,16 @@
       "source_assembly_id": "02402",
       "part_count": 13,
       "required_removals": 12,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/cases/development/asap_02402.json",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_02402.json",
       "case_sha256": "afa69a28013f59fa7d3282250a3fdafae6794ffc680b6b955fc2ac77cdb7e040",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/02402/shared.json",
+      "shared_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/02402/shared.json",
       "shared_sha256": "e02cb44872f87a2bded49e9367f5b32e295a708c81e1ece027eb9e1654d0ff8c",
       "fixture_ids": [
         "0"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/02402/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/02402/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "e2b8fc9e5b720ff06d8901ee13f502cf3739e53a6d53e6db308aa77cd8e4684f"
     },
@@ -601,16 +601,16 @@
       "source_assembly_id": "07722",
       "part_count": 15,
       "required_removals": 14,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/cases/development/asap_07722.json",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_07722.json",
       "case_sha256": "05b0c4b65c452f8fd78c52c5b37ba0dd5a63f70793a1ea2f463a4cc094f818ae",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/07722/shared.json",
+      "shared_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/07722/shared.json",
       "shared_sha256": "779427c3e8fb6e5a68b2eeb786555da09471396d719b3eef33cc4274828d23a2",
       "fixture_ids": [
         "1"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/07722/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/07722/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "1ad562e5c63f1efe3dfb52436bc06a4b490f81935427c7925554c6cf275297f3"
     },
@@ -619,16 +619,16 @@
       "source_assembly_id": "03674",
       "part_count": 12,
       "required_removals": 11,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/cases/development/asap_03674.json",
+      "case_path": "<workspace>/disassembly_docskills_v3/cases/development/asap_03674.json",
       "case_sha256": "ab723afbd500a5dbf5a82a822a99a21644e1104c5c1b42c8f095875f8d438c96",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/03674/shared.json",
+      "shared_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/03674/shared.json",
       "shared_sha256": "34625c9b210858925ee9e05065826f8f3605fde195b1b9b984387cea1413a4a7",
       "fixture_ids": [
         "1"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_docskills_v3/outputs/input_audit/development/03674/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_docskills_v3/outputs/input_audit/development/03674/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "4306920a45db0af174fde6482df7cf4a6932fcc0a4d3a37e5cfd5d68f877f036"
     },
@@ -637,16 +637,16 @@
       "source_assembly_id": "02429",
       "part_count": 18,
       "required_removals": 17,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/cases/development/asap_02429.json",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_02429.json",
       "case_sha256": "b6cfd5707fcc7bd7e0889a049312a25016711e662026aa14b6eac5a10e5e64c3",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/02429/shared.json",
+      "shared_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/02429/shared.json",
       "shared_sha256": "0f25387017e8c303cdc186b3ccf4f915db2944cb3195933a944dea699beebb56",
       "fixture_ids": [
         "3"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/02429/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/02429/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "4d5b75bddc477fc2fea02d26f80b0d421412de4ce1c3e8787dda88a7ec2faa47"
     }
@@ -657,16 +657,16 @@
       "source_assembly_id": "05459",
       "part_count": 17,
       "required_removals": 16,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/cases/development/asap_05459.json",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_05459.json",
       "case_sha256": "d8d466430385fb438b7c7c0ed61b1cba78d335709841d79f27ac97e2d7a87951",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/05459/shared.json",
+      "shared_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/05459/shared.json",
       "shared_sha256": "370128419aabb88842b564af82d204253432eb1c290b32cfb1084fc8dbcd78d4",
       "fixture_ids": [
         "16"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/05459/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/05459/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "f67eade25f39971cab945b34fb23ed25c6ab16cac6679c3ee9900bd3c76c37ea"
     }
@@ -674,31 +674,31 @@
   "inherited_discovery_results": [
     {
       "case_id": "asap_02406",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02406/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02406/result.json",
       "result_sha256": "034cabefe69fef8cb06df72e3a78cd6cdb60f88340cd66bc8cf90b39ddcdcaf8",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_02402",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02402/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02402/result.json",
       "result_sha256": "149df829002820f706827c1595fe984f41385fdd235c7b766edb13e970a998f4",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_07722",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_07722/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_07722/result.json",
       "result_sha256": "43451b43d8ede6062942cb84e029d7c24ec687e4c826c566f74a15a5cf7ab9e9",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_03674",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_03674/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_03674/result.json",
       "result_sha256": "739c9cbe0717419b625e19cc19308e831b2730f2c6c11bba40bef4fd10768fa8",
       "copied_without_model_call": true
     },
     {
       "case_id": "asap_02429",
-      "source_result_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/development/full_search/asap_02429/result.json",
+      "source_result_path": "<workspace>/disassembly_final_v4/outputs/development/full_search/asap_02429/result.json",
       "result_sha256": "e284a27b8ee160eca31ff1d32f430c63ec02dd23a8af4a9bc01a1ddb54d8a03d",
       "copied_without_model_call": true
     }
@@ -711,16 +711,16 @@
       "source_assembly_id": "07375",
       "part_count": 11,
       "required_removals": 10,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/cases/development/asap_07375.json",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_07375.json",
       "case_sha256": "8c964d4c828ca37b98e8e07f0bed2c2e739029efb3d4e898a453ba4ba4457376",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/07375/shared.json",
+      "shared_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/07375/shared.json",
       "shared_sha256": "0a88c9350746ad841ecb94ef387f94b6d92a9d46ff46f2c15211a5f1611fe33d",
       "fixture_ids": [
         "1"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/07375/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/07375/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "f5f5ae852811294cf0291690918891010673246563f59fdf552548d06cdae91b"
     },
@@ -729,16 +729,16 @@
       "source_assembly_id": "04243",
       "part_count": 11,
       "required_removals": 10,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/cases/development/asap_04243.json",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_04243.json",
       "case_sha256": "725da7e23baa0f9ca8f22ad29c31eab6c4d18ffb0e5fd8e2e9096584c153f533",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/04243/shared.json",
+      "shared_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/04243/shared.json",
       "shared_sha256": "d0170e3c441c3ffc818ba1958f22343e42c86d6132f916e4c3a6195d9bc6c909",
       "fixture_ids": [
         "3"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/04243/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/04243/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "a48bfcfc187c47b2847cd443cddfc95f94c2c4194417fa562707f7579859ddf6"
     },
@@ -747,16 +747,16 @@
       "source_assembly_id": "04060",
       "part_count": 11,
       "required_removals": 10,
-      "case_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/cases/development/asap_04060.json",
+      "case_path": "<workspace>/disassembly_final_v4/cases/development/asap_04060.json",
       "case_sha256": "bbfce5edc9087d7d080ffe23c1c6366bc46b12e8da51274bd6155017e2354f34",
-      "shared_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/04060/shared.json",
+      "shared_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/04060/shared.json",
       "shared_sha256": "d87c740f909ece3c86a5c3ae5b3a3e56a5de67a2e2b2856e01a34f1d802aa6ea",
       "fixture_ids": [
         "5"
       ],
       "initial_physics_validated": true,
       "full_path_known_before_evaluation": false,
-      "source_inventory_path": "/Users/juyeonkim/Documents/경희대학교 26-2학기 관련 문서/독립심화학습/disassembly_final_v4/outputs/input_audit/development/04060/source_inventory.json",
+      "source_inventory_path": "<workspace>/disassembly_final_v4/outputs/input_audit/development/04060/source_inventory.json",
       "source_split": "training_assembly",
       "geometry_fingerprint": "c00269186585729271544fd8259ee86f87cef1496499816511072d25f9a5fd49"
     }
